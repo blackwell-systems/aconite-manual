@@ -43,7 +43,9 @@ Aconite has an "aliveness" layer: a small set of controls that loosen each voice
 away from perfect digital precision, the way separate analog voice cards each have
 their own personality. Turn them up and voices detune slightly from one another,
 drift slowly over time, and vary in cutoff, envelope timing, pulse width, and
-glide.
+glide. A separate transient control decides whether each note picks up wherever
+the oscillators and filter happen to be — for a punchy, slightly different attack
+every time — or resets them for a clicky, consistent one.
 
 At zero, every voice collapses to identical and the synth is clinically precise.
 That is a valid choice. But the character controls are there so a stacked chord
@@ -59,7 +61,7 @@ CPU.
 
 So Aconite gives you a **Quality** control that sets how hard it works:
 
-- **1× (draft)** — a straight passthrough, cheapest, for arranging.
+- **1× (draft)** — no oversampling, the lightest path, for arranging.
 - **2× (live)** — the default, a good balance for playing.
 - **4× (high)** — cleaner high end for exposed, resonant, or driven patches.
 - **8× (offline)** — pristine, for final renders.
