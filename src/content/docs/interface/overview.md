@@ -40,7 +40,10 @@ controls let you carve the window down to exactly what you are working on:
 - **Pop a section out.** The deepest editors — the **step sequencer** (its note roll,
   value lanes, and curve lanes as one unit) and the **scope** — can detach into their
   own resizable windows. Blow the sequencer up to full size to program a pattern, drag
-  it onto a second monitor, and keep playing while it stays open.
+  it onto a second monitor, and keep playing while it stays open. When a section is
+  popped out, its spot in the main window collapses to a slim strip with a **Re-dock**
+  button, so the detached editor leaves no dead space behind — the window stays compact
+  around whatever is still docked.
 
 Between the two, the layout is yours: fold everything but the two or three sections you
 need, or float the pattern editor beside a compact main window. The interface also
