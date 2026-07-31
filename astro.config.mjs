@@ -52,6 +52,7 @@ export default defineConfig({
         {
           label: 'Filters',
           items: [
+            { label: 'Saturation & drive', link: '/filters/saturation/' },
             { label: 'The two filters', link: '/filters/the-two-filters/' },
             { label: 'Feedback (“bark”) & FB Sat', link: '/filters/feedback/' },
             { label: 'Routing & configs', link: '/filters/routing/' },
