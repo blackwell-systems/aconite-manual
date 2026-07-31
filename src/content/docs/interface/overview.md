@@ -8,12 +8,7 @@ Each band owns one stage of the instrument, so the layout reads roughly in signa
 order: where sound is made at the top, how it is shaped in the middle, and how it
 is performed toward the bottom.
 
-:::note[TODO: annotated interface screenshot]
-An annotated hero screenshot of the full interface goes here, with callouts
-labeling each band. It is produced by the synth's screenshot capture hook and
-dropped into `src/assets/screenshots/`. See `SCREENSHOTS.md` in this repo for how
-panel images are generated.
-:::
+![The Aconite interface, top to bottom: the header, the source row, the shaping and modulation row, the scope, the master strip, the performance row, the pattern engine, and the keyboard.](../../assets/screenshots/interface-overview.png)
 
 ## The bands, top to bottom
 
