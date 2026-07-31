@@ -1,6 +1,6 @@
 ---
 title: The Aconite philosophy
-description: Why Aconite sounds the way it does — analog-modeled DSP, per-voice character as a feature, and an honest note on CPU.
+description: Why Aconite sounds the way it does — faithful analog character without the vintage limitations, per-voice aliveness, and a Quality control that trades CPU for fidelity.
 ---
 
 Before you turn a single knob, it helps to know what Aconite is trying to be.
@@ -20,6 +20,22 @@ Resonance, Drive, Voicing, Feedback, and FB Sat each act at a physically differe
 point in the signal path, and they interact. Learning how they push against one
 another is the depth that makes the filter section reward exploration, not a set
 of redundant knobs.
+
+## The character, not the constraints
+
+We believe analog modeling does not have to come at the price of limited
+functionality. We faithfully model many pieces of vintage gear for their spectral
+character — how a particular filter saturates, how a classic circuit compresses
+and colors the signal — but we do not let the technological limitations of the
+past leak into the present.
+
+The original hardware was often confined to a few voices, a fixed signal path, or
+a single modulation route because that was all the era's circuitry allowed. Those
+were constraints of the technology, not part of the sound. Aconite keeps the tone
+those instruments were loved for and drops the shackles: modulate almost anything
+to almost anything, route the voice and effects freely, recall every setting
+exactly, and trade fidelity against CPU whenever you like. You get the character
+without inheriting the era's ceiling.
 
 ## Per-voice character is a feature, not a bug
 
