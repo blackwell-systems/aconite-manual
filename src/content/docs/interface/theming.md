@@ -7,10 +7,11 @@ Aconite is fully themeable at runtime: one shared palette drives every color on
 the face, so recoloring live-recolors the whole instrument. A theme is a small set
 of tokens — neutral **chrome**, a **per-module accent**, and a **master tint** —
 plus a spectral gradient shared by the frequency-aware visualizations. You can
-shape themes live in the theme editor, step through around 40 curated themes in the
-browser, save and load `.labtheme` files, and the active theme travels with the
-patch and the saved project. The default look is **"Steel & Neon-Orange
-Industrial"**.
+**build your own theme from scratch — or edit any of the bundled ones — live in the
+theme editor**, step through around 40 curated themes in the browser, save and load
+your themes as `.labtheme` files to share or collect, and the active theme travels with the
+patch and the saved project. The default look is **"Ultraviolet"** — Aconite's
+signature deep-violet theme.
 
 ## How colors are organized
 
@@ -91,5 +92,5 @@ its sound. A patch you share with someone else will arrive in the same visual
 context you designed it in.
 
 If you load a preset that was saved without a theme — older patches, for example —
-Aconite keeps whatever theme you currently have loaded. The default **"Steel &
-Neon-Orange Industrial"** applies only when no theme information is present at all.
+Aconite keeps whatever theme you currently have loaded. The default
+**"Ultraviolet"** applies only when no theme information is present at all.
