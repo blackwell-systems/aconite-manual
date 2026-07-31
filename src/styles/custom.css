@@ -1,0 +1,98 @@
+/*
+ * Aconite manual theme.
+ *
+ * Evokes the synth's own look: premium, dark, refined, with a single warm
+ * amber/orange accent (the master section's gold, pulled toward the default
+ * "Steel & Neon-Orange Industrial" signal colour). Kept tasteful and legible:
+ * one accent, deep neutral chrome, generous contrast. No neon over-glow.
+ */
+
+:root {
+  /* Warm amber accent scale (light -> dark). */
+  --aconite-amber-050: #fff4e2;
+  --aconite-amber-100: #ffe3b8;
+  --aconite-amber-200: #ffcf85;
+  --aconite-amber-300: #f6b95a;
+  --aconite-amber-400: #e79a2f;
+  --aconite-amber-500: #cf7d18;
+  --aconite-amber-600: #a5610f;
+  --aconite-amber-700: #7c470b;
+  --aconite-amber-800: #4f2d08;
+  --aconite-amber-900: #2c1904;
+}
+
+/* ---- Dark theme (default look) ---- */
+:root,
+:root[data-theme='dark'] {
+  /* Accent: warm amber, used for links, active nav, focus rings. */
+  --sl-color-accent-low: #3a2408;
+  --sl-color-accent: var(--aconite-amber-400);
+  --sl-color-accent-high: var(--aconite-amber-200);
+
+  /* Neutral chrome: cool gunmetal, slightly warm at the deepest tone. */
+  --sl-color-white: #f5f1ea;
+  --sl-color-gray-1: #e6e1d8;
+  --sl-color-gray-2: #c4bfb6;
+  --sl-color-gray-3: #948f86;
+  --sl-color-gray-4: #5f5b54;
+  --sl-color-gray-5: #3a3833;
+  --sl-color-gray-6: #262420;
+  --sl-color-black: #17150f;
+
+  /* Surfaces: near-black with a faint warm cast, screen-like. */
+  --sl-color-bg: #131210;
+  --sl-color-bg-nav: #17150f;
+  --sl-color-bg-sidebar: #17150f;
+  --sl-color-bg-inline-code: #262420;
+  --sl-color-hairline: #2f2c26;
+  --sl-color-hairline-light: #3a3833;
+
+  /* Code blocks. */
+  --astro-code-color-background: #100f0c;
+}
+
+/* ---- Light theme (inverted look) ---- */
+:root[data-theme='light'] {
+  --sl-color-accent-low: var(--aconite-amber-100);
+  --sl-color-accent: var(--aconite-amber-600);
+  --sl-color-accent-high: var(--aconite-amber-800);
+
+  --sl-color-white: #1c1a15;
+  --sl-color-gray-1: #2b2822;
+  --sl-color-gray-2: #423e37;
+  --sl-color-gray-3: #6c675e;
+  --sl-color-gray-4: #948f86;
+  --sl-color-gray-5: #d3cec4;
+  --sl-color-gray-6: #ece7dd;
+  --sl-color-gray-7: #f5f1ea;
+  --sl-color-black: #ffffff;
+
+  --sl-color-bg: #faf6ee;
+  --sl-color-hairline: #e2ddd2;
+}
+
+/* Site title: a touch of warmth and letter-spacing for a refined wordmark. */
+.site-title {
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+/* Headings lean on the near-white so they sit crisp over the dark bg. */
+:root[data-theme='dark'] h1,
+:root[data-theme='dark'] h2,
+:root[data-theme='dark'] h3 {
+  color: var(--sl-color-white);
+}
+
+/* Give the hero tagline the amber accent for a single tasteful pop. */
+.hero .tagline {
+  color: var(--sl-color-gray-2);
+}
+
+/* Blockquote / aside "note" callouts read as screen panels: subtle amber edge. */
+.starlight-aside--note {
+  border-inline-start-color: var(--aconite-amber-400);
+}
+.starlight-aside--tip {
+  border-inline-start-color: var(--aconite-amber-300);
+}
