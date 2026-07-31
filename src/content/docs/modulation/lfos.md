@@ -1,13 +1,112 @@
 ---
 title: LFOs
-description: The drawable LFOs — waveforms with A/B morph, sync-aware rate, phase, bipolar, one-shot, and retrigger.
+description: The drawable LFOs — waveforms with A/B morph, sync-aware rate, phase, bipolar, one-shot, and retrigger options.
 ---
 
-Aconite's **LFOs** offer standard waveforms plus a drawable shape editor and an
-**A/B morph** between two shapes. Each has a sync-aware Rate (free or
-tempo-locked), plus phase, bipolar, one-shot, and retrigger options — so an LFO can
-be a slow evolving wash or a tight per-note ramp.
+Aconite has **six LFOs** — low-frequency oscillators that loop a shape continuously and
+push whatever destination you route them to. They differ from
+[envelopes](/aconite-manual/envelopes/pool/) in one fundamental way: an envelope is
+note-triggered and note-released, shaped around key presses. An LFO cycles on its own clock,
+independently of the notes you play. That makes LFOs the right tool for slow evolving
+movement, vibrato, tremolo, filter sweeps, and any other modulation that should not restart
+with every note.
 
-:::note
-This chapter is being written.
+All six are identical in capability. Each has its own rate, shape, and settings.
+
+## Starting from a waveform preset
+
+Each LFO offers five **waveform presets** to start from: Sine, Triangle, Ramp (rises),
+Saw (falls), and Square. Selecting a preset seeds the LFO's drawable shape with that
+classic waveform, so you get a familiar starting point without having to draw anything.
+From there you can leave it as-is or open the shape editor and modify it.
+
+:::tip
+If you want a clean triangle or sine LFO, just pick the preset and set the rate. The
+drawable shape editor is there when you need it — it is never required.
 :::
+
+## The shape editor
+
+Clicking into the LFO display opens the same **shape editor** used by
+[drawable envelopes](/aconite-manual/envelopes/drawable/):
+
+- **Click** to add a breakpoint, **drag** to reposition it.
+- **Drag the curve between points** to bend the segment — one handle smoothly controls the
+  whole shape from convex to concave.
+- **Right-click a segment** to switch between Curve, Step, and Spline interpolation.
+  Step mode turns the segment into a held level that jumps at the next point — this is how
+  you turn an LFO into a simple step sequencer without leaving the LFO tab.
+- **Value snapping** quantizes the output to a grid of discrete levels, giving a stepped
+  staircase output.
+- **Time grid** snaps breakpoint positions to equal divisions while you edit, making it
+  easy to place points on a musical grid.
+
+Drawn shapes are shared across all voices and take effect immediately on any held note.
+They save with the preset.
+
+## A/B morph
+
+Every LFO holds **two shapes — A and B** — and a **Morph** knob that crossfades between
+them. At zero, the LFO plays shape A exactly. At one, it plays shape B. Anywhere between
+is a blend of both.
+
+This means you can draw a gentle sine as shape A and a sharp saw as shape B, then automate
+or modulate the Morph knob to sweep the LFO's character in real time — routing velocity
+or a macro to Morph, for instance, so harder playing sharpens the LFO shape.
+
+The A/B editor shows both shapes at once: the active one bright with its handles, the
+inactive one faintly behind it. Switch between them with the A / B toggle in the editor.
+
+## Rate and tempo sync
+
+The **Rate** knob sets how fast the LFO cycles. In free mode it is measured in Hz —
+higher values are faster. With **Sync** turned on, the knob snaps to tempo divisions
+(whole bars, half notes, quarter notes, eighths, sixteenths, and their dotted and triplet
+variants). BPM comes from the host when a DAW is running, or from Aconite's own Tempo
+control in standalone mode.
+
+Each LFO has its own Sync toggle, so you can have one LFO running free at 0.3 Hz and
+another locked to a dotted eighth note at the same time.
+
+## Per-LFO options
+
+Beyond rate and shape, each LFO has a set of playback controls:
+
+- **Phase** — offsets the LFO's starting position in the cycle. Use it to stagger two
+  LFOs running at the same rate so they do not move in lockstep.
+- **Bipolar / Unipolar** — bipolar output swings from −1 to +1 (the default, giving equal
+  movement above and below the destination's center). Unipolar output swings from 0 to +1,
+  only ever adding to the destination.
+- **Retrigger** — when on, the LFO resets to its phase offset each time a note triggers.
+  This makes the LFO behave more like a very slow envelope — the shape always starts at
+  the same point on note-on, useful for plucks, stabs, or anything where predictable LFO
+  position matters.
+- **One-shot** — the LFO traverses the shape once and then holds at the final value.
+  Combine with retrigger for a slow, one-time sweep on each note.
+- **Slew** — smooths the LFO output, rounding off sharp transitions. Useful when Step
+  segments produce clicks or when you want a lazy lag on a fast shape.
+
+## Routing LFOs
+
+LFOs have no dedicated destination knobs. To route an LFO, either:
+
+1. Right-click the knob you want to modulate and choose **Add modulation → LFO 1** (or
+   whichever LFO you want).
+2. Open the [modulation matrix](/aconite-manual/modulation/matrix/), set the Source column
+   to the LFO, and choose a destination.
+
+Common LFO destinations include filter cutoff (a sweep), oscillator pitch (vibrato),
+pan (auto-pan), waveshaper drive (tremolo-style grit), and LFO rates (modulating one
+LFO's speed with another for evolving complexity). Any destination in the
+[matrix](/aconite-manual/modulation/matrix/) is available.
+
+## Bus LFOs
+
+Two additional **Bus LFOs** live in the last two tabs of the Modulators panel. They run
+once for the whole mix — not per voice — and route exclusively to bus and master
+destinations: reverb size, delay feedback, chorus depth, EQ, and master gain. They are
+the right tool for mix-level movement that would be too expensive or unstable if it ran
+separately inside every voice.
+
+See the [modulation matrix](/aconite-manual/modulation/matrix/) for the full list of bus
+destinations.
