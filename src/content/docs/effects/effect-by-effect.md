@@ -99,13 +99,17 @@ can lock precisely to the grid. **Rotate** sweeps the pans of all taps together
 for a spinning, animated stereo image. **Delay mod** adds subtle pitch drift to the
 taps. A **Direct** dry send and **Output** makeup sit alongside the main mix.
 
+**Feedback high-pass** thins the feedback path so low-end energy doesn't accumulate
+with each repeat — long regenerating patterns stay open and clear rather than
+building into a muddy rumble.
+
 The hero visualisation is a semicircular **pan graph** that plots each tap by its
 time and pan around a half-disc — you can see the rhythmic pattern and stereo spread
 at a glance, with per-tap editing rows below.
 
 This effect is **insert-only** — it cannot run as a send/return.
 
-**Key controls:** Mix, Taps (1–6), Feedback, Tone, Feedback mode (Tap / Normal),
+**Key controls:** Mix, Taps (1–6), Feedback, Tone, Feedback high-pass, Feedback mode (Tap / Normal),
 rotate rate/depth, delay-mod rate/depth, Direct, Output; per tap: Time or
 Sync + Division, Level, Pan, Enable, EQ type / frequency / gain; feedback tap:
 Time or Sync + Division, Gain, Pan, EQ.
@@ -374,6 +378,17 @@ the shaper sits:
 Peaks stay level-matched as you push harder, so switching curve or raising drive
 does not jump the loudness.
 
+**Trim** is a pre-curve input trim: it sets how hot the signal arrives at the
+shape before Drive takes over. Because Trim sits ahead of the curve and Drive
+controls how deep into it you push, you can stage a clean input level for the
+curve independently of how much harmonic character Drive adds — useful when the
+incoming oscillator level varies between patches or scenes.
+
+The hard-edged curves — Hard Clip, Cubic, Fold, and any drawn curve — are
+anti-aliased, and the voice can run at higher quality for extra headroom on
+extreme settings. The asymmetric and folding curves are DC-cleaned so an offset
+never builds up, even at high drive levels.
+
 **Key controls:** Curve, Place (Pre-filter / Post-filter / Mid-filter), Drive, Mix,
 Trim, Bias (Asym curve only).
 
@@ -395,3 +410,9 @@ The drawn shape is saved with the patch and is shared across both scenes. The sa
 drawing interface appears for drawable LFOs, envelope contours, step-sequencer Curve
 Lanes, and the Performer — so the feel is consistent everywhere a curve can be
 hand-drawn in Aconite.
+
+**String oscillator note.** The voice-path waveshaper is separate from the String
+oscillator's own in-loop drive. That means a plucked String can be coloured at its
+source — shaping the attack and the body of the string model itself — and then
+shaped again downstream by the waveshaper, stacking into a full electric-string
+chain without the two stages interfering with each other.

@@ -68,10 +68,11 @@ present and musical without being imposing.
 ### Acid
 
 A strict acid-lineage filter with four poles and spread poles for a gentler knee. Its
-resonance sits right on the edge of oscillation, a feedback high-pass emphasizes the
-characteristic cut, and the uncompensated passband means resonance literally eats the low
-end — a feature. The tuning-stable peak stays locked as you modulate. When you need the
-303-style squelch, start here.
+resonance sits right on the edge of oscillation, and an internal feedback high-pass
+emphasizes the characteristic squelch cut — a circuit-level detail distinct from the
+front-end HPF — that gives Acid its unique midrange scream. The uncompensated passband means
+resonance literally eats the low end — a feature. The tuning-stable peak stays locked as you
+modulate. When you need the 303-style squelch, start here.
 
 ---
 
@@ -87,13 +88,16 @@ audible.
 Three models — **SVF**, **Bite**, and **Multimode** — go further than just switching
 between responses: they produce a continuous blend between them.
 
-The **Mode** selector snaps to a discrete response (LP, BP, HP, Notch — plus LP2 on
-Multimode). The **Morph** control is a signed offset from that position that blends
-continuously between the adjacent modes. Rather than clicking between responses, you can
-sweep through them smoothly — or, more powerfully, route a modulation source to Morph 1 or
-Morph 2 in the [modulation matrix](/aconite-manual/modulation/matrix/) and let an LFO or
-envelope carry the filter from low-pass through band-pass into high-pass inside a single
-patch.
+- **SVF** and **Bite** morph across **LP · BP · HP · Notch**.
+- **Multimode** morphs across **LP4 · LP2 · BP · HP · Notch** — that extra LP2 tap gives it
+  a distinct in-between slope not available on the other morphable models.
+
+The **Mode** selector snaps to a discrete response. The **Morph** control is a signed offset
+from that position that blends continuously between the adjacent modes. Rather than clicking
+between responses, you can sweep through them smoothly — or, more powerfully, route a
+modulation source to Morph 1 or Morph 2 in the [modulation matrix](/aconite-manual/modulation/matrix/)
+and let an LFO or envelope carry the filter from low-pass through band-pass into high-pass
+inside a single patch.
 
 The Ladder, Cascade, Diode, and Acid models are fixed-mode — they ignore Morph, since their
 character comes from the specific behavior of one response, not a blend.
@@ -101,9 +105,11 @@ character comes from the specific behavior of one response, not a blend.
 ## Cutoff, key-tracking, and envelope amount
 
 **Cutoff** sets the filter's corner frequency across the full audible range. It responds to
-several modulation inputs at once — the filter envelope, LFOs, key-tracking, the step
-sequencer, and the modulation matrix all sum onto it — so a single knob position is really
-a base value that modulation rides on top of.
+several modulation inputs at once — the filter envelope, LFOs, key-tracking, the Step
+Sequencer, the Performer, and anything else you route through the modulation matrix all sum
+onto it — so a single knob position is really a base value that modulation rides on top of.
+A small per-voice drift also nudges each voice's cutoff slightly from its neighbors, giving
+the filter block an organic, analog aliveness even on sustained chords.
 
 **Key Track** ties the cutoff to the note you're playing: at 100%, the filter tracks
 exactly one octave per octave, keeping timbre consistent as you move up the keyboard. At 0%
@@ -111,11 +117,12 @@ the filter stays fixed. Values in between give a softer tracking that is natural
 pads and leads.
 
 **Env Amt** (envelope amount) scales how far the [filter envelope](/aconite-manual/envelopes/pool/)
-pushes cutoff from its resting position on each note. A positive value opens the filter on
-attack; a negative value closes it. Pair with Decay and Sustain to create plucks, stabs,
-and evolving filter sweeps. Both Env Amt and Key Track can be linked to Filter 1 when
-Filter 2 is running independently, or kept separate — see
-[Routing & configs](/aconite-manual/filters/routing/).
+pushes cutoff from its resting position on each note, over a range of ±6 octaves. A positive
+value opens the filter on attack; a negative value closes it. The amount is also scaled by
+velocity, so playing harder produces a more dramatic sweep without any extra routing. Pair
+with Decay and Sustain to create plucks, stabs, and evolving filter sweeps. Both Env Amt and
+Key Track can be linked to Filter 1 when Filter 2 is running independently, or kept separate
+— see [Routing & configs](/aconite-manual/filters/routing/).
 
 ## Resonance and Drive
 
@@ -137,9 +144,9 @@ Both Resonance and Drive are modulation matrix destinations.
 
 ## Voicing and Depth
 
-**Voicing** and **Depth** are available on the **Ladder** and **Diode** models and act
-inside the filter's saturation character — a good example of the kind of control that sounds
-redundant until you hear it.
+**Voicing** and **Depth** are available on the **Ladder** and **Diode** models (and apply
+to both when you're running them together) — acting inside the filter's saturation character,
+a good example of the kind of control that sounds redundant until you hear it.
 
 **Voicing** switches between **Clean** and **Analog** internal saturation paths. Despite the
 names, Clean is the screamier option: it has a taller, sharper, more squelchy resonance,
@@ -156,6 +163,16 @@ Both filters carry their own Voicing, Drive, and Depth, so you can pair a scream
 Filter 1 against a composed Analog Filter 2 — or any other combination that suits the
 sound you are after.
 
+## Global Sat
+
+**Global Sat** is a soft-clip on the voice output — always audible, always active — whose
+knob sits on the filter panel next to FB Sat. Where FB Sat only works when a filter Feedback
+loop is engaged, Global Sat adds gentle warmth to the voice regardless of patch or filter
+model. Use it to take the slight digital edge off an otherwise clean voice, or to give a
+whole patch the kind of rounded, consistent character that makes a polyphonic stack feel
+cohesive. It is a whole-voice control, not a per-filter one: every oscillator, model, and
+routing choice you make still passes through it on the way out.
+
 ## How the controls interact
 
 These are the behaviors worth knowing before you start exploring:
@@ -168,6 +185,9 @@ These are the behaviors worth knowing before you start exploring:
   [Feedback & FB Sat](/aconite-manual/filters/feedback/) for the full picture.
 - **Depth only acts under Analog voicing.** Under Clean, it is silent.
 - **Morph does nothing on fixed-mode models.** Save it for SVF, Bite, and Multimode.
+- **Global Sat is always audible; FB Sat is not.** If you want whole-voice warmth regardless
+  of patch, reach for Global Sat. FB Sat only colors the feedback loops — with Feedback at
+  zero it has nothing to act on.
 
 The filter section is designed to reward that kind of systematic exploration. Each control
 acts at a different physical point in the signal path, and understanding where is the depth

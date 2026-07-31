@@ -23,7 +23,7 @@ Each scene is a completely independent voice pool. It carries its own:
 - Analog character settings — Voice Detune, Drift, Variance, and Transient.
 - Scene Pan position.
 
-The arpeggiator, master effects, oversampling Quality, and MIDI routing are shared across both
+The arpeggiator, master effects, oversampling Quality, MPE, and MIDI routing are shared across both
 scenes. When you switch to Scene B to edit it, the arp keeps playing from Scene A's patch.
 
 Scenes are saved and recalled with [presets](/aconite-manual/master/presets/), so a split or layer

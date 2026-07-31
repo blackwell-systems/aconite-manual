@@ -31,15 +31,18 @@ Clicking into the LFO display opens the same **shape editor** used by
 [drawable envelopes](/aconite-manual/envelopes/drawable/):
 
 - **Click** to add a breakpoint, **drag** to reposition it.
-- **Drag the curve between points** to bend the segment — one handle smoothly controls the
-  whole shape from convex to concave.
+- **Drag the curve between points** to bend the segment — the handle is symmetric, easing
+  the segment in or out. It adjusts curve tension across the full range from convex to
+  concave; it is not a free midpoint pull.
 - **Right-click a segment** to switch between Curve, Step, and Spline interpolation.
   Step mode turns the segment into a held level that jumps at the next point — this is how
   you turn an LFO into a simple step sequencer without leaving the LFO tab.
 - **Value snapping** quantizes the output to a grid of discrete levels, giving a stepped
-  staircase output.
+  staircase output. You can apply this to the whole shape or per individual segment, so part
+  of the LFO cycle can staircase while the rest remains smooth.
 - **Time grid** snaps breakpoint positions to equal divisions while you edit, making it
-  easy to place points on a musical grid.
+  easy to place points on a musical grid. This affects editing only — it does not quantize
+  the LFO's output timing during playback.
 
 Drawn shapes are shared across all voices and take effect immediately on any held note.
 They save with the preset.
@@ -107,6 +110,10 @@ once for the whole mix — not per voice — and route exclusively to bus and ma
 destinations: reverb size, delay feedback, chorus depth, EQ, and master gain. They are
 the right tool for mix-level movement that would be too expensive or unstable if it ran
 separately inside every voice.
+
+The bus LFOs share all the same shape, rate, and playback controls as the voice LFOs —
+waveform presets, A/B morph, tempo sync, phase, bipolar/unipolar, one-shot, slew, and
+retrigger. They are full LFOs routed to a different scope, not stripped-down versions.
 
 See the [modulation matrix](/aconite-manual/modulation/matrix/) for the full list of bus
 destinations.

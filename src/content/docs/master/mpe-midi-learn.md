@@ -98,6 +98,38 @@ you up to eight hardware knobs that behave like LFOs or envelopes: scalable with
 the matrix's depth slider, combinable with Via transforms, and routable to multiple
 destinations at once.
 
+### Value range and Invert
+
+Each mapping in the manager table has an editable **low** and **high** value. By
+default a mapping spans the full parameter range, but you can narrow it — for
+example, constraining a hardware knob to sweep only the top half of a filter
+cutoff's travel. The **Invert** checkbox reverses the direction: push the hardware
+knob up and the parameter goes down. This is handy when a fader's physical
+"closed" end should correspond to a parameter's maximum, or for dialing in a
+feel that matches the hardware control's natural motion.
+
+### Pickup and Jump
+
+Each mapping also has a **takeover** mode that controls what happens the first time
+you move a hardware control after loading a patch or switching presets:
+
+- **Pickup** (the default) is soft-takeover. The parameter does not change until
+  the incoming CC value crosses the parameter's current value — the knob "picks up"
+  from wherever the sound already is, with no jump. This is the safe choice for
+  live performance.
+- **Jump** snaps the parameter to the hardware position the instant you move the
+  control. Useful when you want instant response and your controller's position
+  always reflects reality (motorized faders, for example).
+
+You can set each mapping to whichever mode suits the controller and the context.
+
+### Default CC assignments
+
+The eight CC source slots default to **CCs 20–27**, so if your controller already
+sends on those channels, the slots respond out of the box without any setup. You
+can reassign any slot to a different CC at any time using the learn button on that
+row.
+
 ### What MIDI-learn does NOT save in presets
 
 This is an important distinction. **MIDI-learn mappings are stored per machine

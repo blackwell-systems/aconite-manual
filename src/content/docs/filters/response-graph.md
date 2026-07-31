@@ -48,7 +48,9 @@ When the front-end high-pass is set to Pre or Post, the graph adds a **pale curv
 own handle. Drag it horizontally to set HPF Freq; drag vertically to set Bite (the HPF's
 resonance). The curve draws the real roll-off shape for whichever slope (6, 12, or 24 dB/oct)
 is selected — a 24 dB/oct curve looks much steeper than a 6 dB/oct one, which makes the
-slope choice visible at a glance.
+slope choice visible at a glance. This also applies to the Cascade filter's own 12 vs. 24
+dB/oct slope switch: switching slope is reflected immediately as a visibly steeper or
+shallower curve in the graph, so you can see the difference before committing to it.
 
 The HPF curve stays fixed as the main filter curves sweep. If you're running the HPF Pre, you
 can see the combined shape that the signal actually experiences: the HPF cut on the left, the
@@ -63,6 +65,11 @@ Feedback the curve is clean; as Feedback rises, the sub-cutoff hump grows and th
 from Resonance changes shape. This makes the antagonism between Feedback and Resonance
 (described in [Feedback & FB Sat](/aconite-manual/filters/feedback/)) visible as well as
 audible.
+
+**FB Sat does not appear in the graph.** Its effect is tonal and harmonic — it shapes the
+character of the feedback signal, not its frequency-domain shape. The curve will not change
+when you adjust FB Sat. Judge it entirely by ear, ideally with Feedback turned up enough to
+hear the loop contributing to the sound.
 
 ## Modulation and live sweeping
 

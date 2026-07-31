@@ -80,7 +80,8 @@ identical. Higher settings model older, looser hardware.
   that each have their own character.
 - **Transient** — two settings. **Analog** leaves oscillator phase and filter state running when a
   voice is stolen and reused, for a punchy, varying attack. **Reset** zeroes them at each note-on
-  for a consistent, clicky attack.
+  for a consistent, clicky attack. Transient governs the DSP state reset only — it is separate from
+  **Env Restart**, which controls the envelope's starting level when a new note arrives.
 
 The analog-character controls are what the philosophy chapter describes as "aliveness." See
 [The Aconite philosophy](/aconite-manual/getting-started/philosophy/) for the broader framing of why
@@ -117,7 +118,10 @@ The pitch-bend range controls how many semitones the pitch wheel reaches at full
 is two semitones; wider ranges suit expressive lead playing or trombone-style glides.
 
 When MPE is active, each voice tracks per-note bend from its own MIDI channel, and the per-note
-pitch-bend range is set independently — 48 semitones by default, to suit expressive controllers.
+pitch-bend range is adjustable from 1 to 96 semitones — 48 semitones by default, to suit expressive
+controllers. Per-note pressure and vertical slide are exposed to the modulation matrix as the sources
+**MPE Press** and **MPE Slide**, so you can route them to any destination — filter cutoff, timbre,
+volume, or anything else in the matrix — for fully independent expression on every finger.
 
 ## Panning
 
@@ -133,6 +137,12 @@ A **PANIC** button is always visible in the header. One click instantly silences
 all notes, kills any stuck or hung voices across both scenes, clears held and latch state, and
 flushes the effect bus so ringing reverb and delay tails go quiet. Use it any time a note will not
 release or a patch runs away on you.
+
+## Quality and CPU
+
+The oversampling Quality setting and the Auto HQ on bounce option live in the
+[Master band](/aconite-manual/master/master-band/). For a full explanation of Quality levels and
+CPU tradeoffs, see [Performance & CPU](/aconite-manual/reference/performance/).
 
 :::tip
 For thick pads: set Poly to 6–8 voices, nudge Voice Detune to about 10–15%, add a little Drift,

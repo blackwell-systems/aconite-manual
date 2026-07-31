@@ -88,25 +88,67 @@ only the currently focused voice (the one you clicked in the grid). Steps that d
 focused voice read blank. The other lanes — Nudge, Slide, Tie, Ratchet, Octave, Accidental, and
 Cond — always edit the whole step.
 
+You can also set a step's velocity directly in the grid: **a note block's height represents its
+velocity** — drag the block up or down in the Sequence Screen to raise or lower the level without
+leaving the roll.
+
+A **Lanes** menu at the edge of the strip lets you show or hide individual lanes, down to a single
+visible lane. The strip re-fits to whatever is visible, so you can clear away lanes you are not
+using and keep the view focused.
+
 ## Conditional triggers
 
 Each step can carry a **Cond** value that gates it behind a rule. A step has to pass its Cond check,
 its own Chance roll, and the global Euclidean fill mask to fire. The condition families are:
 
 - **Loop ratios** — the step plays on a chosen loop out of every few passes (for example: 1:2 plays
-  on odd loops, 2:2 on even loops, 1:4 only every fourth time through). Different steps on different
-  ratios cause the pattern to rewrite itself over several bars.
+  on odd loops, 2:2 on even loops, 1:4 only every fourth time through). The full set runs through
+  all :2, :3, and :4 combinations, plus sparse long-cycle ratios: **1:6** surfaces the step once
+  every six loops and **1:8** once every eight — useful for a fill note that appears only rarely,
+  or for a slow evolution that takes eight bars to complete. Different steps on different ratios
+  cause the pattern to rewrite itself over several bars.
 - **FILL / !FILL** — the step fires only while the momentary Fill control is held (FILL), or only
   while it is not (!FILL). Dot extra hits with FILL and they wait until you hold Fill; mark the main
   groove !FILL and it drops out the instant you call the fill for breakdowns.
 - **PRE / !PRE** — fires only if the previous conditional step did (PRE), or only if it did not
-  (!PRE). This chains steps: a ghost note with PRE only sounds when its parent does, creating
-  dependent probability — the pair either happens together or not at all.
+  (!PRE). With PRE, each pass through the pattern yields one of three outcomes: neither step, the
+  main step alone, or both together — but never the second step without the first. This creates
+  dependent probability: a ghost note that only shadows its parent, so the pair reads as one musical
+  gesture that either happens or does not. **!PRE** inverts that relationship — the second step
+  becomes a call-and-response that only fills in when the first drops out, swapping between two
+  hits rather than stacking them.
 - **1ST / !1ST** — fires on the first pass only (1ST), or on every pass but the first (!1ST). Use
   it for a pickup that never repeats, or an answer that only arrives after the pattern loops.
 
 Stacked with Chance and Euclidean fill, conditional triggers turn a static grid into an evolving,
 generative pattern that keeps surprising you.
+
+## The scale editor
+
+The Keys scale row includes a per-degree toggle for each scale degree. Click a degree to turn it
+off — the scale switches to **Custom** and that degree's row disappears from the piano roll,
+removing those pitches from the pattern's vocabulary. Use it to sculpt a scale that only contains
+the degrees you want, from a pentatonic subset right down to a two-note drone grid. Turning a
+degree back on restores its row and brings it back into Custom mode with the remaining degrees
+still set.
+
+## Per-note focus: editing a voice in a chord
+
+Click any note block in the Sequence Screen to **focus** that voice for editing. When a voice is
+focused, its whole row washes with a highlight band, its blocks gain an accent ring, and its row
+label turns bold — so you can see exactly which degree you are editing. A small **"editing:
+&lt;degree&gt;"** indicator on the value-lane strip names the focused voice as an interval relative
+to the root.
+
+With a voice focused, the **Velocity, Accent, and Chance** lanes read and write that voice across
+the whole pattern. Steps that hold the focused degree show its values; steps that do not read blank
+and ignore edits. This lets you set a louder top note across every chord in the pattern, accent one
+inner voice without touching the others, or give a single voice a lower play chance for generative
+variation.
+
+Focus is a live editing state and is not saved with the pattern. When no voice is focused, the
+per-note lanes default to each step's primary (lowest) voice — which for a mono line is always the
+only note, so focus only matters once steps hold chords.
 
 ## Euclidean fill
 
@@ -137,9 +179,13 @@ Each curve lane offers:
 - **Bipolar** — centre the output around zero for −1 to +1 modulation.
 
 The curve editor lets you drag control points, add new ones, delete them with a double-click, and
-cycle each segment's interpolation between Curve, Step, and Spline. A generator menu offers
-built-in shapes (Ramp, Triangle, Sine, Pulse, S-Curve, Random) and transforms (Invert, Reverse,
-Smooth). A live sample dot sweeps along the curve as the pattern plays, showing exactly what the
+cycle each segment's interpolation between Curve, Step, and Spline. Drag a segment vertically to
+bend its tension — pulling it up or down shapes the curve between its two endpoints without moving
+the points themselves. A generator menu offers built-in shapes (Ramp, Triangle, Sine, Pulse,
+S-Curve, Random) and transforms (Invert, Reverse, Smooth). A **Bars** toggle paints one bar per
+step so the curve lines up visually with the pattern grid; a **Snap** toggle locks edits to the
+step grid and to the nearest value level so every point lands cleanly on a beat or a quantised
+value. A live sample dot sweeps along the curve as the pattern plays, showing exactly what the
 lane is currently outputting.
 
 Clicking the lane's destination header opens the matrix routing for that Curve source, so you wire

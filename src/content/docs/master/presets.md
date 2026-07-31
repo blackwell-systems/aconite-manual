@@ -19,7 +19,11 @@ A preset is a complete snapshot of the full patch state:
   performance controls.
 - All **drawn shapes** — the LFO curves and their morph targets, the step
   sequencer pattern, the waveshaper transfer curve, the velocity curve, the
-  Performer curve, and all six drawable envelope contours.
+  Performer curve, and all six drawable envelope contours, the four **Curve Lanes**,
+  and the arp step lane.
+- The **path to any user wavetable** you have loaded — the reference to the file, so
+  Aconite can reload it when the preset is opened. (The wavetable data itself is not
+  embedded; the file needs to be present on the machine where you load the preset.)
 - Your active **colour theme**.
 
 When you save a preset and load it later, or share it with someone else, the sound
@@ -28,6 +32,12 @@ a preset does not carry are MIDI-learn mappings (those belong to your hardware
 setup, not the sound) and authorization state. See
 [MPE & MIDI-learn](/aconite-manual/master/mpe-midi-learn/) for why MIDI-learn
 intentionally stays outside presets.
+
+Presets are **forward-compatible**: if a preset was saved with an older version of
+Aconite, parameters that did not exist at the time are silently ignored; parameters
+that are absent fall back to their defaults. Old preset files and saved sessions
+load without complaint — you will never get an error because a patch predates a new
+feature.
 
 ## The preset browser
 
@@ -52,9 +62,11 @@ your DAW restores a saved session.
 2. Click **Save** in the browser.
 3. Type a name and confirm.
 
-That is it. The preset is written to your user presets folder and immediately
-appears in the **User** section of the browser menu. It carries the full patch
-state exactly as described above.
+That is it. The preset is written as a **.synthpreset** file to your user
+application-data presets folder. It immediately appears in the **User** section of
+the browser menu and carries the full patch state exactly as described above. That
+folder is also where you go to back up your library or copy presets to share with
+someone else — the files are portable.
 
 To delete a user preset, select it in the menu and use the delete option.
 

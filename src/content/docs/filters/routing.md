@@ -11,10 +11,17 @@ independently of the feedback loops, so you can use both at once.
 
 ## The six routings
 
-The **Routing** selector appears in the filter section when Filter 2 is enabled. All
-modulation — LFOs, the step sequencer, the Performer — sweeps both filters' Cutoff together.
-Per-filter controls like Env Amt and Key Track can be linked to follow Filter 1 or kept
-independent on Filter 2.
+The **Routing** selector appears in the filter section when Filter 2 is enabled.
+
+**Shared modulation CV.** The LFO, Step Sequencer, and Performer cutoff signals are shared
+— when any of those sources sweep cutoff, both filters move together. This keeps the two
+filters in a consistent tonal relationship during live sweeps without requiring you to route
+anything twice. Per-filter controls like Env Amt and Key Track can be linked to follow
+Filter 1 or kept independent on Filter 2.
+
+**Mono vs. stereo.** Four of the six routings — Single, Serial, Parallel, and Ring —
+produce a mono voice signal. Only **Stereo** and **Wide** produce a genuinely stereo output
+from the voice.
 
 ### Single
 
@@ -35,6 +42,13 @@ has already been shaped. A high Resonance on Filter 1 feeds that peak into Filte
 then colors it further. Try swapping the models (not available from the Config selector —
 set each filter's model manually) to hear the difference.
 :::
+
+**Waveshaper placement in Serial routing.** The drawable waveshaper insert can sit before
+Filter 1 (Pre), after Filter 2 (Post), or — uniquely in Serial routing — between the two
+filters (Mid). That Mid position lets Filter 1 shape the tone before the waveshaper distorts
+it, then sends the result into Filter 2 for a second pass. See
+[Effect by effect](/aconite-manual/effects/effect-by-effect/) for the full waveshaper
+reference; the placement choice is made on the filter panel.
 
 ### Parallel
 
@@ -78,7 +92,7 @@ player's musical choice.
 | Config | What it does |
 |---|---|
 | **Single Ladder LP** | The neutral starting point. One Ladder low-pass, nothing else engaged. |
-| **Dual Serial (fat)** | Two filters in series for a thick, stacked character. |
+| **Dual Serial (fat)** | Two filters in series for a thick, stacked character — a common pairing for warmth into focus. |
 | **Parallel Stack** | Both filters summed for layered tonality. |
 | **Ring Metallic** | Ring routing for non-harmonic, metallic textures. |
 | **Stereo Split** | Filter 1 left, Filter 2 right — instant stereo separation. |

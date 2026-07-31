@@ -43,9 +43,10 @@ In practice this means:
   squelch and gain warmth and movement. A specific texture, not necessarily louder or more
   aggressive.
 
-The useful musical range for Feedback is roughly the lower half of its travel. Past that
-point the effect becomes quite strong and the interaction with Resonance can produce
-unexpected results — worth exploring deliberately, but easy to overshoot.
+A good aim point is roughly 0–0.6 on the control's travel — the lower half. In that range
+the bark adds weight and movement without overwhelming the patch. Past that point the effect
+becomes quite strong and the interaction with Resonance can produce unexpected results —
+worth exploring deliberately, but easy to overshoot.
 
 :::caution
 At extreme Feedback levels, especially with high Resonance, the filter can become
@@ -55,19 +56,21 @@ controls before hunting elsewhere — the interaction is doing its job.
 
 ## FB Sat — warmth on the feedback loop
 
-**FB Sat** applies soft-clipping saturation to both filters' feedback loops simultaneously.
+**FB Sat** applies soft-clipping saturation to both filters' feedback loops simultaneously —
+and it is worth emphasizing that word: *both*, together, as one. There is no way to warm
+Filter 1's feedback loop while keeping Filter 2's clean. When FB Sat moves, it shapes the
+character of both loops at once, which makes it a global filter texture control rather than
+a per-filter one.
+
 It is a tonal control, not a limiter: its main effect is harmonic warmth and coloration on
-the feedback signal, and it barely moves the output level.
+the feedback signal, and it barely moves the output level. The practical use is
+straightforward — when Feedback is turned up and the loop starts to feel a little raw or
+harsh, FB Sat smooths and colors it. Think of it the way you'd think of a tube stage in a
+hardware feedback path: it adds even harmonics and a subtle compression that makes the growl
+feel more musical and less synthetic.
 
-The practical use is straightforward — when Feedback is turned up and the loop starts to
-feel a little raw or harsh, FB Sat smooths and colors it. Think of it the way you'd think
-of a tube stage in a hardware feedback path: it adds even harmonics and a subtle compression
-that makes the growl feel more musical and less synthetic.
-
-Because it acts on both loops, FB Sat is a global filter character control. It does not let
-you warm Filter 1's feedback while keeping Filter 2's clean — both loops get the same
-treatment. Judge it entirely by ear: if Feedback is up and something sounds slightly brittle,
-try nudging FB Sat. If Feedback is low, FB Sat has very little to act on.
+Judge it entirely by ear: if Feedback is up and something sounds slightly brittle, try
+nudging FB Sat. If Feedback is low, FB Sat has very little to act on.
 
 FB Sat is also a modulation matrix destination, so a slow LFO can gently breathe the
 feedback coloration over time — a subtle but effective way to add animation to a sustained

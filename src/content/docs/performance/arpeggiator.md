@@ -104,12 +104,16 @@ clock, gate, swing, probability, and Euclidean fill drive it.
 
 - **Time** is the spread amount. In Sync mode it is a fraction of the step, so the strum tightens as
   you speed up — the way a real strummed chord behaves. In Free mode it is an absolute time in
-  milliseconds.
+  milliseconds. The gate automatically extends to cover a wide strum, so the tail of a slow strum
+  is never cut short.
 - **Direction** — Up (low to high), Down (high to low), Up-Down (alternates each step), As Played,
   or Random (a fresh shuffle each step).
 
 Strum Time is a modulation destination, so a slow LFO can breathe the chord wider and tighter over
 time. Chord mode applies to the held-note modes; the step sequencer keeps its own pitch model.
+
+When Chord mode is active, Aconite automatically switches to polyphonic voicing so the full note
+stack rings together — even if the patch was previously set to a mono mode.
 
 ## The arp as a modulator
 

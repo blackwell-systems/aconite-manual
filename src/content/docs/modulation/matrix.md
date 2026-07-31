@@ -58,8 +58,10 @@ The source menu lists over forty options, organized by type:
 - **MPE Press** and **MPE Slide** — per-note pressure and slide for MPE controllers
 - **Noise** — an audio-rate random signal for thick FM, PWM, and cutoff textures
 - The **envelope follower** — see [Envelope follower](/aconite-manual/modulation/env-follower/)
-- **Step Seq** and **Performer** — the pattern generators from the
-  [Modulators panel](/aconite-manual/modulation/overview/)
+- **Step Seq** — stepped levels, directional (Forward/Reverse/Ping-Pong/Random), with
+  optional per-step glide; see the [Step sequencer](/aconite-manual/modulation/overview/#the-step-sequencer)
+- **Performer** — a curve-per-step sequencer: each step plays a shaped sub-curve from a
+  per-step library rather than a flat level; see the [Performer](/aconite-manual/modulation/overview/#the-performer)
 - **Arp Step**, **Arp Vel**, **Arp Gate** — the arpeggiator's own rhythm as a modulation
   source; route Arp Gate to filter cutoff to pluck the filter on every arp note
 - **Curve 1–4** — four drawable, pattern-synced automation lanes

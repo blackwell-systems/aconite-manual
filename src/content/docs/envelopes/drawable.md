@@ -23,8 +23,9 @@ points**. Editing is direct:
 - **Drag a point** to reposition it — horizontally to change its timing, vertically to change
   its level.
 - **Drag the curve between two points** to bend the segment without moving either endpoint.
-  Pull the line toward you to ease it in or out; the single handle gives you the full S-curve
-  range from convex to concave.
+  The handle is symmetric — it eases the segment in or out, giving you the full range from
+  convex to concave. It adjusts curve tension rather than pulling the midpoint freely to an
+  arbitrary position.
 - **Right-click a segment** to change its interpolation mode:
   - **Curve** — a tension-warped ramp, the default. One handle controls the whole shape of
     the segment.
@@ -35,6 +36,15 @@ points**. Editing is direct:
 - **Shift-click a point** to set it as the **sustain marker** — the position where the
   envelope pauses and holds while the key is down. Everything to the right of the sustain
   marker is the release.
+
+Two additional controls shape the contour at a broader level:
+
+- **Value quantization** — snaps the envelope output to N evenly spaced levels, producing a
+  stepped staircase. You can apply quantization to the whole shape or per segment, so one
+  section of the contour can staircase while the rest flows smoothly.
+- **Time-grid snapping** — locks breakpoint positions to N equal divisions while you edit.
+  This makes it easy to line up points on a musical grid as you draw. The snap affects
+  editing only; it does not quantize the envelope's playback in real time.
 
 When nothing is drawn yet and you flip an envelope to Draw mode, it starts from an
 ADSR-shaped default so the transition feels natural. You can sculpt from there or replace

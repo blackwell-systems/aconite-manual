@@ -51,7 +51,8 @@ the slots top to bottom in the order you see them. Reordering is non-destructive
 slot's settings travel with it.
 
 Two effects are always inserted in place and cannot run as sends: the **Multi-tap
-delay** and the **Stereo imager**. Everything else can be either an insert or a send.
+delay** (its **Feedback high-pass** keeps long regenerating patterns from building
+low-end mud) and the **Stereo imager**. Everything else can be either an insert or a send.
 
 ## Insert vs send/return
 

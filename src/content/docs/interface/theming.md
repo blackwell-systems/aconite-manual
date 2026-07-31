@@ -52,6 +52,10 @@ the whole instrument recolors the instant you step — there is no separate load
 click. Around 40 curated themes ship with Aconite, spanning dark industrial looks,
 inverted light panels, and everything between.
 
+The same `<` / `>` browser is also available **inside the theme editor overlay**,
+so you can step through themes and fine-tune them in the same session — browse
+until you find something close, then nudge the colors without closing the editor.
+
 :::tip
 Step through themes while a patch is playing. Color can change how you hear a sound
 — a dark cold theme and a bright warm theme can make the same patch feel like two
@@ -73,7 +77,11 @@ lets you:
   small preview card.
 
 When you are happy with a theme, you can save it to a `.labtheme` file for sharing
-or archiving.
+or archiving. The `.labtheme` format and the theme embedded in a preset are the
+same format — they are fully interchangeable. A theme you author in the editor and
+save as a file can be loaded back into any preset, and a theme carried inside a
+preset can be exported as a standalone file. You can maintain a personal theme
+library of `.labtheme` files and drop whichever one suits a project into any patch.
 
 ## Themes travel with patches
 

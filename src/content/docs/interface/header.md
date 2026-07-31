@@ -63,9 +63,19 @@ learned control lets you clear its assignment. The full workflow is covered in
 
 ## PANIC
 
-**PANIC** cuts all active voices and resets every stuck note immediately. It sends
-MIDI All Notes Off as well, so it clears stuck notes both in Aconite and in any
-downstream MIDI-triggered devices. Keep it in reach when you are performing live.
+**PANIC** is the emergency stop. One click does all of this at once:
+
+- Stops all active voices immediately and kills any that are stuck or hung.
+- Sends MIDI All Notes Off, so it clears stuck notes in Aconite and any
+  downstream MIDI-triggered devices.
+- Clears arp hold and latch state, and resets any held note in mono modes — so a
+  latched arp chord or a stubbornly held mono note releases completely.
+- **Flushes the effect bus**, cutting ringing reverb tails, delay repeats, and any
+  other time-based FX residue that would otherwise keep sounding after the voices
+  stop.
+
+Keep it in reach when you are performing live. A runaway patch, a note that will
+not release, or a reverb that is out of control — PANIC clears it all in one press.
 
 ## Options (gear menu)
 

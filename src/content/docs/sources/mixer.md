@@ -6,9 +6,12 @@ description: The Minimoog-style level mixer and Mix Drive, the mixer's overdrive
 ![The mixer panel](../../../assets/screenshots/panel-mixer.png)
 
 The **mixer** sets the level of each source before the filter, in the classic
-Minimoog style, and adds **Mix Drive** — an overdrive on the mix bus that fattens
-and saturates the combined signal as you push it, giving you dirt before the filter
-even touches it.
+Minimoog style, and adds **Mix Drive** — a per-voice overdrive that fattens and
+saturates each playing voice's combined signal as you push it, giving you dirt
+before the filter even touches it. Because it runs per-voice rather than on a
+shared bus, chords saturate more three-dimensionally: each voice's harmonics are
+generated independently, so the result never collapses into a single smeared
+distortion cloud.
 
 ## The five faders
 
@@ -45,9 +48,10 @@ A few things worth knowing when you start tweaking levels:
   stage hard even before Mix Drive enters the picture. Pull it back until you feel
   the weight rather than hear the sub as a separate element.
 
-- **Oscillator levels are [modulation matrix](/aconite-manual/modulation/matrix/)
-  destinations.** You can sweep Osc 2's level with an envelope for a swell, or
-  modulate the noise level with an LFO for a trembling breath effect.
+- **All five faders are [modulation matrix](/aconite-manual/modulation/matrix/)
+  destinations** — Osc 1, Osc 2, Osc 3, Sub, and Noise. You can sweep Osc 2's
+  level with an envelope for a swell, bring the noise in on an LFO for a trembling
+  breath effect, or have the sub duck in and out with an envelope follower.
 
 ## Mix Drive
 
@@ -56,8 +60,9 @@ the filter input. Every voice's mixed signal runs through it before anything els
 in the signal path touches it, which means it colours the material that then gets
 further shaped by the [filter](/aconite-manual/filters/the-two-filters/).
 
-At low settings it is transparent — the signal passes through cleanly. As you push
-it:
+At its minimum, Mix Drive is a **true bypass** — the clean signal path is completely
+untouched, not just quiet. The moment you move it off zero, the drive stage engages.
+As you push it:
 
 - The low end softens and thickens slightly, rounding off peaks in a way that
   feels warm rather than harsh.

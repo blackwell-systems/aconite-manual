@@ -45,10 +45,24 @@ That takes CPU. Quality gives you the choice:
 Only the audio processing pays the oversampling cost. Your modulation, envelopes,
 and parameter automation always run at full host rate regardless of this setting.
 
-**Auto-HQ on bounce** is in the Options menu. When it is on, Aconite
-automatically raises quality to maximum whenever your DAW renders offline — a
-bounce, export, or mixdown. You can monitor at 2× to stay comfortable on CPU, and
-your exported file will be as clean as the 8× setting can make it.
+**Auto-HQ on bounce** is in the Options menu. It is **off by default**, and the
+tradeoff is deliberate:
+
+- **Off** — an offline render (bounce, export, or mixdown) uses whatever Quality
+  you were monitoring at. Your exported audio is a faithful capture of exactly what
+  you heard while the patch was playing. No surprises.
+- **On** — an offline render always uses maximum oversampling regardless of your
+  live Quality setting. Monitor at 2× to keep CPU comfortable; your exported file
+  comes out as clean as 8× can make it. The flip side is that the bounce may differ
+  subtly in the high frequencies from what you heard while playing.
+
+Choose **On** when pristine renders matter more than render-matches-monitor
+consistency; leave it **Off** (the default) when you want the export to be exactly
+the sound you approved at your monitoring setting.
+
+**1× (Draft)** is a true passthrough — there is no oversampling or resampling
+overhead at all. It is the fastest possible path, useful when you are sketching
+ideas on a light machine or tracking CPU usage in a dense session.
 
 ## Glue and Warmth
 

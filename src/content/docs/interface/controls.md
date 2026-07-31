@@ -69,8 +69,15 @@ To assign modulation to a control:
 3. Click a source to connect it. A depth slider appears — drag it to set how much
    that source moves the control. Positive depth pushes the value up from its
    current position; negative depth pulls it down.
-4. You can connect multiple sources to the same knob — each gets its own ring and
-   its own depth.
+4. The panel also exposes a **Via** selector for each connection. Via is a
+   curve or transform that sits between the source signal and the depth amount —
+   it reshapes the modulation before it reaches the destination. You can use it to
+   make a linear LFO act exponential at one end, gate the modulation so it only
+   kicks in above a threshold, or invert the response. Via is the difference between
+   "this source moves that knob" and "this source moves that knob in a specific
+   shape."
+5. You can connect multiple sources to the same knob — each gets its own ring, its
+   own depth, and its own Via.
 
 To remove a connection, open the Modulate panel again and click the source to
 deselect it, or drag its depth slider all the way to zero.

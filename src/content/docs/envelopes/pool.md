@@ -28,8 +28,12 @@ Two additional controls refine the shape:
 - **Velocity** — scales how much a harder keystroke deepens the envelope's output. The amp
   envelope defaults to full velocity sensitivity (harder playing is louder). The filter
   envelope defaults to zero, so velocity does not move the filter cutoff until you dial it in.
-- **Key Follow** — scales the envelope times with pitch. Higher notes get shorter times,
-  lower notes get longer ones. At zero it has no effect.
+  The free envelopes (Env 3–6) also default to velocity-independent — they modulate their
+  destination at a fixed depth until you route them, at which point their output tracks
+  velocity according to this setting.
+- **Key Follow** — scales the envelope times with pitch, pivoting around middle C. Notes
+  above middle C get shorter attack, decay, and release times; notes below get longer ones.
+  At zero it has no effect.
 
 And two toggles reshape the contour's output curve:
 
@@ -83,6 +87,11 @@ running:
   behavior: no click, smooth re-attack.
 - **From Zero** — re-attacks from silence, giving a consistent, clean start on every note.
 
+Restart governs the envelope's starting level only. It is separate and orthogonal from the
+**Transient** control on the Voice/Play card, which resets oscillator and filter state on
+retrigger. The two controls are independent — you can combine any Restart setting with any
+Transient setting.
+
 ## Routing an envelope to a destination
 
 All six envelopes are modulation sources. The quickest way to connect one:
@@ -102,6 +111,17 @@ you can assign once you know what needs to move in your patch: LFO rate, oscilla
 [filter morph](/aconite-manual/filters/the-two-filters/), waveshaper depth, or anything else
 the matrix lists.
 :::
+
+## Draw mode and the ADSR knobs
+
+Any envelope can switch to [Draw mode](/aconite-manual/envelopes/drawable/), replacing the
+ADSR shape with a hand-drawn multi-segment contour. The two views stay in sync: edits you
+make in the draw canvas mirror back to the A/D/S/R knobs, and adjusting the knobs reshapes
+the drawn contour to match. You can move between the two representations freely without
+losing your intent.
+
+Each envelope's drawn contour, its sustain marker, and its loop region are stored per scene
+and saved with the preset, so different scenes can carry entirely different drawn shapes.
 
 ## The live playhead
 

@@ -54,9 +54,33 @@ release. At low voice counts this stage is straightforward; at higher polyphony,
 the aliveness controls can vary subtle characteristics between voices here, which
 is part of what makes a chord shimmer rather than sit perfectly still.
 
+Two saturation stages are woven into the filter and voice output path:
+
+- **FB Sat** sits on the feedback loops inside the filter block. It only engages
+  when Filter Feedback is turned up — it softens and colors the edges of
+  self-oscillation and resonant screaming rather than letting the feedback loop
+  clip hard. If you are not using Filter Feedback, FB Sat is transparent.
+- **Global Sat** is an always-on, gentle soft-clip applied to each voice's output
+  after the VCA, before the voices are summed. It is the whole-voice warmth
+  control: a small amount rounds off individual voice peaks and gives the synth a
+  slightly warmer, more analog-feeling top end. The knob for it lives on the filter
+  panel. Global Sat is per-voice — it acts on every voice independently before they
+  combine into the stereo mix.
+
+### 4a. The scene layer
+
+Everything in stages 1–4 describes one voice pool. In **Layer**, **Split**, or
+**Channel** modes, Aconite runs **two parallel voice pools** — two full scenes —
+each going through its own oscillators, filters, amp, and per-voice saturation
+independently. The two pools sum together before they reach the effects rack, so
+the effects always process the combined mix. Each scene can have its own play mode,
+unison, filter settings, and character — they are genuinely independent instruments
+that share one effects chain and one master output.
+
 ### 5. Effects rack
 
-After the per-voice stage, the voices sum to stereo and enter the **effects rack**.
+After the per-voice stage (and after both scenes sum in multi-scene modes), the
+voices merge to stereo and enter the **effects rack**.
 Effects run on the combined mix, not per-voice, which is standard for a
 synthesizer: you shape the individual voices with envelopes and filters, then glue
 and color the full mix with effects. Reverb, chorus, delay, and similar processing
@@ -91,11 +115,14 @@ think in:
 
 1. **Sources** — what waveforms and levels are feeding the chain?
 2. **Mix Drive** — is the pre-filter signal already saturated?
-3. **Filters** — how are they shaped, modeled, and routed?
-4. **Amp envelope** — how does each note behave over time?
-5. **Effects** — what is happening to the stereo mix?
-6. **Master** — is the output stage adding character or headroom?
-7. **Modulation** — what is moving, and by how much?
+3. **Filters** — how are they shaped, modeled, and routed? (FB Sat colours the
+   filter feedback loop if Feedback is up.)
+4. **Amp envelope / per-voice output** — how does each note behave over time?
+   (Global Sat warms each voice's output before it joins the mix.)
+5. **Scene mode** — are two voice pools running in Layer, Split, or Channel mode?
+6. **Effects** — what is happening to the stereo mix?
+7. **Master** — is the output stage adding character or headroom?
+8. **Modulation** — what is moving, and by how much?
 
 Work through those stages in order and you can always find where a sound is coming
 from and where to change it.

@@ -43,8 +43,9 @@ content that sits somewhere between a saw and a sine. It has a bite and an
 asymmetry that the pure classics lack; useful for plucky, percussive tones and
 sounds that need both warmth and edge.
 
-**Sine** is the only base wave without model variants. Everything else can be
-dressed in any of the four model characters below.
+**Sine** is the only base wave without model variants. **Shark's-tooth** supports
+only the **Analog** model — it does not have Unison, Silk, or DCO variants. **Saw**,
+**Square**, and **Triangle** each support all four models.
 
 ### Models
 
@@ -68,6 +69,15 @@ cleaner and more stable than Analog or Silk but not sterile — alive in the way
 Juno-80 or Jupiter-8 is alive. Good for clean leads, arpeggios, and anything
 where you want controlled character without unpredictability.
 
+:::note
+Selecting any model variant — Analog, Unison, Silk, or DCO — disables **pulse
+width modulation**, **hard sync**, **per-sample FM**, and **operator self-FM
+feedback** for that oscillator. Those features work only on the plain, unadorned
+waveform entries (Saw, Square, Triangle, Shark's-tooth). If you need sync or FM
+alongside an analog character, keep the relevant oscillator on its plain waveform
+and layer the modelled version on a different oscillator.
+:::
+
 :::tip
 You can layer all three models on the same base wave across the three oscillators.
 For example: one Silk saw for warmth on Osc 1, one Unison saw for width on Osc 2,
@@ -79,10 +89,11 @@ and one DCO saw for a clean centre on Osc 3 — then blend them to taste in the
 
 **Wavetable** — a morphable set of up to eight frames (sine → triangle → saw →
 square in the factory set). The **Position** control sweeps across the frames, and
-**WT Morph** switches between a smooth crossfade and spectral interpolation (which
-blends the harmonic content rather than the waveform shape). You can load your own
-wavetables via **Load WT**. When you select Wavetable, the Pulse Width controls
-relabel to **Position** and **Pos Mod**, and the same LFO-sweep behaviour applies.
+**WT Morph** switches between **Linear** (crossfade between frames) and **Spectral**
+(spectral interpolation, which blends the harmonic content rather than the waveform
+shape). You can load your own wavetables via **Load WT**. When you select Wavetable,
+the Pulse Width controls relabel to **Position** and **Pos Mod**, and the same
+LFO-sweep behaviour applies.
 
 **String** — a plucked-string physical model. It is struck at note-on and then
 rings and decays like a real string, running through Aconite's filter, amp, and
@@ -93,11 +104,18 @@ the **Hammer** exciter — a velocity-dependent felt-hammer that makes harder no
 intrinsically brighter, just like a piano. Adjust **Pluck Position** for a bridge-y
 nasal quality versus a round, full sound; **Dispersion** adds stiffness and
 inharmonicity from guitar through koto to piano; **Damping** controls how fast the
-highs die; and **Drive** (with **Drive Curve**) runs a waveshaper inside the string
-loop — loud passes fold and grit up, calming as the note decays. The String also
-has a **Poly** mode that mixes in a second polarisation plane for a subtle two-stage
-decay and beating chorus, the single biggest "real vs synthetic" tell. All String
-parameters are [mod-matrix](/aconite-manual/modulation/matrix/) destinations.
+highs die; **Tone** sets pluck hardness from a soft, round fingertip feel to a
+hard pick attack — harder settings are brighter in timbre, not just louder;
+**Decay** sets the overall ring time; and **Drive** (with **Drive Curve**) runs a
+waveshaper inside the string loop — loud passes fold and grit up, calming as the
+note decays. The String also has a **Poly** mode that mixes in a second polarisation
+plane for a subtle two-stage decay and beating chorus, the single biggest "real vs
+synthetic" tell. Playing legato bends the still-ringing string rather than
+re-plucking it, so glides sound like a guitarist sliding their finger up the neck.
+With the **Hammer** exciter, the String becomes a fully playable piano: note-off
+engages a damper, the top of the keyboard rings undamped the way a real piano's
+high strings do, and the sustain pedal holds notes open. All String parameters are
+[mod-matrix](/aconite-manual/modulation/matrix/) destinations.
 
 **Modal** — a bank of tuned resonators struck at note-on. Fourteen instrument
 types are available: Membrane, Timpani, Tabla, Steelpan, Handpan, Marimba,
@@ -121,8 +139,9 @@ continuously.
 
 Each oscillator has three pitch controls that stack:
 
-- **Octave** — shifts by octaves over a wide range. Use this to put two oscillators
-  at different registers.
+- **Octave** — shifts by octaves from −4 to +4. Use this to put two oscillators
+  at very different registers or to stack sub and super-octave layers from a single
+  patch.
 - **Coarse** — up to ±24 semitones. Useful for intervals (a fifth, a third, an
   octave plus a semitone) and for hard-sync sweeping.
 - **Detune** — up to ±50 cents. Small amounts give natural beating between
