@@ -3,6 +3,8 @@ title: Step sequencer
 description: The degree-relative in-key roll, per-step fields, per-note value lanes, curve lanes, and the piano-roll editor.
 ---
 
+![The step sequencer: note roll, value lanes, and curve lane](../../../assets/screenshots/panel-step-seq.png)
+
 The **step sequencer** is a degree-relative, in-key note roll. Each step carries
 its own fields — octave, accent, velocity, slide, tie, ratchet, nudge, chance, and
 conditional triggers — alongside per-note value lanes, four drawable curve lanes,

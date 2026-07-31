@@ -3,6 +3,8 @@ title: Sub oscillator & noise
 description: The sub oscillator's wave and octave, and the noise flavors including tuned noise and sample-and-hold.
 ---
 
+![The sub oscillator panel](../../../assets/screenshots/panel-sub.png)
+
 Under the three main oscillators sit a **sub oscillator** — with its own wave and
 octave for adding weight below the fundamental — and a **noise** source offering
 several flavors, including tuned noise and a sample-and-hold source.
@@ -48,6 +50,8 @@ automatically include the sub content.
 :::
 
 ## Noise
+
+![The noise source panel](../../../assets/screenshots/panel-noise.png)
 
 Aconite's noise source is not a single colour but a menu of seven distinct
 flavours. Each one has a different spectral balance, and some have their own

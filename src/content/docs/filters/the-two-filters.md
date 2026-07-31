@@ -3,6 +3,8 @@ title: The two filters
 description: The seven filter models, cutoff, resonance, drive, mode-morph, voicing, and the character controls.
 ---
 
+![The filter panel with its response graph and compound cutoff knob](../../../assets/screenshots/panel-filter.png)
+
 The filter block is the heart of Aconite's character. Each of its two independent
 filters offers seven models — **Ladder, SVF, Bite, Multimode, Cascade, Diode, and
 Acid** — with Cutoff, Resonance, and Drive, a discrete Mode plus a continuous,

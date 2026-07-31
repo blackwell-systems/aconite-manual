@@ -3,6 +3,8 @@ title: The envelope pool
 description: Six routable envelopes, their voicing models, ADSR plus velocity and curve, and the Cycle and Restart behaviors.
 ---
 
+![The envelope pool](../../../assets/screenshots/panel-env.png)
+
 Aconite gives you a pool of **six routable envelopes**. Two are wired by default — the
 amp envelope controls overall volume, and the filter envelope shapes the cutoff — but all
 six are full, independent envelopes you can route to any destination in the

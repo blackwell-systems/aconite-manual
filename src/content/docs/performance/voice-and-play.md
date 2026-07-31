@@ -3,6 +3,8 @@ title: Voice & play
 description: Polyphony, play modes, note priority, glide, unison, and the analog-character controls.
 ---
 
+![The voice and play controls](../../../assets/screenshots/panel-voice.png)
+
 The voicing section decides how notes become sounding voices: up to 16-voice
 **polyphony**, five **play modes** (Poly / Duo / Mono / Legato / Latch) with note
 priority and glide, **unison** stacking (count / detune / spread), and the

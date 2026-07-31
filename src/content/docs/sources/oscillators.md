@@ -3,6 +3,8 @@ title: Oscillators
 description: The Wave × Model oscillator concept, the models, and per-oscillator tuning, pulse width, and phase.
 ---
 
+![The oscillator panel](../../../assets/screenshots/panel-osc.png)
+
 Aconite gives you three full oscillators, each built on a **Wave × Model** idea:
 you pick a waveform and, independently, a model that decides how that waveform is
 generated. The models span classic analog and virtual-analog, a DCO, wavetable,

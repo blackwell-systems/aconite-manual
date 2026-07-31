@@ -3,6 +3,8 @@ title: Modulators overview
 description: The Modulators panel and its tab strip — LFOs, the step sequencer, the Performer, bus LFOs, and the envelope follower.
 ---
 
+![The Modulators panel](../../../assets/screenshots/panel-mod.png)
+
 A patch is more than a static tone. The thing that separates a living, breathing sound from
 a frozen one is **modulation** — sources that move over time, routed to destinations that
 respond. Aconite's modulation system is built around one idea: anything that generates
