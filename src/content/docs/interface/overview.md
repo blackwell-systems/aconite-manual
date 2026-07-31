@@ -20,8 +20,8 @@ Reading down the window, you move through the instrument:
 - **Sources** — the oscillators, sub, and noise, plus the mixer.
 - **Filter · Modulation · Effects** — the two filters and their routing, the
   modulation system, and the effects rack.
-- **Scope** — the live visualizations.
 - **Master** — the output stage: gain, glue, sag, and metering.
+- **Scope** — the live visualizations, monitoring the master output.
 - **Performance** — voicing and play controls.
 - **Arp · Scale · Step sequencer** — the pattern engine.
 - **Keyboard** — the on-screen keyboard with the pitch and mod wheels.
