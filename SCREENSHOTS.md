@@ -12,6 +12,12 @@ plugin's panels to PNG at a chosen scale. Panels are captured there, in the
 private build, and the finished PNGs are dropped into this repo under
 `src/assets/screenshots/`.
 
+The full set of `panel-*.png` images is regenerated in one command by a capture
+script in the private synth repo (`tools/capture-manual-shots.sh`): it shoots
+every panel in a fixed, representative state and writes the PNGs straight into
+`src/assets/screenshots/` here. After a GUI design change, re-running that script
+and committing the updated PNGs is all it takes to keep the manual current.
+
 ## How to add one to a page
 
 1. Capture the panel in the synth and export the PNG.
