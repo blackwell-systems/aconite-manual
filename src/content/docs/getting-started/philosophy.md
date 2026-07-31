@@ -34,7 +34,7 @@ That is a valid choice. But the character controls are there so a stacked chord
 can shimmer and move instead of sitting perfectly still. When something sounds
 "alive" rather than static, this layer is usually why.
 
-## The honest part: fidelity costs cycles
+## The catch: fidelity costs cycles
 
 Here is the trade-off we are not going to hide from you. Modeling analog behavior
 accurately, especially the in-loop saturation in the Ladder and Diode filters,
