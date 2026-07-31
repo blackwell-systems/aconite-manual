@@ -6,7 +6,7 @@ description: A reference to each of the twelve effects — what it's for, its ke
 ![The drawable waveshaper](../../../assets/screenshots/panel-shaper.png)
 
 Aconite ships **twelve effects**: Chorus (8 models), Phaser, Delay (3 voicings),
-Multi-tap / SuperTap (with per-tap tempo sync), Reverb (Plate / Room / Hall), Tape,
+Multi-tap delay (with per-tap tempo sync), Reverb (Plate / Room / Hall), Tape,
 Distortion (5 modes), Bit-crusher, Compressor (4 topologies), Transient shaper, EQ
 (3 voicings), and Stereo Imager. This chapter covers each one: what it's for, its
 key controls, and its hero visualization.
@@ -17,6 +17,8 @@ send — see [Using the FX rack](/aconite-manual/effects/using-the-rack/).
 ---
 
 ### Chorus
+
+![The Chorus panel](../../../assets/screenshots/panel-fx-chorus.png)
 
 Eight distinct models, each voiced after a specific classic rather than one generic
 engine with a relabelled knob. You pick a model and the controls reorganise to show
@@ -41,6 +43,8 @@ Dim Mode 1–4 (Compact), Sync + Division.
 
 ### Phaser
 
+![The Phaser panel](../../../assets/screenshots/panel-fx-phaser.png)
+
 A cascade of all-pass stages swept by an LFO, summed against the dry signal to
 produce a comb of moving notches. As the LFO sweeps the notch positions, you hear
 the characteristic whooshing sweep — silky at low feedback, sharp and nasal with
@@ -58,6 +62,8 @@ Sync + Division.
 ---
 
 ### Delay
+
+![The Delay panel](../../../assets/screenshots/panel-fx-delay.png)
 
 A stereo delay with smooth, pitch-correct time adjustment and three character
 voicings.
@@ -80,7 +86,9 @@ Tape / BBD), Sync + Division.
 
 ---
 
-### Multi-tap delay (SuperTap)
+### Multi-tap delay
+
+![The Multi-tap delay panel](../../../assets/screenshots/panel-fx-multitap.png)
 
 A rhythmic multi-tap delay that reads up to six independent taps off one delay
 line. Each tap has its own time, level, pan, and three-band EQ, so you can sculpt a
@@ -118,6 +126,8 @@ Time or Sync + Division, Gain, Pan, EQ.
 
 ### Reverb
 
+![The Reverb panel](../../../assets/screenshots/panel-fx-reverb.png)
+
 One reverb with three algorithms, each suited to a different acoustic context.
 
 **Plate** produces a lush, dense, diffuse tail — the kind of reverb most people hear
@@ -139,6 +149,8 @@ Pre-Delay, Tone (Plate), Mod Depth (Room + Hall), Er Level (Hall).
 ---
 
 ### Tape
+
+![The Tape panel](../../../assets/screenshots/panel-fx-tape.png)
 
 Tape saturation and character, with controls that go well beyond a single warmth
 knob. The heart of the effect is the **Engine** switch: **Clean** applies a fitted
@@ -168,6 +180,8 @@ Reproduce EQ (Off / NAB / IEC), Machine profile.
 ---
 
 ### Distortion
+
+![The Distortion panel](../../../assets/screenshots/panel-fx-distortion.png)
 
 A front-and-centre overdrive and distortion unit with five distinct clipping modes.
 Drive pushes the signal into the mode-selected curve; **Tone** tames fizz at the
@@ -203,6 +217,8 @@ Bias, Sag, Output, Mix.
 
 ### Bit-crusher
 
+![The Bit-crusher panel](../../../assets/screenshots/panel-fx-crush.png)
+
 Two independent lo-fi operations that you can engage separately or together.
 
 **Bit-depth reduction** uses a mid-tread quantizer to reduce the word length of the
@@ -226,6 +242,8 @@ too aggressive, so you can keep the crunch without the ice-pick frequencies.
 ---
 
 ### Compressor
+
+![The Compressor panel](../../../assets/screenshots/panel-fx-comp.png)
 
 Four selectable compression modes, each a different circuit topology with its own
 ballistics and colour:
@@ -259,6 +277,8 @@ Release, Knee, Makeup, Auto/Manual makeup, Amount (Grit), Drive (Grit), Tone (Gr
 
 ### Transient shaper
 
+![The Transient shaper panel](../../../assets/screenshots/panel-fx-transient.png)
+
 A threshold-free transient designer that reshapes a sound's dynamic envelope without
 any gain-reduction threshold to set. There are only two controls that matter:
 **Attack** and **Sustain**.
@@ -282,6 +302,8 @@ Output.
 ---
 
 ### Parametric EQ
+
+![The Parametric EQ panel](../../../assets/screenshots/panel-fx-eq.png)
 
 A three-band parametric EQ — low shelf, mid bell, high shelf — plus a single
 **Tilt** knob for a whole-patch brighter/darker sweep. Three voicings change how the
@@ -311,6 +333,8 @@ Side).
 ---
 
 ### Stereo imager
+
+![The Stereo imager panel](../../../assets/screenshots/panel-fx-imaging.png)
 
 Width and image control for the final output — almost always the last slot in the
 chain, shaping the finished mix rather than feeding into further effects.
