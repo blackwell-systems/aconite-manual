@@ -8,7 +8,7 @@ Each band owns one stage of the instrument, so the layout reads roughly in signa
 order: where sound is made at the top, how it is shaped in the middle, and how it
 is performed toward the bottom.
 
-![The Aconite interface, top to bottom: the header, the source row, the shaping and modulation row, the scope, the master strip, the performance row, the pattern engine, and the keyboard.](../../assets/screenshots/interface-overview.png)
+![The Aconite interface, top to bottom: the header, the source row, the shaping and modulation row, the scope, the master strip, the performance row, the pattern engine, and the keyboard.](../../../assets/screenshots/interface-overview.png)
 
 ## The bands, top to bottom
 
