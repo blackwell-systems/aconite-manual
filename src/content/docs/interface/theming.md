@@ -6,7 +6,7 @@ description: Aconite's runtime theme system — the token model, the theme edito
 Aconite is fully themeable at runtime: one shared palette drives every color on
 the face, so recoloring live-recolors the whole instrument. A theme is a small set
 of tokens — neutral **chrome**, a **per-module accent**, and a **master tint** —
-plus a spectral gradient shared by the frequency-aware visualizations. You can
+plus the color rules that drive the frequency and lane visualizations. You can
 **build your own theme from scratch — or edit any of the bundled ones — live in the
 theme editor**, step through around 40 curated themes in the browser, save and load
 your themes as `.labtheme` files to share or collect, and the active theme travels with the
@@ -37,13 +37,26 @@ all the module accents together at once, while keeping them distinct from one
 another. Dragging the Hue slider re-skins every module in one move, giving you a
 completely different mood without losing the per-module contrast.
 
-## The spectral gradient
+## Frequency and lane colors
 
-Each theme also carries a **spectral gradient** — a bass-to-treble color ramp that
-washes the frequency-aware visualizations. This same gradient drives the filter
-response graph, the live scopes, and the mixer lanes, so they always read
-consistently with one another. You can choose between the theme's own colors or a
-fixed visible-spectrum rainbow.
+Two kinds of visualization use color to carry meaning, and each theme controls both.
+
+**Frequency displays** — the filter response graph and the noise spectrum — encode
+pitch as *brightness*. Each theme takes a single hue (drawn from the filter accent)
+and ramps it from deep and saturated at the bass end to bright and pale at the
+treble. Read left to right, lows sit dark and highs glow, so you can see where a
+filter is working at a glance. It is deliberately a single-hue lightness ramp rather
+than a rainbow, so pitch reads as one continuous scale instead of a scatter of
+unrelated colors.
+
+**Lane colors** — the mixer channels and the step sequencer — instead use a palette
+of *distinct* colors, one per lane, so each source keeps its own identifiable color
+no matter where it sits. Here you can choose between the theme's own set of colors
+and a fixed visible-spectrum set, or turn the lane coloring off for a single neutral
+tone.
+
+Both follow the active theme, so the whole face stays visually coherent as you
+recolor.
 
 ## Browsing and switching themes
 
@@ -72,8 +85,8 @@ lets you:
 - Pick any color token from a swatch grid and edit it in a full color picker.
 - Drag the master **Hue / Saturation / Brightness** sliders to shift all module
   accents at once.
-- Toggle the spectral gradient between Rainbow and Themed modes, and enable or
-  disable the mixer-lane coloring.
+- Switch the lane colors between the theme's own palette and a fixed
+  visible-spectrum set, and enable or disable the lane coloring entirely.
 - Preview your changes live — the whole synth recolors as you work, not just a
   small preview card.
 
