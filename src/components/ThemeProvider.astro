@@ -1,0 +1,22 @@
+---
+/*
+ * Override of Starlight's `ThemeProvider`.
+ *
+ * The Aconite manual is dark-mode only. Unlike the stock provider, this one
+ * does NOT read `localStorage` or the OS `prefers-color-scheme`: it forces
+ * `data-theme="dark"` unconditionally, so the site always renders dark
+ * regardless of any prior stored preference or system setting.
+ *
+ * `window.StarlightThemeProvider.updatePickers` is still defined as a no-op so
+ * that any code expecting the global (e.g. an inlined picker script) does not
+ * throw. The theme-select control itself is overridden away separately.
+ */
+---
+
+{/* Intentionally inlined to avoid FOUC. */}
+<script is:inline>
+	document.documentElement.dataset.theme = 'dark';
+	window.StarlightThemeProvider = {
+		updatePickers() {},
+	};
+</script>

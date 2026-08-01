@@ -17,6 +17,13 @@ export default defineConfig({
         'The user manual for Aconite, a filters-forward analog-modeling polysynth by Alkaloid Audio.',
       customCss: ['./src/styles/custom.css'],
       social: [],
+      // Dark-mode only: override the theme components so the header has no
+      // light/dark toggle and the site always renders dark (ignores OS
+      // `prefers-color-scheme` and any stored `starlight-theme`).
+      components: {
+        ThemeSelect: './src/components/ThemeSelect.astro',
+        ThemeProvider: './src/components/ThemeProvider.astro',
+      },
       // Sidebar groups mirror the manual outline's Part structure so the whole
       // manual is browsable end to end.
       sidebar: [
