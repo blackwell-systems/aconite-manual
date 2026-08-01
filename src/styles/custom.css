@@ -79,6 +79,18 @@
   color: var(--aconite-uv-300);
 }
 
+/* Hero primary call-to-action: a dark surface with an accent border (not a filled accent
+   blob). Correct selector is Starlight's .sl-link-button.primary. */
+:root[data-theme='dark'] a.sl-link-button.primary {
+  background: #211b21;
+  border-color: var(--sl-color-text-accent);
+  color: var(--sl-color-white);   /* light text so the label reads on the dark #211b21 fill */
+}
+:root[data-theme='dark'] a.sl-link-button.primary:hover {
+  background: #2b2430;
+  border-color: var(--aconite-uv-400);
+}
+
 /* Hero tagline: soft muted lilac, one restrained pop. */
 .hero .tagline {
   color: var(--sl-color-gray-3);
