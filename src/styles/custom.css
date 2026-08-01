@@ -1,98 +1,104 @@
 /*
  * Aconite manual theme.
  *
- * Evokes the synth's own look: premium, dark, refined, with a single warm
- * amber/orange accent (the master section's gold, pulled toward the default
- * "Steel & Neon-Orange Industrial" signal colour). Kept tasteful and legible:
- * one accent, deep neutral chrome, generous contrast. No neon over-glow.
+ * Matches the synth's default "Ultraviolet" theme: a deep violet-black chrome
+ * with a luminous violet-magenta signal accent and lilac text. The palette
+ * mirrors the plugin's Ultraviolet tokens so the site and the instrument read
+ * as one product. Premium and restrained: the violet-black dominates, with
+ * violet used as ACCENT (links, active nav, focus, headings), not as big fills.
  */
 
 :root {
-  /* Warm amber accent scale (light -> dark). */
-  --aconite-amber-050: #fff4e2;
-  --aconite-amber-100: #ffe3b8;
-  --aconite-amber-200: #ffcf85;
-  --aconite-amber-300: #f6b95a;
-  --aconite-amber-400: #e79a2f;
-  --aconite-amber-500: #cf7d18;
-  --aconite-amber-600: #a5610f;
-  --aconite-amber-700: #7c470b;
-  --aconite-amber-800: #4f2d08;
-  --aconite-amber-900: #2c1904;
+  /* Ultraviolet accent scale (light -> dark). The signature signal colour is
+     the luminous violet-magenta #e02efa; the deeper hover/secondary is
+     #a62bff. */
+  --aconite-uv-050: #f6ddff;
+  --aconite-uv-100: #f0c8ff;
+  --aconite-uv-200: #ec9bff;
+  --aconite-uv-300: #e661fb;
+  --aconite-uv-400: #e02efa; /* signature accent */
+  --aconite-uv-500: #c02cff;
+  --aconite-uv-600: #a62bff; /* deeper violet (secondary/hover) */
+  --aconite-uv-700: #6f1fb0;
+  --aconite-uv-800: #34205c;
+  --aconite-uv-900: #1a0e34;
 }
 
-/* ---- Dark theme (default look) ---- */
+/* ---- Dark theme (the only theme; site is dark-only) ---- */
 :root,
 :root[data-theme='dark'] {
-  /* Accent: warm amber, used for links, active nav, focus rings. */
-  --sl-color-accent-low: #3a2408;
-  --sl-color-accent: var(--aconite-amber-400);
-  --sl-color-accent-high: var(--aconite-amber-200);
+  /* Accent: luminous violet-magenta, used for links, active nav, focus rings. */
+  --sl-color-accent-low: #34205c;
+  --sl-color-accent: var(--aconite-uv-600);
+  --sl-color-accent-high: var(--aconite-uv-300);
 
-  /* Neutral chrome: cool gunmetal, slightly warm at the deepest tone. */
-  --sl-color-white: #f5f1ea;
-  --sl-color-gray-1: #e6e1d8;
-  --sl-color-gray-2: #c4bfb6;
-  --sl-color-gray-3: #948f86;
-  --sl-color-gray-4: #5f5b54;
-  --sl-color-gray-5: #3a3833;
-  --sl-color-gray-6: #262420;
-  --sl-color-black: #17150f;
+  /* Text ramp: lilac heading -> near-white lilac body -> muted lilac. In dark
+     mode Starlight uses white/gray-1..2 for bright text and gray-3..4 for
+     muted, over the deep violet-black surfaces. */
+  --sl-color-white: #edddff;       /* body / brightest */
+  --sl-color-gray-1: #e4d6ff;      /* headings (bright lilac) */
+  --sl-color-gray-2: #d6c4f5;
+  --sl-color-gray-3: #b49fda;      /* muted / secondary text */
+  --sl-color-gray-4: #8f79bd;
+  --sl-color-gray-5: #271642;      /* borders / hairline */
+  --sl-color-gray-6: #140a2a;      /* secondary surface */
+  --sl-color-black: #090414;       /* deepest background */
 
-  /* Surfaces: near-black with a faint warm cast, screen-like. */
-  --sl-color-bg: #131210;
-  --sl-color-bg-nav: #17150f;
-  --sl-color-bg-sidebar: #17150f;
-  --sl-color-bg-inline-code: #262420;
-  --sl-color-hairline: #2f2c26;
-  --sl-color-hairline-light: #3a3833;
+  /* Surfaces: deep violet-black chrome. */
+  --sl-color-bg: #090414;          /* page */
+  --sl-color-bg-nav: #0f0820;      /* primary surface */
+  --sl-color-bg-sidebar: #140a2a;  /* secondary surface */
+  --sl-color-bg-inline-code: #140a2a;
+  --sl-color-hairline: #271642;    /* border / hairline */
+  --sl-color-hairline-light: #34205c; /* lighter outline */
+  --sl-color-hairline-shade: #1a0e34; /* divider */
 
   /* Code blocks. */
-  --astro-code-color-background: #100f0c;
+  --astro-code-color-background: #0f0820;
 }
 
-/* ---- Light theme (inverted look) ---- */
-:root[data-theme='light'] {
-  --sl-color-accent-low: var(--aconite-amber-100);
-  --sl-color-accent: var(--aconite-amber-600);
-  --sl-color-accent-high: var(--aconite-amber-800);
-
-  --sl-color-white: #1c1a15;
-  --sl-color-gray-1: #2b2822;
-  --sl-color-gray-2: #423e37;
-  --sl-color-gray-3: #6c675e;
-  --sl-color-gray-4: #948f86;
-  --sl-color-gray-5: #d3cec4;
-  --sl-color-gray-6: #ece7dd;
-  --sl-color-gray-7: #f5f1ea;
-  --sl-color-black: #ffffff;
-
-  --sl-color-bg: #faf6ee;
-  --sl-color-hairline: #e2ddd2;
-}
-
-/* Site title: a touch of warmth and letter-spacing for a refined wordmark. */
+/* Site title: a touch of letter-spacing for a refined wordmark. */
 .site-title {
   font-weight: 650;
   letter-spacing: 0.02em;
 }
 
-/* Headings lean on the near-white so they sit crisp over the dark bg. */
+/* Headings lean on the bright lilac so they sit crisp over the violet-black. */
 :root[data-theme='dark'] h1,
 :root[data-theme='dark'] h2,
 :root[data-theme='dark'] h3 {
-  color: var(--sl-color-white);
+  color: var(--aconite-uv-050);
 }
 
-/* Give the hero tagline the amber accent for a single tasteful pop. */
+/* Links glow with the signature violet-magenta accent. */
+:root[data-theme='dark'] .sl-markdown-content a,
+:root[data-theme='dark'] a:not(.site-title):not([class*='action']) {
+  color: var(--aconite-uv-400);
+}
+:root[data-theme='dark'] .sl-markdown-content a:hover {
+  color: var(--aconite-uv-300);
+}
+
+/* Hero tagline: soft muted lilac, one restrained pop. */
 .hero .tagline {
-  color: var(--sl-color-gray-2);
+  color: var(--sl-color-gray-3);
 }
 
-/* Blockquote / aside "note" callouts read as screen panels: subtle amber edge. */
+/* Aside / callouts read as screen panels: subtle violet edge. */
 .starlight-aside--note {
-  border-inline-start-color: var(--aconite-amber-400);
+  border-inline-start-color: var(--aconite-uv-600);
 }
 .starlight-aside--tip {
-  border-inline-start-color: var(--aconite-amber-300);
+  border-inline-start-color: var(--aconite-uv-400);
+}
+
+/* Scrollbar thumb tuned to the Ultraviolet chrome. */
+:root[data-theme='dark'] {
+  scrollbar-color: #3a2260 #0f0820;
+}
+:root[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background-color: #3a2260;
+}
+:root[data-theme='dark'] ::-webkit-scrollbar-track {
+  background-color: #0f0820;
 }
