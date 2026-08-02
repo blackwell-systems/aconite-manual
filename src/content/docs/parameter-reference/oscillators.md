@@ -23,6 +23,19 @@ For the full guide see [Oscillators](/aconite-manual/sources/oscillators/).
 | Rand | Per-note random spread of the start phase. | 0 to 100 % |
 | Retrig | Oscillator phase at note-on. Free lets the wave run continuously (looser, more analog); Retrig resets the phase to the same start each note for a tight, punchy transient. | Free / Retrig |
 
+## Lo-fi (vintage-digital)
+
+Behind the per-oscillator **LO-FI** toggle. Offered on the clean-digital engines
+(Sine, Saw, Square, Triangle, Shark's-tooth, and Wavetable); not on the
+analog-modelled, String, Modal, Kick, or Additive oscillators. All three are off
+by default and stack. See [Oscillators](/aconite-manual/sources/oscillators/).
+
+| Control | What it does | Range / values |
+|---------|--------------|----------------|
+| Bits | Bit-depth reduction: quantises the waveform into coarser steps for gritty, crunchy vintage-digital distortion (top is clean). | 16 to 1 (16 = clean) |
+| Crush | Sample-rate reduction: decimates the oscillator for the cold, aliased character of cheap early digital hardware (0 is clean). | 0 to 1 |
+| Alias | Defeats the anti-aliasing so the raw waveform's harmonics fold back as buzzy, inharmonic tones, the naive-digital-oscillator sound (0 is clean). | 0 to 1 |
+
 ## FM and sync
 
 Global controls shared by the oscillators. See [FM and hard sync](/aconite-manual/sources/fm-sync/).

@@ -156,6 +156,50 @@ click centre from dark thud to bright tap, and **Drive** softens or grit-ifies t
 whole body. There is no switch; the six controls cover the whole range
 continuously.
 
+## Lo-fi / vintage-digital character
+
+Where the analog models warm and round the clean waveforms, the lo-fi stage does
+the opposite: it makes them cold, brittle, and unmistakably digital. This is the
+sound of early samplers and cheap hardware, PPG grit, 8- and 12-bit crunch, and
+the raw edge of a chiptune. Every oscillator that offers it starts clean, so the
+lo-fi character is something you dial in deliberately, not a colour you have to
+work around.
+
+The controls live behind a **LO-FI** toggle on the oscillator, one click away so
+they stay out of your way until you want them. Flip it on and you get three knobs:
+
+- **Bits**: bit-depth reduction. At the top it is perfectly clean. Turn it down
+  and the waveform is quantised into progressively coarser steps, adding gritty,
+  crunchy, vintage-digital distortion that gets harsher the lower you go.
+- **Crush**: sample-rate reduction. It decimates the oscillator, holding each
+  sampled value for a moment before it grabs the next, which brings in the cold,
+  aliased character of cheap early digital hardware. A little roughens the tone; a
+  lot turns it harsh and ringing.
+- **Alias**: this defeats the oscillator's built-in anti-aliasing. Normally
+  Aconite keeps the harmonics clean; turn Alias up and the raw waveform's upper
+  harmonics fold back into the audible range as buzzy, inharmonic tones. This is
+  the classic "naive digital oscillator" sound, gritty and slightly detuned in a
+  way that is unmistakably early-digital.
+
+All three are off by default, so a fresh oscillator is clean until you reach for
+them. They stack: a little Bits with a touch of Crush and Alias piles the vintage
+character up fast.
+
+Lo-fi is offered on the clean-digital engines: the plain band-limited waveforms
+(Sine, Saw, Square, Triangle, and Shark's-tooth) and the Wavetable oscillator.
+It is intentionally left off the analog-modelled, physical-model (String, Modal,
+Kick), and Additive oscillators, because crushing voices that already have a
+strong character of their own fights against what makes them distinctive. If you
+want to lo-fi one of those, or the whole patch at once, reach for the bit-crusher
+in the [effects rack](/aconite-manual/effects/effect-by-effect/) instead, which
+processes the full mix rather than a single oscillator.
+
+:::note
+The lo-fi character sounds the same whatever you set the **Quality**
+(oversampling) option to, so you can audition and mix at a lighter quality setting
+and trust that the grit you dialled in will not change when you turn Quality up.
+:::
+
 ## Tuning
 
 Each oscillator has three pitch controls that stack:
