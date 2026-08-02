@@ -112,6 +112,20 @@ export default defineConfig({
           items: [{ label: 'Learn by doing', link: '/tutorials/' }],
         },
         {
+          label: 'Parameter reference',
+          items: [
+            { label: 'Oscillators, sub & noise', link: '/parameter-reference/oscillators/' },
+            { label: 'Filters & waveshaper', link: '/parameter-reference/filters/' },
+            { label: 'Envelopes', link: '/parameter-reference/envelopes/' },
+            { label: 'LFOs & modulators', link: '/parameter-reference/lfos-modulators/' },
+            { label: 'Modulation matrix & macros', link: '/parameter-reference/modulation-matrix/' },
+            { label: 'Effects', link: '/parameter-reference/effects/' },
+            { label: 'Arp & step sequencer', link: '/parameter-reference/arp-sequencer/' },
+            { label: 'Voice, performance & scenes', link: '/parameter-reference/voice-performance/' },
+            { label: 'Master, MPE & scope', link: '/parameter-reference/master/' },
+          ],
+        },
+        {
           label: 'Reference appendices',
           items: [
             { label: 'Parameter list', link: '/reference/parameters/' },
