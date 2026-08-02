@@ -11,7 +11,7 @@ rhythm layer with swing, probability, and Euclidean fill. It has a chord mode wi
 strum, and doubles as a modulation source and a set of modulation destinations.
 
 Hold a chord, press play, and the arp turns it into a rhythmic stream of notes. The defaults are
-simple — up, in time, one octave — so you can reach for depth only when you want it. The step
+simple (up, in time, one octave), so you can reach for depth only when you want it. The step
 sequencer shares this same clock and rhythm engine; see the
 [step sequencer](/aconite-manual/performance/step-sequencer/) for programming a fixed pitch pattern.
 
@@ -34,14 +34,14 @@ becomes a six-step pattern that spans three registers.
 
 **Rate** runs in two modes:
 
-- **Sync** — tempo-locked to your DAW, subdivided by the value you choose (eighth notes, sixteenth notes, dotted values, and so on).
-- **Free** — an absolute speed in steps per second, independent of any clock, so a pattern floats on its own.
+- **Sync**: tempo-locked to your DAW, subdivided by the value you choose (eighth notes, sixteenth notes, dotted values, and so on).
+- **Free**: an absolute speed in steps per second, independent of any clock, so a pattern floats on its own.
 
 **Gate** controls how much of each step the note actually sounds. A short Gate chops notes into
 staccato hits; a full Gate plays each note into the next for a legato feel.
 
 **Latch** is the arp's live-playing trick: engage Latch mode, play a chord, and the arp keeps
-cycling after you lift your fingers. Tap a new root note to shift the whole pattern — useful for
+cycling after you lift your fingers. Tap a new root note to shift the whole pattern: useful for
 bass arps you want to play both hands free.
 
 ## Scale awareness: stay in key
@@ -56,7 +56,7 @@ Give the arp a musical key and it keeps every note legal.
 - **Scale-walk modes** (Scale Up / Scale Down / Scale Up-Down) turn the lowest held note into the
   start of a melodic run through the scale. Hold one key for a scale run; hold a chord to set where
   the walk begins.
-- **Transpose** shifts the whole pattern by scale **degrees**, not raw semitones — a "+2" stays
+- **Transpose** shifts the whole pattern by scale **degrees**, not raw semitones: a "+2" stays
   diatonic wherever you are. Because Transpose is a modulation destination, an LFO or macro can
   sweep it for automatic chord progressions without ever leaving the key.
 
@@ -67,15 +67,15 @@ notes are legal; the interval grid says which intervals to actively build.
 
 Each interval has two switches:
 
-- **Unit** — **Degree** follows the scale, so a "third" is whatever major or minor quality that
-  scale degree produces. **Semitone** is an exact interval, which can step outside the key — pair it
+- **Unit**: **Degree** follows the scale, so a "third" is whatever major or minor quality that
+  scale degree produces. **Semitone** is an exact interval, which can step outside the key; pair it
   with Snap to pull it back.
-- **From** — **Held** stacks the interval on every note in your chord for dense clusters that follow
+- **From**: **Held** stacks the interval on every note in your chord for dense clusters that follow
   the voicing. **Root** stacks on the lowest held note only, so a single key gives a defined voicing
   that transposes cleanly as you move.
 
 One grid covers three jobs at once: stacking octaves (exactly what the Octaves control does), adding
-harmonizer voices above a held chord, and building diatonic triads from a single key — degrees 1, 3,
+harmonizer voices above a held chord, and building diatonic triads from a single key; degrees 1, 3,
 5 From Root give you an arpeggiated in-key triad anywhere you play.
 
 The interval grid applies to the held-note modes. Scale-walk modes and the step sequencer carry
@@ -88,7 +88,7 @@ A shared rhythm layer shapes the timing across every mode:
 - **Swing** delays the off-beat steps for groove.
 - **Probability** sets the per-step chance a step fires; a failed roll leaves a rest, thinning the
   pattern naturally.
-- **Euclidean fill** spreads a set number of hits evenly across a cycle of steps — 3 hits in 8 gives
+- **Euclidean fill** spreads a set number of hits evenly across a cycle of steps: 3 hits in 8 gives
   the tresillo, 5 in 8 gives the cinquillo. Setting the cycle length differently from the pattern
   length produces polymeter.
 
@@ -97,44 +97,44 @@ Probability and Euclidean fill decide *whether* a step sounds; Swing decides *wh
 ## Chord mode and strum
 
 **Chord** flips the arp from one-note-at-a-time to firing the whole note pool together on each
-step — same held notes, interval set, and scale-snap, played as a rhythmic chord stab. The same
+step: same held notes, interval set, and scale-snap, played as a rhythmic chord stab. The same
 clock, gate, swing, probability, and Euclidean fill drive it.
 
 **Strum** spreads those chord notes across time:
 
 - **Time** is the spread amount. In Sync mode it is a fraction of the step, so the strum tightens as
-  you speed up — the way a real strummed chord behaves. In Free mode it is an absolute time in
+  you speed up, the way a real strummed chord behaves. In Free mode it is an absolute time in
   milliseconds. The gate automatically extends to cover a wide strum, so the tail of a slow strum
   is never cut short.
-- **Direction** — Up (low to high), Down (high to low), Up-Down (alternates each step), As Played,
+- **Direction**: Up (low to high), Down (high to low), Up-Down (alternates each step), As Played,
   or Random (a fresh shuffle each step).
 
 Strum Time is a modulation destination, so a slow LFO can breathe the chord wider and tighter over
 time. Chord mode applies to the held-note modes; the step sequencer keeps its own pitch model.
 
 When Chord mode is active, Aconite automatically switches to polyphonic voicing so the full note
-stack rings together — even if the patch was previously set to a mono mode.
+stack rings together, even if the patch was previously set to a mono mode.
 
 ## The arp as a modulator
 
 The arp exposes live data as modulation sources you can route through the
 [modulation matrix](/aconite-manual/modulation/matrix/):
 
-- **Arp Step** — the pattern position, a staircase that advances with the clock. Route it to filter
+- **Arp Step**: the pattern position, a staircase that advances with the clock. Route it to filter
   cutoff for a rhythmic filter sweep that tracks the pattern.
-- **Arp Velocity** — the velocity of the current note, carrying any accents you have set.
-- **Arp Gate** — high while a note sounds, low between notes. Route it to any parameter for a
+- **Arp Velocity**: the velocity of the current note, carrying any accents you have set.
+- **Arp Gate**: high while a note sounds, low between notes. Route it to any parameter for a
   pulsing modulation that breathes with the rhythm.
 
 And the arp takes modulation *in* from the same matrix:
 
-- **Arp Root** — automate the key centre with an LFO to drift the pattern through keys over time.
-- **Arp Transpose** — move the pattern diatonically from another source for programmatic chord
+- **Arp Root**: automate the key centre with an LFO to drift the pattern through keys over time.
+- **Arp Transpose**: move the pattern diatonically from another source for programmatic chord
   progressions.
-- **Arp Strum** — automate strum width for evolving, organic chord attacks.
+- **Arp Strum**: automate strum width for evolving, organic chord attacks.
 
 :::tip
 For a quick expressive patch: set the arp to Up, route **Arp Gate** to filter cutoff, and push
-the filter envelope amount up. Every arp note plucks the filter open, then lets it settle —
+the filter envelope amount up. Every arp note plucks the filter open, then lets it settle:
 a classic two-handed feel from one held chord.
 :::

@@ -3,7 +3,7 @@
 The interface images in this manual (the annotated hero shot, the per-panel
 captures, the signal-flow diagram source frames) are **PNGs exported from the
 running synth**. They are the only artifacts that cross from the build into this
-public repo — no source, no code, no scripts.
+public repo: no source, no code, no scripts.
 
 ## How the images are produced
 

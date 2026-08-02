@@ -1,6 +1,6 @@
 ---
 title: The Aconite philosophy
-description: Why Aconite sounds the way it does — faithful analog character without the vintage limitations, per-voice aliveness, and a Quality control that trades CPU for fidelity.
+description: "Why Aconite sounds the way it does: faithful analog character without the vintage limitations, per-voice aliveness, and a Quality control that trades CPU for fidelity."
 ---
 
 Before you turn a single knob, it helps to know what Aconite is trying to be.
@@ -25,8 +25,8 @@ of redundant knobs.
 
 We believe analog modeling does not have to come at the price of limited
 functionality. We faithfully model many pieces of vintage gear for their spectral
-character — how a particular filter saturates, how a classic circuit compresses
-and colors the signal — but we do not let the technological limitations of the
+character (how a particular filter saturates, how a classic circuit compresses
+and colors the signal) but we do not let the technological limitations of the
 past leak into the present.
 
 The original hardware was often confined to a few voices, a fixed signal path, or
@@ -44,8 +44,8 @@ away from perfect digital precision, the way separate analog voice cards each ha
 their own personality. Turn them up and voices detune slightly from one another,
 drift slowly over time, and vary in cutoff, envelope timing, pulse width, and
 glide. A separate transient control decides whether each note picks up wherever
-the oscillators and filter happen to be — for a punchy, slightly different attack
-every time — or resets them for a clicky, consistent one.
+the oscillators and filter happen to be (for a punchy, slightly different attack
+every time) or resets them for a clicky, consistent one.
 
 At zero, every voice collapses to identical and the synth is clinically precise.
 That is a valid choice. But the character controls are there so a stacked chord
@@ -61,10 +61,10 @@ CPU.
 
 So Aconite gives you a **Quality** control that sets how hard it works:
 
-- **1× (draft)** — no oversampling, the lightest path, for arranging.
-- **2× (live)** — the default, a good balance for playing.
-- **4× (high)** — cleaner high end for exposed, resonant, or driven patches.
-- **8× (offline)** — pristine, for final renders.
+- **1× (draft)**: no oversampling, the lightest path, for arranging.
+- **2× (live)**: the default, a good balance for playing.
+- **4× (high)**: cleaner high end for exposed, resonant, or driven patches.
+- **8× (offline)**: pristine, for final renders.
 
 Only the audio path pays the oversampling cost; your control-rate parameters and
 modulation always run at host rate. And an optional **Auto HQ on bounce** setting

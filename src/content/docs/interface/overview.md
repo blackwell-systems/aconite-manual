@@ -15,16 +15,16 @@ its own band, so you see the controls at a readable size where they are explaine
 
 Reading down the window, you move through the instrument:
 
-- **Header** — the preset browser, A/B compare, theme switcher, MIDI-learn arm,
+- **Header**: the preset browser, A/B compare, theme switcher, MIDI-learn arm,
   the PANIC button, the Options (gear) menu, and the oversampling Quality control.
-- **Sources** — the oscillators, sub, and noise, plus the mixer.
-- **Filter · Modulation · Effects** — the two filters and their routing, the
+- **Sources**: the oscillators, sub, and noise, plus the mixer.
+- **Filter · Modulation · Effects**: the two filters and their routing, the
   modulation system, and the effects rack.
-- **Master** — the output stage: gain, glue, sag, and metering.
-- **Scope** — the live visualizations, monitoring the master output.
-- **Performance** — voicing and play controls.
-- **Arp · Scale · Step sequencer** — the pattern engine.
-- **Keyboard** — the on-screen keyboard with the pitch and mod wheels.
+- **Master**: the output stage: gain, glue, sag, and metering.
+- **Scope**: the live visualizations, monitoring the master output.
+- **Performance**: voicing and play controls.
+- **Arp · Scale · Step sequencer**: the pattern engine.
+- **Keyboard**: the on-screen keyboard with the pitch and mod wheels.
 
 As you work through this manual, each chapter zooms into one band.
 
@@ -33,22 +33,22 @@ As you work through this manual, each chapter zooms into one band.
 Aconite is a deep instrument, but you never have to look at all of it at once. Two
 controls let you carve the window down to exactly what you are working on:
 
-- **Collapse a band.** Every band has a header bar with a triangle — click it to fold
+- **Collapse a band.** Every band has a header bar with a triangle; click it to fold
   the band away and reclaim its height. Minimize the rows you are not touching (say,
   everything but Filter and Modulation while you dial in a tone) and the window shrinks
   around what is left.
-- **Pop a section out.** The deepest editors — the **step sequencer** (its note roll,
-  value lanes, and curve lanes as one unit) and the **scope** — can detach into their
+- **Pop a section out.** The deepest editors, the **step sequencer** (its note roll,
+  value lanes, and curve lanes as one unit) and the **scope**, can detach into their
   own resizable windows. Blow the sequencer up to full size to program a pattern, drag
   it onto a second monitor, and keep playing while it stays open. When a section is
   popped out, its spot in the main window collapses to a slim strip with a **Re-dock**
-  button, so the detached editor leaves no dead space behind — the window stays compact
+  button, so the detached editor leaves no dead space behind; the window stays compact
   around whatever is still docked.
 
 Between the two, the layout is yours: fold everything but the two or three sections you
 need, or float the pattern editor beside a compact main window. The interface also
 scales to whatever width you give it, staying crisp at any size. There is no single
-"correct" layout — you shape it around the task in front of you.
+"correct" layout; you shape it around the task in front of you.
 
 ## Consistency by design
 

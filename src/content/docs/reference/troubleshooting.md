@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting & FAQ
-description: Common questions and fixes — activation, CPU, "why does it sound alive?", and where your files live.
+description: 'Common questions and fixes: activation, CPU, "why does it sound alive?", and where your files live.'
 ---
 
 Answers to the questions that come up most: activation and authorization,
@@ -16,7 +16,7 @@ to try when something is not behaving.
 
 Work through this list:
 
-1. **Is Aconite receiving MIDI?** Play a note — the on-screen keyboard along the
+1. **Is Aconite receiving MIDI?** Play a note; the on-screen keyboard along the
    bottom should light up. If it does not, your DAW's MIDI routing is not
    reaching the plugin. Check the instrument track's MIDI input assignment in your
    host.
@@ -25,7 +25,7 @@ Work through this list:
 3. **Is the preset using a very long attack?** Pads often have attack times of
    several seconds. Hold the note for a few seconds and see if the sound appears.
 4. **Are all voices in use?** If the Voices count is set low and every voice is
-   held, a new note steals the oldest — you might have notes stuck on. Press
+   held, a new note steals the oldest; you might have notes stuck on. Press
    **PANIC** (see below) to clear all state and start fresh.
 5. **Is the filter closed?** On some patches, Cutoff can be swept down to near
    silence. Find the filter Cutoff and drag it up while holding a note.
@@ -83,7 +83,7 @@ Yes, after the initial activation. Aconite does not phone home during normal use
 
 **Q: A certain patch is using a lot of CPU. Is something wrong?**
 
-Not necessarily — it is most likely the Quality setting. Aconite's analog
+Not necessarily; it is most likely the Quality setting. Aconite's analog
 modeling, especially the Ladder and Diode filter modes, uses oversampling to stay
 clean. Higher Quality settings cost more CPU by design, and that expense buys
 audibly better high-end and resonance behavior.
@@ -98,7 +98,7 @@ To reclaim CPU headroom:
   still render at maximum automatically.
 - Reduce the **Voices** count if the patch uses heavy polyphony and you do not
   need it.
-- Disable FX effects you are not using — reverb and multi-tap delay carry the
+- Disable FX effects you are not using: reverb and multi-tap delay carry the
   most cost.
 
 See [The Aconite philosophy](/aconite-manual/getting-started/philosophy/) for a
@@ -108,7 +108,7 @@ fuller explanation of what oversampling is buying.
 
 ## MIDI input not working
 
-**Q: I pressed keys on my controller and nothing happened — Aconite shows no
+**Q: I pressed keys on my controller and nothing happened, Aconite shows no
 activity.**
 
 - Confirm your MIDI controller is connected and recognised by your operating
@@ -119,7 +119,7 @@ activity.**
   the header) and confirm your device is selected as a MIDI input.
 
 If the on-screen keyboard along the bottom of the plugin produces sound but your
-hardware controller does not, the issue is upstream of Aconite — the DAW or
+hardware controller does not, the issue is upstream of Aconite: the DAW or
 system is not routing MIDI to it.
 
 ---
@@ -132,7 +132,7 @@ You need to assign that hardware knob to a parameter using MIDI Learn:
 
 1. Right-click the parameter you want to control.
 2. Choose **MIDI Learn** from the menu.
-3. Move the hardware knob or fader — Aconite catches the first incoming CC and
+3. Move the hardware knob or fader; Aconite catches the first incoming CC and
    binds it.
 
 Once learned, Aconite uses **soft takeover** (pickup mode): the parameter will
@@ -155,8 +155,8 @@ hardware controls as mod-matrix sources.
 **Q: I sent a preset to a friend and it sounds noticeably different on their
 machine. Why?**
 
-MIDI-learn mappings — the assignments between your hardware controllers and
-Aconite's parameters — are **per-machine** and are never saved into preset files.
+MIDI-learn mappings (the assignments between your hardware controllers and
+Aconite's parameters) are **per-machine** and are never saved into preset files.
 This is by design: a preset file carries the sound, not your hardware setup.
 When your friend loads the preset, any parameters you had mapped to hardware
 controllers will simply sit at their saved values, not follow their controllers.
@@ -191,7 +191,7 @@ can drop note-off events, which leaves voices open indefinitely.
 **Q: I play a chord and the individual notes seem to have slightly different
 character. Is Aconite out of tune?**
 
-This is the **analog character layer** — it is working as intended and is a
+This is the **analog character layer**; it is working as intended and is a
 feature, not a bug. Aconite models the personality variation you find in hardware
 synthesizers where each voice card is slightly different: voices can drift
 slightly in pitch, cutoff, envelope timing, pulse width, and glide.
@@ -214,7 +214,7 @@ more on why this layer exists.
 User presets appear under the **User** section in the preset browser menu. Click
 the name button in the header to open the menu and look under User. If your
 preset does not appear there, make sure you clicked **Save** and gave the preset
-a name — stepping away without saving will discard the changes.
+a name; stepping away without saving will discard the changes.
 
 Preset files are stored in your user application data directory. The exact path
 depends on your operating system; see

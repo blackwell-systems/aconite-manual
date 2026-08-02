@@ -6,8 +6,8 @@ description: The seven filter models, cutoff, resonance, drive, mode-morph, voic
 ![The filter panel with its response graph and compound cutoff knob](../../../assets/screenshots/panel-filter.png)
 
 The filter block is the heart of Aconite's character. Each of its two independent
-filters offers seven models — **Ladder, SVF, Bite, Multimode, Cascade, Diode, and
-Acid** — with Cutoff, Resonance, and Drive, a discrete Mode plus a continuous,
+filters offers seven models (**Ladder, SVF, Bite, Multimode, Cascade, Diode, and
+Acid**) with Cutoff, Resonance, and Drive, a discrete Mode plus a continuous,
 modulatable **Morph**, key-tracking, envelope amount, and the **Voicing** (Clean /
 Analog) and **Depth** character controls. These controls interact in deliberate
 ways worth learning; that interaction is what makes the section reward exploration.
@@ -15,7 +15,7 @@ ways worth learning; that interaction is what makes the section reward explorati
 ## The seven models
 
 Every model is available on both filters, and each one has its own heritage and its own
-sonic personality. Choosing a model shapes not just tone but behavior — how resonance
+sonic personality. Choosing a model shapes not just tone but behavior: how resonance
 blooms, how Drive bites, and how hard the filter pushes back.
 
 ### Ladder
@@ -23,13 +23,13 @@ blooms, how Drive bites, and how hard the filter pushes back.
 The classic 4-pole low-pass, in the lineage of the synthesizers that defined what a filter
 could be. A saturator lives inside the resonance loop, so as you push Resonance, instead of
 blowing up into a harsh spike, the peak compresses into a warm, characteristic growl. Near
-maximum Resonance the filter approaches self-oscillation. Rich, vintage, weighty — the
+maximum Resonance the filter approaches self-oscillation. Rich, vintage, weighty, the
 obvious choice for basses, leads, and anything that needs "that" sound.
 
 ### SVF
 
 A clean, versatile state-variable filter producing low-pass, band-pass, high-pass, and notch
-responses. It is the lightest model on CPU and the right choice when you need clarity —
+responses. It is the lightest model on CPU and the right choice when you need clarity:
 bright pads, high-polyphony patches, or a foundation you can build character onto with Drive
 and Feedback. A light input drive adds gentle warmth when you push it, but it never becomes
 aggressive.
@@ -39,7 +39,7 @@ aggressive.
 An aggressive Sallen-Key design in the MS-20 lineage. Its feedback saturator lets the
 resonance scream and grow before a gentle limiter keeps it musical, and it will fully
 self-oscillate at maximum Resonance. This is the model to reach for when you want something
-forward, gnarly, and slightly unpredictable — sharp leads, harsh sweeps, grit-forward sound
+forward, gnarly, and slightly unpredictable: sharp leads, harsh sweeps, grit-forward sound
 design.
 
 ### Multimode
@@ -54,13 +54,13 @@ useful model when you want multi-response capability without sacrificing tonal c
 A cleaner Moog cascade with a continuous **Drive** range that sweeps from Clean (exactly
 linear, no coloration) through to Rough (tames resonance as it distorts). Clean mode is ideal
 for pads and strings that need air without grit. Cascade also offers a slope switch between
-12 dB/oct and 24 dB/oct — use 12 for more open, airy sounds; 24 for thick, closed-down
+12 dB/oct and 24 dB/oct: use 12 for more open, airy sounds; 24 for thick, closed-down
 character.
 
 ### Diode
 
 Modeled in the diode-ladder tradition, with a gentler frequency knee than the Ladder and a
-singing resonance that peaks slightly sharp of the cutoff frequency — a quirk of the
+singing resonance that peaks slightly sharp of the cutoff frequency, a quirk of the
 inter-stage diode coupling that gives it an airy, elastic quality. The passband stays full
 as Resonance rises, so it never sounds thin. Think of this as the neutral acid flavor:
 present and musical without being imposing.
@@ -69,9 +69,9 @@ present and musical without being imposing.
 
 A strict acid-lineage filter with four poles and spread poles for a gentler knee. Its
 resonance sits right on the edge of oscillation, and an internal feedback high-pass
-emphasizes the characteristic squelch cut — a circuit-level detail distinct from the
-front-end HPF — that gives Acid its unique midrange scream. The uncompensated passband means
-resonance literally eats the low end — a feature. The tuning-stable peak stays locked as you
+emphasizes the characteristic squelch cut (a circuit-level detail distinct from the
+front-end HPF) that gives Acid its unique midrange scream. The uncompensated passband means
+resonance literally eats the low end, a feature. The tuning-stable peak stays locked as you
 modulate. When you need the 303-style squelch, start here.
 
 ---
@@ -85,29 +85,29 @@ audible.
 
 ## Mode and Morph
 
-Three models — **SVF**, **Bite**, and **Multimode** — go further than just switching
+Three models (**SVF**, **Bite**, and **Multimode**) go further than just switching
 between responses: they produce a continuous blend between them.
 
 - **SVF** and **Bite** morph across **LP · BP · HP · Notch**.
-- **Multimode** morphs across **LP4 · LP2 · BP · HP · Notch** — that extra LP2 tap gives it
+- **Multimode** morphs across **LP4 · LP2 · BP · HP · Notch**: that extra LP2 tap gives it
   a distinct in-between slope not available on the other morphable models.
 
 The **Mode** selector snaps to a discrete response. The **Morph** control is a signed offset
 from that position that blends continuously between the adjacent modes. Rather than clicking
-between responses, you can sweep through them smoothly — or, more powerfully, route a
+between responses, you can sweep through them smoothly, or, more powerfully, route a
 modulation source to Morph 1 or Morph 2 in the [modulation matrix](/aconite-manual/modulation/matrix/)
 and let an LFO or envelope carry the filter from low-pass through band-pass into high-pass
 inside a single patch.
 
-The Ladder, Cascade, Diode, and Acid models are fixed-mode — they ignore Morph, since their
+The Ladder, Cascade, Diode, and Acid models are fixed-mode: they ignore Morph, since their
 character comes from the specific behavior of one response, not a blend.
 
 ## Cutoff, key-tracking, and envelope amount
 
 **Cutoff** sets the filter's corner frequency across the full audible range. It responds to
-several modulation inputs at once — the filter envelope, LFOs, key-tracking, the Step
+several modulation inputs at once (the filter envelope, LFOs, key-tracking, the Step
 Sequencer, the Performer, and anything else you route through the modulation matrix all sum
-onto it — so a single knob position is really a base value that modulation rides on top of.
+onto it), so a single knob position is really a base value that modulation rides on top of.
 A small per-voice drift also nudges each voice's cutoff slightly from its neighbors, giving
 the filter block an organic, analog aliveness even on sustained chords.
 
@@ -121,12 +121,12 @@ pushes cutoff from its resting position on each note, over a range of ±6 octave
 value opens the filter on attack; a negative value closes it. The amount is also scaled by
 velocity, so playing harder produces a more dramatic sweep without any extra routing. Pair
 with Decay and Sustain to create plucks, stabs, and evolving filter sweeps. Both Env Amt and
-Key Track can be linked to Filter 1 when Filter 2 is running independently, or kept separate
-— see [Routing & configs](/aconite-manual/filters/routing/).
+Key Track can be linked to Filter 1 when Filter 2 is running independently, or kept separate.
+See [Routing & configs](/aconite-manual/filters/routing/).
 
 ## Resonance and Drive
 
-**Resonance** sets the Q — the emphasis at the cutoff frequency. Every model approaches
+**Resonance** sets the Q, the emphasis at the cutoff frequency. Every model approaches
 self-oscillation near maximum, bounded so it stays musical rather than blowing up. The exact
 character of that peak varies by model: sharp and squelchy on SVF, compressed and growly on
 Ladder, on-the-edge on Acid.
@@ -134,18 +134,18 @@ Ladder, on-the-edge on Acid.
 **Drive** is input gain into the filter's nonlinearity, and what "Drive" means is
 model-specific:
 
-- On **Ladder, Bite, Diode, and Acid** — pre-gain into the in-loop saturator, adding
+- On **Ladder, Bite, Diode, and Acid**: pre-gain into the in-loop saturator, adding
   harmonic saturation and compressing the resonance peak under heavy gain.
-- On **Multimode** — input saturation only, keeping the filter responses clean.
-- On **Cascade** — the blend between Clean (linear) and Rough (tames resonance as it distorts).
-- On **SVF** — a light input soft-drive for gentle warmth.
+- On **Multimode**: input saturation only, keeping the filter responses clean.
+- On **Cascade**: the blend between Clean (linear) and Rough (tames resonance as it distorts).
+- On **SVF**: a light input soft-drive for gentle warmth.
 
 Both Resonance and Drive are modulation matrix destinations.
 
 ## Voicing and Depth
 
 **Voicing** and **Depth** are available on the **Ladder** and **Diode** models (and apply
-to both when you're running them together) — acting inside the filter's saturation character,
+to both when you're running them together), acting inside the filter's saturation character,
 a good example of the kind of control that sounds redundant until you hear it.
 
 **Voicing** switches between **Clean** and **Analog** internal saturation paths. Despite the
@@ -155,17 +155,17 @@ resonance the way real hardware does, adding body and grit as you push Drive. Th
 Voicing as a resonance-character control first, and a distortion-character control second.
 
 **Depth** sets the amount of the Analog path's internal clipping. Under Clean voicing it
-does nothing. Under Analog, turning Depth up increases the grit and compression — useful for
+does nothing. Under Analog, turning Depth up increases the grit and compression, useful for
 matching the feel of particular hardware or finding a middle ground between singing and
 saturated.
 
 Both filters carry their own Voicing, Drive, and Depth, so you can pair a screaming Clean
-Filter 1 against a composed Analog Filter 2 — or any other combination that suits the
+Filter 1 against a composed Analog Filter 2, or any other combination that suits the
 sound you are after.
 
 ## Global Sat
 
-**Global Sat** is a soft-clip on the voice output — always audible, always active — whose
+**Global Sat** is a soft-clip on the voice output (always audible, always active) whose
 knob sits on the filter panel next to FB Sat. Where FB Sat only works when a filter Feedback
 loop is engaged, Global Sat adds gentle warmth to the voice regardless of patch or filter
 model. Use it to take the slight digital edge off an otherwise clean voice, or to give a
@@ -180,13 +180,13 @@ These are the behaviors worth knowing before you start exploring:
 - **Clean voicing is the screamier one.** It has the sharper, more squelchy peak. Analog
   tames it. If resonance sounds too polite, try Clean.
 - **Feedback and Resonance are antagonistic at high Q.** Cranking Feedback while Resonance
-  is high does not add more scream — it collapses the sharp peak into a broader growl below
+  is high does not add more scream; it collapses the sharp peak into a broader growl below
   cutoff. Feedback is a "growl / tame the scream" color, not extra resonance. See
   [Feedback & FB Sat](/aconite-manual/filters/feedback/) for the full picture.
 - **Depth only acts under Analog voicing.** Under Clean, it is silent.
 - **Morph does nothing on fixed-mode models.** Save it for SVF, Bite, and Multimode.
 - **Global Sat is always audible; FB Sat is not.** If you want whole-voice warmth regardless
-  of patch, reach for Global Sat. FB Sat only colors the feedback loops — with Feedback at
+  of patch, reach for Global Sat. FB Sat only colors the feedback loops; with Feedback at
   zero it has nothing to act on.
 
 The filter section is designed to reward that kind of systematic exploration. Each control

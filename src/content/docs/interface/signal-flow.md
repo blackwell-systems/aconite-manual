@@ -1,6 +1,6 @@
 ---
 title: Signal flow
-description: The mental model — oscillators through mixer, filters, amp, effects, and master, with modulation over the top.
+description: "The mental model: oscillators through mixer, filters, amp, effects, and master, with modulation over the top."
 ---
 
 Everything in Aconite fits one signal path: the oscillators (plus sub and noise)
@@ -24,7 +24,7 @@ The Sources section is covered in detail in the Sources chapters.
 ### 2. Mixer and Mix Drive
 
 The individual source levels combine in the **mixer**, which also hosts a **Mix
-Drive** control. Mix Drive adds saturation into the mix bus — before the filters —
+Drive** control. Mix Drive adds saturation into the mix bus (before the filters),
 so it affects all sources at once. A little Mix Drive adds body and glues the
 oscillators together; a lot pushes the signal into audible harmonic density before
 a single filter parameter is touched.
@@ -38,7 +38,7 @@ filter topology itself. They are different tools with different characters.
 The mixed and driven signal passes into the **filter block**. Aconite has two
 independent filters, each with its own model, cutoff, resonance, and routing. The
 two filters can run in series (one feeding the other), in parallel (mixing their
-outputs), or with more complex topologies — the routing controls are in the filter
+outputs), or with more complex topologies; the routing controls are in the filter
 section itself.
 
 The filter is the heart of the instrument. Its cutoff, resonance, drive, voicing,
@@ -48,7 +48,7 @@ interact with one another. That depth is covered in
 
 ### 4. Per-voice output (amp and VCA)
 
-After the filters, each voice passes through its own **amplitude envelope** — the
+After the filters, each voice passes through its own **amplitude envelope**, the
 VCA stage that controls how loud a note is over time, from its attack through its
 release. At low voice counts this stage is straightforward; at higher polyphony,
 the aliveness controls can vary subtle characteristics between voices here, which
@@ -57,24 +57,24 @@ is part of what makes a chord shimmer rather than sit perfectly still.
 Two saturation stages are woven into the filter and voice output path:
 
 - **FB Sat** sits on the feedback loops inside the filter block. It only engages
-  when Filter Feedback is turned up — it softens and colors the edges of
+  when Filter Feedback is turned up; it softens and colors the edges of
   self-oscillation and resonant screaming rather than letting the feedback loop
   clip hard. If you are not using Filter Feedback, FB Sat is transparent.
 - **Global Sat** is an always-on, gentle soft-clip applied to each voice's output
   after the VCA, before the voices are summed. It is the whole-voice warmth
   control: a small amount rounds off individual voice peaks and gives the synth a
   slightly warmer, more analog-feeling top end. The knob for it lives on the filter
-  panel. Global Sat is per-voice — it acts on every voice independently before they
+  panel. Global Sat is per-voice; it acts on every voice independently before they
   combine into the stereo mix.
 
 ### 4a. The scene layer
 
 Everything in stages 1–4 describes one voice pool. In **Layer**, **Split**, or
-**Channel** modes, Aconite runs **two parallel voice pools** — two full scenes —
+**Channel** modes, Aconite runs **two parallel voice pools** (two full scenes),
 each going through its own oscillators, filters, amp, and per-voice saturation
 independently. The two pools sum together before they reach the effects rack, so
 the effects always process the combined mix. Each scene can have its own play mode,
-unison, filter settings, and character — they are genuinely independent instruments
+unison, filter settings, and character; they are genuinely independent instruments
 that share one effects chain and one master output.
 
 ### 5. Effects rack
@@ -98,7 +98,7 @@ The master stage is covered in [Master band](/aconite-manual/master/master-band/
 
 ## Modulation flows sideways
 
-**Modulation** is not a series stage — it is a parallel layer that runs alongside
+**Modulation** is not a series stage; it is a parallel layer that runs alongside
 the whole signal path and can reach almost any control. Envelopes, LFOs, velocity,
 the mod wheel, aftertouch, and more can each be routed to any knob, with
 individual depths. Modulation does not change the signal directly; it moves the
@@ -113,16 +113,16 @@ The full modulation system is covered in
 When you are troubleshooting a sound or planning a patch, this is the order to
 think in:
 
-1. **Sources** — what waveforms and levels are feeding the chain?
-2. **Mix Drive** — is the pre-filter signal already saturated?
-3. **Filters** — how are they shaped, modeled, and routed? (FB Sat colours the
+1. **Sources**: what waveforms and levels are feeding the chain?
+2. **Mix Drive**: is the pre-filter signal already saturated?
+3. **Filters**: how are they shaped, modeled, and routed? (FB Sat colours the
    filter feedback loop if Feedback is up.)
-4. **Amp envelope / per-voice output** — how does each note behave over time?
+4. **Amp envelope / per-voice output**: how does each note behave over time?
    (Global Sat warms each voice's output before it joins the mix.)
-5. **Scene mode** — are two voice pools running in Layer, Split, or Channel mode?
-6. **Effects** — what is happening to the stereo mix?
-7. **Master** — is the output stage adding character or headroom?
-8. **Modulation** — what is moving, and by how much?
+5. **Scene mode**: are two voice pools running in Layer, Split, or Channel mode?
+6. **Effects**: what is happening to the stereo mix?
+7. **Master**: is the output stage adding character or headroom?
+8. **Modulation**: what is moving, and by how much?
 
 Work through those stages in order and you can always find where a sound is coming
 from and where to change it.

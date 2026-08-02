@@ -64,8 +64,8 @@ The standard bend range is ±2 semitones; in MPE mode, per-note bend range is
 set separately (see below).
 
 The **mod wheel** (MIDI CC 1) is a modulation matrix source, labelled **Mod
-Wheel** in the source list. Route it to any destination — filter cutoff, LFO
-rate, vibrato depth, or anything else — by adding a matrix slot with Mod Wheel
+Wheel** in the source list. Route it to any destination (filter cutoff, LFO
+rate, vibrato depth, or anything else) by adding a matrix slot with Mod Wheel
 as the source. It arrives pre-assigned to nothing by default, so it only acts
 once you route it.
 
@@ -95,7 +95,7 @@ messages independently.
 
 | MPE source | What it carries | Matrix label |
 |-----------|----------------|--------------|
-| Per-note pitch bend | Continuous pitch per note | — (wired to voice pitch) |
+| Per-note pitch bend | Continuous pitch per note | - (wired to voice pitch) |
 | Pressure | Channel aftertouch per note | MPE Press |
 | Slide | Per-note Y-axis position (typically CC 74) | MPE Slide |
 

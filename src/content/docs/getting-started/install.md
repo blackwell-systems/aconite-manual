@@ -8,9 +8,9 @@ needs; there is no harm in installing all of them.
 
 ## Formats
 
-- **VST3** — for most DAWs on macOS and Windows.
-- **AU (Audio Unit)** — for Logic Pro, GarageBand, and other AU hosts on macOS.
-- **Standalone** — a self-contained app that runs without a DAW, for practicing,
+- **VST3**: for most DAWs on macOS and Windows.
+- **AU (Audio Unit)**: for Logic Pro, GarageBand, and other AU hosts on macOS.
+- **Standalone**: a self-contained app that runs without a DAW, for practicing,
   sound design, or live use.
 
 ## Platforms
@@ -23,7 +23,7 @@ Aconite runs on **macOS** and **Windows**.
 2. Run it and choose which formats to install.
 3. Launch your DAW. If it caches its plugin list, rescan so Aconite appears. In
    Logic, AU validation runs the first time you launch after installing.
-4. To confirm the install worked, open the **Standalone** app — it does not depend
+4. To confirm the install worked, open the **Standalone** app; it does not depend
    on a host, so it is the quickest way to verify the synth runs.
 
 ## Updating

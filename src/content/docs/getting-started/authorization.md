@@ -1,6 +1,6 @@
 ---
 title: Authorization
-description: Aconite's offline keyfile authorization — what's gated, what never is, and how to activate.
+description: "Aconite's offline keyfile authorization: what's gated, what never is, and how to activate."
 ---
 
 Aconite uses a simple, offline authorization. There is no always-on connection,
@@ -10,7 +10,7 @@ no login required at play time, and no phoning home while you work.
 
 The most important thing to know: **playing Aconite is never gated.** An
 unauthorized instance still makes sound. You can load a project, hear every patch,
-and perform with it. Authorization only unlocks **authoring** — saving your own
+and perform with it. Authorization only unlocks **authoring**: saving your own
 work. Your music and your sessions are never held hostage.
 
 ## The offline keyfile

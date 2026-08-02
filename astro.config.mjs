@@ -12,7 +12,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Aconite',
-      tagline: 'The analog-modeling polysynth — user manual',
+      tagline: 'The analog-modeling polysynth: user manual',
       description:
         'The user manual for Aconite, a filters-forward analog-modeling polysynth by Alkaloid Audio.',
       customCss: ['./src/styles/custom.css'],
@@ -34,7 +34,7 @@ export default defineConfig({
             { label: 'The Aconite philosophy', link: '/getting-started/philosophy/' },
             { label: 'Install & formats', link: '/getting-started/install/' },
             { label: 'Authorization', link: '/getting-started/authorization/' },
-            { label: 'Quick start — your first sound', link: '/getting-started/quick-start/' },
+            { label: 'Quick start: your first sound', link: '/getting-started/quick-start/' },
           ],
         },
         {
@@ -51,6 +51,7 @@ export default defineConfig({
           label: 'Sound sources',
           items: [
             { label: 'Oscillators', link: '/sources/oscillators/' },
+            { label: 'Additive oscillator', link: '/sources/additive/' },
             { label: 'FM & hard sync', link: '/sources/fm-sync/' },
             { label: 'Sub oscillator & noise', link: '/sources/sub-noise/' },
             { label: 'Mixer & Mix Drive', link: '/sources/mixer/' },

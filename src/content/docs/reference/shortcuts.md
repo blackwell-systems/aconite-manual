@@ -11,7 +11,7 @@ Cmd** while dragging for fine control.
 
 ## Knob and slider interactions
 
-These gestures apply to every knob and slider in the interface — filter Cutoff,
+These gestures apply to every knob and slider in the interface: filter Cutoff,
 envelope times, LFO rates, FX mix levels, and all others.
 
 | Gesture | What it does |
@@ -21,7 +21,7 @@ envelope times, LFO rates, FX mix levels, and all others.
 | **Cmd + drag** (macOS) / **Ctrl + drag** (Windows) | Fine control, same as Shift. |
 | **Double-click** | Reset to the default value. |
 | **Scroll wheel** | Nudge the value up or down. |
-| **Right-click** | Open the context menu — Modulate, MIDI Learn, reset, and copy/paste options (see below). |
+| **Right-click** | Open the context menu: Modulate, MIDI Learn, reset, and copy/paste options (see below). |
 
 :::tip
 Shift + drag is the fastest route to an exact value. Once you have roughly
@@ -36,11 +36,11 @@ Right-clicking any knob opens a menu with several options:
 
 | Option | What it does |
 |--------|--------------|
-| **Modulate ▸** | Lists all routes currently targeting this knob — each with its depth and a remove button — above an **Add modulation ▸** submenu of every available source (LFOs, envelopes, velocity, macros, MIDI CC…). Pick a source to add a new route. |
+| **Modulate ▸** | Lists all routes currently targeting this knob (each with its depth and a remove button) above an **Add modulation ▸** submenu of every available source (LFOs, envelopes, velocity, macros, MIDI CC…). Pick a source to add a new route. |
 | **MIDI Learn** | Arms MIDI learn for this parameter. Move a hardware knob or fader; Aconite catches the first CC and binds it. |
 | **Forget MIDI mapping** | Removes the hardware CC assignment from this parameter (appears only when a mapping exists). |
 | **Set value…** | Opens a text entry to type an exact value. |
-| **Reset to default** | Resets to the default value — same as double-clicking. |
+| **Reset to default** | Resets to the default value, same as double-clicking. |
 | **Copy value** | Copies the current value to the clipboard. |
 | **Paste value** | Pastes a copied value onto this knob. |
 
@@ -67,7 +67,7 @@ A one-octave on-screen keyboard runs along the bottom of the plugin window.
 | **Drag horizontally while held** | Slide to adjacent notes (useful for testing filter sweeps continuously). |
 
 The keyboard is a convenience for quick testing without a connected controller. It
-does not transmit velocity — notes play at a fixed medium velocity.
+does not transmit velocity: notes play at a fixed medium velocity.
 
 ---
 
@@ -104,7 +104,7 @@ These apply anywhere in the Aconite window:
 |--------|--------------|
 | **Right-click a knob → MIDI Learn** | Arm learn mode; move a hardware control to bind it. |
 | **Right-click a knob → Forget MIDI mapping** | Remove the hardware binding from that parameter. |
-| **MIDI button (header)** | Open the MIDI map manager — a table of all CC→parameter bindings plus 8 learnable CC matrix source slots. Edit, reassign, or clear mappings from one place. |
+| **MIDI button (header)** | Open the MIDI map manager: a table of all CC→parameter bindings plus 8 learnable CC matrix source slots. Edit, reassign, or clear mappings from one place. |
 
 Once learned, hardware controls use **soft takeover**: the parameter does not
 jump when you grab the hardware control. It starts following only once the
@@ -120,7 +120,7 @@ persist across sessions for the same machine and instance.
 
 On compound knobs (the concentric ring controls in the oscillator and modulation
 sections), each ring responds independently to all the gestures above. Right-click
-the ring you want to modulate or learn — Aconite identifies which ring the cursor
+the ring you want to modulate or learn; Aconite identifies which ring the cursor
 is over and opens the correct menu for that parameter.
 
 :::note

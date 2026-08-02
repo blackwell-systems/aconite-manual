@@ -1,12 +1,12 @@
 ---
 title: Modulators overview
-description: The Modulators panel and its tab strip — LFOs, the step sequencer, the Performer, bus LFOs, and the envelope follower.
+description: "The Modulators panel and its tab strip: LFOs, the step sequencer, the Performer, bus LFOs, and the envelope follower."
 ---
 
 ![The Modulators panel](../../../assets/screenshots/panel-mod.png)
 
 A patch is more than a static tone. The thing that separates a living, breathing sound from
-a frozen one is **modulation** — sources that move over time, routed to destinations that
+a frozen one is **modulation**: sources that move over time, routed to destinations that
 respond. Aconite's modulation system is built around one idea: anything that generates
 movement can be pointed at anything that accepts it.
 
@@ -16,36 +16,36 @@ The modulation system has three parts:
 
 **Sources** generate values that change over time. Aconite has more than forty of them:
 
-- The [envelope pool](/aconite-manual/envelopes/pool/) — six ADSR envelopes, each also
+- The [envelope pool](/aconite-manual/envelopes/pool/): six ADSR envelopes, each also
   available in [drawn contour](/aconite-manual/envelopes/drawable/) form. Note-triggered,
   note-released.
-- The [LFOs](/aconite-manual/modulation/lfos/) — six drawable, tempo-syncable oscillators
+- The [LFOs](/aconite-manual/modulation/lfos/): six drawable, tempo-syncable oscillators
   that run freely or retrigger on each note.
-- The [envelope follower](/aconite-manual/modulation/env-follower/) — a source that tracks
+- The [envelope follower](/aconite-manual/modulation/env-follower/): a source that tracks
   the signal's own level and turns dynamics into modulation.
-- The **step sequencer** and the **Performer** — pattern generators with their own clocks,
+- The **step sequencer** and the **Performer**: pattern generators with their own clocks,
   described in detail below.
-- **Curve 1–4** — four drawable, pattern-synced automation lanes that loop a hand-drawn
+- **Curve 1–4**: four drawable, pattern-synced automation lanes that loop a hand-drawn
   shape against the transport, independent of note events.
-- **Noise** — an audio-rate random signal for thick, dense modulation: FM grit, PWM flutter,
-  and cutoff textures that no LFO shape can produce.
-- **Performance controls** — velocity, key position (keytrack), pitch and mod wheels, MPE
+- **Noise**: an audio-rate random signal for thick, dense modulation, such as FM grit, PWM
+  flutter, and cutoff textures that no LFO shape can produce.
+- **Performance controls**: velocity, key position (keytrack), pitch and mod wheels, MPE
   pressure and slide, four macro knobs, and eight learnable MIDI CC inputs.
-- **Arp lanes** — the arpeggiator exposes its step position, velocity accent, and gate as
+- **Arp lanes**: the arpeggiator exposes its step position, velocity accent, and gate as
   sources, so the arp can modulate anything it touches.
 
 **Destinations** are the controls that respond to modulation. The [modulation
-matrix](/aconite-manual/modulation/matrix/) lists seventy-six of them across every section:
+matrix](/aconite-manual/modulation/matrix/) lists dozens of them across every section:
 oscillator pitch and level, filter cutoff, resonance, drive and morph, envelope times,
 LFO rates, waveshaper parameters, pan, and more.
 
-**The matrix** is where sources meet destinations. Each of the eight slots in the per-voice
+**The matrix** is where sources meet destinations. Each of the 24 slots in the
 matrix takes a source, a destination, an optional transform, and a depth amount. The
 [matrix chapter](/aconite-manual/modulation/matrix/) covers this in full.
 
 ## The Modulators panel
 
-The **Modulators** panel holds Aconite's standalone generators — the sources that exist
+The **Modulators** panel holds Aconite's standalone generators, the sources that exist
 on their own clock, independent of note events. A scrolling **tab strip** across the top
 selects one at a time:
 
@@ -58,7 +58,7 @@ selects one at a time:
 | Env Follow | The envelope follower |
 
 Each tab shows that source's editor and controls. Setting a source up here is separate from
-routing it — you shape the LFO, draw the step levels, or set the follower's attack time,
+routing it: you shape the LFO, draw the step levels, or set the follower's attack time,
 then wire it to a destination in the [matrix](/aconite-manual/modulation/matrix/) or through
 a right-click on any knob.
 
@@ -79,10 +79,10 @@ in the patch at once.
 
 Aconite's modulation splits into two tiers:
 
-- **Per-voice modulation** — each note carries its own copy of every envelope, LFO, and
+- **Per-voice modulation**: each note carries its own copy of every envelope, LFO, and
   follower. One note's filter envelope does not interfere with another's. This is what
   makes a legato chord shimmer rather than collapse into a single moving curve.
-- **Bus modulation** — a second set of two LFOs and eight routing slots runs once for
+- **Bus modulation**: a second set of two LFOs and eight routing slots runs once for
   the whole mix, modulating the [effects rack](/aconite-manual/effects/using-the-rack/)
   and master output. A macro can breathe the reverb size, a bus LFO can auto-pan the
   whole output, or a drawn curve lane can automate the EQ tilt across a section.
@@ -94,19 +94,19 @@ destination routes per-voice. The scope badge in each row tells you which is act
 ## The step sequencer
 
 The step sequencer advances through a grid of levels one step at a time, clocked by its own
-rate. You draw the step levels in the shape editor — the same editor used by the LFOs — and
+rate. You draw the step levels in the shape editor (the same editor used by the LFOs) and
 the sequencer reads them in order.
 
-- **Direction** — choose how the playhead moves through the steps: **Forward** (left to
+- **Direction**: choose how the playhead moves through the steps, either **Forward** (left to
   right), **Reverse** (right to left), **Ping-Pong** (forward then backward, alternating),
   or **Random** (picks an unpredictable step each clock tick).
-- **Per-step Glide** — mark individual steps as glided. A glided step slides toward its
+- **Per-step Glide**: mark individual steps as glided. A glided step slides toward its
   level over its full duration rather than jumping immediately, smoothing the transition
   from the previous value. Non-glided steps jump cleanly.
-- **Transport lock** — when the step sequencer is synced to tempo, Transport lock aligns
+- **Transport lock**: when the step sequencer is synced to tempo, Transport lock aligns
   the playhead to the bar. Instead of free-running from note-on, the sequence locks to song
   position, so every pass starts at the same point in the bar.
-- **Rate** — one full pass through all steps per cycle, in free Hz or locked to a tempo
+- **Rate**: one full pass through all steps per cycle, in free Hz or locked to a tempo
   division.
 
 Route the step sequencer from the [modulation matrix](/aconite-manual/modulation/matrix/)
@@ -127,12 +127,12 @@ The shape for each step is chosen from a per-step curve library:
 | **Rise** | Starts low, rises to the step level |
 | **Pulse** | A rectangular pulse mid-step |
 | **Sine** | A full sine arc over the step |
-| **Flat** | Holds the step level — equivalent to the step sequencer |
+| **Flat** | Holds the step level (equivalent to the step sequencer) |
 
 Beyond the curve shape, each step has:
 
-- **Level** — scales how high that step's curve reaches.
-- **XFade** — ramps from the previous step's ending value into the start of the current
+- **Level**: scales how high that step's curve reaches.
+- **XFade**: ramps from the previous step's ending value into the start of the current
   curve, smoothing the transition instead of jumping to the new shape abruptly.
 
 The Performer runs at the same Rate/Sync controls as the step sequencer and routes through

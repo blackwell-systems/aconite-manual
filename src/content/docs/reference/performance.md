@@ -1,6 +1,6 @@
 ---
 title: Performance & CPU
-description: An honest guide to CPU cost — oversampling Quality tiers, Auto-HQ on bounce, voice count, and what's expensive.
+description: "An honest guide to CPU cost: oversampling Quality tiers, Auto-HQ on bounce, voice count, and what's expensive."
 ---
 
 Aconite trades CPU for fidelity deliberately. This page explains what costs the
@@ -16,7 +16,7 @@ these tradeoffs exist.
 
 The **Quality** control in the Master band sets the internal oversampling rate.
 Higher settings run the audio engine at a multiple of your project sample rate,
-then filter it back down — which removes aliasing from hard sync, FM,
+then filter it back down, which removes aliasing from hard sync, FM,
 waveshaping, and the nonlinear filters, at the cost of proportionally more CPU.
 
 | Setting | Oversampling | When to use |
@@ -45,7 +45,7 @@ setting.
   live setting. Monitor at 1× or 2× to keep CPU low; render pristine.
 
 The tradeoff: with Auto-HQ on, the rendered file may sound subtly different from
-what you heard live — the higher-quality decimation removes a small amount of
+what you heard live: the higher-quality decimation removes a small amount of
 high-frequency character that was audible at lower settings. For most material
 this difference is inaudible; for patches built around the sound of aliasing
 (intentional lo-fi) you may prefer to leave it off.
@@ -76,18 +76,18 @@ Factors that increase voice count:
 
 Ordered roughly by impact:
 
-1. **Quality setting** — the single biggest lever. 8× costs roughly eight times
+1. **Quality setting**: the single biggest lever. 8× costs roughly eight times
    as much audio-path CPU as 1×.
-2. **Unison** — stacking eight voices per note at high polyphony is the heaviest
+2. **Unison**: stacking eight voices per note at high polyphony is the heaviest
    voice configuration.
-3. **Voice count** — more concurrent voices, more CPU. High polyphony with long
+3. **Voice count**: more concurrent voices, more CPU. High polyphony with long
    releases keeps voices alive longer.
-4. **Filter model** — heavier models (Ladder, Diode, Bite, Acid) include
+4. **Filter model**: heavier models (Ladder, Diode, Bite, Acid) include
    in-loop saturation that costs more than the clean SVF or Cascade models.
-5. **Active effects** — each enabled effect in the FX bus adds processing.
+5. **Active effects**: each enabled effect in the FX bus adds processing.
    Reverb, multi-tap delay, and the EQ with spectrum analysis active are the
    heaviest. Effects that are disabled (bypass dot off) cost nothing.
-6. **Scene mode Layer** — running both scenes simultaneously doubles most of
+6. **Scene mode Layer**: running both scenes simultaneously doubles most of
    the voice-path cost.
 
 ---

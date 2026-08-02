@@ -181,7 +181,7 @@ See [the waveshaper section](/aconite-manual/effects/effect-by-effect/) for the 
 | Drive | How hard the signal hits the curve | 0–100 % |
 | Mix | Dry/wet blend | 0–100 % |
 | Trim | Input level ahead of the curve | 0–100 % |
-| Bias | Asymmetry amount (Asym curve only) | — |
+| Bias | Asymmetry amount (Asym curve only) | 0–100 % |
 
 ---
 
