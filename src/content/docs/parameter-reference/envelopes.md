@@ -23,7 +23,7 @@ envelope shares the control set below. See
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
-| Model | Envelope circuit model. ADS is a clean digital shape; the others emulate the attack and decay curvatures and sag of classic hardware. | ADS / Analogue / Digital / Vintage / Classic |
+| Model | Envelope voicing: sets the attack, decay, and release curve shapes. ADS is a punchy exponential whose release reuses the decay time; Analogue a rounded RC-style exponential; Digital near-linear and precise; Vintage a linear attack into an exponential decay and release; Classic an exponential attack into a linear decay and release. | ADS / Analogue / Digital / Vintage / Classic |
 | Velocity | How much playing velocity scales the envelope output. | 0 to 100 % |
 | Keytrack | How much pitch scales the envelope times (higher notes shorter). | signed % |
 | Curve | Bends the attack and decay slopes from linear into the exponential curves of an analog RC envelope, for a snappier feel. | 0 to 100 % |
