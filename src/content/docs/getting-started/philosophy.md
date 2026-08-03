@@ -21,6 +21,29 @@ point in the signal path, and they interact. Learning how they push against one
 another is the depth that makes the filter section reward exploration, not a set
 of redundant knobs.
 
+## An instrument, not a rack of modules
+
+Most synths hand you a set of good parts and leave it to you to make them sound
+like one thing. Aconite is built the other way round. It models the whole
+instrument, including the parts you never see on a panel, so the pieces cohere
+into a single voice instead of stacking into layers.
+
+Some of that lives in the sound sources. The chip oscillator carries the real
+output stage of the console it models, so stacking its channels compresses and
+blends them into one voice the way the hardware does, not a clean digital sum.
+The string model has a full resonating body behind it that any sound source can
+drive.
+
+The rest is the glue further down the chain: the console-style bus saturation,
+the power supply that sags and blooms under a heavy chord, and the sympathetic
+resonance that lets held strings ring with what you play. None of these are
+effects bolted on the end. They are the connective tissue that makes a signal
+path sound like an instrument.
+
+The practical upshot is that the parts are meant to interact. A choice you make
+in one place is felt in another, on purpose. That is what gives a patch the sense
+that it was played on something, rather than assembled.
+
 ## The character, not the constraints
 
 We believe analog modeling does not have to come at the price of limited
@@ -84,4 +107,4 @@ matters. You are in control of where the synth spends its cycles.
 - Expect two voices of the same note to differ slightly when the aliveness layer
   is up. Turn it down for surgical precision.
 
-Everything else in this manual is detail on top of these three ideas.
+Everything else in this manual is detail on top of these core ideas.
