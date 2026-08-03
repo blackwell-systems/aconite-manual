@@ -124,6 +124,8 @@ so they get full treatment here.
 
 ## String (plucked and bowed string)
 
+![The String oscillator panel](../../../assets/screenshots/panel-osc-string.png)
+
 The **String** is a physical model of a vibrating string, not a wavetable or an
 analog oscillator playing back a fixed shape. Energy is fed into the string at
 note-on, and from there it rings and decays on its own, coloured by everything you
@@ -132,6 +134,13 @@ playable piano, and (with the Bow exciter) a singing violin, cello, or double ba
 Two behaviours it shares with real strings: harder plucks are genuinely brighter,
 not just louder, and playing legato bends the still-ringing string rather than
 re-plucking it, so glides sound like a guitarist sliding a finger up the neck.
+
+The String's controls are laid out in labelled sections so the model reads like a
+real instrument rather than a wall of knobs. **PITCH** holds the octave, coarse, and
+fine tuning. **EXCITER** picks the front end that starts the string (below) and its
+one exciter-specific knob. **STRING BODY** shapes the string itself: Decay, Damp,
+Tone, and Dispersion. **DRIVE** is the string's own saturation stage (Drive, Place,
+and a Drive Curve). **VOICING** carries the two "realness" controls, Poly and Uni.
 
 ### The Exciter: how the string is set in motion
 
@@ -165,6 +174,13 @@ single biggest character control on the model:
 - **Dispersion**: string stiffness, which stretches the overtones progressively
   sharp and morphs the timbre from guitar through koto and clav toward bell and
   piano. The fundamental stays in tune while the character changes underneath it.
+  This is also the control behind the String's piano behaviour: on a real piano the
+  strings are stiff enough that their partials stretch measurably sharp, and more so
+  the higher you play, which is why a piano's top octaves are tuned deliberately sharp
+  to match. Turn Dispersion up and the String reproduces that inharmonicity, the
+  partials stretching sharp toward the treble exactly as a real piano's do, which is a
+  large part of why a Hammer-excited String reads as a genuine piano rather than a
+  plucked synth.
 - **Drive** and **Place**: **Drive** is a saturation stage that colours the string
   in a level-dependent way (loud passes fold over and grit up, then mellow as the
   note decays, for sitar and distorted electric-string tones). **Place** decides
@@ -194,6 +210,8 @@ strings do, and the sustain pedal holds notes open. Every String control is a
 can breathe under an LFO, envelope, or the step sequencer.
 
 ## Modal (struck and rung percussion)
+
+![The Modal oscillator panel](../../../assets/screenshots/panel-osc-modal.png)
 
 The **Modal** oscillator is the String's sibling: instead of a string it is a bank
 of tuned resonant modes, struck at note-on. It covers a wide range of real
@@ -229,6 +247,8 @@ rather than resetting it, exactly as real percussion does. The mode-shaping cont
 are [mod-matrix](/aconite-manual/modulation/matrix/) destinations.
 
 ## Kick (808-to-909 drum synth)
+
+![The Kick oscillator panel](../../../assets/screenshots/panel-osc-kick.png)
 
 The **Kick** is the third of the struck family, a flexible bass-drum voice that
 sweeps continuously between a TR-808 character and a TR-909 character. One note-on
@@ -293,6 +313,8 @@ and trust that the grit you dialled in will not change when you turn Quality up.
 :::
 
 ## Chip (authentic NES / 2A03)
+
+![The Chip oscillator panel](../../../assets/screenshots/panel-osc-chip.png)
 
 The **Chip** oscillator is a from-scratch model of the Nintendo / Famicom sound
 chip, the Ricoh 2A03. It is not a bit-crushed modern oscillator dressed up to sound

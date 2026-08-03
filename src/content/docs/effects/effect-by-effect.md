@@ -440,3 +440,69 @@ oscillator's own in-loop drive. That means a plucked String can be coloured at i
 source (shaping the attack and the body of the string model itself) and then
 shaped again downstream by the waveshaper, stacking into a full electric-string
 chain without the two stages interfering with each other.
+
+## The Sympathetic Resonator
+
+![The Sympathetic Resonator](../../../assets/screenshots/panel-resonator.png)
+
+The waveshaper's panel is a two-page deck: a **Shaper | Resonator** tab strip at
+the top swaps its control surface between the drawable waveshaper (above) and the
+**Sympathetic Resonator**. Both stages keep running; the tab only changes which one
+you are looking at. The Resonator is a bank of undamped tuned strings that ring in
+sympathy with the notes you play, the way a real piano's unplayed strings sing along
+when you hold the sustain pedal, or a sitar's drone strings buzz under the melody.
+
+It is worth being clear about what this is not. It is **not** reverb. A reverb models
+the room around an instrument (extrinsic space); the Resonator models the instrument's
+own undamped strings ringing (intrinsic body). A real piano wants both, and they sit
+in different places: the Resonator completes a physical-model instrument, adding the
+"the whole instrument sings" halo that a dry pluck or strike never has, while reverb
+adds the space it sits in. Used on the String, Modal, or Kick voices it is the last
+piece that makes a modelled instrument read as real rather than synthetic.
+
+**The character knobs.**
+
+- **Amount**: how much the resonator bank rings, from silent (0, the bank is
+  effectively off) up to a rich, blooming sympathetic halo. This is the master
+  control: at 0 the Resonator is inert no matter what else is set.
+- **Decay**: how long the undamped strings ring on, from a short, tight shimmer to a
+  long, singing sustain that hangs under the notes you play.
+- **Tone**: the colour of the ringing, from a dark, woody halo to a bright, metallic
+  one.
+
+**Model.** A selector picks the tuning of the resonator bank, which is what gives it
+its character:
+
+- **Piano**: the undamped strings of a grand piano, the "whole piano sings" pedal-down
+  bloom.
+- **Duplex**: the fine, high, metallic shimmer of a piano's behind-the-bridge string
+  segments, undamped by design.
+- **Tanpura**: the buzzing sustained drone of the Indian tanpura, a low continuous
+  wash under whatever you play.
+- **Sitar**: the sitar's bank of sympathetic strings buzzing under the melody line.
+- **Harp**: open, undamped harp strings ringing together.
+- **Free**: instead of a fixed tuning, the bank tracks the notes you are actually
+  holding, exactly like a real piano's undamped strings. Hold a chord (or the sustain
+  pedal) and those pitches ring in sympathy; release them and they damp. This is the
+  most piano-realistic mode, because the sympathetic set follows your hands.
+
+**The send mixer.** A five-fader strip (**Osc 1**, **Osc 2**, **Osc 3**, **Sub**,
+**Noise**) sets how much of each source feeds the resonator bank. This is what makes
+the effect model-coupled rather than a wash across the whole mix: you feed the
+resonator from the String or Modal oscillator that should be exciting the sympathetic
+strings, and leave the rest out. Turn up the send from the source you want the bank to
+listen to.
+
+**Tap.** A **Post-VCA / Pre-filter** switch chooses where the bank taps the voice.
+**Post-VCA** (the default) is the cleaner, more reverb-like feed taken after the amp.
+**Pre-filter** feeds the raw pre-filter signal into the bank, which is the
+model-coupled placement that most convincingly earns the "the instrument itself is
+ringing" realism, because the sympathetic strings hear the source the same way the
+played string does.
+
+:::note
+The **Sympathetic Bank** display at the top of the panel shows the bank's per-string
+ring energy live as you play. In a static screenshot (like the one above) it reads
+near-flat because no notes are sounding to excite it; play a note with Amount up and
+the bars come alive.
+:::
