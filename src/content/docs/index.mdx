@@ -1,9 +1,9 @@
 ---
 title: Aconite
-description: The user manual for Aconite, a filters-forward analog-modeling polysynth by Alkaloid Audio.
+description: The user manual for Aconite, an analog-voiced polysynth that models the whole instrument, by Alkaloid Audio.
 template: splash
 hero:
-  tagline: Most synths bolt a filter onto an oscillator. Aconite is a filter section the whole instrument exists to feed.
+  tagline: An analog-voiced polysynth that models the whole instrument, not a rack of modules.
   actions:
     - text: Quick start, your first sound
       link: /aconite-manual/getting-started/quick-start/
@@ -17,55 +17,86 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## It sounds like hardware because it models hardware
+## It models the whole instrument, on purpose
 
-Aconite is an analog-modeling polysynth built by **Alkaloid Audio**. Analog-modeled
-filters and oscillators, per-voice character and drift, and a signal path you
-reroute rather than a fixed chain. It is equally happy loading a factory patch and
-playing, or letting you build a tone from the filter up.
+Aconite is an analog-modeling polysynth built by **Alkaloid Audio**. Most synths
+hand you a set of good parts and leave it to you to make them cohere. Aconite is
+built the other way round: it models the *whole* instrument, including the parts
+you never see on a panel, so the pieces settle into a single voice instead of
+stacking into layers.
 
-## Everything serves the filters
+Some of that lives in the sound sources. The string model has a full resonating
+body behind it that any source can drive. The chip oscillator carries the real
+output stage of the console it models, so stacking its channels blends them the way
+the hardware does. The rest is the glue further down the chain: console-style bus
+saturation, a power supply that sags and blooms under a heavy chord, and a
+sympathetic resonance that lets held strings ring with what you play. None of these
+are effects bolted on the end. They are the connective tissue that makes a signal
+path sound like an instrument.
 
-This is the idea the whole instrument is organized around. Two fully independent
-filters, each drawn from a menu of seven models, sit at the center, and the
-oscillators, modulation, and effects all exist to feed them and move them.
-
-<Card title="Two filters, front and center" icon="setting">
-  Two independent filters, **seven models each** (Ladder, SVF, Bite, Multimode,
-  Cascade, Diode, Acid), a continuous mode-morph you can modulate, per-filter
-  feedback "bark", in-loop saturation for real analog growl, and **resonance that
-  self-oscillates into a pure sine** you can play as a voice. A live response
-  graph you grab and drag. Series, parallel, or split, this is where a patch gets
-  its character.
-</Card>
-
-Everything below exists to give those filters something worth shaping.
+## The parts are meant to interact
 
 <CardGrid>
   <Card title="Many ways to make a tone" icon="seti:audio">
-    Classic virtual-analog and wavetable oscillators alongside physical-modeling
-    String, Modal, and Kick models, cross-modulated with **true through-zero FM**
-    and band-limited hard sync. Three full oscillators plus sub and noise.
+    Three full oscillators plus sub and noise: classic virtual-analog and
+    wavetable, a **drawable additive** engine with per-partial analog drift, and
+    physical-modeling **String** (plucked, hammered piano, and bowed), **Modal**
+    percussion (fourteen tuned instruments), a flexible **Kick**, and a **chip**
+    oscillator. Cross-modulated with true through-zero FM and band-limited hard sync.
   </Card>
-  <Card title="Everything can move" icon="random">
-    A per-voice modulation matrix, bus modulation over the effects and master,
-    six drawable LFOs, six routable envelopes, plus an arpeggiator and step
-    sequencer that double as modulation sources.
+  <Card title="It rings with what you play" icon="approve-check">
+    A built-in bank of tuned string resonators sounds in sympathy with your notes:
+    the piano sustain-pedal bloom, a tanpura or sitar drone, a harp's open-string
+    shimmer. A per-oscillator send lets **any** patch take on a sympathetic halo,
+    with a damper-aware mode that retunes the bank to the notes you are holding.
+  </Card>
+  <Card title="Analog character everywhere, placed by you" icon="random">
+    Not warmth at one stage: analog-modeled oscillators, per-voice and per-partial
+    drift, saturable filter poles, a driven voice mixer, console bus glue, and a
+    power-supply sag that blooms under heavy chords. Most of those amounts are
+    modulation destinations, so you move the character in real time.
+  </Card>
+  <Card title="Filters worth learning" icon="setting">
+    Two independent filters, **seven models each** (Ladder, SVF, Bite, Multimode,
+    Cascade, Diode, Acid), a continuous mode-morph you can modulate, per-filter
+    feedback "bark", in-loop saturation for real analog growl, and resonance that
+    self-oscillates into a pure sine you can play as a voice. Series, parallel, or
+    split.
+  </Card>
+</CardGrid>
+
+## Everything can move, and you draw it
+
+<CardGrid>
+  <Card title="Modulation, drawn by hand" icon="pencil">
+    One modulation matrix over per-voice and bus destinations, six drawable LFOs,
+    six routable envelopes that switch between analog ADSR and a drawn contour, four
+    macros, an envelope follower, MPE, and MIDI-learn.
+  </Card>
+  <Card title="Closer to a groovebox" icon="seti:clock">
+    A step sequencer with **per-note** velocity, accent, and chance lanes plus
+    drawable curve lanes, ratchets, ties, slides, and Euclidean fills, and a
+    scale-aware arpeggiator. Both double as modulation sources.
   </Card>
   <Card title="A full effects rack" icon="puzzle">
-    Twelve effects, freely re-orderable, each insert or send/return: chorus,
-    phaser, delay, multi-tap, reverb, tape, distortion, bit-crusher, compressor,
-    transient shaper, EQ, and stereo imager.
+    Twelve effects, freely re-orderable, each insert or send: chorus, phaser, delay,
+    multi-tap, reverb, tape, distortion, bit-crusher, compressor, transient shaper,
+    EQ, and stereo imager.
+  </Card>
+  <Card title="A showpiece you can re-skin" icon="seti:image">
+    A dense interface with real-signal visualisers and a full theme editor: edit
+    every colour live, build a theme from scratch or from an existing one, and save,
+    load, or embed it in a preset.
   </Card>
 </CardGrid>
 
 ## Who it's for
 
-Aconite is for people who reach for a synth to **sculpt** a sound, not pick one
-off a shelf. If loading patch 34 and moving on is all you want, this is not the
-instrument for you. If you want filters with nerd knobs worth learning, character
-controls that interact, and a modulation system deep enough to make a patch
-breathe, it rewards every hour you put in.
+Aconite is for people who reach for a synth to **shape** a sound, not just pick one
+off a shelf. It is equally happy loading a factory patch and playing, or letting you
+build a tone from the ground up. If you want physical instruments that respond
+instead of trigger, character controls that interact, and a modulation system deep
+enough to make a patch breathe, it rewards every hour you put in.
 
 ## Formats
 
