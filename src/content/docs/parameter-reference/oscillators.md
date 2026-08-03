@@ -11,7 +11,7 @@ For the full guide see [Oscillators](/aconite-manual/sources/oscillators/).
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
-| Type | Oscillator model and waveform in one: picks the synthesis engine (Analog ladder-style, Unison super-saw, DCO, Silk, Wavetable, String, Modal, Kick, Additive) and the wave it plays. | Sine; Saw, Square, Triangle and Shark's-tooth families (each in Standard, Analog, Unison, Silk and DCO flavours); Wavetable; String; Modal; Kick; Additive |
+| Type | Oscillator model and waveform in one: picks the synthesis engine (Analog ladder-style, Unison super-saw, DCO, Silk, Wavetable, Additive, String, Modal, Kick, Chip) and the wave it plays. | Sine; Saw, Square, Triangle and Shark's-tooth families (each in Standard, Analog, Unison, Silk and DCO flavours); Wavetable; Additive; String; Modal; Kick; Chip |
 | Octave | Coarse pitch in octaves. | -4 to +4 oct |
 | Coarse | Coarse pitch in semitones. | -24 to +24 st |
 | Detune | Fine pitch offset. | -50 to +50 cents |
@@ -80,11 +80,14 @@ Visible when a String wave is selected.
 | Damping | How fast the highs decay relative to the fundamental, from bright and metallic to dark and soft. | 0 to 100 % |
 | Dispersion | String stiffness and inharmonicity: stretches the overtones sharp, morphing guitar toward koto, bell, and piano-string timbres. | 0 to 100 % |
 | Tone | Pluck hardness and brightness of the excitation, from soft finger to hard pick. | 0 to 100 % |
-| Drive | In-loop waveshaper: drives the string's own feedback into saturation for a distorted, living tone (clean at zero). | 0 to 100 % |
-| Drive Curve | Hardness of the in-loop fold applied by Drive. | Soft / Med / Hard |
-| Exciter | What kicks the string into motion. | Noise / Impulse / From Osc / Body / Hammer |
+| Drive | Level-dependent saturation on the string: loud passes fold and grit up, mellowing as the note decays, for sitar and distorted electric-string tones (clean at zero). | 0 to 100 % |
+| Place | Where the Drive grit sits: from inside the string (character evolves over the note) to the string's output (an amp after the pickup, cleaner and more aggressive). | 0 to 100 % |
+| Drive Curve | Hardness of the fold applied by Drive. | Soft / Med / Hard |
+| Exciter | What sets the string in motion. Bow is a sustained friction excitation (the string sings while held); the others strike once at note-on. | Noise / Impulse / From Osc / Body / Hammer / Bow |
 | Poly | Dual polarisation: blends in a second, slightly detuned string plane that decays slower, for a two-stage decay and gentle beating (single string at zero). | 0 to 100 % |
 | Unison | True multi-string unison: adds up to two more slightly detuned strings for a lush chorus and long shimmering aftersound (single string at zero). | 0 to 100 % |
+| Bow Force | Bow exciter only: bow pressure and dynamics. Harder is louder; past the sweet spot it over-presses into a raucous scratch. | 0 to 100 % |
+| Bow Speed | Bow exciter only: bow speed and brightness. Faster gives a brighter, quicker-catching tone. | 0 to 100 % |
 
 ## Modal model
 
@@ -114,6 +117,24 @@ Visible when a Kick wave is selected.
 | Click | Level of the band-passed noise-burst attack (the beater click). | 0 to 100 % |
 | Click Tone | Centre of the click band-pass, from dark thud to bright beater. | 0 to 100 % |
 | Drive | Soft-clip on the summed body and click, from clean sub to gritty. | 0 to 100 % |
+
+## Chip model
+
+Visible when a Chip wave is selected. An authentic NES / 2A03 voice. Every setting
+is per oscillator, so the three oscillators act as independent console channels. See
+[Oscillators](/aconite-manual/sources/oscillators/).
+
+| Control | What it does | Range / values |
+|---------|--------------|----------------|
+| Wave | The 2A03 voice: Pulse (duty-based square), stepped Triangle (NES bass), or the console noise channel. | Pulse / Triangle / Noise |
+| Duty | Pulse duty cycle (Pulse wave): the four hardware widths, 50% being the plain square. | 12.5 / 25 / 50 / 75 % |
+| Noise Mode | Noise character (Noise wave): Long is a broad white hiss; Short is a shorter, pitched, metallic buzz. | Long / Short |
+| Pitch Quant | Snaps the pitch onto the console's coarse hardware tuning grid, so high notes drift slightly out of tune, the key NES tell (on by default; off plays exact pitch). | Off / On |
+| Vol Quant | Snaps the output level onto the coarse 16-step (4-bit) amplitude grid the real chip uses. | Off / On |
+
+Stacking two or more Chip oscillators in one voice mixes them through a model of the
+console's nonlinear output DAC, so the channels compress and glue like a full NES mix.
+It is automatic (no control) and engages only at two or more Chip oscillators.
 
 ## Wavetable model
 

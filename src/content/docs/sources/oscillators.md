@@ -1,6 +1,6 @@
 ---
 title: Oscillators
-description: The Wave × Model oscillator concept, the models, and per-oscillator tuning, pulse width, and phase.
+description: The Wave × Model oscillator concept, the analog, physical-model, and Chip voices, and per-oscillator tuning, pulse width, and phase.
 ---
 
 ![The oscillator panel](../../../assets/screenshots/panel-osc.png)
@@ -8,9 +8,9 @@ description: The Wave × Model oscillator concept, the models, and per-oscillato
 Aconite gives you three full oscillators, each built on a **Wave × Model** idea:
 you pick a waveform and, independently, a model that decides how that waveform is
 generated. The models span classic analog and virtual-analog, a DCO, wavetable,
-and the physical-modeling **String**, **Modal**, and **Kick** voices. Each
-oscillator has its own octave, coarse tune, detune, pulse width and PWM, and phase
-controls.
+the additive bank, the physical-modeling **String**, **Modal**, and **Kick**
+voices, and the authentic **Chip** (NES) oscillator. Each oscillator has its own
+octave, coarse tune, detune, pulse width and PWM, and phase controls.
 
 ## The three oscillators share one panel
 
@@ -116,45 +116,137 @@ LFO-sweep behaviour applies. If you would rather build a tone from its individua
 harmonics than morph through pre-made waves, see the
 [Additive oscillator](/aconite-manual/sources/additive/).
 
-**String**: a plucked-string physical model. It is struck at note-on and then
-rings and decays like a real string, running through Aconite's filter, amp, and
-effects. The exciter on the front end controls how the string is set into motion:
-a **Noise** burst (classic Karplus-Strong pluck), an **Impulse** spike (bright and
-click-y), a harmonic **From Osc** seed, a **Body** impulse-response colour, or
-the **Hammer** exciter (a velocity-dependent felt-hammer that makes harder notes
-intrinsically brighter, just like a piano). Adjust **Pluck Position** for a bridge-y
-nasal quality versus a round, full sound; **Dispersion** adds stiffness and
-inharmonicity from guitar through koto to piano; **Damping** controls how fast the
-highs die; **Tone** sets pluck hardness from a soft, round fingertip feel to a
-hard pick attack (harder settings are brighter in timbre, not just louder);
-**Decay** sets the overall ring time; and **Drive** (with **Drive Curve**) runs a
-waveshaper inside the string loop (loud passes fold and grit up, calming as the
-note decays). The String also has a **Poly** mode that mixes in a second polarisation
-plane for a subtle two-stage decay and beating chorus, the single biggest "real vs
-synthetic" tell. Playing legato bends the still-ringing string rather than
-re-plucking it, so glides sound like a guitarist sliding their finger up the neck.
-With the **Hammer** exciter, the String becomes a fully playable piano: note-off
-engages a damper, the top of the keyboard rings undamped the way a real piano's
-high strings do, and the sustain pedal holds notes open. All String parameters are
-[mod-matrix](/aconite-manual/modulation/matrix/) destinations.
+The three physical-model voices below (**String**, **Modal**, and **Kick**) are a
+family: each one is a genuine physical model, excited at note-on and left to ring
+and decay on its own, and each plays through the voice's filter, amp, and effects
+exactly like any other oscillator. They are a flagship part of what Aconite can do,
+so they get full treatment here.
 
-**Modal**: a bank of tuned resonators struck at note-on. Fourteen instrument
-types are available: Membrane, Timpani, Tabla, Steelpan, Handpan, Marimba,
-Vibraphone, Xylophone, Glockenspiel, Tubular Bell, Church Bell, Woodblock,
-Cowbell, and Glass Bowl. Controls include **Decay**, **Damp** (high-mode loss),
-**Strike** position (centre for bass, edge for bright slap), **Tension** (the
-metallic bloom as struck partials rise), **Symp(athy)** (a shimmer of neighbour
-resonances, the acoustic "singing" of a handpan), and **PDrop** (a pitch drop on
-the strike). Re-striking a still-ringing Modal note layers on top rather than
-resetting it, exactly as real percussion does.
+## String (plucked and bowed string)
 
-**Kick**: an 808-to-909 kick drum voice, struck at every note-on. Six controls
-sweep the full range between the two archetypes: **Tune** sets the fundamental,
-**Punch** dials between the tight 808 snap and the longer 909 pitch sweep, **Decay**
-sets the ring time, **Click** adds the beater noise burst, **Click Tone** moves the
-click centre from dark thud to bright tap, and **Drive** softens or grit-ifies the
-whole body. There is no switch; the six controls cover the whole range
-continuously.
+The **String** is a physical model of a vibrating string, not a wavetable or an
+analog oscillator playing back a fixed shape. Energy is fed into the string at
+note-on, and from there it rings and decays on its own, coloured by everything you
+do to it. From a single resonator it plays guitar, koto, harp, clav, a fully
+playable piano, and (with the Bow exciter) a singing violin, cello, or double bass.
+Two behaviours it shares with real strings: harder plucks are genuinely brighter,
+not just louder, and playing legato bends the still-ringing string rather than
+re-plucking it, so glides sound like a guitarist sliding a finger up the neck.
+
+### The Exciter: how the string is set in motion
+
+The **Exciter** menu chooses the front end that starts the string, and it is the
+single biggest character control on the model:
+
+- **Noise**: a short burst of noise, the classic breathy Karplus-Strong pluck.
+- **Impulse**: a single sharp spike, the brightest and most click-forward attack.
+- **From Osc**: the oscillator's own waveform seeds the string, for a harmonically
+  rich, more synthetic pluck.
+- **Body**: a modelled instrument-body resonance colours every note, so the string
+  sounds like it is strung across a real soundboard rather than floating in space.
+- **Hammer**: a velocity-sensitive felt-hammer strike whose attack sharpens the
+  harder you play, which is exactly what makes a piano brighter when you hit it
+  harder. This is the exciter that turns the String into a playable piano.
+- **Bow**: the one exciter that does not strike. Instead of seating energy once, it
+  feeds a sustained friction force into the string for as long as you hold the key,
+  so the string sings into a bowed violin, cello, or bass tone that rings while held
+  and stops when you release. The same resonator that plays guitar and piano becomes
+  a bowed-string instrument.
+
+### The controls
+
+- **Tone**: pluck hardness, from a soft, round fingertip feel to a hard pick attack.
+  Harder is brighter in timbre, not merely louder.
+- **Pluck Position**: where along the string it is plucked, from a bridge-y, nasal
+  quality to a round, full sound.
+- **Decay**: overall ring time, from a short muted pluck to a long open sustain.
+- **Damping**: how fast the highs fade relative to the low end, from dark and soft
+  to bright and metallic.
+- **Dispersion**: string stiffness, which stretches the overtones progressively
+  sharp and morphs the timbre from guitar through koto and clav toward bell and
+  piano. The fundamental stays in tune while the character changes underneath it.
+- **Drive** and **Place**: **Drive** is a saturation stage that colours the string
+  in a level-dependent way (loud passes fold over and grit up, then mellow as the
+  note decays, for sitar and distorted electric-string tones). **Place** decides
+  where that grit lives: at one end the saturation sits inside the string itself, so
+  the character evolves over the note; at the other end it moves to the string's
+  output, like an amplifier placed after the pickup, for a cleaner and more
+  aggressive edge. A single **Drive Curve** (Soft / Med / Hard) sets the fold
+  hardness.
+- **Poly**: dual polarisation. A real string vibrates in two planes at once, and
+  those planes interfere into a two-stage decay and a gentle beating chorus, the
+  single biggest "real versus synthetic" tell in a strung tone. Poly mixes in that
+  second plane.
+- **Unison**: true multi-string unison, the way a piano note is actually one, two,
+  or three slightly detuned strings sharing one bridge. Off is a single string;
+  turning it up brings in a second and then a third detuned string for the natural
+  chorus and slow beating of a real strung note.
+- **Bow Force** and **Bow Speed** (Bow exciter only): the two live bowing controls.
+  **Bow Force** is pressure and dynamics: harder bowing is louder, and pressing past
+  the sweet spot over-presses into a raucous scratch. **Bow Speed** is brightness and
+  articulation: a faster bow gives a brighter, quicker-catching tone. Route an
+  envelope to Bow Force to swell a note up from silence, the signature bowed gesture.
+
+With the Hammer exciter, the String is a fully playable felt piano: note-off engages
+a damper, the top of the keyboard rings on undamped the way a real piano's high
+strings do, and the sustain pedal holds notes open. Every String control is a
+[mod-matrix](/aconite-manual/modulation/matrix/) destination, so the whole string
+can breathe under an LFO, envelope, or the step sequencer.
+
+## Modal (struck and rung percussion)
+
+The **Modal** oscillator is the String's sibling: instead of a string it is a bank
+of tuned resonant modes, struck at note-on. It covers a wide range of real
+struck-and-rung instruments from one voice, selected by the **Modal Type** menu:
+
+- **Membranes**: Membrane, Timpani, Tabla, the skinned drums.
+- **Tuned metal**: Steelpan, Handpan, the singing pitched-metal instruments.
+- **Struck bars**: Marimba, Vibraphone, Xylophone, Glockenspiel.
+- **Bells**: Tubular Bell, Church Bell.
+- **Idiophones**: Woodblock, Cowbell, Glass Bowl.
+
+Its controls shape the strike and the ring:
+
+- **Strike**: where the instrument is struck, from the centre (bass, round) to the
+  edge (bright, slappy).
+- **Tension**: the tuned-metal "sing". Struck hard, the partials of real tuned metal
+  bend upward in pitch and the upper harmonics arrive slightly after the strike, the
+  blooming shimmer of a bell or a handpan. Turn Tension up to add that bloom.
+- **Decay**: overall ring time, from a short damped hit to a long singing sustain.
+- **Damp**: how fast the high modes die relative to the low ones, from dull and
+  muted to bright and ringing.
+- **Symp(athy)**: a halo of lightly damped neighbouring resonances ringing under the
+  struck note, the played-together shimmer of a handpan or steelpan.
+- **PDrop** and **PTime**: a pitch drop on the strike (the note starts sharp and
+  glides down to pitch), which gives that struck-metal "bloom" and the boom of a kick
+  or timpani. **PDrop** is the depth (0 is off), **PTime** the glide time from a fast
+  snap to a slow settle.
+
+A **Ring / Choke** selector sets the note-off behaviour: **Ring** lets the body decay
+on its own, and **Choke** mutes the tail when you release the key, for tight one-shot
+percussion. Re-striking a still-ringing Modal note layers on top of the ringing body
+rather than resetting it, exactly as real percussion does. The mode-shaping controls
+are [mod-matrix](/aconite-manual/modulation/matrix/) destinations.
+
+## Kick (808-to-909 drum synth)
+
+The **Kick** is the third of the struck family, a flexible bass-drum voice that
+sweeps continuously between a TR-808 character and a TR-909 character. One note-on
+is one kick, and like the String and Modal it plays through the voice's filter, amp,
+and effects. There is no 808/909 switch; the six controls cover the whole range:
+
+- **Tune**: the fundamental pitch, the played note offset up or down an octave.
+- **Punch**: a single control that sweeps the 808-to-909 axis, setting both the depth
+  and the speed of the pitch snap at once. Near the bottom it is the tight 808 snap;
+  near the top it is the longer, sweeping 909 pitch drop.
+- **Decay**: how long the body rings, from a short punchy thump to a long boom.
+- **Click**: the level of the beater-click attack (a short filtered noise burst). At
+  zero it is bypassed and the body is a clean sine sub.
+- **Click Tone**: the colour of that click, from a dark thud to a bright, snappy tap.
+- **Drive**: a soft-clip on the whole body, from a clean sub at zero to 909-style
+  grit and harmonics as you push it.
+
+All six controls are [mod-matrix](/aconite-manual/modulation/matrix/) destinations.
 
 ## Lo-fi / vintage-digital character
 
@@ -198,6 +290,55 @@ processes the full mix rather than a single oscillator.
 The lo-fi character sounds the same whatever you set the **Quality**
 (oversampling) option to, so you can audition and mix at a lighter quality setting
 and trust that the grit you dialled in will not change when you turn Quality up.
+:::
+
+## Chip (authentic NES / 2A03)
+
+The **Chip** oscillator is a from-scratch model of the Nintendo / Famicom sound
+chip, the Ricoh 2A03. It is not a bit-crushed modern oscillator dressed up to sound
+old, and it is not the same thing as the lo-fi stage above (which degrades a clean
+waveform). Chip *is* the chip: it behaves like the real hardware, stepped edges and
+all, so it reads as a genuine console voice rather than just a buzzy square.
+
+A **Wave** menu picks one of the three classic 2A03 voices:
+
+- **Pulse**: the pulse-wave voice, with the four hardware duty cycles, **12.5%**,
+  **25%**, **50%**, and **75%**, chosen with the **Duty** menu. 50% is the plain
+  square; the narrower duties are the thin, nasal, hollow tones that carry so many
+  chiptune leads.
+- **Triangle**: the stepped triangle, the rubbery NES bass and melody voice. The
+  staircase steps are deliberately present, not smoothed away, because that gentle
+  quantised stagger is part of the sound.
+- **Noise**: the console's noise channel, a metallic or hiss-like tone with a **Noise
+  Mode** toggle. **Long** is a broad white hiss, good for snares and wind; **Short**
+  is a much shorter, pitched, metallic buzz, good for zaps and percussive blips.
+
+Two authenticity toggles, both on by default, are what make it read as "Nintendo":
+
+- **Pitch Quant** is the headline control. Real 2A03 hardware can only tune to a
+  coarse grid of pitches, and because that grid gets coarser as notes rise, high
+  notes on real hardware drift slightly, mechanically out of tune. Pitch Quant
+  reproduces that exactly: it snaps the played pitch onto the console's tuning grid,
+  so the top of the keyboard has that unmistakable, slightly-off console intonation.
+  Leave it on for the authentic sound; turn it off when you want the chip timbre with
+  clean, exact tuning.
+- A **4-bit output quantize** snaps the level onto the coarse 16-step amplitude grid
+  the real chip uses, another part of its gritty character.
+
+Every Chip setting is **per oscillator**, so the three oscillators act as three
+independent console channels. You can build a whole NES arrangement inside a single
+patch: two pulses at different duty widths for a lead and a harmony, the triangle for
+bass, and the noise channel for percussion, each with its own Wave, Duty, and pitch.
+
+:::note
+**Automatic DAC glue.** When you stack two or more Chip oscillators in one voice,
+they mix through a model of the console's real, nonlinear output stage instead of a
+plain sum, so the channels compress and blend together the way a full NES mix does:
+two loud voices come out noticeably quieter than their straight sum, and the channels
+"glue". It happens on its own with no control to set, exactly like the hardware (a
+real 2A03 has no such switch), and it engages only once at least two Chip oscillators
+are playing together. A single Chip oscillator, or a Chip oscillator alongside a
+non-chip one, mixes normally.
 :::
 
 ## Tuning
