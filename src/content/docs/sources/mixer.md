@@ -23,8 +23,8 @@ not a crossfade or an either-or selection:
 | **Osc 1** | Level of oscillator 1 into the mix. |
 | **Osc 2** | Level of oscillator 2 into the mix. |
 | **Osc 3** | Level of oscillator 3 into the mix. |
-| **Sub** | Level of the [sub oscillator](/aconite-manual/sources/sub-noise/). |
-| **Noise** | Level of the [noise source](/aconite-manual/sources/sub-noise/). |
+| **Sub** | Level of the [sub oscillator](/sources/sub-noise/). |
+| **Noise** | Level of the [noise source](/sources/sub-noise/). |
 
 Because the sources are independent faders (not a crossfade), any combination can
 be active at once. You can run all three oscillators at full level, or bring in
@@ -48,7 +48,7 @@ A few things worth knowing when you start tweaking levels:
   stage hard even before Mix Drive enters the picture. Pull it back until you feel
   the weight rather than hear the sub as a separate element.
 
-- **All five faders are [modulation matrix](/aconite-manual/modulation/matrix/)
+- **All five faders are [modulation matrix](/modulation/matrix/)
   destinations**: Osc 1, Osc 2, Osc 3, Sub, and Noise. You can sweep Osc 2's
   level with an envelope for a swell, bring the noise in on an LFO for a trembling
   breath effect, or have the sub duck in and out with an envelope follower.
@@ -58,7 +58,7 @@ A few things worth knowing when you start tweaking levels:
 **Mix Drive** is an analog-style overdrive that sits between the mixer output and
 the filter input. Every voice's mixed signal runs through it before anything else
 in the signal path touches it, which means it colours the material that then gets
-further shaped by the [filter](/aconite-manual/filters/the-two-filters/).
+further shaped by the [filter](/filters/the-two-filters/).
 
 At its minimum, Mix Drive is a **true bypass**: the clean signal path is completely
 untouched, not just quiet. The moment you move it off zero, the drive stage engages.

@@ -72,10 +72,10 @@ the browser's **User** menu.
 ## Where to go next
 
 - Want to understand _why_ the filter behaves the way it does? Read
-  [The Aconite philosophy](/aconite-manual/getting-started/philosophy/) and, when
-  you're ready for depth, [The two filters](/aconite-manual/filters/the-two-filters/).
+  [The Aconite philosophy](/getting-started/philosophy/) and, when
+  you're ready for depth, [The two filters](/filters/the-two-filters/).
 - Want to make things move on their own? The
-  [modulation matrix](/aconite-manual/modulation/matrix/) is where a patch comes
+  [modulation matrix](/modulation/matrix/) is where a patch comes
   alive.
 - Want a guided build from scratch? The
-  [Tutorials](/aconite-manual/tutorials/) walk through whole patches end to end.
+  [Tutorials](/tutorials/) walk through whole patches end to end.

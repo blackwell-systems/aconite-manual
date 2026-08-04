@@ -70,7 +70,7 @@ as the source. It arrives pre-assigned to nothing by default, so it only acts
 once you route it.
 
 The **sustain pedal** (MIDI CC 64) works in all play modes. In
-[Latch](/aconite-manual/performance/voice-and-play/) mode it holds arp and step
+[Latch](/performance/voice-and-play/) mode it holds arp and step
 sequencer patterns running after you lift the keys.
 
 ---
@@ -107,7 +107,7 @@ messages independently.
   paths are active and unaffected.
 
 For setup guidance and examples, see
-[Voice and play](/aconite-manual/performance/voice-and-play/).
+[Voice and play](/performance/voice-and-play/).
 
 ---
 

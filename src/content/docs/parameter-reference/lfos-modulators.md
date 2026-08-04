@@ -5,8 +5,8 @@ description: "Lookup reference for the six LFOs, their direct routings, the step
 
 A terse lookup for every modulator control. Aconite has six drawable LFOs plus
 the step sequencer, the performer, and a per-voice envelope follower. See
-[Modulators overview](/aconite-manual/modulation/overview/) and
-[LFOs](/aconite-manual/modulation/lfos/).
+[Modulators overview](/modulation/overview/) and
+[LFOs](/modulation/lfos/).
 
 ## LFO controls (LFO 1 to 6)
 
@@ -54,7 +54,7 @@ A per-step curve sequencer.
 ## Envelope follower
 
 A per-voice modulation source that tracks the pre-filter amplitude (an auto-wah).
-See [Envelope follower](/aconite-manual/modulation/env-follower/).
+See [Envelope follower](/modulation/env-follower/).
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|

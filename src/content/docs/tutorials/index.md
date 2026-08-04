@@ -97,7 +97,7 @@ release. This glues the bass and lets you push the level without clipping.
   → Add modulation → Velocity) so harder playing opens the filter more.
 - Try different filter models: Ladder for growl, Diode for a gentler squelch, SVF
   for a clean, modern pluck.
-- See [The two filters](/aconite-manual/filters/the-two-filters/) for a complete guide
+- See [The two filters](/filters/the-two-filters/) for a complete guide
   to the filter character controls.
 
 ---
@@ -213,8 +213,8 @@ different character. The pad goes from wide-but-static to genuinely alive.
 - Try the **Morph** destination in the matrix: route LFO 1 to **Morph 1** instead of
   (or alongside) Cutoff, and the LFO will sweep the filter's response mode from LP to
   BP and back: a character sweep rather than a frequency sweep.
-- See [LFOs](/aconite-manual/modulation/lfos/) and
-  [Modulation matrix](/aconite-manual/modulation/matrix/) for the full guide.
+- See [LFOs](/modulation/lfos/) and
+  [Modulation matrix](/modulation/matrix/) for the full guide.
 
 ---
 
@@ -356,8 +356,8 @@ host's BPM and bar position, so it starts in time when your DAW plays.
   step outside the scale for a moment: a key 303 gesture.
 - Add a **Macro** knob routed to Cutoff and Resonance with opposite signs, so one knob
   sweeps the filter through its full character arc in a single turn.
-- See [Step sequencer](/aconite-manual/performance/step-sequencer/) for the full step
-  model reference and [The two filters](/aconite-manual/filters/the-two-filters/) for
+- See [Step sequencer](/performance/step-sequencer/) for the full step
+  model reference and [The two filters](/filters/the-two-filters/) for
   deeper filter guidance.
 
 ---
@@ -376,10 +376,10 @@ A few directions to explore next:
   modulation matrix all work the same way.
 - **Draw a modulator.** Open LFO 1's shape editor and draw a completely custom shape.
   Route it to Cutoff, envelope times, or oscillator detune. The
-  [LFOs](/aconite-manual/modulation/lfos/) chapter covers the full editor.
+  [LFOs](/modulation/lfos/) chapter covers the full editor.
 - **Build a beat.** Use the Kick oscillator type on one instance and the Modal model on
   another to synthesize a kick and a percussion hit, then layer them in the Mixer.
 - **Explore scenes.** Switch to Layer mode (Voice / Play → Scene Mode → Layer), edit
   scene B to a completely different patch (a pad under a lead, for instance), and play
-  both at once. See [Voice & play](/aconite-manual/performance/voice-and-play/) for
+  both at once. See [Voice & play](/performance/voice-and-play/) for
   the scene system.

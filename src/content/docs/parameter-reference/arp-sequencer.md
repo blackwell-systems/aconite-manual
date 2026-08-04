@@ -4,8 +4,8 @@ description: "Lookup reference for the arpeggiator: modes, scale awareness, the 
 ---
 
 A terse lookup for the arpeggiator and its programmable step lane. One arp feeds
-both scenes. See [Arpeggiator](/aconite-manual/performance/arpeggiator/) and
-[Step sequencer](/aconite-manual/performance/step-sequencer/).
+both scenes. See [Arpeggiator](/performance/arpeggiator/) and
+[Step sequencer](/performance/step-sequencer/).
 
 ## Arpeggiator
 

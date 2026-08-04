@@ -4,8 +4,8 @@ description: "Lookup reference for the master output controls, the console bus s
 ---
 
 A terse lookup for the master-section controls. See
-[The Master band](/aconite-manual/master/master-band/) and
-[MPE and MIDI-learn](/aconite-manual/master/mpe-midi-learn/).
+[The Master band](/master/master-band/) and
+[MPE and MIDI-learn](/master/mpe-midi-learn/).
 
 ## Master output
 

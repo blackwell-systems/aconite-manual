@@ -57,11 +57,11 @@ The source menu lists over forty options, organized by type:
   controller integration
 - **MPE Press** and **MPE Slide**, per-note pressure and slide for MPE controllers
 - **Noise**, an audio-rate random signal for thick FM, PWM, and cutoff textures
-- The **envelope follower**: see [Envelope follower](/aconite-manual/modulation/env-follower/)
+- The **envelope follower**: see [Envelope follower](/modulation/env-follower/)
 - **Step Seq**: stepped levels, directional (Forward/Reverse/Ping-Pong/Random), with
-  optional per-step glide; see the [Step sequencer](/aconite-manual/modulation/overview/#the-step-sequencer)
+  optional per-step glide; see the [Step sequencer](/modulation/overview/#the-step-sequencer)
 - **Performer**, a curve-per-step sequencer: each step plays a shaped sub-curve from a
-  per-step library rather than a flat level; see the [Performer](/aconite-manual/modulation/overview/#the-performer)
+  per-step library rather than a flat level; see the [Performer](/modulation/overview/#the-performer)
 - **Arp Step**, **Arp Vel**, **Arp Gate**: the arpeggiator's own rhythm as a modulation
   source; route Arp Gate to filter cutoff to pluck the filter on every arp note
 - **Curve 1–4**: four drawable, pattern-synced automation lanes
@@ -139,7 +139,7 @@ and to filter cutoff in another, and the single knob controls both.
 
 The last two tabs in the Modulators panel (**Bus LFO 1** and **Bus LFO 2**) are LFOs
 that run once for the whole mix. Their destinations are the
-[effects rack](/aconite-manual/effects/using-the-rack/) and master controls: reverb,
+[effects rack](/effects/using-the-rack/) and master controls: reverb,
 chorus, delay, phaser, EQ, and master gain. Use bus modulation for mix-wide movement
 that would be redundant or too expensive if it ran per-voice.
 

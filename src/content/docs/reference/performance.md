@@ -7,7 +7,7 @@ Aconite trades CPU for fidelity deliberately. This page explains what costs the
 most, how to tune the balance for your session, and how to get the best of both
 worlds at render time.
 
-See [The Aconite philosophy](/aconite-manual/getting-started/philosophy/) for why
+See [The Aconite philosophy](/getting-started/philosophy/) for why
 these tradeoffs exist.
 
 ---

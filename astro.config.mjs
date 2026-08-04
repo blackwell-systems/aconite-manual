@@ -2,13 +2,11 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// GitHub project Pages serves this repo under a sub-path, so `site` + `base`
-// must both be set or assets (CSS, images) will resolve to the wrong URL.
-// A custom domain (e.g. docs.alkaloid.audio) can later drop `base` and point
-// `site` at the domain instead.
+// Served from the root of a custom subdomain (aconite.alkaloidaudio.com), so
+// `site` points at the domain and there is no `base` sub-path. The `public/CNAME`
+// file pins the custom domain across deploys.
 export default defineConfig({
-  site: 'https://blackwell-systems.github.io',
-  base: '/aconite-manual',
+  site: 'https://aconite.alkaloidaudio.com',
   integrations: [
     starlight({
       title: 'Aconite',

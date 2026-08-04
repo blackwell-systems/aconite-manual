@@ -83,7 +83,7 @@ To remove a connection, open the Modulate panel again and click the source to
 deselect it, or drag its depth slider all the way to zero.
 
 The full modulation system (sources, depths, the matrix view) is covered in
-[Modulation matrix](/aconite-manual/modulation/matrix/).
+[Modulation matrix](/modulation/matrix/).
 
 ## MIDI-learn
 
@@ -96,7 +96,7 @@ Mapped controls show a small indicator when MIDI-learn mode is active. To clear 
 mapping, right-click the control and choose **Clear MIDI mapping**.
 
 Full MIDI-learn details (scope, session behavior, and CC conflicts) are in
-[MPE & MIDI-learn](/aconite-manual/master/mpe-midi-learn/).
+[MPE & MIDI-learn](/master/mpe-midi-learn/).
 
 ## Tooltips
 

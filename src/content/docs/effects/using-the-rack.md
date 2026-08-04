@@ -9,7 +9,7 @@ Aconite's effects live in a **12-slot chain** on the post-mix stereo bus. Each s
 can be enabled independently, run as an **insert** or a **send/return**, and
 dragged to reorder, so the same set of effects can sound completely different
 depending on their order. The master saturation and bus glue controls live in the
-[Master band](/aconite-manual/master/master-band/), distinct from the rack.
+[Master band](/master/master-band/), distinct from the rack.
 
 ## Where the rack sits
 
@@ -76,7 +76,7 @@ Effect mix levels and key parameters are modulation destinations in Aconite's bu
 modulation tier: two bus LFOs and an 8-slot bus matrix. You can route a bus LFO, a
 macro, an arp lane, or a Curve lane onto reverb size, chorus depth, delay feedback,
 EQ tilt, master gain, and more, making the whole mix breathe and move over time.
-See the [modulation overview](/aconite-manual/modulation/overview/) for how the bus
+See the [modulation overview](/modulation/overview/) for how the bus
 tier connects to the rest of the modulation system.
 
 ## Order matters: practical guidance

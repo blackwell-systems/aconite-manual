@@ -6,18 +6,18 @@ description: The per-voice envelope follower, a source that tracks the signal's 
 The **envelope follower** is a modulation source with an unusual quality: it listens to
 the signal running through the voice and turns what it hears into a moving value you can
 route anywhere. When the signal is loud, the follower's output is high. When the signal
-is quiet, the output falls. Route that output to [filter cutoff](/aconite-manual/filters/the-two-filters/)
+is quiet, the output falls. Route that output to [filter cutoff](/filters/the-two-filters/)
 and the filter opens as the sound gets louder: the classic auto-wah, without any external
 signal required.
 
-It lives in the **Env Follow** tab of the [Modulators panel](/aconite-manual/modulation/overview/).
+It lives in the **Env Follow** tab of the [Modulators panel](/modulation/overview/).
 
 ## What it does
 
 Every note in Aconite carries its own envelope follower. As the voice produces audio, the
 follower continuously tracks the signal's amplitude and outputs a smooth, time-averaged
 level that rises and falls with the sound. That level is a modulation source like any
-other; you route it in the [matrix](/aconite-manual/modulation/matrix/) or via a right-click
+other; you route it in the [matrix](/modulation/matrix/) or via a right-click
 on any knob.
 
 The result is **dynamics-as-modulation**: the harder you play, the stronger the signal,
@@ -43,7 +43,7 @@ Four controls shape how the follower tracks the signal:
 
 ## Using the envelope follower
 
-The follower becomes a source in the [modulation matrix](/aconite-manual/modulation/matrix/)
+The follower becomes a source in the [modulation matrix](/modulation/matrix/)
 the moment you select **Env Follow** as a source. You can also right-click any knob and
 choose **Add modulation → Env Follow** to wire it directly.
 

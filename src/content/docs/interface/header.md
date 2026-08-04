@@ -24,7 +24,7 @@ The preset browser sits at the left of the header: a **name display** flanked by
   you for a name and a bank if it is a new patch; saving an existing user preset
   overwrites it in place.
 
-The preset system is covered in full in [Presets](/aconite-manual/master/presets/).
+The preset system is covered in full in [Presets](/master/presets/).
 
 ## A/B compare
 
@@ -47,7 +47,7 @@ advance, with no separate load step. Around 40 curated themes ship with Aconite,
 from dark industrial to light and inverted looks.
 
 For deeper customization (editing colors, saving your own themes) see
-[Theming](/aconite-manual/interface/theming/).
+[Theming](/interface/theming/).
 
 ## MIDI-learn arm
 
@@ -58,7 +58,7 @@ the button again to disarm.
 
 Existing mappings are shown visually when the mode is active; right-clicking a
 learned control lets you clear its assignment. The full workflow is covered in
-[MPE & MIDI-learn](/aconite-manual/master/mpe-midi-learn/).
+[MPE & MIDI-learn](/master/mpe-midi-learn/).
 
 ## PANIC
 
@@ -97,4 +97,4 @@ driven and resonant patches, at the cost of more CPU.
 | **8×** | Offline: maximum fidelity for final renders |
 
 The philosophy behind this control, and why it exists at all, is explained in
-[The Aconite philosophy](/aconite-manual/getting-started/philosophy/).
+[The Aconite philosophy](/getting-started/philosophy/).

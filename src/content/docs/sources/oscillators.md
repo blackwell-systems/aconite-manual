@@ -35,7 +35,7 @@ version. A parenthesized suffix adds a layer of analog personality on top.
 You can also **drag the waveform display up or down** to step through the waveform
 types, exactly as if you were turning the wave selector. Hold **Shift** while
 dragging for finer, one-at-a-time steps. See [How every control
-works](/aconite-manual/interface/controls/) for the shared drag and fine-adjust
+works](/interface/controls/) for the shared drag and fine-adjust
 behavior.
 
 ### Waveforms
@@ -101,7 +101,7 @@ and layer the modelled version on a different oscillator.
 You can layer all three models on the same base wave across the three oscillators.
 For example: one Silk saw for warmth on Osc 1, one Unison saw for width on Osc 2,
 and one DCO saw for a clean centre on Osc 3, then blend them to taste in the
-[mixer](/aconite-manual/sources/mixer/).
+[mixer](/sources/mixer/).
 :::
 
 ### Special oscillators
@@ -114,7 +114,7 @@ shape). You can load your own wavetables via **Load WT**. When you select Waveta
 the Pulse Width controls relabel to **Position** and **Pos Mod**, and the same
 LFO-sweep behaviour applies. If you would rather build a tone from its individual
 harmonics than morph through pre-made waves, see the
-[Additive oscillator](/aconite-manual/sources/additive/).
+[Additive oscillator](/sources/additive/).
 
 The three physical-model voices below (**String**, **Modal**, and **Kick**) are a
 family: each one is a genuine physical model, excited at note-on and left to ring
@@ -237,7 +237,7 @@ With the Hammer exciter and a Grand (or any piano) body, the String is a fully
 playable felt piano: note-off engages a damper, the top of the keyboard rings on
 undamped the way a real piano's high strings do, and the sustain pedal holds notes
 open. Every String control is a
-[mod-matrix](/aconite-manual/modulation/matrix/) destination, so the whole string
+[mod-matrix](/modulation/matrix/) destination, so the whole string
 can breathe under an LFO, envelope, or the step sequencer.
 
 ## Modal (struck and rung percussion)
@@ -275,7 +275,7 @@ A **Ring / Choke** selector sets the note-off behaviour: **Ring** lets the body 
 on its own, and **Choke** mutes the tail when you release the key, for tight one-shot
 percussion. Re-striking a still-ringing Modal note layers on top of the ringing body
 rather than resetting it, exactly as real percussion does. The mode-shaping controls
-are [mod-matrix](/aconite-manual/modulation/matrix/) destinations.
+are [mod-matrix](/modulation/matrix/) destinations.
 
 ## Kick (808-to-909 drum synth)
 
@@ -297,7 +297,7 @@ and effects. There is no 808/909 switch; the six controls cover the whole range:
 - **Drive**: a soft-clip on the whole body, from a clean sub at zero to 909-style
   grit and harmonics as you push it.
 
-All six controls are [mod-matrix](/aconite-manual/modulation/matrix/) destinations.
+All six controls are [mod-matrix](/modulation/matrix/) destinations.
 
 ## Lo-fi / vintage-digital character
 
@@ -334,7 +334,7 @@ It is intentionally left off the analog-modelled, physical-model (String, Modal,
 Kick), and Additive oscillators, because crushing voices that already have a
 strong character of their own fights against what makes them distinctive. If you
 want to lo-fi one of those, or the whole patch at once, reach for the bit-crusher
-in the [effects rack](/aconite-manual/effects/effect-by-effect/) instead, which
+in the [effects rack](/effects/effect-by-effect/) instead, which
 processes the full mix rather than a single oscillator.
 
 :::note
@@ -441,7 +441,7 @@ Each oscillator has three pitch controls that stack:
   oscillators; larger amounts give wide, chorused stacks.
 
 Per-voice analog drift (governed by Aconite's aliveness layer, see
-[The Aconite philosophy](/aconite-manual/getting-started/philosophy/)) adds a
+[The Aconite philosophy](/getting-started/philosophy/)) adds a
 small, slow wander to each voice's tuning independently, so a stacked chord
 shimmers rather than sitting perfectly still.
 
@@ -474,7 +474,7 @@ Phase controls decide where the waveform starts when you press a key:
   gives a more consistent, punchy attack transient.
 
 :::note
-FM and hard sync have their own chapter: [FM & hard sync](/aconite-manual/sources/fm-sync/).
-The sub oscillator and noise source are covered in [Sub oscillator & noise](/aconite-manual/sources/sub-noise/).
-All levels (including the balance between oscillators) live in the [Mixer](/aconite-manual/sources/mixer/).
+FM and hard sync have their own chapter: [FM & hard sync](/sources/fm-sync/).
+The sub oscillator and noise source are covered in [Sub oscillator & noise](/sources/sub-noise/).
+All levels (including the balance between oscillators) live in the [Mixer](/sources/mixer/).
 :::

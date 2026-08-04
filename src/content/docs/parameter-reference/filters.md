@@ -5,7 +5,7 @@ description: "Lookup reference for the two filters, their routing, the front-end
 
 A terse lookup for every filter control. The per-filter set applies to both
 Filter 1 and Filter 2 unless noted. For the full guide see
-[The two filters](/aconite-manual/filters/the-two-filters/).
+[The two filters](/filters/the-two-filters/).
 
 ## Per-filter controls
 
@@ -39,7 +39,7 @@ Filter 1 and Filter 2 unless noted. For the full guide see
 
 ## Front-end high-pass
 
-See [Feedback and FB Sat](/aconite-manual/filters/feedback/) and [Routing](/aconite-manual/filters/routing/).
+See [Feedback and FB Sat](/filters/feedback/) and [Routing](/filters/routing/).
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
@@ -51,7 +51,7 @@ See [Feedback and FB Sat](/aconite-manual/filters/feedback/) and [Routing](/acon
 ## Waveshaper
 
 Adds harmonics at a configurable point around the filter block. See
-[Effect by effect](/aconite-manual/effects/effect-by-effect/).
+[Effect by effect](/effects/effect-by-effect/).
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|

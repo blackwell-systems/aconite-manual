@@ -43,4 +43,4 @@ themes is a good choice). To set up Aconite on another computer, install the
 plugin and drop the same keyfile in.
 
 If you run into any trouble activating, see
-[Troubleshooting & FAQ](/aconite-manual/reference/troubleshooting/).
+[Troubleshooting & FAQ](/reference/troubleshooting/).

@@ -30,7 +30,7 @@ When you save a preset and load it later, or share it with someone else, the sou
 is exactly as you left it, including any shapes you drew by hand. The only things
 a preset does not carry are MIDI-learn mappings (those belong to your hardware
 setup, not the sound) and authorization state. See
-[MPE & MIDI-learn](/aconite-manual/master/mpe-midi-learn/) for why MIDI-learn
+[MPE & MIDI-learn](/master/mpe-midi-learn/) for why MIDI-learn
 intentionally stays outside presets.
 
 Presets are **forward-compatible**: if a preset was saved with an older version of
@@ -41,7 +41,7 @@ feature.
 
 ## The preset browser
 
-The browser lives in the [header](/aconite-manual/interface/header/) as a compact
+The browser lives in the [header](/interface/header/) as a compact
 row:
 
 - **`<` and `>` arrows** step to the previous or next preset in the list, wrapping
@@ -111,7 +111,7 @@ A/B compare is a workflow tool for the moment when you are deciding between two
 versions of a patch. Rather than saving two separate presets and loading back and
 forth, you can hold both states in memory and flip between them instantly.
 
-The A/B controls live in the [header](/aconite-manual/interface/header/).
+The A/B controls live in the [header](/interface/header/).
 
 **How it works:**
 
@@ -146,8 +146,8 @@ complete snapshot a preset would capture. Reopen the project and the sound comes
 back exactly as you left it, including any drawn shapes and your current theme.
 MIDI-learn mappings come back too, through the host session rather than the preset
 format. Authorization state is per-machine and does not travel with sessions;
-see [Authorization](/aconite-manual/getting-started/authorization/) for how to
+see [Authorization](/getting-started/authorization/) for how to
 move Aconite to a new machine.
 
 For a walkthrough of loading your first sound, see the
-[Quick start](/aconite-manual/getting-started/quick-start/).
+[Quick start](/getting-started/quick-start/).

@@ -150,4 +150,4 @@ In practice this means:
 - Your mappings persist across a session: save the project in your DAW and they
   come back when you reopen it, because the host session carries them separately.
 - A/B compare flips between two patch states without touching your mappings.
-  See [Presets & A/B](/aconite-manual/master/presets/) for the A/B workflow.
+  See [Presets & A/B](/master/presets/) for the A/B workflow.

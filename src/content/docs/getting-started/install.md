@@ -42,8 +42,8 @@ the plugin itself:
 
 Because these live in your user data and not inside the plugin, they survive
 updates and are easy to back up: copy the folder. See
-[Presets & A/B](/aconite-manual/master/presets/) for how presets are organized and
-[Theming](/aconite-manual/interface/theming/) for themes.
+[Presets & A/B](/master/presets/) for how presets are organized and
+[Theming](/interface/theming/) for themes.
 
 :::note
 The exact folder path depends on your operating system and follows the standard

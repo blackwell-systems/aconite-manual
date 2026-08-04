@@ -19,15 +19,15 @@ the master:
 
 | Stage | Where it acts | What it does | Home |
 |---|---|---|---|
-| **Mix Drive** | the mixer, before the filter | Minimoog-style "mixer overload" - grit rises as you push the source mix hot, and the filter then shapes the saturated tone | [Mixer & Mix Drive](/aconite-manual/sources/mixer/) |
-| **Filter Drive** | each filter's input | pushes a filter model into its own non-linearity; the character depends on the model | [The two filters](/aconite-manual/filters/the-two-filters/) |
-| **Voicing (Analog) + Depth** | inside the filter resonance | Analog voicing adds per-stage clipping inside the Ladder/Diode resonance; Depth sets how hard | [The two filters](/aconite-manual/filters/the-two-filters/) |
-| **FB Sat** | the filter feedback loops | warms and tames the resonant "bark"; only bites when a filter's Feedback is up | [Feedback & FB Sat](/aconite-manual/filters/feedback/) |
-| **Global Sat** | the voice output | an always-on gentle warmth on the whole voice, regardless of patch | [The two filters](/aconite-manual/filters/the-two-filters/) |
-| **Waveshaper** | before, between, or after the filters | a full drawable transfer-curve shaper - from subtle to overt, wherever you place it | [Effect by effect](/aconite-manual/effects/effect-by-effect/) |
-| **Bus Glue + Warmth** | the master bus | gentle whole-mix "console glue"; Warmth shifts its harmonic character | [The Master band](/aconite-manual/master/master-band/) |
-| **PSU Sag** | the master bus | not distortion but its sibling: loud chords duck then bloom back, like an analog power supply sagging under load | [The Master band](/aconite-manual/master/master-band/) |
-| **Distortion / Tape / Bit-crusher / Compressor** | the effects rack | overt, characterful coloration - tube, fuzz, tape, lo-fi, or driven compression | [Effect by effect](/aconite-manual/effects/effect-by-effect/) |
+| **Mix Drive** | the mixer, before the filter | Minimoog-style "mixer overload" - grit rises as you push the source mix hot, and the filter then shapes the saturated tone | [Mixer & Mix Drive](/sources/mixer/) |
+| **Filter Drive** | each filter's input | pushes a filter model into its own non-linearity; the character depends on the model | [The two filters](/filters/the-two-filters/) |
+| **Voicing (Analog) + Depth** | inside the filter resonance | Analog voicing adds per-stage clipping inside the Ladder/Diode resonance; Depth sets how hard | [The two filters](/filters/the-two-filters/) |
+| **FB Sat** | the filter feedback loops | warms and tames the resonant "bark"; only bites when a filter's Feedback is up | [Feedback & FB Sat](/filters/feedback/) |
+| **Global Sat** | the voice output | an always-on gentle warmth on the whole voice, regardless of patch | [The two filters](/filters/the-two-filters/) |
+| **Waveshaper** | before, between, or after the filters | a full drawable transfer-curve shaper - from subtle to overt, wherever you place it | [Effect by effect](/effects/effect-by-effect/) |
+| **Bus Glue + Warmth** | the master bus | gentle whole-mix "console glue"; Warmth shifts its harmonic character | [The Master band](/master/master-band/) |
+| **PSU Sag** | the master bus | not distortion but its sibling: loud chords duck then bloom back, like an analog power supply sagging under load | [The Master band](/master/master-band/) |
+| **Distortion / Tape / Bit-crusher / Compressor** | the effects rack | overt, characterful coloration - tube, fuzz, tape, lo-fi, or driven compression | [Effect by effect](/effects/effect-by-effect/) |
 
 ## Which one do I reach for?
 
@@ -59,13 +59,13 @@ The stages split into two families, and the difference matters:
   Waveshaper) run *inside each voice*. A stacked chord therefore saturates
   three-dimensionally - every note has its own drive, so the voices don't smear together the
   way a single bus distortion would. These stages are the ones the
-  [Quality](/aconite-manual/master/master-band/) setting cleans up: turning Quality higher
+  [Quality](/master/master-band/) setting cleans up: turning Quality higher
   keeps their driven high end smooth (see
-  [The Aconite philosophy](/aconite-manual/getting-started/philosophy/)).
+  [The Aconite philosophy](/getting-started/philosophy/)).
 - **Master / bus** stages (Bus Glue, PSU Sag, and the effects rack) run *once on the whole
   mix* after the voices sum. Glue and Sag are kept deliberately gentle so they cohere the
   mix rather than smear it; the rack effects are where the heavier, more overt coloration
   lives.
 
 A good instinct: shape *character* per-voice (down low in the path), and add *cohesion* on
-the master (up at the top of the [Master band](/aconite-manual/master/master-band/)).
+the master (up at the top of the [Master band](/master/master-band/)).

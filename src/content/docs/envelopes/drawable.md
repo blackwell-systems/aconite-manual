@@ -3,7 +3,7 @@ title: Drawable envelopes
 description: "Draw mode: hand-drawn multi-segment envelope contours with sustain and loop markers."
 ---
 
-Every envelope in the [pool](/aconite-manual/envelopes/pool/) can swap its four-knob ADSR
+Every envelope in the [pool](/envelopes/pool/) can swap its four-knob ADSR
 for a hand-drawn contour. Flip any envelope to **Draw mode** and the display becomes a canvas
 where you place breakpoints, bend the segments between them, and mark exactly where the
 envelope holds while the key is down. The result is a shape the four ADSR knobs could never
@@ -12,7 +12,7 @@ that accelerates at the end.
 
 Draw mode does not replace the envelope; it replaces its shape generator. Velocity, Key
 Follow, Cycle, Restart, and routing all work exactly as they do on a standard
-[envelope](/aconite-manual/envelopes/pool/).
+[envelope](/envelopes/pool/).
 
 ## Drawing and editing the contour
 
@@ -69,7 +69,7 @@ lasts exactly one bar, one beat, or any subdivision you choose.
 
 ## Cycle and One-shot with drawn contours
 
-The [Cycle modes](/aconite-manual/envelopes/pool/#cycle-mode) from the envelope pool apply
+The [Cycle modes](/envelopes/pool/#cycle-mode) from the envelope pool apply
 to drawn contours without change:
 
 - **Normal**: plays to the sustain marker, holds, releases on note-off.
@@ -98,7 +98,7 @@ standard Analogue-model ADSR while the filter envelope plays a three-peak shape,
 fires a one-shot drawn contour to punch a waveshaper on each note.
 
 :::tip
-Draw mode and the [LFOs](/aconite-manual/modulation/lfos/) share the same shape engine. If
+Draw mode and the [LFOs](/modulation/lfos/) share the same shape engine. If
 you draw a shape you want to reuse as a periodic modulator, open an LFO tab; you will
 find the same drawing tools there, playing back the same type of contour as a looping wave
 rather than a note-gated event.

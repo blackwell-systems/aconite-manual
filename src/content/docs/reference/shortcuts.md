@@ -51,7 +51,7 @@ real time to show where modulation is currently pushing the value.
 To set the route's depth or add a Via transform, open the Master Matrix grid
 in the modulation section.
 
-See [Modulation matrix](/aconite-manual/modulation/matrix/) for a full guide to
+See [Modulation matrix](/modulation/matrix/) for a full guide to
 routing.
 
 ---

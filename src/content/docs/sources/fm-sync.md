@@ -36,7 +36,7 @@ brightens dramatically, and you start to hear the inharmonic clang that makes FM
 famous. Very high depths produce dense, metallic spectra.
 
 :::tip
-Modulating FM Depth with an envelope from the [modulation matrix](/aconite-manual/modulation/matrix/)
+Modulating FM Depth with an envelope from the [modulation matrix](/modulation/matrix/)
 is one of the fastest ways to create a bright-then-warm decay arc. Map a fast
 attack/slow decay envelope to FM Depth and the attack snaps bright while the
 tail settles back.
@@ -116,7 +116,7 @@ The two most expressive techniques:
    every note has the same aggressive, synced quality.
 
 2. **Swept detune**: route an envelope or LFO from the
-   [modulation matrix](/aconite-manual/modulation/matrix/) to Osc 1's pitch. The
+   [modulation matrix](/modulation/matrix/) to Osc 1's pitch. The
    harmonic spectrum sweeps in real time, giving you the classic "rising sync
    scream" on attack or a slowly evolving sweep across held notes.
 
@@ -124,7 +124,7 @@ The two most expressive techniques:
 For the classic hard-sync lead, set Osc 2 routing to **2 → 1**, put Osc 1 about
 a fifth sharp with Coarse, then connect a fast envelope to Osc 1 pitch (positive
 Amount, moderate Decay). The sync sweep brightens aggressively on each attack
-and settles back. Nudge Resonance up on [the filter](/aconite-manual/filters/the-two-filters/)
+and settles back. Nudge Resonance up on [the filter](/filters/the-two-filters/)
 to emphasise the sweep further.
 :::
 
@@ -142,5 +142,5 @@ territory: the sync is reshaping Osc 1's cycle while FM is simultaneously
 pushing its instantaneous pitch around. The combination produces timbres that
 neither technique reaches alone: sounds with sync's harmonic focus and FM's
 inharmonic complexity at once. Start with moderate amounts of each and use the
-[modulation matrix](/aconite-manual/modulation/matrix/) to sweep them separately,
+[modulation matrix](/modulation/matrix/) to sweep them separately,
 listening to how each dimension changes independently.

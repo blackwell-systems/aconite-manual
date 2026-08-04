@@ -16,12 +16,12 @@ The modulation system has three parts:
 
 **Sources** generate values that change over time. Aconite has more than forty of them:
 
-- The [envelope pool](/aconite-manual/envelopes/pool/): six ADSR envelopes, each also
-  available in [drawn contour](/aconite-manual/envelopes/drawable/) form. Note-triggered,
+- The [envelope pool](/envelopes/pool/): six ADSR envelopes, each also
+  available in [drawn contour](/envelopes/drawable/) form. Note-triggered,
   note-released.
-- The [LFOs](/aconite-manual/modulation/lfos/): six drawable, tempo-syncable oscillators
+- The [LFOs](/modulation/lfos/): six drawable, tempo-syncable oscillators
   that run freely or retrigger on each note.
-- The [envelope follower](/aconite-manual/modulation/env-follower/): a source that tracks
+- The [envelope follower](/modulation/env-follower/): a source that tracks
   the signal's own level and turns dynamics into modulation.
 - The **step sequencer** and the **Performer**: pattern generators with their own clocks,
   described in detail below.
@@ -35,13 +35,13 @@ The modulation system has three parts:
   sources, so the arp can modulate anything it touches.
 
 **Destinations** are the controls that respond to modulation. The [modulation
-matrix](/aconite-manual/modulation/matrix/) lists dozens of them across every section:
+matrix](/modulation/matrix/) lists dozens of them across every section:
 oscillator pitch and level, filter cutoff, resonance, drive and morph, envelope times,
 LFO rates, waveshaper parameters, pan, and more.
 
 **The matrix** is where sources meet destinations. Each of the 24 slots in the
 matrix takes a source, a destination, an optional transform, and a depth amount. The
-[matrix chapter](/aconite-manual/modulation/matrix/) covers this in full.
+[matrix chapter](/modulation/matrix/) covers this in full.
 
 ## The Modulators panel
 
@@ -59,7 +59,7 @@ selects one at a time:
 
 Each tab shows that source's editor and controls. Setting a source up here is separate from
 routing it: you shape the LFO, draw the step levels, or set the follower's attack time,
-then wire it to a destination in the [matrix](/aconite-manual/modulation/matrix/) or through
+then wire it to a destination in the [matrix](/modulation/matrix/) or through
 a right-click on any knob.
 
 ## The right-click shortcut
@@ -83,11 +83,11 @@ Aconite's modulation splits into two tiers:
   follower. One note's filter envelope does not interfere with another's. This is what
   makes a legato chord shimmer rather than collapse into a single moving curve.
 - **Bus modulation**: a second set of two LFOs and eight routing slots runs once for
-  the whole mix, modulating the [effects rack](/aconite-manual/effects/using-the-rack/)
+  the whole mix, modulating the [effects rack](/effects/using-the-rack/)
   and master output. A macro can breathe the reverb size, a bus LFO can auto-pan the
   whole output, or a drawn curve lane can automate the EQ tilt across a section.
 
-Both tiers share the same [matrix](/aconite-manual/modulation/matrix/) grid. Choosing a
+Both tiers share the same [matrix](/modulation/matrix/) grid. Choosing a
 bus destination in the matrix automatically routes to the bus tier; choosing a voice
 destination routes per-voice. The scope badge in each row tells you which is active.
 
@@ -109,7 +109,7 @@ the sequencer reads them in order.
 - **Rate**: one full pass through all steps per cycle, in free Hz or locked to a tempo
   division.
 
-Route the step sequencer from the [modulation matrix](/aconite-manual/modulation/matrix/)
+Route the step sequencer from the [modulation matrix](/modulation/matrix/)
 or right-click any knob and choose it under **Add modulation**.
 
 ## The Performer
@@ -136,4 +136,4 @@ Beyond the curve shape, each step has:
   curve, smoothing the transition instead of jumping to the new shape abruptly.
 
 The Performer runs at the same Rate/Sync controls as the step sequencer and routes through
-the [modulation matrix](/aconite-manual/modulation/matrix/) in the same way.
+the [modulation matrix](/modulation/matrix/) in the same way.

@@ -44,7 +44,7 @@ section itself.
 The filter is the heart of the instrument. Its cutoff, resonance, drive, voicing,
 and feedback controls all act at physically different points within the model and
 interact with one another. That depth is covered in
-[The two filters](/aconite-manual/filters/the-two-filters/).
+[The two filters](/filters/the-two-filters/).
 
 ### 4. Per-voice output (amp and VCA)
 
@@ -96,7 +96,7 @@ subtle but musical compression character at higher levels. The master brickwall
 limiter, off by default, sits last of all, so with it engaged the output can never
 clip no matter how hard the stages before it are pushed.
 
-The master stage is covered in [Master band](/aconite-manual/master/master-band/).
+The master stage is covered in [Master band](/master/master-band/).
 
 ## Modulation flows sideways
 
@@ -108,7 +108,7 @@ parameters that shape it, which means every parameter in the flow above can beco
 a moving, expressive, voice-by-voice target.
 
 The full modulation system is covered in
-[Modulation matrix](/aconite-manual/modulation/matrix/).
+[Modulation matrix](/modulation/matrix/).
 
 ## The short version
 

@@ -47,7 +47,7 @@ set each filter's model manually) to hear the difference.
 Filter 1 (Pre), after Filter 2 (Post), or, uniquely in Serial routing, between the two
 filters (Mid). That Mid position lets Filter 1 shape the tone before the waveshaper distorts
 it, then sends the result into Filter 2 for a second pass. See
-[Effect by effect](/aconite-manual/effects/effect-by-effect/) for the full waveshaper
+[Effect by effect](/effects/effect-by-effect/) for the full waveshaper
 reference; the placement choice is made on the filter panel.
 
 ### Parallel
@@ -128,7 +128,7 @@ it is clean with no resonance.
 aggressively; 6 dB is gentle and transparent.
 
 Both Freq and Bite are modulation matrix destinations; see the
-[modulation matrix](/aconite-manual/modulation/matrix/) for routing options. A slow LFO on
+[modulation matrix](/modulation/matrix/) for routing options. A slow LFO on
 HPF Freq with Bite up gives a subtle animated brightness that is easy to overlook but hard
 to stop using once you find it.
 
@@ -146,4 +146,4 @@ sounds where you want expressive movement to feel unified even though the two to
 characters are different.
 
 For modulation routing details, including how to drive each filter's Cutoff, Resonance, and
-Morph independently from the matrix, see [Modulation overview](/aconite-manual/modulation/overview/).
+Morph independently from the matrix, see [Modulation overview](/modulation/overview/).

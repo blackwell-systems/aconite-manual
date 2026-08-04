@@ -53,7 +53,7 @@ If after rescanning the plugin still does not appear:
   Re-running the installer should place it correctly; if you installed manually,
   move the file to the expected location and rescan.
 
-See [Installing Aconite](/aconite-manual/getting-started/install/) for
+See [Installing Aconite](/getting-started/install/) for
 format-specific path guidance.
 
 ---
@@ -62,7 +62,7 @@ format-specific path guidance.
 
 **Q: Aconite is asking for activation. How do I do it?**
 
-See [Authorization](/aconite-manual/getting-started/authorization/) for the
+See [Authorization](/getting-started/authorization/) for the
 complete step-by-step guide. The short version: Aconite needs a one-time online
 activation per machine. Once activated, the synth works fully offline.
 
@@ -71,7 +71,7 @@ again?**
 
 No. Deactivate on your old machine (or, if that is no longer possible, use the
 deactivation option in your account portal), then activate on the new one. See
-[Authorization](/aconite-manual/getting-started/authorization/) for details.
+[Authorization](/getting-started/authorization/) for details.
 
 **Q: Can I use Aconite without an internet connection?**
 
@@ -101,7 +101,7 @@ To reclaim CPU headroom:
 - Disable FX effects you are not using: reverb and multi-tap delay carry the
   most cost.
 
-See [The Aconite philosophy](/aconite-manual/getting-started/philosophy/) for a
+See [The Aconite philosophy](/getting-started/philosophy/) for a
 fuller explanation of what oversampling is buying.
 
 ---
@@ -143,9 +143,9 @@ sudden jumps.
 To see, edit, or remove all your MIDI assignments, open the **MIDI** manager
 (the MIDI button in the header).
 
-See [Keyboard & mouse shortcuts](/aconite-manual/reference/shortcuts/) for more
+See [Keyboard & mouse shortcuts](/reference/shortcuts/) for more
 on the right-click menu, and the
-[Modulation matrix](/aconite-manual/modulation/matrix/) chapter for using
+[Modulation matrix](/modulation/matrix/) chapter for using
 hardware controls as mod-matrix sources.
 
 ---
@@ -202,7 +202,7 @@ At zero, every voice collapses to identical and the synth is clinically precise.
 Higher settings model looser, older hardware. A patch that feels "alive" or
 "shimmering" usually has these set up deliberately.
 
-See [The Aconite philosophy](/aconite-manual/getting-started/philosophy/) for
+See [The Aconite philosophy](/getting-started/philosophy/) for
 more on why this layer exists.
 
 ---
@@ -218,7 +218,7 @@ a name; stepping away without saving will discard the changes.
 
 Preset files are stored in your user application data directory. The exact path
 depends on your operating system; see
-[Installing Aconite](/aconite-manual/getting-started/install/) for the default
+[Installing Aconite](/getting-started/install/) for the default
 location.
 
 ---

@@ -63,7 +63,7 @@ real feedback loop closed, raising a filter's Feedback grows a broad hump in its
 just below the cutoff frequency. You can watch the Feedback control's effect directly: at zero
 Feedback the curve is clean; as Feedback rises, the sub-cutoff hump grows and the cutoff peak
 from Resonance changes shape. This makes the antagonism between Feedback and Resonance
-(described in [Feedback & FB Sat](/aconite-manual/filters/feedback/)) visible as well as
+(described in [Feedback & FB Sat](/filters/feedback/)) visible as well as
 audible.
 
 **FB Sat does not appear in the graph.** Its effect is tonal and harmonic; it shapes the
@@ -100,5 +100,5 @@ immediately intuitive, and it is a good way to find the exact blend point where 
 starts to sound right for a part.
 
 For a full picture of what you can route to Cutoff, Resonance, and Morph, see the
-[modulation matrix](/aconite-manual/modulation/matrix/). For an overview of the oscillators
-feeding the filter, see [Sources](/aconite-manual/sources/oscillators/).
+[modulation matrix](/modulation/matrix/). For an overview of the oscillators
+feeding the filter, see [Sources](/sources/oscillators/).

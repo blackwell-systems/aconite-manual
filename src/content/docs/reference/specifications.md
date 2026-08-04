@@ -18,7 +18,7 @@ guidance, and credits.
 
 All three formats install from a single installer. There is no harm in installing
 all of them. For step-by-step installation instructions see
-[Install & formats](/aconite-manual/getting-started/install/).
+[Install & formats](/getting-started/install/).
 
 ---
 
@@ -73,7 +73,7 @@ installer readme.
 
 Aconite requires authorization to run after the trial period. For the full
 authorization process, see
-[Authorization](/aconite-manual/getting-started/authorization/).
+[Authorization](/getting-started/authorization/).
 
 ---
 

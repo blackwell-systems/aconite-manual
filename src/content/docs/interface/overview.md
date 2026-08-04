@@ -57,7 +57,7 @@ learn how a knob, a right-click menu, or the theming works in one place, it work
 the same everywhere. The next chapters cover those shared behaviors before diving
 into each section:
 
-- [Header & global controls](/aconite-manual/interface/header/)
-- [How every control works](/aconite-manual/interface/controls/)
-- [Theming](/aconite-manual/interface/theming/)
-- [Signal flow](/aconite-manual/interface/signal-flow/)
+- [Header & global controls](/interface/header/)
+- [How every control works](/interface/controls/)
+- [Theming](/interface/theming/)
+- [Signal flow](/interface/signal-flow/)

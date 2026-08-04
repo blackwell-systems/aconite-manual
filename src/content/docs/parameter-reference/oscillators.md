@@ -5,7 +5,7 @@ description: "Lookup reference for every oscillator control: type, tuning, phase
 
 A terse lookup for every user-facing control in the sound-source section. Each of
 the three oscillators (Osc 1, Osc 2, Osc 3) shares the per-oscillator set below.
-For the full guide see [Oscillators](/aconite-manual/sources/oscillators/).
+For the full guide see [Oscillators](/sources/oscillators/).
 
 ## Per-oscillator controls
 
@@ -28,7 +28,7 @@ For the full guide see [Oscillators](/aconite-manual/sources/oscillators/).
 Behind the per-oscillator **LO-FI** toggle. Offered on the clean-digital engines
 (Sine, Saw, Square, Triangle, Shark's-tooth, and Wavetable); not on the
 analog-modelled, String, Modal, Kick, or Additive oscillators. All three are off
-by default and stack. See [Oscillators](/aconite-manual/sources/oscillators/).
+by default and stack. See [Oscillators](/sources/oscillators/).
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
@@ -38,7 +38,7 @@ by default and stack. See [Oscillators](/aconite-manual/sources/oscillators/).
 
 ## FM and sync
 
-Global controls shared by the oscillators. See [FM and hard sync](/aconite-manual/sources/fm-sync/).
+Global controls shared by the oscillators. See [FM and hard sync](/sources/fm-sync/).
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
@@ -57,7 +57,7 @@ Global controls shared by the oscillators. See [FM and hard sync](/aconite-manua
 
 ## Noise
 
-See [Sub oscillator and noise](/aconite-manual/sources/sub-noise/).
+See [Sub oscillator and noise](/sources/sub-noise/).
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
@@ -125,7 +125,7 @@ Visible when a Kick wave is selected.
 Visible when a Chip wave is selected. Two authentic chip families, picked by the
 Family selector: the NES / 2A03 and the Commodore 64 SID (6581/8580). Every setting
 is per oscillator, so the three oscillators act as independent console channels. See
-[Oscillators](/aconite-manual/sources/oscillators/).
+[Oscillators](/sources/oscillators/).
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
@@ -154,7 +154,7 @@ Visible when the Wavetable wave is selected.
 
 ## Additive model
 
-Visible when the Additive wave is selected. See [Additive oscillator](/aconite-manual/sources/additive/).
+Visible when the Additive wave is selected. See [Additive oscillator](/sources/additive/).
 
 ### Spectrum page
 

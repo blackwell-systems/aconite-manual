@@ -19,7 +19,7 @@ MIDI-learn.
 ## Oscillators
 
 Each of the three main oscillators (Osc 1, Osc 2, Osc 3) shares this control
-set. See [Oscillators](/aconite-manual/sources/oscillators/) for the full guide.
+set. See [Oscillators](/sources/oscillators/) for the full guide.
 
 ### Per-oscillator controls
 
@@ -64,7 +64,7 @@ set. See [Oscillators](/aconite-manual/sources/oscillators/) for the full guide.
 
 ### String model controls
 
-Visible when a String wave is selected. See [Oscillators](/aconite-manual/sources/oscillators/).
+Visible when a String wave is selected. See [Oscillators](/sources/oscillators/).
 
 | Control | What it does |
 |---------|-------------|
@@ -135,7 +135,7 @@ Visible when the Wavetable wave is selected.
 ## Filters
 
 Aconite has two independent filters. The controls below apply per filter (Filter 1
-and Filter 2) unless noted. See [The two filters](/aconite-manual/filters/the-two-filters/).
+and Filter 2) unless noted. See [The two filters](/filters/the-two-filters/).
 
 ### Per-filter controls
 
@@ -175,7 +175,7 @@ and Filter 2) unless noted. See [The two filters](/aconite-manual/filters/the-tw
 ## Waveshaper
 
 The waveshaper adds harmonics at a configurable point around the filter block.
-See [the waveshaper section](/aconite-manual/effects/effect-by-effect/) for the full guide.
+See [the waveshaper section](/effects/effect-by-effect/) for the full guide.
 
 | Control | What it does | Range / notes |
 |---------|-------------|---------------|
@@ -191,7 +191,7 @@ See [the waveshaper section](/aconite-manual/effects/effect-by-effect/) for the 
 ## Envelopes
 
 Aconite has six envelopes. Env 1 defaults to amplitude, Env 2 to filter cutoff;
-Env 3–6 are free. See [Envelopes](/aconite-manual/modulation/lfos/).
+Env 3–6 are free. See [Envelopes](/modulation/lfos/).
 
 | Control | What it does | Range / notes |
 |---------|-------------|---------------|
@@ -212,8 +212,8 @@ Env 3–6 are free. See [Envelopes](/aconite-manual/modulation/lfos/).
 ## LFOs and modulators
 
 Six drawable LFOs plus the Step Sequencer and Performer. See
-[LFOs](/aconite-manual/modulation/lfos/) and the modulation
-[Matrix](/aconite-manual/modulation/matrix/).
+[LFOs](/modulation/lfos/) and the modulation
+[Matrix](/modulation/matrix/).
 
 ### Drawable LFO controls (LFO 1–6)
 
@@ -262,7 +262,7 @@ source, an optional Via transform, a destination, and a signed depth.
 | Destination | What the slot modulates (any modulatable parameter) |
 | Depth | Amount, positive or negative |
 
-See [Modulation matrix](/aconite-manual/modulation/matrix/) for the full source and destination lists.
+See [Modulation matrix](/modulation/matrix/) for the full source and destination lists.
 
 ### Macros
 
@@ -273,8 +273,8 @@ combination of destinations via the matrix and can be MIDI-learned to a hardware
 
 ## Arpeggiator and Step Sequencer
 
-See [Arpeggiator](/aconite-manual/performance/arpeggiator/) and
-[Step Sequencer](/aconite-manual/performance/step-sequencer/).
+See [Arpeggiator](/performance/arpeggiator/) and
+[Step Sequencer](/performance/step-sequencer/).
 
 ### Arpeggiator
 
@@ -298,7 +298,7 @@ See [Arpeggiator](/aconite-manual/performance/arpeggiator/) and
 
 ## Voice / Play
 
-See [Voice and play](/aconite-manual/performance/voice-and-play/).
+See [Voice and play](/performance/voice-and-play/).
 
 | Control | What it does | Range / notes |
 |---------|-------------|---------------|
@@ -328,7 +328,7 @@ See [Voice and play](/aconite-manual/performance/voice-and-play/).
 
 ## Master
 
-See [The Master band](/aconite-manual/master/master-band/).
+See [The Master band](/master/master-band/).
 
 | Control | What it does | Range / notes |
 |---------|-------------|---------------|
@@ -351,7 +351,7 @@ See [The Master band](/aconite-manual/master/master-band/).
 
 The FX bus carries twelve effects in a fully re-orderable chain. Each effect has
 a **Mix** (dry/wet) and can run as an **Insert** or **Send**. See
-[Effect by effect](/aconite-manual/effects/effect-by-effect/).
+[Effect by effect](/effects/effect-by-effect/).
 
 | Effect | Key controls |
 |--------|-------------|

@@ -26,7 +26,7 @@ Each scene is a completely independent voice pool. It carries its own:
 The arpeggiator, master effects, oversampling Quality, MPE, and MIDI routing are shared across both
 scenes. When you switch to Scene B to edit it, the arp keeps playing from Scene A's patch.
 
-Scenes are saved and recalled with [presets](/aconite-manual/master/presets/), so a split or layer
+Scenes are saved and recalled with [presets](/master/presets/), so a split or layer
 you build is completely portable.
 
 ## Scene modes

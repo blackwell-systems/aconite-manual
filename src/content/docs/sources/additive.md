@@ -22,7 +22,7 @@ preset shape.
 
 ## Additive versus Wavetable
 
-Additive and the [Wavetable](/aconite-manual/sources/oscillators/#special-oscillators)
+Additive and the [Wavetable](/sources/oscillators/#special-oscillators)
 oscillator both give you more than a single fixed wave, but they get there in
 opposite ways:
 
@@ -221,7 +221,7 @@ movement, beating, and warmth of hardware while keeping the exact spectrum you
 designed.
 
 **Drive and Drift can be modulated.** Both are available as destinations in the
-[modulation matrix](/aconite-manual/modulation/matrix/), so an LFO or an envelope
+[modulation matrix](/modulation/matrix/), so an LFO or an envelope
 can open the warmth or the wander up over the course of a note, breathing the
 analog character in and out rather than leaving it fixed.
 
@@ -260,7 +260,7 @@ climb, so the sound stays clean and never turns harsh no matter how high you pla
   preset, so a sound you draw today loads back exactly as you left it. Each
   oscillator keeps its own set.
 - **Tune it like any other oscillator.** The normal
-  [Octave, Coarse, and Detune](/aconite-manual/sources/oscillators/#tuning)
+  [Octave, Coarse, and Detune](/sources/oscillators/#tuning)
   controls work as they always do: shift it by octaves, tune it to an interval,
   or detune it slightly against another oscillator for beating and width.
 - **Leaving Additive is just a type change.** To go back to a fixed waveform or
@@ -276,8 +276,8 @@ movement and life on top of that drawn spectrum (bands that evolve, harmonics th
 beat and wander, a touch of warmth), but the drawn shape itself is still the thing
 you design, not a set of individual harmonics animated one by one. For sweeping
 between wholly different waves over time, reach for the
-[Wavetable](/aconite-manual/sources/oscillators/#special-oscillators) oscillator
-and the [modulation matrix](/aconite-manual/modulation/matrix/).
+[Wavetable](/sources/oscillators/#special-oscillators) oscillator
+and the [modulation matrix](/modulation/matrix/).
 :::
 
 :::tip

@@ -14,7 +14,7 @@ source.
 Select **Step Seq** from the mode menu and the panel grows to show the pattern editor. The sequencer
 is a mode of the arpeggiator: it inherits the arp's clock, rate, gate, Latch, the scale foundation
 (Root, Scale, Snap, and diatonic Transpose), and the rhythm layer (Swing, Probability, Euclidean
-fill). See the [arpeggiator](/aconite-manual/performance/arpeggiator/) for that shared machinery.
+fill). See the [arpeggiator](/performance/arpeggiator/) for that shared machinery.
 
 ## How the pitch grid works
 
@@ -55,7 +55,7 @@ Slide and tie each give the line a different kind of continuity.
 
 A **slide** step glides into the next note instead of retriggering, the classic 303 portamento
 bend. For the glide to actually bend the pitch, turn **Glide** up in the
-[voicing controls](/aconite-manual/performance/voice-and-play/). Keep Mono on (its default) so
+[voicing controls](/performance/voice-and-play/). Keep Mono on (its default) so
 slides collapse to a single legato voice.
 
 A **tie** holds the previous note through the step with no re-attack, turning a run of tied steps
@@ -163,7 +163,7 @@ through the bar.
 Four **Curve Lanes** sit below the value lanes, one for each of the sequencer's pattern-synced
 modulation sources: **Curve 1** through **Curve 4**. Each lane is a curve you draw that plays in
 sync with the pattern, and you route each one to any destination through the
-[modulation matrix](/aconite-manual/modulation/matrix/).
+[modulation matrix](/modulation/matrix/).
 
 Draw a filter sweep that tracks your bassline. Draw a pitch-bend shape. Draw an FX-mix ramp. Route
 Curve 1 to filter cutoff and your drawn shape drives the filter exactly in step with the sequence,

@@ -5,7 +5,7 @@ description: "The drawable LFOs: waveforms with A/B morph, sync-aware rate, phas
 
 Aconite has **six LFOs**, low-frequency oscillators that loop a shape continuously and
 push whatever destination you route them to. They differ from
-[envelopes](/aconite-manual/envelopes/pool/) in one fundamental way: an envelope is
+[envelopes](/envelopes/pool/) in one fundamental way: an envelope is
 note-triggered and note-released, shaped around key presses. An LFO cycles on its own clock,
 independently of the notes you play. That makes LFOs the right tool for slow evolving
 movement, vibrato, tremolo, filter sweeps, and any other modulation that should not restart
@@ -28,7 +28,7 @@ drawable shape editor is there when you need it; it is never required.
 ## The shape editor
 
 Clicking into the LFO display opens the same **shape editor** used by
-[drawable envelopes](/aconite-manual/envelopes/drawable/):
+[drawable envelopes](/envelopes/drawable/):
 
 - **Click** to add a breakpoint, **drag** to reposition it.
 - **Drag the curve between points** to bend the segment: the handle is symmetric, easing
@@ -95,13 +95,13 @@ LFOs have no dedicated destination knobs. To route an LFO, either:
 
 1. Right-click the knob you want to modulate and choose **Add modulation → LFO 1** (or
    whichever LFO you want).
-2. Open the [modulation matrix](/aconite-manual/modulation/matrix/), set the Source column
+2. Open the [modulation matrix](/modulation/matrix/), set the Source column
    to the LFO, and choose a destination.
 
 Common LFO destinations include filter cutoff (a sweep), oscillator pitch (vibrato),
 pan (auto-pan), waveshaper drive (tremolo-style grit), and LFO rates (modulating one
 LFO's speed with another for evolving complexity). Any destination in the
-[matrix](/aconite-manual/modulation/matrix/) is available.
+[matrix](/modulation/matrix/) is available.
 
 ## Bus LFOs
 
@@ -115,5 +115,5 @@ The bus LFOs share all the same shape, rate, and playback controls as the voice 
 waveform presets, A/B morph, tempo sync, phase, bipolar/unipolar, one-shot, slew, and
 retrigger. They are full LFOs routed to a different scope, not stripped-down versions.
 
-See the [modulation matrix](/aconite-manual/modulation/matrix/) for the full list of bus
+See the [modulation matrix](/modulation/matrix/) for the full list of bus
 destinations.

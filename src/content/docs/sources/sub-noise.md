@@ -14,7 +14,7 @@ several flavors, including tuned noise and a sample-and-hold source.
 The sub tracks the pitch you play and adds content at a fixed octave below. It is
 the simplest, most direct way to add low-end weight to any patch without touching
 the main oscillators. Its level sits alongside the other sources in the
-[Mixer](/aconite-manual/sources/mixer/).
+[Mixer](/sources/mixer/).
 
 ### Wave
 
@@ -38,7 +38,7 @@ Three shapes are available:
 **Octave** switches the sub between one octave below (−1) and two octaves below
 (−2) the played note. At −2, in the lower keyboard registers, the sub reaches
 very low frequencies; make sure your monitoring can reproduce them, and watch
-the [Mix Drive](/aconite-manual/sources/mixer/) if you push the sub level high,
+the [Mix Drive](/sources/mixer/) if you push the sub level high,
 as the low energy will drive the pre-filter stage hard.
 
 :::tip
@@ -56,7 +56,7 @@ automatically include the sub content.
 Aconite's noise source is not a single colour but a menu of seven distinct
 flavours. Each one has a different spectral balance, and some have their own
 controls that appear when selected. Noise level lives alongside the other sources
-in the [Mixer](/aconite-manual/sources/mixer/).
+in the [Mixer](/sources/mixer/).
 
 ### Spectral colours
 
@@ -98,7 +98,7 @@ bright percussive transients.
 Layer Tuned noise (high Reso, Keytrack on) with a Silk saw oscillator for an
 instant breathy flute or shakuhachi character. The noise provides the breathiness;
 the oscillator provides the pitch. Feed both through
-[the filter](/aconite-manual/filters/the-two-filters/) with moderate cutoff and
+[the filter](/filters/the-two-filters/) with moderate cutoff and
 low resonance to blend them together naturally.
 :::
 
@@ -121,13 +121,13 @@ colours reach.
 
 ### Noise through the filter
 
-All noise flavours run through the [filter](/aconite-manual/filters/the-two-filters/)
+All noise flavours run through the [filter](/filters/the-two-filters/)
 exactly like the oscillators do. This means the noise is shaped by Cutoff and
 Resonance, responds to filter envelopes, and can be filtered down to a narrow
 band. Turning up Resonance with white or pink noise is one of the fastest routes
 to a wind or breath whoosh: the resonant peak sweeps through the noise as you
 move Cutoff, giving the noise a pitched, wind-chime quality.
 
-You can also route noise into the [modulation matrix](/aconite-manual/modulation/matrix/)
+You can also route noise into the [modulation matrix](/modulation/matrix/)
 as a source to modulate other parameters directly, which is separate from using
 it here as an audio source in the mixer.

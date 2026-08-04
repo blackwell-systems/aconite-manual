@@ -5,7 +5,7 @@ description: "Lookup reference for the per-voice and bus modulation matrix slots
 
 A terse lookup for the modulation matrix. The matrix has a per-voice tier plus a
 bus tier; each slot binds a source, an optional Via transform, a destination, and
-a signed depth. See [The modulation matrix](/aconite-manual/modulation/matrix/).
+a signed depth. See [The modulation matrix](/modulation/matrix/).
 
 ## Matrix slot columns
 

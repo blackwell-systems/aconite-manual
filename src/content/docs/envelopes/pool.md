@@ -8,7 +8,7 @@ description: Six routable envelopes, their voicing models, ADSR plus velocity an
 Aconite gives you a pool of **six routable envelopes**. Two are wired by default (the
 amp envelope controls overall volume, and the filter envelope shapes the cutoff), but all
 six are full, independent envelopes you can route to any destination in the
-[modulation matrix](/aconite-manual/modulation/matrix/). Env 3 through 6 start with
+[modulation matrix](/modulation/matrix/). Env 3 through 6 start with
 nothing connected; they exist so you can put a third, fourth, fifth, or sixth moving
 shape anywhere in the patch.
 
@@ -70,7 +70,7 @@ sustain level:
 - **Loop**: on reaching sustain, the envelope jumps back to attack and re-runs the
   attack-to-decay arc while the key is held. Release still fires on note-off. This turns
   the envelope into a note-synced, tempo-lockable shape, a natural complement to
-  [the LFOs](/aconite-manual/modulation/lfos/).
+  [the LFOs](/modulation/lfos/).
 - **One-shot**: the envelope plays straight through to release on note-on, ignoring when
   you let go. Useful for percussion, transients, or any shape that must complete regardless
   of note length.
@@ -103,18 +103,18 @@ All six envelopes are modulation sources. The quickest way to connect one:
    marks that it now has a source, and a colored arc animates to show the live push.
 
 To set a precise depth or add a Via transform, open the
-[modulation matrix](/aconite-manual/modulation/matrix/) and adjust the row there.
+[modulation matrix](/modulation/matrix/) and adjust the row there.
 
 :::tip
 Envelope 3 through 6 start free; nothing is routed to them. Think of them as blank shapes
 you can assign once you know what needs to move in your patch: LFO rate, oscillator detune,
-[filter morph](/aconite-manual/filters/the-two-filters/), waveshaper depth, or anything else
+[filter morph](/filters/the-two-filters/), waveshaper depth, or anything else
 the matrix lists.
 :::
 
 ## Draw mode and the ADSR knobs
 
-Any envelope can switch to [Draw mode](/aconite-manual/envelopes/drawable/), replacing the
+Any envelope can switch to [Draw mode](/envelopes/drawable/), replacing the
 ADSR shape with a hand-drawn multi-segment contour. The two views stay in sync: edits you
 make in the draw canvas mirror back to the A/D/S/R knobs, and adjusting the knobs reshapes
 the drawn contour to match. You can move between the two representations freely without
@@ -127,5 +127,5 @@ and saved with the preset, so different scenes can carry entirely different draw
 
 While a tab is selected, the envelope display shows a **live playhead** riding the current
 position in real time. In normal ADSR mode it moves through the attack, decay, sustain, and
-release stages as the voice runs. In [Draw mode](/aconite-manual/envelopes/drawable/) it
+release stages as the voice runs. In [Draw mode](/envelopes/drawable/) it
 tracks the hand-drawn contour instead.

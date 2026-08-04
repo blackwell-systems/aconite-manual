@@ -4,8 +4,8 @@ description: "Lookup reference for every control on the twelve effects: chorus, 
 ---
 
 A terse lookup for every effect control. The FX bus carries twelve effects in a
-re-orderable chain. See [Using the FX rack](/aconite-manual/effects/using-the-rack/)
-and [Effect by effect](/aconite-manual/effects/effect-by-effect/).
+re-orderable chain. See [Using the FX rack](/effects/using-the-rack/)
+and [Effect by effect](/effects/effect-by-effect/).
 
 ## Shared per-effect controls
 

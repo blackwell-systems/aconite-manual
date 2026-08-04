@@ -6,8 +6,8 @@ description: "Lookup reference for the six envelopes: the ADSR stages, model, ve
 A terse lookup for every envelope control. Aconite has six envelopes: Env 1
 defaults to amplitude, Env 2 to filter cutoff, and Env 3 to 6 are free. Every
 envelope shares the control set below. See
-[The envelope pool](/aconite-manual/envelopes/pool/) and
-[Drawable envelopes](/aconite-manual/envelopes/drawable/).
+[The envelope pool](/envelopes/pool/) and
+[Drawable envelopes](/envelopes/drawable/).
 
 ## Stage controls
 

@@ -52,7 +52,7 @@ Glide slides the pitch from the previous note to the new one over a settable tim
 A whole chord glides from the previous note cleanly, without each voice smearing its own start.
 
 For slide steps in the step sequencer, Glide has to be non-zero for the slide to actually bend
-pitch. See the [step sequencer](/aconite-manual/performance/step-sequencer/) for details.
+pitch. See the [step sequencer](/performance/step-sequencer/) for details.
 
 ## Unison
 
@@ -84,7 +84,7 @@ identical. Higher settings model older, looser hardware.
   **Env Restart**, which controls the envelope's starting level when a new note arrives.
 
 The analog-character controls are what the philosophy chapter describes as "aliveness." See
-[The Aconite philosophy](/aconite-manual/getting-started/philosophy/) for the broader framing of why
+[The Aconite philosophy](/getting-started/philosophy/) for the broader framing of why
 these exist.
 
 ## Velocity curve
@@ -106,7 +106,7 @@ changes the response:
 
 Because the curve reshapes velocity before anything reads it, it moves everything velocity drives at
 once: note loudness and every velocity-based route in the
-[modulation matrix](/aconite-manual/modulation/matrix/) respond to the same drawn shape. It also
+[modulation matrix](/modulation/matrix/) respond to the same drawn shape. It also
 feeds the arpeggiator and step sequencer, so their accents ride the reshaped velocity too.
 
 A live indicator dot shows where your last played note landed on the curve, so you can see your
@@ -141,8 +141,8 @@ release or a patch runs away on you.
 ## Quality and CPU
 
 The oversampling Quality setting and the Auto HQ on bounce option live in the
-[Master band](/aconite-manual/master/master-band/). For a full explanation of Quality levels and
-CPU tradeoffs, see [Performance & CPU](/aconite-manual/reference/performance/).
+[Master band](/master/master-band/). For a full explanation of Quality levels and
+CPU tradeoffs, see [Performance & CPU](/reference/performance/).
 
 :::tip
 For thick pads: set Poly to 6–8 voices, nudge Voice Detune to about 10–15%, add a little Drift,

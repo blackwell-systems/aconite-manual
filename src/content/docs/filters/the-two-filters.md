@@ -95,7 +95,7 @@ between responses: they produce a continuous blend between them.
 The **Mode** selector snaps to a discrete response. The **Morph** control is a signed offset
 from that position that blends continuously between the adjacent modes. Rather than clicking
 between responses, you can sweep through them smoothly, or, more powerfully, route a
-modulation source to Morph 1 or Morph 2 in the [modulation matrix](/aconite-manual/modulation/matrix/)
+modulation source to Morph 1 or Morph 2 in the [modulation matrix](/modulation/matrix/)
 and let an LFO or envelope carry the filter from low-pass through band-pass into high-pass
 inside a single patch.
 
@@ -116,13 +116,13 @@ exactly one octave per octave, keeping timbre consistent as you move up the keyb
 the filter stays fixed. Values in between give a softer tracking that is natural for many
 pads and leads.
 
-**Env Amt** (envelope amount) scales how far the [filter envelope](/aconite-manual/envelopes/pool/)
+**Env Amt** (envelope amount) scales how far the [filter envelope](/envelopes/pool/)
 pushes cutoff from its resting position on each note, over a range of ±6 octaves. A positive
 value opens the filter on attack; a negative value closes it. The amount is also scaled by
 velocity, so playing harder produces a more dramatic sweep without any extra routing. Pair
 with Decay and Sustain to create plucks, stabs, and evolving filter sweeps. Both Env Amt and
 Key Track can be linked to Filter 1 when Filter 2 is running independently, or kept separate.
-See [Routing & configs](/aconite-manual/filters/routing/).
+See [Routing & configs](/filters/routing/).
 
 ## Resonance and Drive
 
@@ -182,7 +182,7 @@ These are the behaviors worth knowing before you start exploring:
 - **Feedback and Resonance are antagonistic at high Q.** Cranking Feedback while Resonance
   is high does not add more scream; it collapses the sharp peak into a broader growl below
   cutoff. Feedback is a "growl / tame the scream" color, not extra resonance. See
-  [Feedback & FB Sat](/aconite-manual/filters/feedback/) for the full picture.
+  [Feedback & FB Sat](/filters/feedback/) for the full picture.
 - **Depth only acts under Analog voicing.** Under Clean, it is silent.
 - **Morph does nothing on fixed-mode models.** Save it for SVF, Bite, and Multimode.
 - **Global Sat is always audible; FB Sat is not.** If you want whole-voice warmth regardless

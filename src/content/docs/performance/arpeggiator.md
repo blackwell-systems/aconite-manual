@@ -13,7 +13,7 @@ strum, and doubles as a modulation source and a set of modulation destinations.
 Hold a chord, press play, and the arp turns it into a rhythmic stream of notes. The defaults are
 simple (up, in time, one octave), so you can reach for depth only when you want it. The step
 sequencer shares this same clock and rhythm engine; see the
-[step sequencer](/aconite-manual/performance/step-sequencer/) for programming a fixed pitch pattern.
+[step sequencer](/performance/step-sequencer/) for programming a fixed pitch pattern.
 
 ## Modes and direction
 
@@ -118,7 +118,7 @@ stack rings together, even if the patch was previously set to a mono mode.
 ## The arp as a modulator
 
 The arp exposes live data as modulation sources you can route through the
-[modulation matrix](/aconite-manual/modulation/matrix/):
+[modulation matrix](/modulation/matrix/):
 
 - **Arp Step**: the pattern position, a staircase that advances with the clock. Route it to filter
   cutoff for a rhythmic filter sweep that tracks the pattern.

@@ -91,11 +91,11 @@ a small amount of Feedback softens the peak without requiring you to reduce Reso
 the way down.
 
 **Animated feedback color.** Route a slow LFO to one of the Feedback destinations in the
-[modulation matrix](/aconite-manual/modulation/matrix/) and let the growl pulse gently on a
+[modulation matrix](/modulation/matrix/) and let the growl pulse gently on a
 long pad. With FB Sat up slightly, the saturation coloration breathes alongside it.
 
 **Dual-filter contrast.** When running two filters in parallel or series (see
-[Routing & configs](/aconite-manual/filters/routing/)), each filter's Feedback is
+[Routing & configs](/filters/routing/)), each filter's Feedback is
 independent. Set high Feedback on Filter 1 for growl and none on Filter 2 for clarity, then
 blend the parallel sum to taste. The two textures can sit in different frequency regions for
 a layered, complex result.

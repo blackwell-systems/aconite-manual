@@ -4,8 +4,8 @@ description: "Lookup reference for the voicing and play-mode controls, the analo
 ---
 
 A terse lookup for the voicing, play-mode, and scene controls. See
-[Voice and play](/aconite-manual/performance/voice-and-play/) and
-[Scenes](/aconite-manual/performance/scenes/).
+[Voice and play](/performance/voice-and-play/) and
+[Scenes](/performance/scenes/).
 
 ## Play mode
 

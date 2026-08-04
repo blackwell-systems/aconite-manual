@@ -12,7 +12,7 @@ Distortion (5 modes), Bit-crusher, Compressor (4 topologies), Transient shaper, 
 key controls, and its hero visualization.
 
 For how the rack chain works as a whole (enabling slots, reordering, insert vs
-send), see [Using the FX rack](/aconite-manual/effects/using-the-rack/).
+send), see [Using the FX rack](/effects/using-the-rack/).
 
 ---
 
@@ -361,7 +361,7 @@ This effect is **insert-only**: it cannot run as a send/return.
 ## The voice-path waveshaper
 
 The waveshaper is not a rack effect; it lives inside each voice, in the signal path
-around the [filter](/aconite-manual/filters/the-two-filters/), and processes audio
+around the [filter](/filters/the-two-filters/), and processes audio
 per voice before the amp stage. It is documented here because it is the main
 distortion tool that works at the voice level, distinct from the rack's Distortion
 slot (which processes the post-mix stereo bus) and the master-band saturation (which
