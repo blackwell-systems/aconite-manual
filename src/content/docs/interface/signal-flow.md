@@ -89,10 +89,12 @@ live here.
 ### 6. Master stage
 
 The stereo signal exits the effects rack into the **master** stage: output gain,
-glue compression, PSU sag, and final metering. The glue sits across the full mix
-and adds cohesion; the sag model simulates the dynamic impedance behavior of an
-analog power supply under load, which gives the output a subtle but musical
-compression character at higher levels.
+glue compression, PSU sag, an optional brickwall limiter, and final metering. The
+glue sits across the full mix and adds cohesion; the sag model simulates the dynamic
+impedance behavior of an analog power supply under load, which gives the output a
+subtle but musical compression character at higher levels. The master brickwall
+limiter, off by default, sits last of all, so with it engaged the output can never
+clip no matter how hard the stages before it are pushed.
 
 The master stage is covered in [Master band](/aconite-manual/master/master-band/).
 

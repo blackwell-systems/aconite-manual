@@ -83,9 +83,11 @@ Visible when a String wave is selected.
 | Drive | Level-dependent saturation on the string: loud passes fold and grit up, mellowing as the note decays, for sitar and distorted electric-string tones (clean at zero). | 0 to 100 % |
 | Place | Where the Drive grit sits: from inside the string (character evolves over the note) to the string's output (an amp after the pickup, cleaner and more aggressive). | 0 to 100 % |
 | Drive Curve | Hardness of the fold applied by Drive. | Soft / Med / Hard |
-| Exciter | What sets the string in motion. Bow is a sustained friction excitation (the string sings while held); the others strike once at note-on. | Noise / Impulse / From Osc / Body / Hammer / Bow |
+| Exciter | What sets the string in motion. Bow is a sustained friction excitation (the string sings while held); the others strike once at note-on. Impulse is a short shaped click, not a lone spike; all five are level-matched. | Noise / Impulse / From Osc / Hammer / Bow |
+| Body | Orthogonal soundboard resonator that colours whatever the exciter feeds in (independent of the Exciter). Hammer + Grand is a real piano; a pluck + Guitar is an acoustic guitar. Off is bit-exact. | Off / Guitar / Grand / Baby Grand / Upright / Spinet (default Off) |
 | Poly | Dual polarisation: blends in a second, slightly detuned string plane that decays slower, for a two-stage decay and gentle beating (single string at zero). | 0 to 100 % |
 | Unison | True multi-string unison: adds up to two more slightly detuned strings for a lush chorus and long shimmering aftersound (single string at zero). | 0 to 100 % |
+| Humanize | Per-note pitch (about ±3 cents) and level (about ±2 dB) scatter, so repeated notes are not machine-gun identical (0 is off/bit-exact). | 0 to 100 % (default 0) |
 | Bow Force | Bow exciter only: bow pressure and dynamics. Harder is louder; past the sweet spot it over-presses into a raucous scratch. | 0 to 100 % |
 | Bow Speed | Bow exciter only: bow speed and brightness. Faster gives a brighter, quicker-catching tone. | 0 to 100 % |
 
@@ -120,21 +122,25 @@ Visible when a Kick wave is selected.
 
 ## Chip model
 
-Visible when a Chip wave is selected. An authentic NES / 2A03 voice. Every setting
+Visible when a Chip wave is selected. Two authentic chip families, picked by the
+Family selector: the NES / 2A03 and the Commodore 64 SID (6581/8580). Every setting
 is per oscillator, so the three oscillators act as independent console channels. See
 [Oscillators](/aconite-manual/sources/oscillators/).
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
-| Wave | The 2A03 voice: Pulse (duty-based square), stepped Triangle (NES bass), or the console noise channel. | Pulse / Triangle / Noise |
-| Duty | Pulse duty cycle (Pulse wave): the four hardware widths, 50% being the plain square. | 12.5 / 25 / 50 / 75 % |
-| Noise Mode | Noise character (Noise wave): Long is a broad white hiss; Short is a shorter, pitched, metallic buzz. | Long / Short |
-| Pitch Quant | Snaps the pitch onto the console's coarse hardware tuning grid, so high notes drift slightly out of tune, the key NES tell (on by default; off plays exact pitch). | Off / On |
-| Vol Quant | Snaps the output level onto the coarse 16-step (4-bit) amplitude grid the real chip uses. | Off / On |
+| Family | Which chip you are playing. NES is the Ricoh 2A03; SID is the C64's MOS 6581/8580. | NES 2A03 / SID 6581-8580 (default NES) |
+| Wave | The chip voice. NES: Pulse (duty square), stepped Triangle, or noise channel. SID: Saw, Triangle, Pulse, or LFSR noise (multi-select reaches the SID's bit-ANDed combined waveforms). | Pulse / Triangle / Noise (NES); Saw / Triangle / Pulse / Noise (SID) |
+| Duty | Pulse duty / width. NES: the four hardware widths (50% is the plain square). SID: a continuous 12-bit pulse width. | 12.5 / 25 / 50 / 75 % (NES); continuous (SID) |
+| Noise Mode | NES noise character (Noise wave): Long is a broad white hiss; Short is a shorter, pitched, metallic buzz. | Long / Short |
+| Rev | SID revision. 6581 is the non-monotonic-DAC "classic SID" grit; 8580 is the cleaner later chip. | 6581 / 8580 (default 6581) |
+| Pitch Quant | NES: snaps the pitch onto the console's coarse hardware tuning grid, so high notes drift slightly out of tune, the key NES tell (on by default; off plays exact pitch). | Off / On |
+| Vol Quant | NES: snaps the output level onto the coarse 16-step (4-bit) amplitude grid the real chip uses. | Off / On |
 
-Stacking two or more Chip oscillators in one voice mixes them through a model of the
-console's nonlinear output DAC, so the channels compress and glue like a full NES mix.
-It is automatic (no control) and engages only at two or more Chip oscillators.
+On the NES family, stacking two or more Chip oscillators in one voice mixes them
+through a model of the console's nonlinear output DAC, so the channels compress and
+glue like a full NES mix. It is automatic (no control) and engages only at two or
+more NES Chip oscillators. The SID family carries its own DAC character per voice.
 
 ## Wavetable model
 

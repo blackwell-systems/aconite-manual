@@ -76,7 +76,10 @@ Visible when a String wave is selected. See [Oscillators](/aconite-manual/source
 | Drive | In-loop waveshaper coloration |
 | Drive Curve | Fold character: Soft / Med / Hard |
 | Poly | Second polarisation (beating chorus) |
-| Exciter | Front-end type: Noise / Impulse / From Osc / Body / Hammer |
+| Unison | Multi-string unison (up to three detuned strings) |
+| Humanize | Per-note pitch/level scatter (0 = off) |
+| Body | Soundboard: Off / Guitar / Grand / Baby Grand / Upright / Spinet |
+| Exciter | Front-end type: Noise / Impulse / From Osc / Hammer / Bow |
 
 ### Modal model controls
 
@@ -330,7 +333,10 @@ See [The Master band](/aconite-manual/master/master-band/).
 | Control | What it does | Range / notes |
 |---------|-------------|---------------|
 | Gain | Output volume | dB |
-| Clip | Output clip / limiter | Off / On |
+| Clip | Output safety clipper (character stage) | Off / Soft / Hard |
+| Limiter | Master brickwall limiter (zero-latency, last in the chain, output can never clip) | Off / On (default Off) |
+| Limiter Ceiling | Level the limiter holds output below | -3 to 0 dBFS (default -1.0) |
+| Limiter Release | Gain-recovery time between peaks | 30 to 500 ms (default 100) |
 | Quality | Internal oversampling rate | 1× / 2× / 4× / 8× |
 | Auto-HQ | Use maximum quality on export regardless of Quality setting | Off / On |
 | Glue | Bus saturation amount | 0–100 % |

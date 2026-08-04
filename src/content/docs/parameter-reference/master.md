@@ -12,7 +12,10 @@ A terse lookup for the master-section controls. See
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
 | Gain | Output volume. | dB |
-| Clip | Master-output safety clipper: Off is bit-exact (can overshoot), Soft rounds peaks gently, Hard brick-wall clips to stop overs reaching the host. | Off / Soft / Hard |
+| Clip | Master-output safety clipper (a character stage): Off is bit-exact (can overshoot), Soft rounds peaks gently, Hard brick-wall clips to stop overs reaching the host. | Off / Soft / Hard |
+| Limiter | Master brickwall limiter: zero-latency, stereo-linked, sits last in the master chain so the output can never clip. Off is bit-exact. | Off / On (default Off) |
+| Limiter Ceiling | The level the limiter holds the output below, in dBFS. | -3 to 0 dBFS (default -1.0) |
+| Limiter Release | How fast the limiter's gain glides back toward unity between peaks. | 30 to 500 ms (default 100) |
 | Quality | Internal oversampling rate: higher reduces aliasing on bright or distorted patches at a CPU cost. | 1x / 2x / 4x / 8x |
 | Auto-HQ | Force maximum oversampling on offline render (bounce) while keeping the live setting for playback. | Off / On |
 

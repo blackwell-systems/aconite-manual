@@ -26,13 +26,18 @@ you never see on a panel, so the pieces settle into a single voice instead of
 stacking into layers.
 
 Some of that lives in the sound sources. The string model has a full resonating
-body behind it that any source can drive. The chip oscillator carries the real
-output stage of the console it models, so stacking its channels blends them the way
-the hardware does. The rest is the glue further down the chain: console-style bus
-saturation, a power supply that sags and blooms under a heavy chord, and a
-sympathetic resonance that lets held strings ring with what you play. None of these
-are effects bolted on the end. They are the connective tissue that makes a signal
-path sound like an instrument.
+**soundboard body** behind it that any excitation can drive, selectable per
+instrument: a felt Hammer through a Grand body is a real piano (an actual strike
+*and* an actual soundboard), a plucked string through a Guitar body is an acoustic
+guitar. A per-note **Humanize** scatters pitch and level just enough that repeated
+notes are never machine-gun identical, so the model breathes. The chip oscillator
+now carries **two** authentic families, the NES 2A03 and the Commodore 64 SID, each
+with the real output stage of the console it models, so stacking channels blends
+them the way the hardware does. The rest is the glue further down the chain:
+console-style bus saturation, a power supply that sags and blooms under a heavy
+chord, and a sympathetic resonance that lets held strings ring with what you play.
+None of these are effects bolted on the end. They are the connective tissue that
+makes a signal path sound like an instrument.
 
 ## The parts are meant to interact
 
@@ -40,9 +45,11 @@ path sound like an instrument.
   <Card title="Many ways to make a tone" icon="seti:audio">
     Three full oscillators plus sub and noise: classic virtual-analog and
     wavetable, a **drawable additive** engine with per-partial analog drift, and
-    physical-modeling **String** (plucked, hammered piano, and bowed), **Modal**
-    percussion (fourteen tuned instruments), a flexible **Kick**, and a **chip**
-    oscillator. Cross-modulated with true through-zero FM and band-limited hard sync.
+    physical-modeling **String** (plucked, hammered piano, and bowed, with a
+    selectable soundboard body and per-note humanize), **Modal** percussion
+    (fourteen tuned instruments), a flexible **Kick**, and a **chip** oscillator
+    with two authentic families, the **NES 2A03** and the **C64 SID**.
+    Cross-modulated with true through-zero FM and band-limited hard sync.
   </Card>
   <Card title="It rings with what you play" icon="approve-check">
     A built-in bank of tuned string resonators sounds in sympathy with your notes:
@@ -97,6 +104,10 @@ off a shelf. It is equally happy loading a factory patch and playing, or letting
 build a tone from the ground up. If you want physical instruments that respond
 instead of trigger, character controls that interact, and a modulation system deep
 enough to make a patch breathe, it rewards every hour you put in.
+
+And a **master brickwall limiter** sits last in the chain, so you can push the Glue,
+Sag, and Drive as hard as the patch wants and the output still can never clip. It is
+off by default and zero-latency when engaged: safe to push, safe to demo.
 
 ## Formats
 

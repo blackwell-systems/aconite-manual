@@ -1,30 +1,42 @@
 ---
 title: The Master band
-description: "The output stage: Gain, Clip, Quality, Auto-HQ, Glue and Warmth, PSU Sag, and the master meter."
+description: "The output stage: Gain, Clip, the brickwall Limiter, Quality, Auto-HQ, Glue and Warmth, PSU Sag, and the master meter."
 ---
 
 ![The Master band](../../../assets/screenshots/panel-master.png)
 
-The **Master band** is Aconite's output stage: **Gain** and **Clip**, the
-oversampling **Quality** and **Auto-HQ** settings, the bus saturation **Glue** and
-**Warmth**, the power-supply **Sag** (with Depth and Time), and the master meter
-with its sag indicator. This is where the whole mix is glued, warmed, and
-level-managed before it leaves the synth.
+The **Master band** is Aconite's output stage: **Gain**, **Clip**, and the master
+brickwall **Limiter**, the oversampling **Quality** and **Auto-HQ** settings, the
+bus saturation **Glue** and **Warmth**, the power-supply **Sag** (with Depth and
+Time), and the master meter with its sag indicator. This is where the whole mix is
+glued, warmed, and level-managed before it leaves the synth.
 
 Everything here sits downstream of every voice and every effect in the rack. The
 signal has already passed through the oscillators, filter, waveshaper, and FX bus
 by the time it reaches the Master band, so changes here colour the full,
 finished mix.
 
-## Gain and Clip
+## Gain, Clip, and Limiter
 
 **Gain** is the output level knob. Use it to trim Aconite's output into your
-mix or interface. It sits before the safety limiter.
+mix or interface. It sits before the Clip and Limiter stages.
 
-**Clip** engages a final hard limiter. Leave it on in most patches; it catches
-any momentary peak that snips above digital full-scale without audibly touching
-normal program material. If you are deliberately running the output hot into the
-Glue or your own hardware, you may want to monitor this and trim Gain first.
+**Clip** is the output safety clipper, a character stage with three settings.
+**Off** is bit-exact and can overshoot; **Soft** rounds peaks gently; **Hard**
+brick-wall clips to stop overs reaching the host. If you are deliberately running
+the output hot into the Glue or your own hardware, you may want to trim Gain first.
+
+**Limiter** is a true master brickwall limiter, and it sits *last* in the master
+chain, after the Clip stage and everything else, so it is the final ceiling on the
+output no matter what precedes it. It is **off by default** and bit-exact when off.
+Turned on it is zero-latency and stereo-linked: the gain needed to hold this sample
+under the ceiling is applied to this sample, so the output can never exceed the
+ceiling and there is no lookahead delay. A **Ceiling** control sets that level
+(-3 to 0 dBFS, default -1 dBFS) and a **Release** control (30 to 500 ms, default
+100 ms) sets how quickly the gain glides back up between peaks, long enough not to
+pump on bass. Because it can never let the output clip, it is a safe thing to leave
+on when you want to push the Glue, Sag, and Drive hard, or when you are demoing a
+patch and do not want a stray peak to spoil it.
 
 ## Quality and Auto-HQ
 
