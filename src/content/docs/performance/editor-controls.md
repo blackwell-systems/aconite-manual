@@ -172,8 +172,13 @@ Grid mode only:
 
 ## Roll looks
 
-A dedicated theme system for the editor surface, live-switchable from the toolbar
-selector with no rebuild:
+A dedicated theme system built for the editor surface. The note editor is where you do
+close, precise work, so its legibility matters more than any other panel — the Roll
+looks are purpose-designed for exactly that: each keeps the grid crisp, the notes
+readable, and the contrast high, so the roll always reads well no matter which global
+app theme you're running. Pick one to lock in that editor-first legibility, or choose
+**Match App** to let the roll blend into the rest of your theme instead. Live-switchable
+from the toolbar selector, no rebuild:
 
 | Look | Character |
 |------|-----------|
