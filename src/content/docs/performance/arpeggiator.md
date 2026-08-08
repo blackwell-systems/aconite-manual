@@ -11,9 +11,10 @@ rhythm layer with swing, probability, and Euclidean fill. It has a chord mode wi
 strum, and doubles as a modulation source and a set of modulation destinations.
 
 Hold a chord, press play, and the arp turns it into a rhythmic stream of notes. The defaults are
-simple (up, in time, one octave), so you can reach for depth only when you want it. The step
-sequencer shares this same clock and rhythm engine; see the
-[step sequencer](/performance/step-sequencer/) for programming a fixed pitch pattern.
+simple (up, in time, one octave), so you can reach for depth only when you want it. The
+[step sequencer (Grid mode)](/performance/step-sequencer/) shares this same clock and rhythm
+engine; the [note editor](/performance/note-editor/) is where you program a fixed pitch pattern
+(Grid) or a free-timeline clip (Free).
 
 ## Modes and direction
 
@@ -78,7 +79,7 @@ One grid covers three jobs at once: stacking octaves (exactly what the Octaves c
 harmonizer voices above a held chord, and building diatonic triads from a single key; degrees 1, 3,
 5 From Root give you an arpeggiated in-key triad anywhere you play.
 
-The interval grid applies to the held-note modes. Scale-walk modes and the step sequencer carry
+The interval grid applies to the held-note modes. Scale-walk modes and Grid mode carry
 their own pitch models, so the grid hides itself when it does not apply.
 
 ## Rhythm: swing, probability, Euclidean fill
@@ -110,7 +111,7 @@ clock, gate, swing, probability, and Euclidean fill drive it.
   or Random (a fresh shuffle each step).
 
 Strum Time is a modulation destination, so a slow LFO can breathe the chord wider and tighter over
-time. Chord mode applies to the held-note modes; the step sequencer keeps its own pitch model.
+time. Chord mode applies to the held-note modes; Grid mode keeps its own pitch model.
 
 When Chord mode is active, Aconite automatically switches to polyphonic voicing so the full note
 stack rings together, even if the patch was previously set to a mono mode.

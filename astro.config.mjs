@@ -92,7 +92,11 @@ export default defineConfig({
           label: 'Arp, sequencer, scenes, voicing',
           items: [
             { label: 'Arpeggiator', link: '/performance/arpeggiator/' },
-            { label: 'Step sequencer', link: '/performance/step-sequencer/' },
+            { label: 'The note editor (Seq)', link: '/performance/note-editor/' },
+            { label: 'Step sequencer (Grid mode)', link: '/performance/step-sequencer/' },
+            { label: 'Piano roll (Free mode)', link: '/performance/piano-roll/' },
+            { label: 'Envelopes tab (automation)', link: '/performance/seq-envelopes/' },
+            { label: 'Editor controls & shortcuts', link: '/performance/editor-controls/' },
             { label: 'Voice & play', link: '/performance/voice-and-play/' },
             { label: 'Scenes', link: '/performance/scenes/' },
           ],

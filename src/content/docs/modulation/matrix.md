@@ -66,6 +66,13 @@ The source menu lists over forty options, organized by type:
   source; route Arp Gate to filter cutoff to pluck the filter on every arp note
 - **Curve 1–4**: four drawable, pattern-synced automation lanes
 
+:::note
+For automation bound directly to one destination (no matrix row to fill in), draw it
+on the [Envelopes tab](/performance/seq-envelopes/) of the note editor. You pick the
+target and draw the curve, and it plays in sync with the pattern and follows host
+transport.
+:::
+
 ## Destinations
 
 Destinations span the full signal path. Most controls you would want to move are available:
