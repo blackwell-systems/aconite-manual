@@ -83,6 +83,26 @@ hit follows a **Shape** you choose:
 The roll's mini-blocks in the grid visually match the shape, so what you see matches
 what plays.
 
+## Chance vs Conditional — the two per-step gates
+
+Chance and Conditional are both "does this step fire?" gates, and they're easy to
+confuse. The distinction that matters: **Chance is random, Conditional is
+deterministic.**
+
+| | **Chance** | **Conditional** |
+|---|---|---|
+| Behaviour | Rolls a die every cycle — fires about N% of the time | Repeats identically — a fixed rule on the pattern pass |
+| Value | 0–100% probability | A trig condition (1:2, 2:2, 1:3 … 1:8, FILL/!FIL, PRE/!PRE, 1ST/!1ST) |
+| Repeatable? | No — different every loop | Yes — the same every loop |
+| Scope | Per **note** (each chord tone rolls its own) | Per **step** (gates the whole step) |
+| Reach for it when | Humanising, thinning, "sometimes" hits | Fills, every-other-bar variation, ghost chains |
+| Editing | Drag lane (plus Play All / Play One groups) | Click-to-menu cell |
+
+**They combine (AND):** a step fires only if it passes *both* its Chance roll *and* its
+Conditional (and the Euclidean fill, and the global Probability). So 1:2 + 60% Chance =
+every other pass, and then 60% of those. The classic pairing is Chance on one step plus
+**PRE** on the next, for dependent ghost notes (described below).
+
 ## Conditional triggers
 
 Each step can carry a **Cond** value that gates it behind a rule. A step has to pass
