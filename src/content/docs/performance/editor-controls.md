@@ -42,6 +42,10 @@ Left to right along the top:
 - **Select (default tool)**: click a note to select it; **Shift** or **Cmd-click**
   adds or removes; drag on empty grid rubber-bands a 2D marquee over time and pitch.
 - **Move / resize**: drag a note body to move it; drag its **right edge** to resize.
+- **Velocity (Alt/Option-drag)**: hold **Alt** (Windows) / **Option** (macOS) and drag **vertically** on a note to
+  adjust its velocity live (drag up = louder). The note brightness and the Velocity lane update in real time; if the
+  note is part of a selection, the whole selection moves together (its contour is preserved). Hold **Shift** while
+  dragging for a fine adjustment. A plain Alt/Option **click** (no drag) instead splits the note at that point.
 - **Split (hold E)**: hold **E** for scissors, then click or drag to split every note
   the cut line crosses. Right-click while E is held glues the note to its adjacent
   same-pitch neighbours.
