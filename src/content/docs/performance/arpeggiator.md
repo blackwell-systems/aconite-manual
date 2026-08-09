@@ -95,6 +95,11 @@ A shared rhythm layer shapes the timing across every mode:
 
 Probability and Euclidean fill decide *whether* a step sounds; Swing decides *when*.
 
+These gates are independent — a step fires only if it passes the Probability roll **and** lands on a
+Euclidean hit slot. In Grid mode the master Probability goes further: it *multiplies* each step's own
+Chance, and a Conditional trig adds a third gate, so a step sounds only when all of them pass. See the
+[step sequencer](/performance/step-sequencer/) for how the full stack works together.
+
 ## Chord mode and strum
 
 **Chord** flips the arp from one-note-at-a-time to firing the whole note pool together on each

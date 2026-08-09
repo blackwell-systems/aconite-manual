@@ -17,7 +17,7 @@ both scenes. See [Arpeggiator](/performance/arpeggiator/) and
 | Octaves | Extends the pattern upward by whole octaves. | 1 to 4 |
 | Gate | How much of each step the note sounds: short is staccato, full plays each note into the next. | 0 to 100 % |
 | Swing | Delays the off-beat steps and shortens the following on-beat for a shuffled feel. | 0 to 100 % |
-| Probability | Per-step chance the step sounds; a failed roll is a rest. | 0 to 100 % |
+| Probability | The master per-step play chance, in every mode; a failed roll is a rest. In Grid mode it multiplies each step's own Chance, and the result is then gated by any Conditional trig and the Euclidean fill — so a step sounds only when all of them pass. | 0 to 100 % |
 
 ## Scale awareness
 

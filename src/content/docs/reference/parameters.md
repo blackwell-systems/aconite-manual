@@ -237,7 +237,7 @@ Six drawable LFOs plus the Step Sequencer and Performer. See
 | Rate | Cycle speed | Free (Hz) or Sync |
 | Direction | Playback order | Forward / Reverse / Ping-Pong / Random |
 | Swing | Off-beat step delay | 0–100 % |
-| Probability | Per-step chance of playing | 0–100 % |
+| Probability | Master per-step play chance; in Grid mode it multiplies each step's own Chance (then Conditional + Euclidean gate too) | 0–100 % |
 | Gate | Note hold portion of each step | Short – Full |
 | Mono | Collapse to single legato voice for slide | Off / On |
 
