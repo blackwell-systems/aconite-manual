@@ -47,11 +47,15 @@ What the lane does depends on the arp mode:
   the pool of notes the arp is cycling swaps to the next chord. In a mono voice this
   gives you an arpeggiated line that follows the changes; in a poly voice the chord
   tones can ring together.
-- **In Grid mode** the chord lane **re-harmonizes your drawn step pattern**: the
-  degree pattern you programmed in the step grid is re-anchored to each chord's root
-  as the progression cycles, so the riff you drew transposes to follow the chords
-  while keeping its rhythm and contour. Rhythm and harmony run on their own cycles,
-  so the pattern keeps evolving.
+- **In Grid mode** the chord lane turns your drawn step pattern into a
+  **chord-arpeggiator**: each step's degree indexes the *current* chord's tones
+  (degree 1 = the lowest note of the chord, 2 = the next up, and so on, wrapping up an
+  octave past the top), so the pattern arpeggiates each chord for real — **quality and
+  voicing come through**. The same drawn 1-2-3 plays a minor third over a minor chord
+  and a major third over a major chord. Your rhythm and contour stay put; harmony
+  follows the changes, and the two run on their own cycles so the pattern keeps
+  evolving. (Want free scale/passing tones instead? Turn the chord lane off — the step
+  grid goes back to plain scale degrees. Want fixed pitches? Use Free mode.)
 
 Either way, the scale keeps everything in key: chord tones are the strong notes, and
 any passing or extension notes stay legal.
