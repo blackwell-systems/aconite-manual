@@ -48,12 +48,15 @@ What the lane does depends on the arp mode:
   gives you an arpeggiated line that follows the changes; in a poly voice the chord
   tones can ring together.
 - **In Grid mode** the chord lane turns your drawn step pattern into a
-  **chord-arpeggiator**: each step's degree indexes the *current* chord's tones
-  (degree 1 = the lowest note of the chord, 2 = the next up, and so on), so the pattern
-  arpeggiates each chord for real — **quality and voicing come through**. The same drawn
+  **chord-arpeggiator**: each step's degree indexes the *current* chord's tones by
+  **function** (degree 1 = the root, 2 = the 3rd, 3 = the 5th, 4 = the 7th, and so on), so
+  the pattern arpeggiates each chord for real — **quality comes through**. The same drawn
   1-2-3 plays a minor third over a minor chord and a major third over a major chord.
-  Your rhythm and contour stay put; harmony follows the changes, and the two run on
-  their own cycles so the pattern keeps evolving.
+  Degree 1 is always the **root**, so a note you drew on the root stays put no matter the
+  scale — the chord's **voicing** (inversion, drop-2, open, slash bass) shapes how the
+  chord *sounds* in the Chord/Sustained output modes, but it never changes which tone a
+  Grid degree plays. Your rhythm and contour stay put; harmony follows the changes, and
+  the two run on their own cycles so the pattern keeps evolving.
   - **Reach** (in the chord header) sets what a step drawn *above* the chord's own notes
     does. **Extended** (default) keeps stacking thirds into tensions — the **7th, 9th,
     11th, 13th** — so drawing higher builds genuine extended voicings; it's a real
