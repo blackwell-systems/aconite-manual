@@ -146,12 +146,16 @@ The lane-level controls sit in the chord band's header (in both presentations):
 
 ## Chord-tone velocity
 
-Each chord block can carry **its own velocity**. **Right-drag a block up and down** to
-set it: the top of the band is loudest, the bottom is quietest. The block's fill height
-shows its velocity, so you can shape an accent pattern across the progression the way you
-draw one into a note lane. **Double right-click** a block to clear it back to **auto**
-(inherit). This applies wherever the chord lane **plays the notes** — the **Chord** and
-**Sustained** outputs, and the order modes.
+Velocity depends on context, because the chord lane and the step grid never play the
+same notes:
+
+- In the **order modes** and the **Chord** / **Sustained** outputs, the chord lane plays
+  the notes, so each block carries **its own velocity**. **Right-drag a block up and down**
+  in the docked chord strip: the top of the band is loudest, the bottom is quietest, and the
+  block's fill height shows it. **Double right-click** a block to clear it back to **auto**.
+- In **Grid** mode the chords only re-pitch your drawn step pattern, so the **step
+  velocity lane** owns velocity there — your programmed dynamics carry straight through the
+  re-harmonisation, and there's no separate chord-velocity control to fight with.
 
 A block left on **auto** falls back to the **Chord Velocity** setting:
 
