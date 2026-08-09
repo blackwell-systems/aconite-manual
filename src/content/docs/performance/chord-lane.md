@@ -49,13 +49,18 @@ What the lane does depends on the arp mode:
   tones can ring together.
 - **In Grid mode** the chord lane turns your drawn step pattern into a
   **chord-arpeggiator**: each step's degree indexes the *current* chord's tones
-  (degree 1 = the lowest note of the chord, 2 = the next up, and so on, wrapping up an
-  octave past the top), so the pattern arpeggiates each chord for real — **quality and
-  voicing come through**. The same drawn 1-2-3 plays a minor third over a minor chord
-  and a major third over a major chord. Your rhythm and contour stay put; harmony
-  follows the changes, and the two run on their own cycles so the pattern keeps
-  evolving. (Want free scale/passing tones instead? Turn the chord lane off — the step
-  grid goes back to plain scale degrees. Want fixed pitches? Use Free mode.)
+  (degree 1 = the lowest note of the chord, 2 = the next up, and so on), so the pattern
+  arpeggiates each chord for real — **quality and voicing come through**. The same drawn
+  1-2-3 plays a minor third over a minor chord and a major third over a major chord.
+  Your rhythm and contour stay put; harmony follows the changes, and the two run on
+  their own cycles so the pattern keeps evolving.
+  - **Reach** (in the chord header) sets what a step drawn *above* the chord's own notes
+    does. **Extended** (default) keeps stacking thirds into tensions — the **7th, 9th,
+    11th, 13th** — so drawing higher builds genuine extended voicings; it's a real
+    extended-harmony writing tool. **Octaves** repeats the chord tones an octave up
+    instead, for a strict arpeggiator (basslines, classic arp runs).
+  - (Want free scale/passing tones instead? Turn the chord lane off — the step grid goes
+    back to plain scale degrees. Want fixed pitches? Use Free mode.)
 
 Either way, the scale keeps everything in key: chord tones are the strong notes, and
 any passing or extension notes stay legal.
