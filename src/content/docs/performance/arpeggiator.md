@@ -113,6 +113,9 @@ clock, gate, swing, probability, and Euclidean fill drive it.
 Strum Time is a modulation destination, so a slow LFO can breathe the chord wider and tighter over
 time. Chord mode applies to the held-note modes; Grid mode keeps its own pitch model.
 
+To play a whole chord *progression* under the arp from one held key, rather than
+stabbing a single held chord, see the [chord lane](/performance/chord-lane/).
+
 When Chord mode is active, Aconite automatically switches to polyphonic voicing so the full note
 stack rings together, even if the patch was previously set to a mono mode.
 

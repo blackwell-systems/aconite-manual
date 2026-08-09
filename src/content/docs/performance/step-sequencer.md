@@ -17,7 +17,9 @@ scale foundation (Root, Scale, Snap, and diatonic Transpose), and the rhythm lay
 (Swing, Probability, Euclidean fill). See the
 [arpeggiator](/performance/arpeggiator/) for that shared machinery, and the
 [note editor](/performance/note-editor/) for the transport, tabs, and Roll looks
-that Grid shares with the piano roll.
+that Grid shares with the piano roll. To have a chord progression re-harmonize your
+drawn pattern as it cycles, add a [chord lane](/performance/chord-lane/) above the
+grid.
 
 ## How the pitch grid works
 

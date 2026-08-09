@@ -51,6 +51,22 @@ both scenes. See [Arpeggiator](/performance/arpeggiator/) and
 | Euclidean Hits | Number of hits distributed evenly across the cycle length; the rest rest. 0 turns Euclidean off. | 0 to 16 |
 | Fill | Momentary control for conditional steps: FILL-conditioned steps play only while this is held, and inverse steps play only while it is off. | Off / On |
 
+## Chord lane
+
+The chord lane plays a chord progression under the arp from one held key. All
+controls default off or neutral, so a patch sounds unchanged until you turn Chord
+on. See [The chord lane](/performance/chord-lane/).
+
+| Control | What it does | Range / values |
+|---------|--------------|----------------|
+| Chord | Enables the chord lane: the arp takes its notes from the drawn progression instead of the held keys. Off leaves the arp playing from held keys as usual, and mutes the lane without deleting the chords. | Off / On (default Off) |
+| Key Source | Where the progression's key centre comes from. Played follows the lowest held note so the progression transposes as you play; Fixed pins it to a set key. | Played / Fixed (default Played) |
+| Fixed Key | The key centre used when Key Source is Fixed. | note (default C3) |
+| Voice-Lead | Smooth picks each chord's inversion to minimise pitch movement from the previous chord for a connected progression; As-written keeps root-position voicings. | As-written / Smooth (default As-written) |
+| Chord Velocity | How hard the chord tones play. Held-key uses your played velocity so dynamics carry through; Fixed plays every tone at one set level. In Grid mode the step's own velocity applies. | Held-key / Fixed (default Held-key) |
+| Fixed Velocity | The level used for chord tones when Chord Velocity is Fixed. | 0 to 100 % |
+| Loop Steps | How many steps the chord lane runs before it repeats; set different from the pattern length for polymeter. | 1 to 8 (default 4) |
+
 ## Step sequencer lane
 
 The Step Seq mode plays a programmable lane, one note per step, with per-step
