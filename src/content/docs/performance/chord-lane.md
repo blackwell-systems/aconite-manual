@@ -56,6 +56,39 @@ What the lane does depends on the arp mode:
 Either way, the scale keeps everything in key: chord tones are the strong notes, and
 any passing or extension notes stay legal.
 
+## Output: walk, stab, or hold
+
+The **Output** selector in the chord header decides how the current chord actually
+voices, so one row of chords can be a walked line, a rhythmic stab, or a held pad
+without redrawing anything:
+
+- **Arp** (default) — the progression re-colours the notes the arp walks, exactly as
+  above. *Use it for* evolving arpeggiated lines that follow the changes.
+- **Chord** — the whole voiced chord is **stabbed on every step**, so the progression
+  plays as rhythmic block chords in time with the arp. *Use it for* stabbed comps,
+  chord-stab basslines, and rhythmic pads.
+- **Sustained** — each chord is **held as a pad** and only re-voices when the
+  progression moves to the next block. Notes shared between two chords ring straight
+  through the change, so it sounds like a real player holding common tones. *Use it
+  for* smooth held pads and connected comping.
+
+**Chord and Sustained switch you to a polyphonic voice automatically** so the stack
+can ring (a small **P** appears on the selector as a reminder). Leave the synth where
+it is; the lane handles it.
+
+## Chord Rate: how fast the chords change
+
+By default the progression advances one step at a time with the arp. **Chord Rate**
+lets the chords change *slower* than the arp plays notes: set it to **2, 3, 4, 6, 8,
+or 16 Steps** and each chord holds for that many arp steps before moving on.
+
+:::tip
+**Fast arp + slow Chord Rate = instant comping.** Set a quick arp rate for busy
+movement, then set Chord Rate to hold each chord for a bar or two. In **Sustained**
+output you get a lush pad that changes chord every bar while the arp keeps ticking;
+in **Chord** output the Chord Rate becomes your stab grid.
+:::
+
 ## Editing chords
 
 The chord blocks behave like notes. **Drag a block's body to move it**, drag its
@@ -91,6 +124,10 @@ own tones after they resolve, so a voiced chord still transposes with the key:
 
 The lane-level controls sit in the chord band's header (in both presentations):
 
+- **Output** chooses **Arp**, **Chord**, or **Sustained** — walk the chord's tones,
+  stab the whole chord, or hold it as a pad (see *Output* above).
+- **Chord Rate** sets how many arp steps a chord holds before the progression advances
+  (see *Chord Rate* above).
 - **Key source** decides the key centre. **Played** follows the lowest note you hold,
   so the whole progression transposes as you play (the performance trick). **Fixed**
   pins the progression to a set key for fixed-song work.
@@ -109,7 +146,14 @@ The lane-level controls sit in the chord band's header (in both presentations):
 
 ## Chord-tone velocity
 
-How hard the chord tones play follows the **Chord Velocity** setting:
+Each chord block can carry **its own velocity**. **Right-drag a block up and down** to
+set it: drag up for louder, and drag all the way to the bottom **"auto" zone** to
+clear it. The block's fill height shows its velocity, so you can shape an accent
+pattern across the progression the way you draw one into a note lane. This applies
+wherever the chord lane **plays the notes** — the **Chord** and **Sustained** outputs,
+and the order modes.
+
+A block left on **auto** falls back to the **Chord Velocity** setting:
 
 - **Held-key** uses the velocity of the note you play, so your dynamics carry through
   the transposer: play softer and the whole progression plays softer.
