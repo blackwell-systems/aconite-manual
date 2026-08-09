@@ -59,6 +59,11 @@ What the lane does depends on the arp mode:
     11th, 13th** — so drawing higher builds genuine extended voicings; it's a real
     extended-harmony writing tool. **Octaves** repeats the chord tones an octave up
     instead, for a strict arpeggiator (basslines, classic arp runs).
+  - **Reading the rows:** with the chord lane on, switch the roll's left-edge labels to
+    **Intervals** and each row is named by its function in the current chord — **R, 3, 5,
+    7** for the chord tones (shown brighter) and **9, 11, 13** (with ♭/♯ variants) for the
+    tensions above them. So you can see at a glance that a row is "the 9th" while you draw.
+    The labels follow the chord under the playhead as the progression moves.
   - (Want free scale/passing tones instead? Turn the chord lane off — the step grid goes
     back to plain scale degrees. Want fixed pitches? Use Free mode.)
 
