@@ -147,11 +147,11 @@ The lane-level controls sit in the chord band's header (in both presentations):
 ## Chord-tone velocity
 
 Each chord block can carry **its own velocity**. **Right-drag a block up and down** to
-set it: drag up for louder, and drag all the way to the bottom **"auto" zone** to
-clear it. The block's fill height shows its velocity, so you can shape an accent
-pattern across the progression the way you draw one into a note lane. This applies
-wherever the chord lane **plays the notes** — the **Chord** and **Sustained** outputs,
-and the order modes.
+set it: the top of the band is loudest, the bottom is quietest. The block's fill height
+shows its velocity, so you can shape an accent pattern across the progression the way you
+draw one into a note lane. **Double right-click** a block to clear it back to **auto**
+(inherit). This applies wherever the chord lane **plays the notes** — the **Chord** and
+**Sustained** outputs, and the order modes.
 
 A block left on **auto** falls back to the **Chord Velocity** setting:
 
