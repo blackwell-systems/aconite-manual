@@ -11,7 +11,7 @@ both scenes. See [Arpeggiator](/performance/arpeggiator/) and
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
-| Mode | How the arp walks the held notes. The Scale modes walk one held key up or down the current scale; Step Seq plays the programmable step lane. | Up / Down / UpDown / Random / As Played / Scale Up / Scale Down / Scale UpDown / Step Seq |
+| Mode | How the Seq walks the held notes. The Scale modes walk one held key up or down the current scale; Grid plays the programmable step lane; Free plays a free-timeline clip. | Up / Down / UpDown / Random / As Played / Scale Up / Scale Down / Scale UpDown / Grid / Free |
 | Rate | Step speed. In Free mode this is steps per second; in Sync mode the step locks to a note division. | steps/sec (Free) or note division (Sync) |
 | Sync | Free runs at the Rate knob's speed; Sync locks the step to a host-tempo division. | Free / Sync |
 | Octaves | Extends the pattern upward by whole octaves. | 1 to 4 |
@@ -69,7 +69,7 @@ on. See [The chord lane](/performance/chord-lane/).
 
 ## Step sequencer lane
 
-The Step Seq mode plays a programmable lane, one note per step, with per-step
+The **Grid** mode plays a programmable lane, one note per step, with per-step
 value lanes below.
 
 | Control | What it does | Range / values |

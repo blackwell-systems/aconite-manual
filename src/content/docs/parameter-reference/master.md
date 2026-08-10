@@ -1,6 +1,6 @@
 ---
 title: "Master, MPE, and scope"
-description: "Lookup reference for the master output controls, the console bus stage (glue and power-supply sag), oversampling, MPE, and the oscilloscope."
+description: "Lookup reference for the master output controls, the console bus stage (glue and power-supply sag), oversampling, MPE, and the scope and analyzer."
 ---
 
 A terse lookup for the master-section controls. See
@@ -38,14 +38,18 @@ The summed-voice bus stage, both bypassed at zero.
 | MPE | Enables per-note expression: each note carries its own pitch-bend, pressure and slide from an MPE controller, routable as per-note modulation. | Off / On |
 | Bend Range | Per-note pitch-bend range in semitones; match it to your controller so slides bend the intended interval. | 1 to 96 semitones |
 
-## Oscilloscope
+## Scope and analyzer
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
 | Source | Which point in the signal path the scope taps. | Master / Pre-FX / Filter / Osc |
 | Source 2 | A second overlaid trace from another tap point for comparison, or Off for a single trace. | Off / Master / Pre-FX / Filter / Osc |
-| Mode | Wave draws the signal over time; XY plots the two sources against each other (a vectorscope for stereo width and phase). | Wave / XY |
-| Trigger Slope | Whether the trace starts on a rising or falling crossing of the trigger level. | Rising / Falling |
-| Trigger Level | The amplitude the trace waits to cross before it draws, stabilising a repeating waveform. | signed |
-| Freeze | Holds the current scope trace. | Off / On |
-| Timebase | Scope zoom over the time axis. | zoom |
+| Mode | Wave draws the signal over time (phosphor oscilloscope); XY plots the two sources against each other (a vectorscope for stereo width and phase); Spectrum is an FFT frequency analyzer (log-frequency axis, with peak-hold); Spectrogram is a scrolling frequency-vs-time waterfall. | Wave / XY / Spectrum / Spectrogram |
+| Trigger Slope | Whether the trace starts on a rising or falling crossing of the trigger level (Wave mode). | Rising / Falling |
+| Trigger Level | The amplitude the trace waits to cross before it draws, stabilising a repeating waveform (Wave mode). | signed |
+| Freeze | Holds the current display. | Live / Frozen |
+| Timebase | Scope zoom over the time axis (Wave mode), shown as a sample window. | zoom |
+
+The **readouts strip** along the top of the display shows **PEAK** and **RMS**
+level in dB, plus an estimated **PITCH** (frequency and nearest note name). PITCH is
+hidden in XY mode.

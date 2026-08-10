@@ -62,8 +62,8 @@ The source menu lists over forty options, organized by type:
   optional per-step glide; see the [Step sequencer](/modulation/overview/#the-step-sequencer)
 - **Performer**, a curve-per-step sequencer: each step plays a shaped sub-curve from a
   per-step library rather than a flat level; see the [Performer](/modulation/overview/#the-performer)
-- **Arp Step**, **Arp Vel**, **Arp Gate**: the arpeggiator's own rhythm as a modulation
-  source; route Arp Gate to filter cutoff to pluck the filter on every arp note
+- **Seq Step**, **Seq Vel**, **Seq Gate**: the Seq engine's own rhythm as a modulation
+  source; route Seq Gate to filter cutoff to pluck the filter on every step
 - **Curve 1–4**: four drawable, pattern-synced automation lanes
 
 :::note

@@ -41,6 +41,7 @@ export default defineConfig({
             { label: 'The window at a glance', link: '/interface/overview/' },
             { label: 'Header & global controls', link: '/interface/header/' },
             { label: 'How every control works', link: '/interface/controls/' },
+            { label: 'The scope & analyzer', link: '/interface/scope/' },
             { label: 'Theming', link: '/interface/theming/' },
             { label: 'Signal flow', link: '/interface/signal-flow/' },
           ],

@@ -41,36 +41,62 @@ feature.
 
 ## The preset browser
 
-The browser lives in the [header](/interface/header/) as a compact
-row:
+Click the **preset name** in the [header](/interface/header/) and the browser
+**slides out as a drawer from the left**, filling the left half of the window. The
+[header](/interface/header/) stays lit and interactive above it, so the name button,
+theme switcher, and transport keep working while you browse. The synth face dims to
+the right so the browser has your focus without hiding the instrument.
 
-- **`<` and `>` arrows** step to the previous or next preset in the list, wrapping
-  at the ends. The list runs through the full factory bank first, then your user
-  presets.
-- **The name button** in the centre shows the current preset name. Click it to
-  open a menu split into **Factory** and **User** sections: pick any preset
-  directly from the list.
-- **Save** stores the current sound as a user preset. Aconite will prompt you for
-  a name.
-- **Random** loads a random preset from the currently filtered list, a quick way to
-  jump somewhere unexpected and start from there.
+**Close the browser** any of three ways: press **Escape**, click **anywhere outside
+the drawer**, or click the **preset name** in the header a second time.
 
-The name display refreshes on any load: from the arrows, from the menu, or when
-your DAW restores a saved session.
+The drawer is a full two-pane browser:
+
+- A **filter rail** down the left side: **All** and **Favourites** under Library;
+  **Factory** and **User** under Bank; the **categories** (Bass, Lead, Pad, Keys,
+  Perc, Seq, FX); and the most-used **tags** as clickable chips. Each shows a count.
+- A **search box** at the top filters as you type, matching preset name, author,
+  category, and tags at once.
+- A **sort** row above the results: **Name**, **Category**, or **Author**.
+- The **results list**, where each row shows the preset name, its author and
+  category, up to three tags, a **Factory** or **User** badge, and a **favourite
+  star**. Click a row to load it; the current preset is highlighted.
+
+Along the bottom of the drawer sit the quick actions: **Save**, **Init** (load the
+clean starting patch), **A / B** (flip the compare slots), **`<`** / **`>`** to step
+through the filtered list, and **Random** to jump somewhere unexpected. The `<` and
+`>` arrows also wrap at the ends, so you can audition quickly without opening the
+list. The header's name display refreshes on any load: from the list, from the
+arrows, or when your DAW restores a saved session.
 
 ## Saving a user preset
 
 1. Shape the sound how you want it.
-2. Click **Save** in the browser.
-3. Type a name and confirm.
+2. Click **Save** at the bottom of the browser.
+3. Fill in the details: a **name**, and optionally a **category**, **tags**
+   (comma-separated), an **author**, and a **favourite** flag.
+4. Confirm.
 
-That is it. The preset is written as a **.synthpreset** file to your user
-application-data presets folder. It immediately appears in the **User** section of
-the browser menu and carries the full patch state exactly as described above. That
+The preset is written as a **.synthpreset** file to your user application-data
+presets folder. It immediately appears in the **User** list and carries the full
+patch state exactly as described above, along with the metadata you entered. That
 folder is also where you go to back up your library or copy presets to share with
 someone else; the files are portable.
 
-To delete a user preset, select it in the menu and use the delete option.
+## Managing user presets
+
+**Right-click any user preset** in the list for its actions:
+
+- **Rename** edits the name in place: type the new name and press Enter (Escape
+  cancels). The file on disk is renamed with it.
+- **Duplicate** makes a copy (named `<name> copy`) that you can then edit
+  independently. Duplicating a factory preset gives you an editable **user** copy of
+  it, a good way to start from a factory sound without altering the original.
+- **Delete** removes the preset, behind a confirmation.
+
+Rename and delete apply to your own user presets; factory presets are read-only.
+**Toggle the favourite star** on any row to flag it, then use the **Favourites**
+filter to pull up just the sounds you starred.
 
 ## The factory bank
 

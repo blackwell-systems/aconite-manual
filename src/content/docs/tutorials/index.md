@@ -284,8 +284,8 @@ and closes to dark over the decay time.
 - **Glide time:** around 40–80 ms. This is the slide speed: a shorter time gives a
   sharper bend, longer gives a slower portamento. The 303 canonical range is 50–70 ms.
 
-**Step 6: Program a step sequence.** Open the **Step Sequencer** section. Select
-**Mode: Step Seq** if it is not already set.
+**Step 6: Program a step sequence.** Open the **Seq** section. Set the mode to
+**Grid** if it is not already set.
 
 Set **Length** to 16 steps. You are going to program a classic-style acid line. Here
 is a simple pattern to get started; remember that steps are scale degrees (1 = root),

@@ -13,18 +13,18 @@ Work left to right across the strip and you cover all of it in a few seconds.
 
 ## Preset browser
 
-The preset browser sits at the left of the header: a **name display** flanked by
-`<` and `>` step arrows, with a **Save** button alongside.
+The current **preset name** sits at the left of the header, flanked by `<` and `>`
+step arrows.
 
-- **`<` / `>`**: step backward or forward through the current bank one patch at a
-  time. Each press loads immediately, so you can audition quickly while playing.
-- **Name button** (click the patch name itself): opens a menu of all available
-  patches organized by bank: Factory and User. Pick a name and it loads.
-- **Save**: writes the current state as a named user preset. Aconite will prompt
-  you for a name and a bank if it is a new patch; saving an existing user preset
-  overwrites it in place.
+- **`<` / `>`**: step backward or forward through the list one patch at a time. Each
+  press loads immediately, so you can audition quickly while playing.
+- **Name button** (click the patch name itself): opens the **preset browser**, a
+  drawer that slides out from the left half of the window with search, category and
+  tag filters, favourites, sorting, and Save. Click the name again (or press Escape,
+  or click outside the drawer) to close it.
 
-The preset system is covered in full in [Presets](/master/presets/).
+The preset system, including the browser, saving, rename/duplicate, and A/B compare,
+is covered in full in [Presets](/master/presets/).
 
 ## A/B compare
 

@@ -21,9 +21,12 @@ Reading down the window, you move through the instrument:
 - **Filter · Modulation · Effects**: the two filters and their routing, the
   modulation system, and the effects rack.
 - **Master**: the output stage: gain, glue, sag, and metering.
-- **Scope**: the live visualizations, monitoring the master output.
+- **Scope**: the live visualizations, monitoring the master output. Switches between
+  a Wave oscilloscope, an XY vectorscope, a Spectrum analyzer, and a Spectrogram; see
+  [the scope & analyzer](/interface/scope/).
 - **Performance**: voicing and play controls.
-- **Arp · Scale · Step sequencer**: the pattern engine.
+- **Seq**: the note-pattern engine (labelled **Seq** on the panel): the arpeggiator,
+  the scale controls, and the Grid/Free note editor.
 - **Keyboard**: the on-screen keyboard with the pitch and mod wheels.
 
 As you work through this manual, each chapter zooms into one band.
