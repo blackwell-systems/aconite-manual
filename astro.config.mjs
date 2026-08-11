@@ -96,6 +96,7 @@ export default defineConfig({
             { label: 'The note editor (Seq)', link: '/performance/note-editor/' },
             { label: 'Step sequencer (Grid mode)', link: '/performance/step-sequencer/' },
             { label: 'The chord lane', link: '/performance/chord-lane/' },
+            { label: 'The probability filter', link: '/performance/probability-filter/' },
             { label: 'Piano roll (Free mode)', link: '/performance/piano-roll/' },
             { label: 'Envelopes tab (automation)', link: '/performance/seq-envelopes/' },
             { label: 'Editor controls & shortcuts', link: '/performance/editor-controls/' },
