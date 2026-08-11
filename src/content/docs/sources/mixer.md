@@ -30,6 +30,22 @@ Because the sources are independent faders (not a crossfade), any combination ca
 be active at once. You can run all three oscillators at full level, or bring in
 just a whisper of noise, or silence Osc 2 entirely while Osc 1 and 3 play.
 
+## The RESO return channel
+
+Set apart on the right of the mixer, past a thin divider and drawn in its own colour,
+is a sixth fader labelled **RESO**. This one is not a sound source. It is the return
+level of the [Sympathetic Resonator](/effects/effect-by-effect/#the-sympathetic-resonator),
+brought out here so you can set how much sympathetic resonance is in the sound right at
+the mix stage, alongside your source levels, instead of switching over to the resonator
+panel. It is the same control as the resonator's own Amount, so moving one moves the
+other.
+
+The RESO fader also has its own **M**. Pressing it mutes the whole resonance instantly,
+without moving the fader, so you can flip the resonance in and out to hear exactly what
+it is adding and then bring it straight back at the level you had set. When you leave it
+alone, RESO simply mirrors whatever the resonator is set to, so a patch that never uses
+sympathetic resonance is completely unaffected.
+
 ## Balancing oscillators for character
 
 A few things worth knowing when you start tweaking levels:

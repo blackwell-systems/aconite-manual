@@ -464,7 +464,13 @@ piece that makes a modelled instrument read as real rather than synthetic.
 
 - **Amount**: how much the resonator bank rings, from silent (0, the bank is
   effectively off) up to a rich, blooming sympathetic halo. This is the master
-  control: at 0 the Resonator is inert no matter what else is set.
+  control: at 0 the Resonator is inert no matter what else is set. This same level
+  also appears as the **RESO** fader on the right of the [mixer](/sources/mixer/), so
+  you can set how much resonance is in the sound right there at the mix stage. The two
+  are one control: move either and the other follows. The RESO fader also has an **M**
+  that mutes the whole resonance instantly without changing the level, so you can flip
+  it in and out to hear exactly what it is adding, then bring it back at the same
+  setting.
 - **Decay**: how long the undamped strings ring on, from a short, tight shimmer to a
   long, singing sustain that hangs under the notes you play.
 - **Tone**: the colour of the ringing, from a dark, woody halo to a bright, metallic
