@@ -112,6 +112,22 @@ feeds the arpeggiator and step sequencer, so their accents ride the reshaped vel
 A live indicator dot shows where your last played note landed on the curve, so you can see your
 touch mapping as you play. A reset returns the curve to the straight linear default at any time.
 
+### Preset modes
+
+A small box in the lower-right corner of the curve plot shows a mini thumbnail of the current
+shape. Click it to cycle through a set of common preset modes, loading each one straight into the
+curve:
+
+- **Linear** — a straight 1:1 response, the same as you played.
+- **Soft** — a soft touch still plays loud, for a gentler, more forgiving feel.
+- **Hard** — it takes a firm hit to get loud, so you have to dig in for the top end.
+- **S-Curve** — gentle at both ends and steep through the middle, easing your softest and loudest notes.
+- **Fixed** — a constant output regardless of how hard you play.
+
+Each click advances Linear → Soft → Hard → S-Curve → Fixed and then wraps back to the start. Draw
+your own contour by hand at any time and the box switches to **Custom**. Whichever mode you land on
+saves with the patch, just like a hand-drawn curve.
+
 ## Pitch-bend range
 
 The pitch-bend range controls how many semitones the pitch wheel reaches at full throw. The standard

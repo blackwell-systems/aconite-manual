@@ -51,7 +51,15 @@ Give the arp a musical key and it keeps every note legal.
 
 - **Root** and **Scale** set the key. The scale menu covers Chromatic, Major, Minor, the modes
   (Dorian, Phrygian, Lydian, Mixolydian, Locrian), Harmonic Minor, Melodic Minor, Major and Minor
-  Pentatonic, Blues, Whole Tone, and a fully editable **Custom** mask.
+  Pentatonic, Blues, and Whole Tone, plus a set of exotic and symmetric scales, and a fully editable
+  **Custom** mask. The exotic and symmetric scales, sitting just before Custom, are:
+  - **Phrygian Dom** — a flamenco / Middle-Eastern colour (the fifth mode of harmonic minor).
+  - **Hungarian Min** — cinematic, with two augmented seconds (harmonic minor with a raised fourth).
+  - **Lydian Dom** — a bright "overtone" or acoustic scale.
+  - **Hirajoshi** — a Japanese koto pentatonic.
+  - **Augmented** — a six-note symmetric scale alternating minor thirds and half steps (a Whole Tone sibling).
+  - **Dim H-W** — an eight-note symmetric half-whole diminished scale that plays over a dominant 7♭9.
+  - **Dim W-H** — an eight-note symmetric whole-half diminished scale.
 - **Snap to key** pulls any out-of-key note to the nearest scale tone, so nothing plays wrong even
   when you are scrambling for chords live.
 - **Scale-walk modes** (Scale Up / Scale Down / Scale Up-Down) turn the lowest held note into the

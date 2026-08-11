@@ -58,6 +58,34 @@ tone.
 Both follow the active theme, so the whole face stays visually coherent as you
 recolor.
 
+## The glass FX screen
+
+The effects display screen can be rendered as a lit **glass** panel rather than a
+flat fill, so the readout looks like a small pane of illuminated glass set into the
+face. This is **on by default**, so out of the box the screen already reads as lit
+glass: a soft gradient, a gentle darkening toward the edges, a faint sheen across
+the top, and a thin beveled rim.
+
+The theme editor gives you a few controls to shape it:
+
+- **FX Glass** (On / Off): turn the glass material on, or switch it off to go back
+  to a plain flat screen. Leave it on for the lit-glass look; turn it off if you
+  prefer a flatter, more utilitarian panel.
+- **Depth** (0 to 1): how pronounced the glass looks. This drives the strength of
+  the gradient, the edge shading, the surface sheen, and the beveled rim together.
+  Low values keep it subtle; high values make the pane read as deep, glossy glass.
+- **Grain** (0 to 1): a subtle texture across the surface. A little grain keeps the
+  glass from looking perfectly clean and adds a tactile, physical feel; zero leaves
+  the surface smooth.
+- **FX Ink** (Inherit / Custom): the color of the text and readouts on the screen.
+  Leave it on **Inherit** to reuse the theme's normal value-text color, or switch to
+  **Custom** and pick a color from the swatch beside it when you want the screen's
+  text to stand apart from the rest of the readouts.
+
+All four settings are part of the theme, so they save and load with it and travel
+inside a shared or exported theme the same way the colors do. A theme you hand to
+someone else arrives with your glass look intact.
+
 ## Browsing and switching themes
 
 The **theme cluster** in the header shows the current theme name with `<` and `>`

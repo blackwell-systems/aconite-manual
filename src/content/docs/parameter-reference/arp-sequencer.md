@@ -24,7 +24,7 @@ both scenes. See [Arpeggiator](/performance/arpeggiator/) and
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
 | Root | The root note the scale is built from, setting the key centre. | C to B |
-| Scale | The key the arp is quantised to. Custom uses a user-editable 12-note mask. | Chromatic, Major, Minor, the modes, Harmonic Minor, Melodic Minor, Pentatonic (Major and Minor), Blues, Whole Tone, Custom |
+| Scale | The key the arp is quantised to. The list runs from Chromatic through the everyday scales into a set of exotic and symmetric scales just before Custom; Custom uses a user-editable 12-note mask. | Chromatic, Major, Minor, the modes, Harmonic Minor, Melodic Minor, Pentatonic (Major and Minor), Blues, Whole Tone, Phrygian Dom (flamenco / Middle-Eastern), Hungarian Min (two augmented seconds), Lydian Dom (bright overtone scale), Hirajoshi (Japanese koto pentatonic), Augmented (six-note symmetric), Dim H-W (half-whole diminished, over a dominant 7♭9), Dim W-H (whole-half diminished), Custom |
 | Snap to key | Pulls every emitted note to the nearest note in the scale, forcing out-of-key notes into the key. | Off / On |
 | Transpose | Shifts the whole pattern by scale degrees, not semitones, so it stays diatonic and in key. | signed degrees |
 

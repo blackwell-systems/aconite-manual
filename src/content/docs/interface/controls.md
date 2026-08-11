@@ -98,6 +98,20 @@ mapping, right-click the control and choose **Clear MIDI mapping**.
 Full MIDI-learn details (scope, session behavior, and CC conflicts) are in
 [MPE & MIDI-learn](/master/mpe-midi-learn/).
 
+## Labels and controls light up together
+
+Across the parameter panels, every control and its label are linked, and the link
+works **both ways**. Hover a knob, slider, or dropdown and its matching label lights
+up (it brightens toward the accent color and turns bold); hover the label instead
+and the control it names lights up the same way. The pairing is exactly one-to-one:
+each label belongs to a single control, so it is always clear which name goes with
+which knob.
+
+This is purely a "find your way around" cue for busy panels; nothing about the sound
+changes when a control or label lights up. It just makes it easy to confirm you are
+about to reach for the right control, or to see at a glance what a given label
+controls.
+
 ## Tooltips
 
 Hovering over a control for about a second reveals a tooltip. The name and current
