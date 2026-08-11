@@ -97,22 +97,35 @@ Three knobs shape the curve:
   amount**. At **0 the filter does nothing** (every note plays, the shipping
   default). Turn it up and the dips in the curve bite harder, until at full depth
   the thinned registers drop out entirely. Depth is the one knob to reach for to
-  dial the whole effect in or back it off.
+  dial the whole effect in or back it off, and it is a
+  [modulation destination](#the-headline-sweep-the-cutoff-and-depth-and-slope) too:
+  an LFO or envelope on Depth fades the whole filter in and out for evolving
+  generative intensity.
 
-## The headline: sweep the cutoff
+## The headline: sweep the cutoff (and depth, and slope)
 
-**Cutoff is a [modulation matrix](/modulation/matrix/) destination.** Assign an
-LFO or an envelope to it and the whole probability response slides up and down
-the register over time, hands-free. The pattern **dissolves and re-forms by
-register**: with an LP sweeping upward, the low notes fill in first, then the
-mids, then the top, so a held generative pattern grows from a sparse bass into a
-full spread and back down again, all on its own. This is the **probability filter
-sweep**, and it is the reason the whole feature exists: an evolving, breathing
-density that you set up once and let run.
+The filter gives you **three [modulation matrix](/modulation/matrix/)
+destinations**, so the whole effect can breathe hands-free:
+
+- **Cutoff** — assign an LFO or envelope and the whole probability response slides
+  up and down the register over time. The pattern **dissolves and re-forms by
+  register**: with an LP sweeping upward, the low notes fill in first, then the
+  mids, then the top, so a held generative pattern grows from a sparse bass into a
+  full spread and back down again, all on its own. This is the **probability filter
+  sweep**, and it is the reason the whole feature exists: an evolving, breathing
+  density that you set up once and let run.
+- **Depth** — the **generative-intensity** control. Because Depth is the master
+  amount (0 does nothing, up thins harder), an LFO or envelope on it fades the
+  whole filter in and out: the note stream **dissolves and re-forms** as the depth
+  swells and recedes, a one-knob "how generative right now." An envelope tied to
+  note-on lets each new phrase build up from a gate into a full spread; a slow LFO
+  breathes the density of the entire pattern.
+- **Slope** — modulate it to move the **edge itself**, sweeping between a gentle
+  cross-register fade and a near-hard register split under a source.
 
 Any matrix source works. A slow LFO gives you a continuous ebb and flow; an
-envelope tied to note-on makes each new phrase build up from the bass; the
-[envelope follower](/modulation/env-follower/) can drive it from your own
+envelope tied to note-on makes each new phrase build up; the
+[envelope follower](/modulation/env-follower/) can drive any of them from your own
 playing dynamics.
 
 ## Where to find it and how to use it
@@ -134,6 +147,29 @@ The probability filter lives with the performance controls, next to the
 Everything the filter does is saved with the patch, so a sculpted density travels
 with the preset.
 
+## See the filter on the keyboard: the heatmap
+
+The on-screen performance keyboard can shade its keys by the filter's response, so
+you can *see* which registers are thinning. Under the header **Options gear →
+"Keyboard follows engine"**, turn on **Heatmap**: because the keyboard is the
+Register axis, every key is shaded by how likely a note in that register is to
+play. A cutoff sweep walks the marked band across the keys, and a disabled or
+depth-0 filter marks nothing (every note passes).
+
+The gear's **"Heatmap: Neutral"** item picks the style, and both mark the **same**
+keys — the ones the filter is thinning:
+
+- **Neutral** (default) — darkens the filtered (low-probability) keys toward black,
+  exactly matching the filter editor's own keybed, so the two read identically.
+- **Themed** — tints those same filtered keys with the current theme's accent
+  instead of black.
+
+Either way the wash marks what the filter **removes**, never what it passes.
+Heatmap composes with **Live Notes** (which lights the notes the generative engine
+is currently playing), so you can watch the live pattern play against the
+probability landscape it is drawn from. Both are display preferences for the
+current session, not part of the patch.
+
 ## Try this
 
 **Sparkle only up top (fixed).** Set Axis to **Register**, shape to **Low-pass**,
@@ -146,6 +182,12 @@ to the probability-filter **Cutoff** in the [matrix](/modulation/matrix/). Hold 
 generative pattern (arp plus [chord lane](/performance/chord-lane/) is ideal) and
 let it run: the response slides up and down the register, so the pattern grows
 and thins by octave on its own, hands-free, for minutes without repeating.
+
+**Generative intensity (Depth).** For a different flavour, route a slow LFO or a
+note-on envelope to the probability-filter **Depth** instead of Cutoff. Now the
+whole filter fades in and out: the note stream dissolves toward the shaped curve
+and re-forms toward a full spread, so the pattern's *density* breathes as one, a
+one-knob "how generative right now."
 
 **Clean register edit (Mask).** For an arrangement move rather than a texture,
 switch Target to **Mask** and Slope to steep. Now the curve is a hard split:
