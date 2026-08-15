@@ -13,7 +13,8 @@ a signed depth. See [The modulation matrix](/modulation/matrix/).
 |---------|--------------|----------------|
 | Source | The modulation source feeding this slot: an LFO, envelope, sequencer, macro, MIDI control or bus LFO driving the destination by the Depth amount. | source list |
 | Via | A transform applied to the source before it drives the destination. Invert flips its polarity; Rectify folds it positive; Quantize snaps it to discrete steps; Lag slews its motion. | Invert / Rectify / Quantize / Lag |
-| Destination | The parameter this slot modulates. A per-voice destination modulates each note; a bus or FX destination modulates the whole channel. | destination list |
+| Destination | The parameter this slot modulates, chosen from a grouped menu with cascading submenus (Pitch, Oscillator with Lo-fi and Additive submenus, Sub/Noise, Filter with Filter 1 / Filter 2 / Common, Shaper, Amp/Filter Envelope, Rates, String, Modal, Kick, Voice, Macros, Output, then FX and the bus subsystems). A per-voice destination modulates each note; a bus or FX destination modulates the whole channel. | grouped destination menu |
+| Modal Mute | Under the Modal group: modulates the Modal oscillator's Ring / Choke note-off behaviour (free-ringing tail versus damped). | Ring / Choke |
 | Depth | How much this slot moves the destination, and in which direction: right of centre adds, left subtracts, centre is off. | signed, centre off |
 
 The bus tier uses the same Source, Destination, and Depth columns and targets the

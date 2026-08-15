@@ -8,8 +8,9 @@ description: The Wave × Model oscillator concept, the analog, physical-model, a
 Aconite gives you three full oscillators, each built on a **Wave × Model** idea:
 you pick a waveform and, independently, a model that decides how that waveform is
 generated. The models span classic analog and virtual-analog, a DCO, wavetable,
-the additive bank, the physical-modeling **String**, **Modal**, and **Kick**
-voices, and the authentic **Chip** oscillator (NES 2A03 and C64 SID). Each oscillator has its own
+the additive bank, the modeled **Acoustic** concert grand, the physical-modeling
+**String**, **Modal**, and **Kick** voices, and the authentic **Chip** oscillator
+(NES 2A03 and C64 SID). Each oscillator has its own
 octave, coarse tune, detune, pulse width and PWM, and phase controls.
 
 ## The three oscillators share one panel
@@ -115,6 +116,37 @@ the Pulse Width controls relabel to **Position** and **Pos Mod**, and the same
 LFO-sweep behaviour applies. If you would rather build a tone from its individual
 harmonics than morph through pre-made waves, see the
 [Additive oscillator](/sources/additive/).
+
+## Acoustic (modeled concert grand)
+
+The **Acoustic** oscillator is a concert grand piano built right into the synth. It
+is made by analysis-resynthesis: real grands were measured, note by note, and their
+partials, amplitude contours, and air captured, then rebuilt so the oscillator can
+play them back. That means it behaves like a synth oscillator, not a fixed sample. It
+tracks pitch across the whole keyboard and responds to velocity musically, so playing
+harder changes the timbre and not just the loudness, the way a real piano brightens
+when you dig in.
+
+An **INSTRUMENT** selector picks which grand you are playing:
+
+- **Grand C5**: the darker, warmer of the two, a rounder studio grand.
+- **Grand CF3**: brighter and more open, a full concert-grand voice.
+
+Four character knobs re-voice whichever grand you chose, so it is a starting point you
+sculpt rather than a locked patch:
+
+- **Bright**: spectral tilt, from mellow and dark to open and present. Lifts or lowers
+  the upper partials across the instrument.
+- **Decay**: how long notes ring, from a short, damped tone to a long open sustain.
+- **Inharm**: inharmonic character, the stretch a real piano's stiff strings give their
+  partials. Turn it up for more of that piano-string bloom and stretched-octave feel.
+- **Morph**: blends toward the other grand, so you can sit anywhere between the warm
+  C5 and the bright CF3 rather than choosing one outright.
+
+Because it is resynthesis rather than a sample, every one of these controls reshapes
+the tone live, and the Acoustic oscillator plays through the voice's filter, amp, and
+effects exactly like any other oscillator. Every knob is a
+[mod-matrix](/modulation/matrix/) destination.
 
 The three physical-model voices below (**String**, **Modal**, and **Kick**) are a
 family: each one is a genuine physical model, excited at note-on and left to ring

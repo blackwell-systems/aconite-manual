@@ -75,21 +75,32 @@ transport.
 
 ## Destinations
 
-Destinations span the full signal path. Most controls you would want to move are available:
+Destinations span the full signal path. The destination menu is grouped, with cascading
+submenus so you drill down to what you want instead of scrolling a flat list. The groups,
+in order:
 
-- **Oscillators**: pitch, coarse tune, fine detune, level, pulse width, FM depth
-- **Additive**: the partial-group levels, plus the additive drive and drift
-- **Filter 1 and 2**: cutoff, resonance, drive, and mode morph for each filter
-- **Filter envelope amounts**: how much each filter envelope pushes the cutoff
-- **Waveshaper**: drive, mix, bias, and trim
-- **Amplitude**: the post-VCA level, for tremolo or gating effects
-- **Envelope times**: attack, decay, sustain, and release for the amp and filter envelopes
-- **LFO rates**: all six LFO rates, plus the step sequencer and Performer rates
-- **Voice character**: detune, drift, and variance from the analog-character controls
-- **Pan**: for per-note spatial placement, keytrack panning, or auto-pan
+- **Pitch**: the played pitch, fanned to all oscillators at once.
+- **Oscillator**: per-oscillator coarse tune, fine detune, level, pulse width, and FM
+  depth, with **Lo-fi** (Bits, Crush, Alias) and **Additive** (the partial-group levels
+  plus additive drive and drift) as their own submenus.
+- **Sub / Noise**: the sub-oscillator and noise-source controls.
+- **Filter**: split into **Filter 1**, **Filter 2**, and **Common**, covering cutoff,
+  resonance, drive, and mode morph for each filter.
+- **Shaper**: the waveshaper's drive, mix, bias, and trim.
+- **Amp / Filter Envelope**: attack, decay, sustain, and release for the amp and filter
+  envelopes, plus how much each filter envelope pushes the cutoff.
+- **Rates**: all six LFO rates, plus the step sequencer and Performer rates.
+- **String**, **Modal**, **Kick**: every control on each physical-model oscillator. The
+  Modal group includes **Modal Mute**, which modulates the model's Ring / Choke note-off
+  behaviour, so you can automate free-ringing versus damped tails per note.
+- **Voice**: the analog-character controls (detune, drift, and variance) and per-note pan.
+- **Macros**: the four macro knobs, so one modulator can drive a macro that in turn fans
+  out to everything routed to it.
+- **Output**: the post-VCA amplitude, for tremolo or gating effects.
 
-Some destinations (reverb mix, delay feedback, master gain, and EQ) are bus-level only.
-Choose them and the row's Scope badge switches to BUS automatically.
+Below those come the **FX** destinations and the **bus** subsystems (reverb, chorus,
+delay, phaser, EQ, and master). These are bus-level only: choose one and the row's Scope
+badge switches to BUS automatically.
 
 :::note
 Cutoff and pitch use a smooth audio-rate connection that updates continuously with no

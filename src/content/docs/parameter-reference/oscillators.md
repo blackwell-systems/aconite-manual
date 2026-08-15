@@ -11,7 +11,7 @@ For the full guide see [Oscillators](/sources/oscillators/).
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
-| Type | Oscillator model and waveform in one: picks the synthesis engine (Analog ladder-style, Unison super-saw, DCO, Silk, Wavetable, Additive, String, Modal, Kick, Chip) and the wave it plays. | Sine; Saw, Square, Triangle and Shark's-tooth families (each in Standard, Analog, Unison, Silk and DCO flavours); Wavetable; Additive; String; Modal; Kick; Chip |
+| Type | Oscillator model and waveform in one: picks the synthesis engine (Analog ladder-style, Unison super-saw, DCO, Silk, Wavetable, Additive, Acoustic, String, Modal, Kick, Chip) and the wave it plays. | Sine; Saw, Square, Triangle and Shark's-tooth families (each in Standard, Analog, Unison, Silk and DCO flavours); Wavetable; Additive; Acoustic; String; Modal; Kick; Chip |
 | Octave | Coarse pitch in octaves. | -4 to +4 oct |
 | Coarse | Coarse pitch in semitones. | -24 to +24 st |
 | Detune | Fine pitch offset. | -50 to +50 cents |
@@ -68,6 +68,20 @@ See [Sub oscillator and noise](/sources/sub-noise/).
 | Keytrack | When on, the Tuned-noise centre follows the played note instead of a fixed frequency. | Off / On |
 | Rate | Step rate of the Sample and Hold noise: how fast new random values are drawn. | Hz |
 | Interp | S&H reconstruction: Step is a hard stairstep; Smooth interpolates between steps. | Step / Smooth |
+
+## Acoustic model
+
+Visible when the Acoustic wave is selected. A modeled concert grand built by
+analysis-resynthesis, so it plays like an oscillator (pitch- and velocity-tracking,
+velocity changes timbre) rather than a fixed sample. See [Oscillators](/sources/oscillators/).
+
+| Control | What it does | Range / values |
+|---------|--------------|----------------|
+| Instrument | Which modeled grand you are playing. Grand C5 is darker and warmer; Grand CF3 is brighter and more open. | Grand C5 / Grand CF3 |
+| Bright | Spectral tilt: mellow and dark below centre, open and present above. | signed |
+| Decay | How long notes ring, from a short damped tone to a long open sustain. | 0 to 100 % |
+| Inharm | Inharmonic stretch: adds the stretched-partial character of a real piano's stiff strings. | 0 to 100 % |
+| Morph | Blends toward the other grand, so you can sit anywhere between C5 and CF3. | 0 to 100 % |
 
 ## String model
 
