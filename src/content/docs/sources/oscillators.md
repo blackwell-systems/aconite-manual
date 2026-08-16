@@ -64,8 +64,10 @@ asymmetry that the pure classics lack; useful for plucky, percussive tones and
 sounds that need both warmth and edge.
 
 **Sine** is the only base wave without model variants. **Shark's-tooth** supports
-only the **Analog** model (it does not have Unison, Silk, or DCO variants). **Saw**,
-**Square**, and **Triangle** each support all four models.
+only the **Analog** model. **Square** and **Triangle** each support the **Analog**,
+**Unison**, and **Silk** models. **Saw** supports those three plus the **DCO** (the
+authentic Juno voice, below), which lives only on the saw as its single **Saw (DCO)**
+entry.
 
 ### Models
 
@@ -84,24 +86,42 @@ like an ensemble on its own.
 design. Smoother and creamier than Analog, with less harmonic bite. The polite
 end of the analog spectrum: good for pads, strings, and vintage polysynth tones.
 
-**DCO**: a digitally clocked oscillator with a light analog edge. The tone is
-cleaner and more stable than Analog or Silk but not sterile, alive in the way a
-Juno-80 or Jupiter-8 is alive. Good for clean leads, arpeggios, and anything
-where you want controlled character without unpredictability.
+**DCO** (Saw (DCO)): the authentic Roland Juno-106 DCO, and the one model that is
+more than a character layer. A real Juno has no wave selector and no triangle, so
+this is a single **Saw (DCO)** entry rather than a family across the base waves.
+Instead of picking one wave, the DCO **mixes three phase-locked sources off one
+rock-solid digital core**: a **sawtooth**, a **PWM pulse**, and a **sub-square one
+octave down**. Three level controls set the blend, a concentric **Saw / Pulse /
+Sub** knob:
+
+- **Saw**: the bright ramp, the classic Juno backbone.
+- **Pulse**: a pulse wave whose duty you set with the oscillator's **Pulse Width**
+  and sweep with **PWM Depth** (on the DCO, pulse width always applies).
+- **Sub**: a square one octave below the note, for weight and body.
+
+Out of the box the mix is saw only (Saw 1, Pulse 0, Sub 0), so Saw (DCO) sounds
+like a clean, rock-steady saw until you bring in pulse or sub. Blend all three for
+the full, unmistakable Juno tone. The DCO's pitch barely drifts, the way a real
+digitally-clocked oscillator holds tuning, with a fixed high-pass and a light analog
+rounding for life. All three level knobs are
+[mod-matrix](/modulation/matrix/) destinations (**Juno Saw**, **Juno Pulse**,
+**Juno Sub**), so you can sweep the blend under an LFO or envelope. Good for clean
+leads, arpeggios, lush pads, and anything Juno-flavoured.
 
 :::note
-Selecting any model variant (Analog, Unison, Silk, or DCO) disables **pulse
-width modulation**, **hard sync**, **per-sample FM**, and **operator self-FM
-feedback** for that oscillator. Those features work only on the plain, unadorned
-waveform entries (Saw, Square, Triangle, Shark's-tooth). If you need sync or FM
+Selecting any model variant (Analog, Unison, Silk, or DCO) disables **hard sync**,
+**per-sample FM**, and **operator self-FM feedback** for that oscillator. Those
+features work only on the plain, unadorned waveform entries (Saw, Square, Triangle,
+Shark's-tooth). Pulse-width modulation is also model-off, with one exception: the
+**DCO**, whose PWM always drives its built-in pulse source. If you need sync or FM
 alongside an analog character, keep the relevant oscillator on its plain waveform
 and layer the modelled version on a different oscillator.
 :::
 
 :::tip
-You can layer all three models on the same base wave across the three oscillators.
-For example: one Silk saw for warmth on Osc 1, one Unison saw for width on Osc 2,
-and one DCO saw for a clean centre on Osc 3, then blend them to taste in the
+You can layer several models across the three oscillators. For example: one Silk saw
+for warmth on Osc 1, one Unison saw for width on Osc 2, and a Saw (DCO) for a clean,
+Juno-flavoured centre on Osc 3, then blend them to taste in the
 [mixer](/sources/mixer/).
 :::
 
@@ -479,8 +499,9 @@ shimmers rather than sitting perfectly still.
 
 ## Pulse width and PWM
 
-Pulse width only acts on the **Square** wave and the **Wavetable** model (where
-it controls morph position instead):
+Pulse width acts on the **Square** wave, the **Saw (DCO)** model (where it shapes
+the DCO's built-in pulse source), and the **Wavetable** model (where it controls
+morph position instead):
 
 - **Pulse Width**: the base duty cycle. At 50% you get the classic hollow square.
   Narrow it toward 0% or 100% and the tone thins into a sharp, reedy buzz.

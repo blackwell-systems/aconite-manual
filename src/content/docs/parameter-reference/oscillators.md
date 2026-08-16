@@ -11,12 +11,12 @@ For the full guide see [Oscillators](/sources/oscillators/).
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
-| Type | Oscillator model and waveform in one: picks the synthesis engine (Analog ladder-style, Unison super-saw, DCO, Silk, Wavetable, Additive, Acoustic, String, Modal, Kick, Chip) and the wave it plays. | Sine; Saw, Square, Triangle and Shark's-tooth families (each in Standard, Analog, Unison, Silk and DCO flavours); Wavetable; Additive; Acoustic; String; Modal; Kick; Chip |
+| Type | Oscillator model and waveform in one: picks the synthesis engine (Analog ladder-style, Unison super-saw, Silk, the authentic Juno DCO, Wavetable, Additive, Acoustic, String, Modal, Kick, Chip) and the wave it plays. 23 types in all. | Sine; Saw (Standard, Analog, Unison, Silk, DCO); Square and Triangle (Standard, Analog, Unison, Silk); Shark's-tooth (Standard, Analog); Wavetable; Additive; Acoustic; String; Modal; Kick; Chip |
 | Octave | Coarse pitch in octaves. | -4 to +4 oct |
 | Coarse | Coarse pitch in semitones. | -24 to +24 st |
 | Detune | Fine pitch offset. | -50 to +50 cents |
 | Level | Oscillator level in the mixer. | 0 to 100 % |
-| Pulse Width | Square-wave duty cycle (relabelled Position on Wavetable, where it sets the frame). | 5 to 95 % |
+| Pulse Width | Duty cycle of the Square wave and of the Saw (DCO)'s built-in pulse source (relabelled Position on Wavetable, where it sets the frame). | 5 to 95 % |
 | PWM Depth | How far the modulation LFO sweeps the pulse width around its centre. | 0 to 100 % |
 | FB | Operator self-feedback: routes the output back into its own phase, morphing sine toward saw and adding harmonics (and, pushed hard, a rougher tone) on the other waves. | 0 to 100 % |
 | Start Phase | Note-on phase the wave restarts from. | 0 to 360 degrees |
@@ -68,6 +68,20 @@ See [Sub oscillator and noise](/sources/sub-noise/).
 | Keytrack | When on, the Tuned-noise centre follows the played note instead of a fixed frequency. | Off / On |
 | Rate | Step rate of the Sample and Hold noise: how fast new random values are drawn. | Hz |
 | Interp | S&H reconstruction: Step is a hard stairstep; Smooth interpolates between steps. | Step / Smooth |
+
+## DCO model (Saw (DCO))
+
+Visible when the Saw (DCO) type is selected. The authentic Roland Juno-106 DCO: one
+phase-locked digital core mixing a saw, a PWM pulse, and a sub-square. The three
+level knobs form a concentric Saw / Pulse / Sub knob and are each a mod-matrix
+destination (Juno Saw / Juno Pulse / Juno Sub). Pulse Width and PWM Depth (above)
+shape the pulse source. See [Oscillators](/sources/oscillators/).
+
+| Control | What it does | Range / values |
+|---------|--------------|----------------|
+| Saw | Level of the sawtooth source, the Juno backbone. | 0 to 100 % (default 100 %) |
+| Pulse | Level of the PWM pulse source (its width and sweep come from Pulse Width / PWM Depth). | 0 to 100 % (default 0) |
+| Sub | Level of the sub-square, one octave below the note. | 0 to 100 % (default 0) |
 
 ## Acoustic model
 
