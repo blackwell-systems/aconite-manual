@@ -11,7 +11,7 @@ For the full guide see [Oscillators](/sources/oscillators/).
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
-| Type | Oscillator model and waveform in one: picks the synthesis engine (Analog ladder-style, Unison super-saw, Silk, the authentic Juno DCO, Wavetable, Additive, Acoustic, String, Modal, Kick, Chip) and the wave it plays. 23 types in all. | Sine; Saw (Standard, Analog, Unison, Silk, DCO); Square and Triangle (Standard, Analog, Unison, Silk); Shark's-tooth (Standard, Analog); Wavetable; Additive; Acoustic; String; Modal; Kick; Chip |
+| Type | Oscillator model and waveform in one: picks the synthesis engine (Analog ladder-style, Unison super-saw, the authentic Juno DCO, Wavetable, Additive, Acoustic, String, Modal, Kick, Chip) and the wave it plays. 20 types in all. | Sine; Saw (Standard, Analog, Unison, DCO); Square and Triangle (Standard, Analog, Unison); Shark's-tooth (Standard, Analog); Wavetable; Additive; Acoustic; String; Modal; Kick; Chip |
 | Octave | Coarse pitch in octaves. | -4 to +4 oct |
 | Coarse | Coarse pitch in semitones. | -24 to +24 st |
 | Detune | Fine pitch offset. | -50 to +50 cents |
@@ -19,6 +19,7 @@ For the full guide see [Oscillators](/sources/oscillators/).
 | Pulse Width | Duty cycle of the Square wave and of the Saw (DCO)'s built-in pulse source (relabelled Position on Wavetable, where it sets the frame). | 5 to 95 % |
 | PWM Depth | How far the modulation LFO sweeps the pulse width around its centre. | 0 to 100 % |
 | FB | Operator self-feedback: routes the output back into its own phase, morphing sine toward saw and adding harmonics (and, pushed hard, a rougher tone) on the other waves. | 0 to 100 % |
+| Soften | Standard-model waves only (sits in the FM row next to FB): pitch-tracked corner rounding via a one-pole low-pass on the raw waveform, rolling off the brightest harmonics for a warmer, rounder tone. At 0 it is bypassed and the Standard wave is unchanged. | 0 to 1 (default 0) |
 | Start Phase | Note-on phase the wave restarts from. | 0 to 360 degrees |
 | Rand | Per-note random spread of the start phase. | 0 to 100 % |
 | Retrig | Oscillator phase at note-on. Free lets the wave run continuously (looser, more analog); Retrig resets the phase to the same start each note for a tight, punchy transient. | Free / Retrig |

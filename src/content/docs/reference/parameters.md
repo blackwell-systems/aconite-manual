@@ -25,13 +25,14 @@ set. See [Oscillators](/sources/oscillators/) for the full guide.
 
 | Control | What it does | Range / notes |
 |---------|-------------|---------------|
-| Wave | Selects the waveform and analog model together | Sine; Saw / Saw (Analog) / Saw (Unison) / Saw (Silk) / Saw (DCO); Square and Triangle families; Shark's-tooth; Wavetable; String; Modal; Kick |
+| Wave | Selects the waveform and analog model together | Sine; Saw / Saw (Analog) / Saw (Unison) / Saw (DCO); Square and Triangle families; Shark's-tooth; Wavetable; String; Modal; Kick |
 | Octave | Coarse pitch in octaves | −4 to +4 |
 | Coarse | Coarse pitch in semitones | −24 to +24 st |
 | Detune | Fine pitch | −50 to +50 cents |
 | Pulse Width | Duty cycle (Square) or morph position (Wavetable) | 0–100 % |
 | PWM Depth | LFO sweep depth around the Pulse Width centre | 0–100 % |
 | FB | Operator self-feedback; morphs sine toward saw, adds harmonics on other waves | 0–100 % |
+| Soften | Standard-model waves only; pitch-tracked corner rounding for a warmer tone (0 = off, Standard wave unchanged) | 0–1 (default 0) |
 | Start Phase | Note-on restart point | 0–360° |
 | Rand | Per-note random phase spread | 0–100 % |
 | Retrig | Whether the phase restarts on note-on | Free / Retrig |

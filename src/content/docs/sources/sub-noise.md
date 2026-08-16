@@ -95,9 +95,9 @@ bright percussive transients.
   or atmospheric pitched textures.
 
 :::tip
-Layer Tuned noise (high Reso, Keytrack on) with a Silk saw oscillator for an
-instant breathy flute or shakuhachi character. The noise provides the breathiness;
-the oscillator provides the pitch. Feed both through
+Layer Tuned noise (high Reso, Keytrack on) with a Standard saw oscillator (Soften
+raised) for an instant breathy flute or shakuhachi character. The noise provides the
+breathiness; the oscillator provides the pitch. Feed both through
 [the filter](/filters/the-two-filters/) with moderate cutoff and
 low resonance to blend them together naturally.
 :::

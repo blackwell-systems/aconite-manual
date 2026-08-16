@@ -64,10 +64,9 @@ asymmetry that the pure classics lack; useful for plucky, percussive tones and
 sounds that need both warmth and edge.
 
 **Sine** is the only base wave without model variants. **Shark's-tooth** supports
-only the **Analog** model. **Square** and **Triangle** each support the **Analog**,
-**Unison**, and **Silk** models. **Saw** supports those three plus the **DCO** (the
-authentic Juno voice, below), which lives only on the saw as its single **Saw (DCO)**
-entry.
+only the **Analog** model. **Square** and **Triangle** each support the **Analog**
+and **Unison** models. **Saw** supports those two plus the **DCO** (the authentic
+Juno voice, below), which lives only on the saw as its single **Saw (DCO)** entry.
 
 ### Models
 
@@ -81,10 +80,6 @@ pitch. The spread is massive, huge and wide and instantly recognisable as a
 supersaw or super-square. Use **Detune** to open the fan; use **Mix** to balance
 the centre tone against the outer voices. This model makes one oscillator sound
 like an ensemble on its own.
-
-**Silk**: a lightly corner-rounded voice modelled on a state-variable oscillator
-design. Smoother and creamier than Analog, with less harmonic bite. The polite
-end of the analog spectrum: good for pads, strings, and vintage polysynth tones.
 
 **DCO** (Saw (DCO)): the authentic Roland Juno-106 DCO, and the one model that is
 more than a character layer. A real Juno has no wave selector and no triangle, so
@@ -108,8 +103,19 @@ rounding for life. All three level knobs are
 **Juno Sub**), so you can sweep the blend under an LFO or envelope. Good for clean
 leads, arpeggios, lush pads, and anything Juno-flavoured.
 
+### Soften
+
+The **Standard** (plain) waveform entries carry a **Soften** knob, in the FM row next
+to **FB**. It rounds the raw waveform's edges with a pitch-tracked one-pole low-pass,
+the same gentle corner rounding a real analog oscillator gives. At **0** it is bypassed
+and the Standard wave is unchanged; raised, it rolls off the brightest harmonics for a
+warmer, rounder tone. Range 0 to 1, default 0. Soften is shown only on the Standard
+model (like **FB**, it is hidden on the analog-modelled and physical voices), so it is
+the quickest way to take the edge off a plain Saw, Square, or Triangle without leaving
+the Standard engine.
+
 :::note
-Selecting any model variant (Analog, Unison, Silk, or DCO) disables **hard sync**,
+Selecting any model variant (Analog, Unison, or DCO) disables **hard sync**,
 **per-sample FM**, and **operator self-FM feedback** for that oscillator. Those
 features work only on the plain, unadorned waveform entries (Saw, Square, Triangle,
 Shark's-tooth). Pulse-width modulation is also model-off, with one exception: the
@@ -119,9 +125,9 @@ and layer the modelled version on a different oscillator.
 :::
 
 :::tip
-You can layer several models across the three oscillators. For example: one Silk saw
-for warmth on Osc 1, one Unison saw for width on Osc 2, and a Saw (DCO) for a clean,
-Juno-flavoured centre on Osc 3, then blend them to taste in the
+You can layer several models across the three oscillators. For example: one Standard
+saw with **Soften** raised for warmth on Osc 1, one Unison saw for width on Osc 2, and
+a Saw (DCO) for a clean, Juno-flavoured centre on Osc 3, then blend them to taste in the
 [mixer](/sources/mixer/).
 :::
 
