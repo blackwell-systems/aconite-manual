@@ -58,9 +58,11 @@ Probability is the performance/generative behaviour; Mask is the surgical one.
 
 ## The three axes
 
-**Axis** decides *what the curve is measured against*: fixed keyboard pitch, the
-pattern's own span, or chord-tone role. This is the difference between a filter
-that stays put and one that follows your playing.
+**Axis** decides *what the filter acts on*. Two axes are spatial — the same curve
+read against a different ruler: fixed keyboard pitch, or the pattern's own span.
+The third works by chord-tone role instead, and swaps the curve for a set of
+per-degree faders. This is the difference between a filter that stays put, one that
+follows your playing, and one that thinks in harmony.
 
 - **Register** — the curve sits over the **actual keyboard**, at absolute pitch.
   Cutoff is a real note. The filter stays where you drew it no matter what you
@@ -72,23 +74,27 @@ that stays put and one that follows your playing.
   so the filter **tracks your playing**: transpose up an octave, or play a wider
   voicing, and the curve stretches to follow. The same "thin the top third"
   setting works in any key. *Use it for* a filter that moves with the music.
-- **Function** — the curve is measured by each note's **chord-tone role** rather
-  than its pitch, so it works hand in hand with the
-  [chord lane](/performance/chord-lane/). Low on the axis is the root, then the
-  3rd and 5th, out to the 7th and the extensions (9th, 11th, 13th). An LP here
-  **keeps the root, 3rd, and 5th and thins the extensions**; an HP keeps the
-  colour tones and thins the root. *Use it for* harmonic control: keep the chord
-  solid while its upper tensions flicker in and out.
+- **Function** — a different kind of axis, and the most musical. Harmonic role is a
+  *category*, not a place on the keyboard, so Function drops the filter curve
+  altogether and gives you a **mixing board for the harmony**: one fader per chord
+  degree — **Root, 3rd, 5th, 7th, 9th, 11th, and 13th** — each set from 0 to 100%.
+  A degree at 100% always plays; pull it down and notes in that harmonic role start
+  to drop out. Switching the axis to Function **swaps the curve view for these seven
+  weight bars** (the shape, Cutoff, and Slope controls disappear; only Depth and the
+  Target stay), and it works hand in hand with the
+  [chord lane](/performance/chord-lane/). *Use it for* harmonic control: keep the
+  chord solid while its upper tensions flicker in and out — thin the extensions,
+  then let Depth and Probability bloom them back in.
 
 ## Cutoff, Slope, and Depth
 
 Three knobs shape the curve:
 
 - **Cutoff** — where the corner sits (for LP/HP) or where the band is centred
-  (for BP/Notch). In **Register** axis this is a pitch on the keyboard; in
-  **Range** it is a position within the pattern's span; in **Function** it is a
-  point along the chord-tone roles. Sweeping Cutoff slides the whole response up
-  or down the register.
+  (for BP/Notch). In **Register** axis this is a pitch on the keyboard; in **Range**
+  it is a position within the pattern's span. Sweeping Cutoff slides the whole
+  response up or down the register. (Cutoff, along with the shape and Slope, does not
+  apply on the **Function** axis, which uses the per-degree faders instead.)
 - **Slope** — how sharply the curve falls off at the corner. A gentle slope fades
   density gradually across several octaves; a steep slope makes a near-hard edge
   between "plays" and "drops," so under **Mask** it behaves like a clean register
