@@ -116,8 +116,11 @@ Visible when the Wavetable wave is selected.
 
 | Control | What it does |
 |---------|-------------|
+| Table | Built-in table library (Basic, Harmonic Bloom, Formant Vowel, PWM, Sync Sweep, FM Bells, Additive Comb, Inharmonic Bell, Distortion, Noise); Basic is the default |
 | Position | Frame position across the wavetable |
-| WT Morph | Frame interpolation: Linear / Spectral |
+| WT Morph | Frame interpolation: Linear / Spectral (Spectral is Basic-only) |
+| Warp | Per-read transform: Off / Bend / PWM / Sync / Asym / Fold / Mirror |
+| Warp Amt | Warp depth; mod-dest WT Warp (0 = untouched) |
 | Load WT | File picker to load a custom wavetable |
 
 ---

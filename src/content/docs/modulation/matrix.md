@@ -81,7 +81,8 @@ in order:
 
 - **Pitch**: the played pitch, fanned to all oscillators at once.
 - **Oscillator**: per-oscillator coarse tune, fine detune, level, pulse width, and FM
-  depth, with **Lo-fi** (Bits, Crush, Alias) and **Additive** (the partial-group levels
+  depth, plus **WT Warp** (the Wavetable oscillator's warp amount, for evolving wavetable
+  motion), with **Lo-fi** (Bits, Crush, Alias) and **Additive** (the partial-group levels
   plus additive drive and drift) as their own submenus.
 - **Sub / Noise**: the sub-oscillator and noise-source controls.
 - **Filter**: split into **Filter 1**, **Filter 2**, and **Common**, covering cutoff,

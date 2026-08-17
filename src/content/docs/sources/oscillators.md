@@ -133,15 +133,34 @@ a Saw (DCO) for a clean, Juno-flavoured centre on Osc 3, then blend them to tast
 
 ### Special oscillators
 
-**Wavetable**: a morphable set of up to eight frames (sine → triangle → saw →
-square in the factory set). The **Position** control sweeps across the frames, and
-**WT Morph** switches between **Linear** (crossfade between frames) and **Spectral**
-(spectral interpolation, which blends the harmonic content rather than the waveform
-shape). You can load your own wavetables via **Load WT**. When you select Wavetable,
-the Pulse Width controls relabel to **Position** and **Pos Mod**, and the same
-LFO-sweep behaviour applies. If you would rather build a tone from its individual
-harmonics than morph through pre-made waves, see the
-[Additive oscillator](/sources/additive/).
+**Wavetable**: a morphable set of frames you sweep through with a **Position**
+control, plus a built-in table library and a **Warp** stage on top.
+
+- **Table**: a built-in library of **ten wavetables**, each a multi-frame set the
+  **Position** knob morphs across: **Basic** (the classic sine → triangle → saw →
+  square sweep), **Harmonic Bloom**, **Formant Vowel**, **PWM**, **Sync Sweep**,
+  **FM Bells**, **Additive Comb**, **Inharmonic Bell**, **Distortion**, and
+  **Noise**. Every table is band-limited, so it stays clean across the whole keyboard.
+  **Basic** is the default and matches the original factory table exactly.
+- **Position**: sweeps across the selected table's frames. When you select Wavetable,
+  the Pulse Width controls relabel to **Position** and **Pos Mod**, and the same
+  LFO-sweep behaviour applies.
+- **WT Morph**: switches between **Linear** (crossfade between frames) and
+  **Spectral** (spectral interpolation, which blends the harmonic content rather than
+  the waveform shape). Spectral morph applies to the **Basic** table; the other
+  library tables use linear morph.
+- **Warp**: a second shaping stage applied on top of the morphed wave, with seven
+  modes: **Off**, **Bend** (a phase pinch), **PWM** (pulse-width), **Sync**
+  (self-sync / formant), **Asym** (asymmetric skew), **Fold** (wavefolding), and
+  **Mirror**. The **Warp Amt** knob sets how hard the warp bites, and it is a
+  [mod-matrix](/modulation/matrix/) destination (**WT Warp**) — modulating it is what
+  gives the wavetable its evolving, harmonically-alive motion. Off (or amount 0) leaves
+  the wave untouched.
+- **Load WT**: loads your own wavetable from a WAV file (up to eight frames),
+  band-limited automatically.
+
+If you would rather build a tone from its individual harmonics than morph through
+pre-made waves, see the [Additive oscillator](/sources/additive/).
 
 ## Acoustic (modeled concert grand)
 

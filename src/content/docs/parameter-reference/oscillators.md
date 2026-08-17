@@ -178,8 +178,11 @@ Visible when the Wavetable wave is selected.
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
+| Table | Built-in wavetable library the Position knob morphs across (each table is band-limited). Basic is the default and matches the original factory table. | Basic; Harmonic Bloom; Formant Vowel; PWM; Sync Sweep; FM Bells; Additive Comb; Inharmonic Bell; Distortion; Noise |
 | Position | Frame position across the wavetable (the per-oscillator Pulse Width knob, relabelled). | 5 to 95 % |
-| WT Morph | Frame interpolation: Linear blends the waveforms directly; Spectral interpolates their harmonics for a smoother sweep. | Linear / Spectral |
+| WT Morph | Frame interpolation: Linear blends the waveforms directly; Spectral interpolates their harmonics for a smoother sweep (Spectral applies to the Basic table; library tables use Linear). | Linear / Spectral |
+| Warp | Secondary per-read transform on top of the morphed wave. | Off / Bend / PWM / Sync / Asym / Fold / Mirror |
+| Warp Amt | How hard the selected Warp mode bites. Mod-matrix destination (WT Warp); 0 (Off) leaves the wave untouched. | 0 to 100 % |
 | Load WT | File picker to load a custom wavetable. | button |
 
 ## Additive model
