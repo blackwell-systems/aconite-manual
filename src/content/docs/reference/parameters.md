@@ -103,8 +103,9 @@ Visible when a Kick wave is selected.
 | Control | What it does |
 |---------|-------------|
 | Tune | Fundamental pitch offset |
-| Punch | Pitch-envelope depth and time; sweeps 808 ↔ 909 axis |
-| Decay | Amplitude −60 dB time |
+| Punch | Pitch-envelope depth; 808 tick ↔ 909 sweep |
+| Snap | Pitch-envelope time, independent of Punch; instant 808 snap ↔ slower 909 fall |
+| Decay | Amplitude −60 dB time (up to ~2.5 s) |
 | Click | Beater noise-burst level |
 | Click Tone | Noise-burst centre frequency |
 | Drive | Soft-clip on body + click |

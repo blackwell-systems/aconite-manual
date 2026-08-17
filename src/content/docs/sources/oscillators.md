@@ -342,20 +342,26 @@ are [mod-matrix](/modulation/matrix/) destinations.
 The **Kick** is the third of the struck family, a flexible bass-drum voice that
 sweeps continuously between a TR-808 character and a TR-909 character. One note-on
 is one kick, and like the String and Modal it plays through the voice's filter, amp,
-and effects. There is no 808/909 switch; the six controls cover the whole range:
+and effects. There is no 808/909 switch; the seven controls cover the whole range:
 
 - **Tune**: the fundamental pitch, the played note offset up or down an octave.
-- **Punch**: a single control that sweeps the 808-to-909 axis, setting both the depth
-  and the speed of the pitch snap at once. Near the bottom it is the tight 808 snap;
-  near the top it is the longer, sweeping 909 pitch drop.
-- **Decay**: how long the body rings, from a short punchy thump to a long boom.
+- **Punch**: the depth of the pitch snap. Near the bottom it is the 808's subtle tick
+  (around +1 octave); near the top it is a deep 909-style sweep (around +3 octaves).
+- **Snap**: how fast that pitch snap falls, from an instant 808 snap (around 6 ms) to a
+  slower 909 fall (around 120 ms). Snap is independent of Punch, so a deep snap can also
+  be fast: the hard 909 attack that a single coupled knob could never reach.
+- **Decay**: how long the body rings, from a short punchy thump (around 50 ms) to a long,
+  sustained 808 boom (up to about 2.5 seconds).
 - **Click**: the level of the beater-click attack (a short filtered noise burst). At
   zero it is bypassed and the body is a clean sine sub.
 - **Click Tone**: the colour of that click, from a dark thud to a bright, snappy tap.
 - **Drive**: a soft-clip on the whole body, from a clean sub at zero to 909-style
   grit and harmonics as you push it.
 
-All six controls are [mod-matrix](/modulation/matrix/) destinations.
+All seven controls are [mod-matrix](/modulation/matrix/) destinations. Two factory presets
+anchor the range: **808 Bass** (a sustained, tuned 808 sub-bass with a long decay, mono
+glide, and Drive saturation) and **909 Kick** (a punchy house/techno kick with deep Punch,
+fast Snap, a short decay, a sharp click, and grit).
 
 ## Lo-fi / vintage-digital character
 

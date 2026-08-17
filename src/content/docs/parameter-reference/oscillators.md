@@ -143,8 +143,9 @@ Visible when a Kick wave is selected.
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
 | Tune | Fundamental pitch offset. | plus or minus 1 octave |
-| Punch | Pitch-envelope depth and time together, sweeping the 808-snap to 909-sweep axis. | 0 to 100 % |
-| Decay | Amplitude decay time to silence. | roughly 50 to 800 ms |
+| Punch | Pitch-envelope depth: 808's subtle tick (about +1 octave) up to a deep 909-style sweep (about +3 octaves). | 0 to 100 % |
+| Snap | Pitch-envelope time, independent of Punch: how fast the snap falls, from an instant 808 snap to a slower 909 fall. | roughly 6 to 120 ms |
+| Decay | Amplitude decay time to silence. | roughly 50 ms to 2.5 s |
 | Click | Level of the band-passed noise-burst attack (the beater click). | 0 to 100 % |
 | Click Tone | Centre of the click band-pass, from dark thud to bright beater. | 0 to 100 % |
 | Drive | Soft-clip on the summed body and click, from clean sub to gritty. | 0 to 100 % |
