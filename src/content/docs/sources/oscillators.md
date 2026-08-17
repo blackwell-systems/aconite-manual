@@ -39,6 +39,10 @@ dragging for finer, one-at-a-time steps. See [How every control
 works](/interface/controls/) for the shared drag and fine-adjust
 behavior.
 
+To jump straight to a type instead of stepping, **right-click the WAVE knob** for a
+menu of every oscillator type, with the current one ticked. MIDI Learn stays on that
+same menu, below the type list.
+
 ### Waveforms
 
 **Sine**: the purest tone, a single frequency with no overtones. Useful for smooth
@@ -158,6 +162,19 @@ control, plus a built-in table library and a **Warp** stage on top.
   the wave untouched.
 - **Load WT**: loads your own wavetable from a WAV file (up to eight frames),
   band-limited automatically.
+
+The big stacked waterfall display above these controls is not just a picture, it is a
+control surface you can play directly:
+
+- **Drag up or down on the waterfall** to scrub the **Position**. The highlighted frame
+  follows the cursor: low on the display is the front of the stack (Position 0), high is
+  the back (Position 1). This is the same Position parameter the POS knob turns, so the
+  knob and the display always agree.
+- **Shift-drag left or right on the waterfall** to set the **Warp Amt** (left edge is 0,
+  right edge is full), and the waterfall re-renders live as you sweep so you can see the
+  shape change. This drives the same Warp Amt the knob does. One thing to know: Warp Amt
+  only changes the sound once a **Warp mode other than Off** is selected, so if nothing is
+  happening as you Shift-drag, pick a warp mode first.
 
 If you would rather build a tone from its individual harmonics than morph through
 pre-made waves, see the [Additive oscillator](/sources/additive/).

@@ -229,7 +229,7 @@ Six drawable LFOs plus the Step Sequencer and Performer. See
 | Phase | Start phase offset | 0–360° |
 | Waveform | Preset shape seed | Sine / Triangle / Ramp / Saw / Square |
 | A/B Morph | Crossfade between two drawn shapes | 0 (shape A) – 1 (shape B) |
-| Retrig | Restart the LFO on each note-on | Off / On |
+| Retrig | Per-LFO: Retrig restarts the LFO on each note-on, Free runs its phase continuously across notes | Free / Retrig |
 | One-shot | Play once then hold | Off / On |
 | Slew | Output smoothing | 0–100 % |
 | Bipolar | Centre output around zero | Off / On |

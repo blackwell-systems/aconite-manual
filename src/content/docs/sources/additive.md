@@ -53,7 +53,8 @@ The heart of the Additive oscillator is a row of **32 harmonic bars**. The
 left-most bar is the fundamental (the pitch you play); each bar to the right is
 the next harmonic up. The height of a bar is how much of that harmonic is present
 in the tone. Drag a bar up to bring that partial forward; drag it down to thin it
-out or silence it entirely.
+out or silence it entirely. Drag across several bars to paint a curve in one gesture,
+and **right-click a bar to zero it** instantly.
 
 Building a spectrum bar by bar from silence is possible, but you will usually
 start from a familiar shape and sculpt from there. The **starting-point presets**

@@ -80,10 +80,13 @@ Beyond rate and shape, each LFO has a set of playback controls:
 - **Bipolar / Unipolar**: bipolar output swings from −1 to +1 (the default, giving equal
   movement above and below the destination's center). Unipolar output swings from 0 to +1,
   only ever adding to the destination.
-- **Retrigger**: when on, the LFO resets to its phase offset each time a note triggers.
-  This makes the LFO behave more like a very slow envelope; the shape always starts at
-  the same point on note-on, useful for plucks, stabs, or anything where predictable LFO
-  position matters.
+- **Retrig / Free**: a per-LFO choice (on all six voice LFOs) for how the phase behaves
+  across notes. In **Retrig** the LFO resets to its phase offset each time a note triggers,
+  so the shape always starts at the same point on note-on, useful for plucks, stabs, or
+  anything where predictable LFO position matters (this makes the LFO behave more like a
+  very slow envelope). In **Free** the phase runs continuously across notes, the way the
+  two bus LFOs always do, so held or overlapping notes catch the LFO wherever it happens
+  to be.
 - **One-shot**: the LFO traverses the shape once and then holds at the final value.
   Combine with retrigger for a slow, one-time sweep on each note.
 - **Slew**: smooths the LFO output, rounding off sharp transitions. Useful when Step

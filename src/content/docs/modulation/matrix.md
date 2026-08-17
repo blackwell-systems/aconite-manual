@@ -83,7 +83,9 @@ in order:
 - **Oscillator**: per-oscillator coarse tune, fine detune, level, pulse width, and FM
   depth, plus **WT Warp** (the Wavetable oscillator's warp amount, for evolving wavetable
   motion), with **Lo-fi** (Bits, Crush, Alias) and **Additive** (the partial-group levels
-  plus additive drive and drift) as their own submenus.
+  plus additive drive and drift, and **Add Tilt** for a spectral-brightness sweep, **Add
+  Noise** for the residual air, and **Add Stretch** for the harmonic-to-inharmonic bell
+  morph) as their own submenus.
 - **Sub / Noise**: the sub-oscillator and noise-source controls.
 - **Filter**: split into **Filter 1**, **Filter 2**, and **Common**, covering cutoff,
   resonance, drive, and mode morph for each filter.
@@ -91,9 +93,15 @@ in order:
 - **Amp / Filter Envelope**: attack, decay, sustain, and release for the amp and filter
   envelopes, plus how much each filter envelope pushes the cutoff.
 - **Rates**: all six LFO rates, plus the step sequencer and Performer rates.
+- **Acoustic**: the modeled concert grand's four character controls, **Bright**, **Decay**,
+  **Inharm**, and **Morph**. Because the grand is resynthesised at note-on, Bright, Decay,
+  and Inharm re-voice each *new* note (route velocity to Bright for the realistic harder-is-
+  brighter gesture) rather than sweeping a note already ringing; **Morph** is the one
+  continuous dest, a live crossfade toward the other grand that you can sweep on a held note.
 - **String**, **Modal**, **Kick**: every control on each physical-model oscillator. The
   Modal group includes **Modal Mute**, which modulates the model's Ring / Choke note-off
-  behaviour, so you can automate free-ringing versus damped tails per note.
+  behaviour so you can automate free-ringing versus damped tails per note, and **Modal
+  PTime**, the pitch-drop glide speed.
 - **Voice**: the analog-character controls (detune, drift, and variance) and per-note pan.
 - **Macros**: the four macro knobs, so one modulator can drive a macro that in turn fans
   out to everything routed to it.
