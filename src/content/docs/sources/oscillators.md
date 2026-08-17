@@ -240,7 +240,7 @@ and Dispersion. **BODY** is a selectable soundboard that any exciter can drive.
 ### The Exciter: how the string is set in motion
 
 The **Exciter** menu chooses the front end that starts the string, and it is the
-single biggest character control on the model. There are five, and they are all
+single biggest character control on the model. There are six, and they are all
 level-matched, so switching between them does not jump the output:
 
 - **Noise**: a short burst of noise, the classic breathy Karplus-Strong pluck.
@@ -257,6 +257,10 @@ level-matched, so switching between them does not jump the output:
   so the string sings into a bowed violin, cello, or bass tone that rings while held
   and stops when you release. The same resonator that plays guitar and piano becomes
   a bowed-string instrument.
+- **Grand**: a dedicated, purpose-voiced felt-hammer piano front end (a decorrelated
+  three-string voice driving the grand soundboard). Where **Hammer** plus a Grand body
+  builds a piano from the general parts, **Grand** is the fully-tuned piano exciter, the
+  quickest route to the String's playable grand tone.
 
 ### The controls
 

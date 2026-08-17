@@ -17,6 +17,11 @@ the step sequencer, the performer, and a per-voice envelope follower. See
 | Div | Note division the rate locks to when Sync is on. | note value |
 | Shape | LFO base waveform. Morph then bends this shape continuously. | Sine / Triangle / Ramp / Saw / Square |
 | Morph | Crossfades the LFO from its base Shape toward a second target waveform (zero is the pure Shape). | 0 to 100 % |
+| Phase | Start-phase offset into the cycle, to stagger two LFOs at the same rate. | 0 to 360 degrees |
+| Trig | Per-LFO (all six voice LFOs): Retrig resets the phase on each note-on; Free runs the phase continuously across notes, the way the two bus LFOs always do. | Free / Retrig (default Retrig) |
+| One-shot | The LFO traverses the shape once then holds at the final value (pair with Retrig for a slow one-time sweep per note). | Off / On |
+| Bipolar | Bipolar swings −1 to +1 around the destination centre; Unipolar swings 0 to +1 (only ever adds). | Bipolar / Unipolar |
+| Slew | Smooths the LFO output, rounding sharp transitions (useful on Step shapes). | 0 to 100 % |
 
 ## LFO direct routings
 

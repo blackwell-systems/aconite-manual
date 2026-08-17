@@ -63,7 +63,7 @@ installer readme.
 | Filters | 2 independent filters; 7 models; 6 routing configurations |
 | Envelopes | 6 (Env 1 amp, Env 2 filter, Env 3–6 free) |
 | LFOs | 6 drawable LFOs + 2 bus LFOs |
-| Modulation matrix | 8 per-voice slots + 8 bus slots; 41 sources |
+| Modulation matrix | 24 per-voice slots + 8 bus slots; 41 sources |
 | Effects | 12 in a freely re-orderable chain |
 | Oversampling | 1× / 2× / 4× / 8× (Quality setting) |
 

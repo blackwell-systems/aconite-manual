@@ -62,10 +62,13 @@ on. See [The chord lane](/performance/chord-lane/).
 | Chord | Enables the chord lane: the arp takes its notes from the drawn progression instead of the held keys. Off leaves the arp playing from held keys as usual, and mutes the lane without deleting the chords. | Off / On (default Off) |
 | Key Source | Where the progression's key centre comes from. Played follows the lowest held note so the progression transposes as you play; Fixed pins it to a set key. | Played / Fixed (default Played) |
 | Fixed Key | The key centre used when Key Source is Fixed. | note (default C3) |
-| Voice-Lead | Smooth picks each chord's inversion to minimise pitch movement from the previous chord for a connected progression; As-written keeps root-position voicings. | As-written / Smooth (default As-written) |
+| Voice-Lead | Smooth picks each chord's inversion to minimise pitch movement from the previous chord for a connected progression; As-written keeps root-position voicings. | As-written / Smooth (default Smooth) |
 | Chord Velocity | How hard the chord tones play. Held-key uses your played velocity so dynamics carry through; Fixed plays every tone at one set level. In Grid mode the step's own velocity applies. | Held-key / Fixed (default Held-key) |
 | Fixed Velocity | The level used for chord tones when Chord Velocity is Fixed. | 0 to 100 % |
-| Loop Steps | How many steps the chord lane runs before it repeats; set different from the pattern length for polymeter. | 1 to 8 (default 4) |
+| Output | How the chord plays. Arp feeds the tones into the arp/step walk (the rhythm engine); Chord fires the whole chord on each step; Sustained holds the block chord with no arp rhythm. | Arp / Chord / Sustained (default Arp) |
+| Chord Rate | How often the progression advances a chord, in steps. | Per Step / 2 / 3 / 4 / 6 / 8 / 16 Steps (default Per Step) |
+| Reach | How a drawn Grid degree past the chord's own tones behaves. Extended stacks further thirds (9th, 11th, 13th tensions); Octaves repeats the chord tones up the octaves instead. | Extended / Octaves (default Extended) |
+| Loop Steps | How many steps the chord lane runs before it repeats; set different from the pattern length for polymeter. | 1 to 64 (default 16) |
 
 ## Step sequencer lane
 

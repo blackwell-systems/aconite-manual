@@ -25,7 +25,7 @@ set. See [Oscillators](/sources/oscillators/) for the full guide.
 
 | Control | What it does | Range / notes |
 |---------|-------------|---------------|
-| Wave | Selects the waveform and analog model together | Sine; Saw / Saw (Analog) / Saw (Unison) / Saw (DCO); Square and Triangle families; Shark's-tooth; Wavetable; String; Modal; Kick |
+| Wave | Selects the waveform and analog model together | Sine; Saw / Saw (Analog) / Saw (Unison) / Saw (DCO); Square and Triangle families; Shark's-tooth; Wavetable; String; Modal; Kick; Additive; Chip; Acoustic (20 types) |
 | Octave | Coarse pitch in octaves | −4 to +4 |
 | Coarse | Coarse pitch in semitones | −24 to +24 st |
 | Detune | Fine pitch | −50 to +50 cents |
@@ -80,7 +80,19 @@ Visible when a String wave is selected. See [Oscillators](/sources/oscillators/)
 | Unison | Multi-string unison (up to three detuned strings) |
 | Humanize | Per-note pitch/level scatter (0 = off) |
 | Body | Soundboard: Off / Guitar / Grand / Baby Grand / Upright / Spinet |
-| Exciter | Front-end type: Noise / Impulse / From Osc / Hammer / Bow |
+| Exciter | Front-end type: Noise / Impulse / From Osc / Hammer / Bow / Grand |
+
+### Acoustic model controls
+
+Visible when the Acoustic wave is selected. A modeled concert grand by analysis-resynthesis. See [Oscillators](/sources/oscillators/).
+
+| Control | What it does |
+|---------|-------------|
+| Instrument | Which modeled grand: Grand C5 (darker, warmer) / Grand CF3 (brighter, more open) |
+| Bright | Spectral tilt (signed; mellow below centre, open above) |
+| Decay | Ring time, short damped to long open sustain |
+| Inharm | Inharmonic stretch of the partials (piano-string character) |
+| Morph | Blend toward the other grand (0 = pure, sweepable on held notes) |
 
 ### Modal model controls
 
@@ -95,6 +107,8 @@ Visible when a Modal wave is selected.
 | Tension | Metallic pitch bloom on strike |
 | Sympathy | Neighbour-resonance halo |
 | PDrop | Pitch drop on strike |
+| PTime | Pitch-drop glide time to settle to the note |
+| Mute | Note-off behaviour: Ring (free decay) / Choke (damped tail) |
 
 ### Kick model controls
 
@@ -238,7 +252,7 @@ Six drawable LFOs plus the Step Sequencer and Performer. See
 
 | Control | What it does | Range / notes |
 |---------|-------------|---------------|
-| Length | Active step count | 1–16 |
+| Length | Active step count | 2–8 |
 | Rate | Cycle speed | Free (Hz) or Sync |
 | Direction | Playback order | Forward / Reverse / Ping-Pong / Random |
 | Swing | Off-beat step delay | 0–100 % |
@@ -257,7 +271,7 @@ Six drawable LFOs plus the Step Sequencer and Performer. See
 
 ## Modulation matrix
 
-The matrix has 8 per-voice slots plus an 8-slot bus tier. Each slot binds a
+The matrix has 24 per-voice slots plus an 8-slot bus tier. Each slot binds a
 source, an optional Via transform, a destination, and a signed depth.
 
 | Control | What it does |
@@ -285,7 +299,7 @@ See [Arpeggiator](/performance/arpeggiator/) and
 
 | Control | What it does | Range / notes |
 |---------|-------------|---------------|
-| Mode | Note-walk order | Up / Down / UpDown / Random / As Played / Scale Up / Scale Down / Scale UpDown / Step Seq |
+| Mode | Note-walk order | Up / Down / UpDown / Random / As Played / Scale Up / Scale Down / Scale UpDown / Grid / Free |
 | Rate | Step speed | Free (Hz) or Sync |
 | Gate | Note duration within each step | Short – Full |
 | Octaves | Range stacking | 1–4 |

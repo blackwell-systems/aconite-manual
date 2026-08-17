@@ -112,7 +112,7 @@ Visible when a String wave is selected.
 | Drive | Level-dependent saturation on the string: loud passes fold and grit up, mellowing as the note decays, for sitar and distorted electric-string tones (clean at zero). | 0 to 100 % |
 | Place | Where the Drive grit sits: from inside the string (character evolves over the note) to the string's output (an amp after the pickup, cleaner and more aggressive). | 0 to 100 % |
 | Drive Curve | Hardness of the fold applied by Drive. | Soft / Med / Hard |
-| Exciter | What sets the string in motion. Bow is a sustained friction excitation (the string sings while held); the others strike once at note-on. Impulse is a short shaped click, not a lone spike; all five are level-matched. | Noise / Impulse / From Osc / Hammer / Bow |
+| Exciter | What sets the string in motion. Bow is a sustained friction excitation (the string sings while held); the others strike once at note-on. Impulse is a short shaped click, not a lone spike; Grand is a dedicated blessed felt-hammer piano front-end; all are level-matched. | Noise / Impulse / From Osc / Hammer / Bow / Grand |
 | Body | Orthogonal soundboard resonator that colours whatever the exciter feeds in (independent of the Exciter). Hammer + Grand is a real piano; a pluck + Guitar is an acoustic guitar. Off is bit-exact. | Off / Guitar / Grand / Baby Grand / Upright / Spinet (default Off) |
 | Poly | Dual polarisation: blends in a second, slightly detuned string plane that decays slower, for a two-stage decay and gentle beating (single string at zero). | 0 to 100 % |
 | Unison | True multi-string unison: adds up to two more slightly detuned strings for a lush chorus and long shimmering aftersound (single string at zero). | 0 to 100 % |
