@@ -26,6 +26,12 @@ The log-frequency axis and the peak-hold trace in Spectrum are always on; there 
 no separate toggle for either. Spectrogram uses the same log-frequency mapping as
 Spectrum, so the two read the same way vertically.
 
+Both FFT modes are **labelled** so you can place what you see. Spectrum marks the
+frequency grid along the bottom (30, 50, 100, 200, 500 Hz, then 1k, 2k, 5k, 10k, 20k,
+with the decades brightest) and a dB scale (0, -20, -40, -60) up the left edge.
+Spectrogram carries the same frequency labels up its left edge, since frequency runs
+vertically there, so you can read the exact band a partial or a sweep sits in.
+
 ## Sources: what the scope is watching
 
 The scope can tap the signal at different points in the voice path, and it can show

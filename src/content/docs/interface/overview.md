@@ -27,7 +27,8 @@ Reading down the window, you move through the instrument:
 - **Performance**: voicing and play controls.
 - **Seq**: the note-pattern engine (labelled **Seq** on the panel): the arpeggiator,
   the scale controls, and the Grid/Free note editor.
-- **Keyboard**: the on-screen keyboard with the pitch and mod wheels.
+- **Keyboard**: the on-screen keyboard with the pitch and mod wheels; see
+  [the on-screen keyboard](/interface/keyboard/).
 
 As you work through this manual, each chapter zooms into one band.
 
