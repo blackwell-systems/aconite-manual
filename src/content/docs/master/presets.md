@@ -25,6 +25,10 @@ A preset is a complete snapshot of the full patch state:
   Aconite can reload it when the preset is opened. (The wavetable data itself is not
   embedded; the file needs to be present on the machine where you load the preset.)
 - Your active **colour theme**.
+- **Both scenes.** When you use the scene layer, a preset captures Scene B's full state alongside
+  Scene A's — its own patch, its own effects rack, and its own sequencer/arp/chord/probability stage
+  (and its own drawn shapes) — so a two-scene layer or split recalls exactly as you built it. See
+  [Scenes](/performance/scenes/).
 
 When you save a preset and load it later, or share it with someone else, the sound
 is exactly as you left it, including any shapes you drew by hand. The only things

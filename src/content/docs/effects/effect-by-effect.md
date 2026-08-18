@@ -430,10 +430,11 @@ drag them to reshape, double-click to remove. Drawing tools:
 - **Reset**: returns the curve to the identity line (a straight diagonal, no
   shaping) so you can start fresh.
 
-The drawn shape is saved with the patch and is shared across both scenes. The same
-drawing interface appears for drawable LFOs, envelope contours, step-sequencer Curve
-Lanes, and the Performer, so the feel is consistent everywhere a curve can be
-hand-drawn in Aconite.
+The drawn shape is saved with the patch and is **per-scene** — each scene has its own
+drawable transfer curve, so Scene B's Draw shape is independent of Scene A's (edit it
+with the Waveshaper open while editing Scene B). The same drawing interface appears for
+drawable LFOs, envelope contours, step-sequencer Curve Lanes, and the Performer, so the
+feel is consistent everywhere a curve can be hand-drawn in Aconite.
 
 **String oscillator note.** The voice-path waveshaper is separate from the String
 oscillator's own in-loop drive. That means a plucked String can be coloured at its

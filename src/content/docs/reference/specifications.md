@@ -59,7 +59,7 @@ installer readme.
 |--------------|--------|
 | Oscillators | 3 main + 1 sub + 1 noise; up to 8-voice unison per oscillator |
 | Polyphony | Up to 16 voices |
-| Scenes | 2 independent voice pools (Layer / Split / Channel modes) |
+| Scenes | 2 fully independent instruments — each with its own voice engine, effects rack, and sequencer/arp stage (Layer / Split / Channel modes; Shared or Per-Scene sequencer) |
 | Filters | 2 independent filters; 7 models; 6 routing configurations |
 | Envelopes | 6 (Env 1 amp, Env 2 filter, Env 3–6 free) |
 | LFOs | 6 drawable LFOs + 2 bus LFOs |

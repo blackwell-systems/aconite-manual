@@ -147,6 +147,13 @@ Two pan controls are available:
   modulation matrix Pan destination, an LFO or other source can auto-pan on top of the static setting.
 - **Scene Pan:** places a whole scene in the field when Layer or Split mode is active.
 
+## Sequencer: Shared / Per-Scene
+
+The **SEQ: Shared / Per-Scene** control chooses whether the two scenes share one sequencer, arp, chord
+lane, and probability filter, or whether Scene B runs its own. **Shared** (the default) drives both
+scenes from one pattern; **Per-Scene** gives Scene B an independent sequence you edit via the
+**Edit: Scene B** box. See [Scenes](/performance/scenes/) for how to build two fully independent scenes.
+
 ## Panic
 
 A **PANIC** button is always visible in the header. One click instantly silences everything: it stops

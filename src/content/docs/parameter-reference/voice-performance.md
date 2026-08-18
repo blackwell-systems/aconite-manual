@@ -37,7 +37,9 @@ A terse lookup for the voicing, play-mode, and scene controls. See
 
 ## Scenes
 
-Aconite has two scenes (A and B). The arp feeds both.
+Aconite has two scenes (A and B). Each is a full independent instrument with its own voice engine,
+its own effects rack, and its own sequencer/arp/chord/probability stage. By default one sequence
+drives both; set **SEQ: Per-Scene** to give Scene B its own.
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
@@ -47,3 +49,4 @@ Aconite has two scenes (A and B). The arp feeds both.
 | Scene B Coarse | Pitch offset of scene B in semitones, for stacking B a fixed interval from A. | semitones |
 | Scene B Level | Output level of scene B relative to A, for balancing a layer or split. | dB |
 | Scene Pan | Per-scene stereo placement (Layer and Split only). | L to R, centre |
+| SEQ: Shared / Per-Scene | Whether one sequencer/arp/chord/probability engine drives both scenes (Shared, default) or Scene B runs its own (Per-Scene). | Shared / Per-Scene |

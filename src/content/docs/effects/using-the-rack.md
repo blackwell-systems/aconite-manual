@@ -5,11 +5,16 @@ description: "The 12-slot effects chain: per-slot enable, insert vs send/return,
 
 ![The effects rack](../../../assets/screenshots/panel-fx.png)
 
-Aconite's effects live in a **12-slot chain** on the post-mix stereo bus. Each slot
+Aconite's effects live in a **12-slot chain** on the stereo scene bus. Each slot
 can be enabled independently, run as an **insert** or a **send/return**, and
 dragged to reorder, so the same set of effects can sound completely different
 depending on their order. The master saturation and bus glue controls live in the
 [Master band](/master/master-band/), distinct from the rack.
+
+Each **scene** has its own copy of this rack, so Scene A and Scene B can carry
+completely different effects; the two scene mixes are combined at the shared master
+stage. Switch which rack you are editing with the **Edit: Scene A / B** box in the
+header. See [Scenes](/performance/scenes/).
 
 ## Where the rack sits
 

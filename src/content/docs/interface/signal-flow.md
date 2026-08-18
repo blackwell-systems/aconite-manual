@@ -71,20 +71,22 @@ Two saturation stages are woven into the filter and voice output path:
 
 Everything in stages 1–4 describes one voice pool. In **Layer**, **Split**, or
 **Channel** modes, Aconite runs **two parallel voice pools** (two full scenes),
-each going through its own oscillators, filters, amp, and per-voice saturation
-independently. The two pools sum together before they reach the effects rack, so
-the effects always process the combined mix. Each scene can have its own play mode,
-unison, filter settings, and character; they are genuinely independent instruments
-that share one effects chain and one master output.
+each going through its own oscillators, filters, amp, per-voice saturation, **and
+its own effects rack** independently. Each scene sums its own voices and runs its
+own effects; the two scene mixes then combine and hit the shared **master** stage
+together. Each scene can have its own play mode, unison, filter settings,
+character, effects, and (with **Sequencer: Per-Scene**) its own sequence: they are
+genuinely independent instruments that share only the master output.
 
 ### 5. Effects rack
 
-After the per-voice stage (and after both scenes sum in multi-scene modes), the
-voices merge to stereo and enter the **effects rack**.
-Effects run on the combined mix, not per-voice, which is standard for a
+Each scene has its **own** 12-slot effects rack. After that scene's per-voice stage,
+its voices merge to stereo and enter the scene's **effects rack**.
+Effects run on the scene mix, not per-voice, which is standard for a
 synthesizer: you shape the individual voices with envelopes and filters, then glue
-and color the full mix with effects. Reverb, chorus, delay, and similar processing
-live here.
+and color the mix with effects. Reverb, chorus, delay, and similar processing
+live here. In multi-scene modes the two scenes' effected mixes are summed after
+their racks and before the shared master stage.
 
 ### 6. Master stage
 

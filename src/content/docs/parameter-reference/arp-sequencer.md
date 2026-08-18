@@ -3,9 +3,10 @@ title: "Arpeggiator and step sequencer"
 description: "Lookup reference for the arpeggiator: modes, scale awareness, the interval grid, swing, probability, Euclidean fill, chord and strum, plus every per-step lane in the step sequencer."
 ---
 
-A terse lookup for the arpeggiator and its programmable step lane. One arp feeds
-both scenes. See [Arpeggiator](/performance/arpeggiator/) and
-[Step sequencer](/performance/step-sequencer/).
+A terse lookup for the arpeggiator and its programmable step lane. By default one arp feeds
+both scenes; with **SEQ: Per-Scene** (Voice panel) Scene B runs its own arp / sequencer / chord /
+probability stage. See [Arpeggiator](/performance/arpeggiator/),
+[Step sequencer](/performance/step-sequencer/), and [Scenes](/performance/scenes/).
 
 ## Arpeggiator
 

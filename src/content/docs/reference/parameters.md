@@ -335,6 +335,7 @@ See [Voice and play](/performance/voice-and-play/).
 | Transient | Oscillator/filter state at note-on | Analog / Reset |
 | Voice Pan | Static voice placement in the stereo field | L–R |
 | Scene Mode | How the two scenes combine | Single / Layer / Split / Channel |
+| SEQ: Shared / Per-Scene | Whether one sequencer/arp/chord/probability engine drives both scenes, or Scene B runs its own | Shared / Per-Scene |
 
 ### MPE
 
