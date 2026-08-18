@@ -94,8 +94,8 @@ a Juno-style DCO. See [Oscillators](/sources/oscillators/).
 peak to the Sustain level, after the Attack stage is complete. See *ADSR*.
 
 **Depth *(Aconite)***: on the filter's character controls: the amount of internal clipping in
-the Analog voicing. Depth only acts under the Analog Voicing setting; under Clean it is
-inaudible. See [The two filters](/filters/the-two-filters/).
+the Analog voicing. Depth only acts under the Analog Filter Character setting; under
+Clean it is inaudible. See [The two filters](/filters/the-two-filters/).
 
 **Detune**: a pitch offset, typically expressed in cents. Oscillators can be individually
 detuned to create beating between voices. Unison Detune spreads stacked voices in a chord.
@@ -106,8 +106,8 @@ See [Oscillators](/sources/oscillators/).
 of cutoff (from inter-stage diode coupling), and a passband that stays full as resonance rises.
 The "neutral acid" character. See [The two filters](/filters/the-two-filters/).
 
-**Draw mode *(Aconite)***: a mode available on each of the six envelopes and on all six LFOs.
-In Draw mode the classic ADSR handles are replaced by a hand-drawn multi-segment contour, using
+**Draw mode *(Aconite)***: a mode available on each of the six envelopes and on the two drawable
+LFOs (LFO 1 and 2). In Draw mode the classic ADSR handles are replaced by a hand-drawn multi-segment contour, using
 the same drawable editor as the LFO shape editor. A sustain marker sets the hold point; a
 loop region bracket sets a repeating sub-region. See [The envelope pool](/envelopes/pool/)
 and [LFOs](/modulation/lfos/).
@@ -173,7 +173,8 @@ Useful for hands-free playing and drones. See
 
 **LFO (low-frequency oscillator)**: a modulation source that cycles at a sub-audio rate
 (typically 0.01 Hz to 20 Hz) to create tremolo, vibrato, filter sweeps, or rhythmic effects.
-Aconite has six drawable LFOs, each with A/B morph. See [LFOs](/modulation/lfos/).
+Aconite has six LFOs: LFO 1 and 2 are drawable ShapeLFOs with A/B morph, and LFO 3 through 6
+are matrix-only. See [LFOs](/modulation/lfos/).
 
 **Low-pass (LP)**: a filter response that passes frequencies below the cutoff and attenuates
 those above. The most common filter shape in synthesis; closing the cutoff makes a sound darker.
@@ -367,10 +368,10 @@ or Lag (a 40 ms slew that smooths the modulation). See
 eight voices can sound simultaneously. With 2-voice unison, four *notes* can sound (each using
 two voices). See [Voice & play](/performance/voice-and-play/).
 
-**Voicing *(Aconite, filter)***: on the Ladder and Diode filter models: a character selector
-with two settings, Clean and Analog. Clean is the lower-distortion path but has a taller,
-sharper resonance; Analog compresses the resonance like real hardware and adds grit when driven.
-See [The two filters](/filters/the-two-filters/).
+**Voicing *(Aconite, filter)***: the filter's character selector (labelled **Filter Character**
+in the panel), with two settings, Clean and Analog. Clean is the lower-distortion path
+but has a taller, sharper resonance; Analog compresses the resonance like real hardware and
+adds grit when driven. See [The two filters](/filters/the-two-filters/).
 
 **Volume / Amplitude**: see *Amplitude*.
 

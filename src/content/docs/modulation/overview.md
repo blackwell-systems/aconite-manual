@@ -19,7 +19,7 @@ The modulation system has three parts:
 - The [envelope pool](/envelopes/pool/): six ADSR envelopes, each also
   available in [drawn contour](/envelopes/drawable/) form. Note-triggered,
   note-released.
-- The [LFOs](/modulation/lfos/): six drawable, tempo-syncable oscillators
+- The [LFOs](/modulation/lfos/): six tempo-syncable oscillators (LFO 1–2 drawable, 3–6 matrix-only)
   that run freely or retrigger on each note.
 - The [envelope follower](/modulation/env-follower/): a source that tracks
   the signal's own level and turns dynamics into modulation.
@@ -51,7 +51,7 @@ selects one at a time:
 
 | Tab | What it is |
 |-----|------------|
-| LFO 1 – 6 | Six drawable low-frequency oscillators |
+| LFO 1 – 6 | Six low-frequency oscillators (LFO 1–2 drawable, LFO 3–6 matrix-only) |
 | Seq | The step sequencer |
 | Perf | The Performer curve sequencer |
 | Bus LFO 1 – 2 | Two LFOs dedicated to the effects and master bus |

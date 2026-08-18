@@ -115,7 +115,7 @@ The hero visualisation is a semicircular **pan graph** that plots each tap by it
 time and pan around a half-disc: you can see the rhythmic pattern and stereo spread
 at a glance, with per-tap editing rows below.
 
-This effect is **insert-only**: it cannot run as a send/return.
+The UI limits this effect to **insert**: it is not offered as a send/return.
 
 **Key controls:** Mix, Taps (1–6), Feedback, Tone, Feedback high-pass, Feedback mode (Tap / Normal),
 rotate rate/depth, delay-mod rate/depth, Direct, Output; per tap: Time or

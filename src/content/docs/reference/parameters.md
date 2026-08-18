@@ -166,8 +166,8 @@ and Filter 2) unless noted. See [The two filters](/filters/the-two-filters/).
 | Drive | Input gain into the filter's nonlinearity | 0–100 % |
 | Mode | Discrete response | LP / BP / HP / Notch (SVF, Bite); LP4 / LP2 / BP / HP / Notch (Multimode) |
 | Morph | Continuous blend offset from the current Mode (mod-matrix destination) | Signed offset |
-| Voicing | Internal saturation character (Ladder and Diode only) | Clean / Analog |
-| Depth | Clipping amount under Analog voicing | 0–100 % |
+| Filter Character | Internal saturation character (parameter Voicing; Ladder and Diode only) | Clean / Analog |
+| Depth | Clipping amount under Analog Filter Character | 0–100 % |
 | Env Amt | How much the filter envelope pushes the cutoff | ±6 octaves |
 | Key Track | Cutoff tracking of played note | 0–100 % |
 | Feedback | External resonant loop ("bark") | 0–100 % |
@@ -230,11 +230,11 @@ Env 3–6 are free. See [Envelopes](/modulation/lfos/).
 
 ## LFOs and modulators
 
-Six drawable LFOs plus the Step Sequencer and Performer. See
-[LFOs](/modulation/lfos/) and the modulation
+Six LFOs (LFO 1–2 drawable, LFO 3–6 matrix-only) plus the Step Sequencer and
+Performer. See [LFOs](/modulation/lfos/) and the modulation
 [Matrix](/modulation/matrix/).
 
-### Drawable LFO controls (LFO 1–6)
+### Drawable LFO controls (LFO 1–2; LFO 3–6 are matrix-only)
 
 | Control | What it does | Range / notes |
 |---------|-------------|---------------|

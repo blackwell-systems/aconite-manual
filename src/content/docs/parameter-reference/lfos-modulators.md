@@ -3,8 +3,9 @@ title: "LFOs and modulators"
 description: "Lookup reference for the six LFOs, their direct routings, the step sequencer, the performer, and the envelope follower."
 ---
 
-A terse lookup for every modulator control. Aconite has six drawable LFOs plus
-the step sequencer, the performer, and a per-voice envelope follower. See
+A terse lookup for every modulator control. Aconite has six LFOs (LFO 1–2 are drawable
+ShapeLFOs; LFO 3–6 share the same engine but are matrix-only) plus the step sequencer,
+the performer, and a per-voice envelope follower. See
 [Modulators overview](/modulation/overview/) and
 [LFOs](/modulation/lfos/).
 

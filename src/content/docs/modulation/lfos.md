@@ -11,7 +11,10 @@ independently of the notes you play. That makes LFOs the right tool for slow evo
 movement, vibrato, tremolo, filter sweeps, and any other modulation that should not restart
 with every note.
 
-All six are identical in capability. Each has its own rate, shape, and settings.
+All six share the same ShapeLFO engine (rate, shape, A/B morph). **LFO 1 and 2** are the
+**drawable** ones with the editor panels shown here; **LFO 3 through 6** run the same engine
+but are **matrix-only** — you set them up from the [modulation matrix](/modulation/matrix/)
+rather than drawing them.
 
 ## Starting from a waveform preset
 

@@ -45,7 +45,7 @@ ways of working.
 ## The high-pass curve
 
 When the front-end high-pass is set to Pre or Post, the graph adds a **pale curve** with its
-own handle. Drag it horizontally to set HPF Freq; drag vertically to set Bite (the HPF's
+own handle. Drag it horizontally to set HPF Freq; drag vertically to set Peak (the HPF's
 resonance). The curve draws the real roll-off shape for whichever slope (6, 12, or 24 dB/oct)
 is selected: a 24 dB/oct curve looks much steeper than a 6 dB/oct one, which makes the
 slope choice visible at a glance. This also applies to the Cascade filter's own 12 vs. 24
@@ -80,7 +80,7 @@ whether a modulation depth is musical or excessive, and observe how two filters 
 or serial relationship move relative to each other.
 
 The HPF curve does not sweep with modulation: it reflects the front-end HPF's knob position
-and updates when you change Freq or Bite, but it is not animated by per-cycle modulation.
+and updates when you change Freq or Peak, but it is not animated by per-cycle modulation.
 
 :::tip
 The response graph is a good diagnostic tool when a patch sounds unexpected. If the curve

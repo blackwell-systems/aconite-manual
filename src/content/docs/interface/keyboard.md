@@ -3,7 +3,7 @@ title: The on-screen keyboard
 description: Playing Aconite with the mouse and computer keys, and how a click's vertical position sets velocity.
 ---
 
-A one-octave keyboard runs along the bottom of the window, in the **Keyboard** band
+The on-screen keyboard runs along the bottom of the window, in the **Keyboard** band
 next to the pitch and mod wheels. It is there to audition a patch without reaching for
 a controller: click the keys with the mouse, or play them from your computer keyboard,
 and the notes go into the same path as any external MIDI, so everything (the

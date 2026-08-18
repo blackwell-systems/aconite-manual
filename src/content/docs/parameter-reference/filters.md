@@ -3,11 +3,12 @@ title: "Filters and waveshaper"
 description: "Lookup reference for the two filters, their routing, the front-end high-pass, saturation and drive controls, and the waveshaper."
 ---
 
-A terse lookup for every filter control. The per-filter set applies to both
-Filter 1 and Filter 2 unless noted. For the full guide see
+A terse lookup for every filter control. The set below documents Filter 1; Filter 2
+is a fully independent second filter with the same controls under `filter2`-prefixed
+parameters, listed separately after. For the full guide see
 [The two filters](/filters/the-two-filters/).
 
-## Per-filter controls
+## Filter 1 controls
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
@@ -17,18 +18,39 @@ Filter 1 and Filter 2 unless noted. For the full guide see
 | Drive | Input gain into the filter's nonlinearity. | 1 to 10 |
 | Mode | Discrete response shape and the home node the Morph slider drifts from. | LP / BP / HP / Notch (varies by model) |
 | Morph | Continuously morphs the response between LP, BP, HP and Notch as a signed offset from the selected Mode (centre is on the mode). | signed offset |
-| Voicing | Drive character: Clean is a transparent saturation; Analog adds per-stage nonlinearity for a thicker push (enables Depth). | Clean / Analog |
-| Depth | How hard the Analog per-stage saturation is driven, clean to thick. Active only under Analog voicing. | 0 to 100 % |
+| Filter Character | Drive character (parameter Voicing): Clean is a transparent feedback-only saturation; Analog adds per-stage nonlinearity for a thicker push (enables Depth). Ladder and Diode only. | Clean / Analog |
+| Depth | How hard the Analog per-stage saturation is driven, clean to thick. Active only under the Analog Filter Character. | 0 to 100 % (default 40 %) |
 | Env Amt | How much the filter envelope pushes the cutoff. | plus or minus 6 octaves |
 | Key Track | How much the cutoff follows the played note, so the filter opens as you play higher. | 0 to 100 % |
 | Feedback | Post-filter feedback loop amount ("bark"), adding resonant edge as it is raised. | 0 to 100 % |
 
-## Filter 2 links
+## Filter 2 controls
 
-| Control | What it does | Range / values |
-|---------|--------------|----------------|
-| Env Link | When on, Filter 2's envelope amount follows Filter 1 instead of its own knob. | Off / On |
-| Key Link | When on, Filter 2's key-track follows Filter 1 instead of its own knob. | Off / On |
+Filter 2 is a second, fully independent filter (built by any Routing other than
+Single). It carries its own model, cutoff, resonance, character, and cutoff-modulation
+knobs, so the two filters can be voiced completely differently. Parameters are
+`filter2`-prefixed.
+
+| Control | Parameter | What it does | Range / values |
+|---------|-----------|--------------|----------------|
+| Model | `filter2Type` | Filter 2's model and circuit character, independent of Filter 1. | Ladder / SVF / Bite / Multimode / Cascade / Diode / Acid (default Ladder) |
+| Cutoff | `filter2Cutoff` | Filter 2's corner frequency. | 20 Hz to 18 kHz (default 1200 Hz) |
+| Resonance | `filter2Reso` | Filter 2's Q and emphasis at cutoff. | 0 to 100 % (default 20 %) |
+| Drive | `filter2Drive` | Input gain into Filter 2's nonlinearity. | 1 to 10 (default 1) |
+| Mode | `filter2Mode` | Filter 2's discrete response, independent of Filter 1. | LP / LP 2-pole / BP / HP / Notch (default LP) |
+| Filter Character | `filter2Voicing` | Filter 2's drive character (Clean / Analog), independent of Filter 1 so both can be Analog. Ladder and Diode only. | Clean / Analog (default Clean) |
+| Depth | `filter2AuthDepth` | Filter 2's Analog per-stage clip amount. Active only under Analog. | 0 to 100 % (default 40 %) |
+| Morph | `filter2Morph` | Filter 2's continuous mode morph, a signed offset from its Mode. | signed offset (default 0) |
+| Env Amt | `filter2EnvAmt` | How much the filter envelope pushes Filter 2's cutoff (its own amount unless Env Link is on). | plus or minus 6 octaves (default 0) |
+| Key Track | `filter2Keytrack` | How much Filter 2's cutoff follows the played note (its own amount unless Key Link is on). | 0 to 100 % (default 0) |
+| Feedback | `filter2Feedback` | Filter 2's own post-filter feedback loop ("bark"). | 0 to 100 % (default 0) |
+
+### Filter 2 links
+
+| Control | Parameter | What it does | Range / values |
+|---------|-----------|--------------|----------------|
+| Env Link | `filter2EnvLink` | When on, Filter 2's envelope amount follows Filter 1 instead of its own knob. | Off / On (default Off) |
+| Key Link | `filter2KeyLink` | When on, Filter 2's key-track follows Filter 1 instead of its own knob. | Off / On (default Off) |
 
 ## Routing and shared controls
 

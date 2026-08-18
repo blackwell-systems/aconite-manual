@@ -52,6 +52,26 @@ probability stage. See [Arpeggiator](/performance/arpeggiator/),
 | Euclidean Hits | Number of hits distributed evenly across the cycle length; the rest rest. 0 turns Euclidean off. | 0 to 16 |
 | Fill | Momentary control for conditional steps: FILL-conditioned steps play only while this is held, and inverse steps play only while it is off. | Off / On |
 
+## Probability filter
+
+A "filter" over the per-step firing chance: a movable cutoff sweeps a probability
+(or mask) curve across a chosen axis so notes drop out or come back as you move it.
+Disabled, or at Depth 0, it is an exact no-op, so a patch is unchanged until you turn
+it on and raise Depth. See [The probability filter](/performance/probability-filter/).
+
+| Control | What it does | Range / values |
+|---------|--------------|----------------|
+| Prob Filter | Enables the probability filter. Off (or Depth 0) is a no-op. | Off / On (default Off) |
+| Mode | The filter response applied to the axis: Low-pass, High-pass, Band-pass, or Notch. | LP / HP / BP / Notch (default LP) |
+| Axis | What the cutoff sweeps across. Register spans the note range; Range and Function fall back to Register in the current build. | Register / Range / Function (default Register) |
+| Target | What the filter shapes: the per-note Probability, or a hard Mask. | Probability / Mask (default Probability) |
+| Cutoff | Position of the filter's corner along the axis. | 0 to 100 % (default 50 %) |
+| Slope | Steepness of the corner, from a gentle taper to a hard edge. | 0 to 100 % (default 50 %) |
+| Depth | How strongly the filter shapes the target; 0 is flat (no-op). | 0 to 100 % (default 0) |
+
+With **SEQ: Per-Scene**, Scene B carries its own `scB_`-prefixed twins of all seven
+controls, so each scene can filter its probability independently.
+
 ## Chord lane
 
 The chord lane plays a chord progression under the arp from one held key. All

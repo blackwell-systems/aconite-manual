@@ -31,6 +31,20 @@ The summed-voice bus stage, both bypassed at zero.
 | Depth | How far the rails sink at full load, the maximum duck of the Sag effect (only audible when Sag is up). | 0 to 100 % |
 | Time | Speed of the sag: fast is a snappy duck-and-bloom, slow is a loose, breathing recovery (only audible when Sag is up). | fast to slow |
 
+### Scene-B bus stage
+
+With **SEQ: Per-Scene** (Voice panel), Scene B carries its own copy of the console
+bus stage, `scB_`-prefixed, so each scene sums through its own glue and sag. Same
+ranges and defaults as the scene-A controls above (all default to bypass).
+
+| Control | Parameter | What it does | Range / values |
+|---------|-----------|--------------|----------------|
+| B Bus Sat | `scB_busSatAmount` | Scene B's summing saturation ("glue"). | 0 to 100 % (default 0) |
+| B Bus Sat Character | `scB_busSatChar` | Scene B's glue colour, odd toward even-harmonic. | 0 to 100 % (default 50 %) |
+| B PSU Sag | `scB_busSagAmount` | Scene B's power-supply sag amount. | 0 to 100 % (default 0) |
+| B PSU Sag Depth | `scB_busSagDepth` | How far Scene B's rails sink at full load. | 0 to 100 % (default 50 %) |
+| B PSU Sag Time | `scB_busSagTime` | Speed of Scene B's sag droop and bloom. | fast to slow (default 50 %) |
+
 ## MPE
 
 | Control | What it does | Range / values |

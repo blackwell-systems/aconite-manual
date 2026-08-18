@@ -6,7 +6,7 @@ description: The six filter routings, the named filter-config presets, and the f
 The two filters can be wired six ways (**Single, Serial, Parallel, Ring, Stereo,
 and Wide**), and the header's **Filter Config** selector applies curated
 combinations of routing plus both models in one click. A positionable **front-end
-high-pass** (Off / Pre / Post, with its own Freq, Bite, and Slope) runs
+high-pass** (Off / Pre / Post, with its own Freq, Peak, and Slope) runs
 independently of the feedback loops, so you can use both at once.
 
 ## The six routings
@@ -97,7 +97,7 @@ player's musical choice.
 | **Ring Metallic** | Ring routing for non-harmonic, metallic textures. |
 | **Stereo Split** | Filter 1 left, Filter 2 right: instant stereo separation. |
 | **Wide Pad (SVF)** | Wide routing with SVF for clean, airy stereo spread. |
-| **Acid 303** | Acid model wired for the classic TB-303 squelch. |
+| **Acid 303** | A driven Ladder tuned for a 303-style squelch. |
 | **Cascade Scream** | Cascade pushed into its Rough drive character. |
 | **Bite Grit** | Bite model for aggressive, self-oscillating leads. |
 
@@ -119,17 +119,17 @@ independently of the feedback loops. You can use it simultaneously with any rout
   main filter's low Cutoff lets through, or to add a roll-off to an already-filtered sound
   without affecting the main filter's resonance behavior.
 
-**Freq** sets the corner frequency (20 Hz to 2 kHz). **Bite** adds resonance at the corner:
+**Freq** sets the corner frequency (20 Hz to 2 kHz). **Peak** (adds bite) adds resonance at the corner:
 a narrow boost that gives the HPF its own character rather than just a passive roll-off.
-On 12 dB/oct and 24 dB/oct slopes, Bite rides the first filter stage; on the 6 dB/oct slope
+On 12 dB/oct and 24 dB/oct slopes, Peak rides the first filter stage; on the 6 dB/oct slope
 it is clean with no resonance.
 
 **Slope** selects 6, 12, or 24 dB/oct. Steeper slopes clear out the low end more
 aggressively; 6 dB is gentle and transparent.
 
-Both Freq and Bite are modulation matrix destinations; see the
+Both Freq and Peak are modulation matrix destinations; see the
 [modulation matrix](/modulation/matrix/) for routing options. A slow LFO on
-HPF Freq with Bite up gives a subtle animated brightness that is easy to overlook but hard
+HPF Freq with Peak up gives a subtle animated brightness that is easy to overlook but hard
 to stop using once you find it.
 
 ## Filter 2 link options

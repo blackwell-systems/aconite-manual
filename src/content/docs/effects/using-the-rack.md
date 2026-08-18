@@ -24,7 +24,9 @@ through the rack as a single stereo stream, so a reverb tail or a delay repeat
 wraps the entire ensemble rather than treating voices individually.
 
 Every effect starts with its mix at zero, so a fresh patch passes audio through
-untouched. You dial in only what you want.
+untouched. You dial in only what you want. The one exception is the parametric EQ,
+whose mix starts at 100%; it is still transparent on a fresh patch because all its
+bands start flat, so there is nothing to blend in until you move a gain.
 
 ## The rack panel
 
@@ -55,7 +57,7 @@ Drag any row up or down to change its position in the chain. The signal flows th
 the slots top to bottom in the order you see them. Reordering is non-destructive: the
 slot's settings travel with it.
 
-Two effects are always inserted in place and cannot run as sends: the **Multi-tap
+The UI limits two effects to insert only, so they never run as sends: the **Multi-tap
 delay** (its **Feedback high-pass** keeps long regenerating patterns from building
 low-end mud) and the **Stereo imager**. Everything else can be either an insert or a send.
 
@@ -121,6 +123,6 @@ running it early in the chain means every subsequent effect processes an already
 warmed-up signal. Running it late applies the warmth and wow/flutter on top of
 effects like reverb, which can make a tail flutter realistically.
 
-The default slot order (chorus → phaser → delay → multi-tap → reverb → tape →
-distortion → bit-crusher → compressor → transient shaper → EQ → stereo imager) is
+The default slot order (chorus → phaser → delay → reverb → tape → bit-crusher →
+compressor → EQ → distortion → multi-tap → transient shaper → stereo imager) is
 a sensible starting point, but none of it is fixed. Drag freely.

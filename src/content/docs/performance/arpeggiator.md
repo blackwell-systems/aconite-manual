@@ -41,9 +41,11 @@ becomes a six-step pattern that spans three registers.
 **Gate** controls how much of each step the note actually sounds. A short Gate chops notes into
 staccato hits; a full Gate plays each note into the next for a legato feel.
 
-**Latch** is the arp's live-playing trick: engage Latch mode, play a chord, and the arp keeps
-cycling after you lift your fingers. Tap a new root note to shift the whole pattern: useful for
-bass arps you want to play both hands free.
+**Seq Trigger** is the arp's live-playing trick: set it to **Run**, and the arp cycles hands-free
+at the scale root without a key held. **Hold** (the default) instead gates the pattern from the
+keys you hold, so it stops when you lift your fingers. In Run you can still tap a new root note to
+shift the whole pattern: useful for bass arps you want to play both hands free. (This is distinct
+from the **Latch** voice play mode, which simply sustains held notes.)
 
 ## Scale awareness: stay in key
 

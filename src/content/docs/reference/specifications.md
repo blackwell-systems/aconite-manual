@@ -62,7 +62,7 @@ installer readme.
 | Scenes | 2 fully independent instruments — each with its own voice engine, effects rack, and sequencer/arp stage (Layer / Split / Channel modes; Shared or Per-Scene sequencer) |
 | Filters | 2 independent filters; 7 models; 6 routing configurations |
 | Envelopes | 6 (Env 1 amp, Env 2 filter, Env 3–6 free) |
-| LFOs | 6 drawable LFOs + 2 bus LFOs |
+| LFOs | 6 voice LFOs (2 drawable + 4 matrix-only) + 2 bus LFOs |
 | Modulation matrix | 24 per-voice slots + 8 bus slots; 41 sources |
 | Effects | 12 in a freely re-orderable chain |
 | Oversampling | 1× / 2× / 4× / 8× (Quality setting) |
