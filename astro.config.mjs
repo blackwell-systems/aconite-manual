@@ -52,6 +52,8 @@ export default defineConfig({
           items: [
             { label: 'Oscillators', link: '/sources/oscillators/' },
             { label: 'Additive oscillator', link: '/sources/additive/' },
+            { label: 'FM oscillator (6-operator)', link: '/sources/fm/' },
+            { label: 'DX7 SysEx import', link: '/sources/dx7-import/' },
             { label: 'FM & hard sync', link: '/sources/fm-sync/' },
             { label: 'Sub oscillator & noise', link: '/sources/sub-noise/' },
             { label: 'Mixer & Mix Drive', link: '/sources/mixer/' },
