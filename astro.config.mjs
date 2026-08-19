@@ -113,6 +113,7 @@ export default defineConfig({
             { label: 'The Master band', link: '/master/master-band/' },
             { label: 'MPE & MIDI-learn', link: '/master/mpe-midi-learn/' },
             { label: 'Presets & A/B', link: '/master/presets/' },
+            { label: 'Recording & capture', link: '/master/record/' },
           ],
         },
         {
