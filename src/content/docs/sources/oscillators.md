@@ -210,6 +210,11 @@ the tone live, and the Acoustic oscillator plays through the voice's filter, amp
 effects exactly like any other oscillator. Every knob is a
 [mod-matrix](/modulation/matrix/) destination.
 
+The oscillator's **header scope** shows a representative render of the selected grand's
+timbre rather than a flat line, so the display reacts as you switch **Instrument**
+(Grand C5 / Grand CF3) and turn **Bright** up or down. It is a picture of the tone, not
+a control.
+
 The three physical-model voices below (**String**, **Modal**, and **Kick**) are a
 family: each one is a genuine physical model, excited at note-on and left to ring
 and decay on its own, and each plays through the voice's filter, amp, and effects

@@ -39,12 +39,19 @@ What happens next depends on the file:
   names** so you can pick the one you want. Choose a name and that voice loads into
   the oscillator.
 
-The import touches **only the current oscillator's FM structure**: the operators,
-the matrix, the envelopes, the ratios. Your filter, effects, amp envelope, and
-everything else in the patch are left exactly as they were, so you are dropping a
-DX7 tone into *your* sound rather than replacing the whole thing. Once it is loaded,
-every part of it is editable in the [FM editor](/sources/fm/) like any patch you
-built by hand: sweep the matrix, redraw an operator envelope, add feedback.
+The import fills in the **current oscillator's FM structure**: the operators, the
+matrix, the envelopes, the ratios. Your filter, effects, amp envelope, and everything
+else in the patch are left exactly as they were, so you are dropping a DX7 tone into
+*your* sound rather than replacing the whole thing. Once it is loaded, every part of it
+is editable in the [FM editor](/sources/fm/) like any patch you built by hand: sweep
+the matrix, redraw an operator envelope, add feedback.
+
+**Vibrato comes across too.** If the DX7 patch has pitch-mod (its own LFO driving
+vibrato, as strings, brass, and lead voices usually do), Aconite maps it onto **LFO 1**
+on import: the LFO's rate, its shape, and how much it moves the pitch. So a
+vibrato-heavy DX7 voice **moves the moment it loads** instead of sitting static, and you
+can then reshape or re-route that LFO like any other. A patch with no pitch-mod imports
+with your LFO 1 left untouched.
 
 ## Import a whole bank into presets
 

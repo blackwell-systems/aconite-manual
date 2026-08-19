@@ -3,9 +3,10 @@ title: FM oscillator (6-operator)
 description: "Aconite's 6-operator FM voice in one oscillator slot: the free FM matrix, the per-operator panel with drawable envelopes, the pitch knobs, and sweeping the whole structure with FM Depth."
 ---
 
-<!-- SCREENSHOT: a labelled shot of the FM oscillator editor (the 6×6 matrix with
-its OUT column, the operator panel, and the drawable operator envelope) will be
-added here once the panel art is finalised. -->
+<!-- SCREENSHOT: a labelled shot of the FM oscillator editor (the full-width waveform
+scope across the top, the 6×6 circle matrix with its OUT column, the operator panel,
+and the drawable operator envelope) will be added here once the panel art is
+finalised. -->
 
 The **FM** oscillator is a complete **6-operator FM synthesizer** living in a single
 oscillator slot. Where classic FM synths hand you a fixed set of "algorithms" to
@@ -26,9 +27,11 @@ Osc 3.
 Pick **FM** from the oscillator's **WAVE** selector, the same menu you use to choose
 Saw, Square, Wavetable, or any other model. Right-click the WAVE knob for the full
 type list and choose **FM**, or drag the waveform display to step onto it. The moment
-FM is selected, the FM editor takes over the oscillator's model area: the matrix on
-the left, the operator panel on the right, and a small live waveform preview across
-the top that redraws as you edit.
+FM is selected, the FM editor takes over the oscillator's model area: a **full-width
+waveform scope** across the top of the card (exactly like every other oscillator
+model), with the matrix on the left and the operator panel on the right below it.
+The scope draws a live render of the current FM patch, so it redraws as you edit the
+matrix, ratios, and envelopes.
 
 A fresh FM oscillator is a **single sine carrier** and nothing else, so it starts out
 as a plain, clean sine. Everything below is how you build a richer tone up from there.
@@ -53,15 +56,19 @@ hard, and that is exactly what the matrix lets you draw.
 
 ## The FM matrix
 
-The **FM MATRIX** is a **6×6 grid** plus one extra column. Read it as
+The **FM MATRIX** is a **6×6 grid** plus one extra column, drawn as a grid of
+value-bearing **circles** (one per cell). Each circle's fill tracks its amount, so the
+whole routing reads at a glance; **empty cells stay greyed but always visible**, so you
+can see every possible connection and drop a value into it. Read the grid as
 **"modulator, then destination"**:
 
 - **Rows are modulators.** Row 3 is operator 3 acting as a modulator.
 - **Columns are destinations.** Column 5 is operator 5 being modulated.
 - A cell where **row 3 meets column 5** sets how hard **operator 3 modulates
-  operator 5**. Drag the cell up to send more; drag it down to zero.
+  operator 5**. **Drag a circle vertically** to set its amount: up sends more, down to
+  zero.
 
-Two cells behave specially:
+Two cells behave specially, and draw with a heavier ring so they stand apart:
 
 - **The diagonal** (row 1 / column 1, row 2 / column 2, and so on) is each operator's
   **self-feedback**: the operator modulating *itself*. A touch of feedback thickens a
@@ -181,6 +188,15 @@ operator 2 is loud) and settling to a purer tone as its envelope decays. Raise
 operator 2's Ratio for a more inharmonic bell; add a little **self-feedback** on the
 diagonal for extra bite; route **FM Depth** to an envelope to make the whole strike
 sweep.
+
+## Clean at the bright end
+
+Bright, high-feedback FM patches (electric-piano tines, hard bells, anything with
+strong self-feedback or a high-ratio modulator) are exactly the sounds that make naive
+FM grainy and harsh. Aconite automatically **oversamples** those patches internally to
+suppress that aliasing, so an electric-piano voice comes out clean instead of gritty.
+There is nothing to set: it engages only for patches that can alias and stays out of
+the way for simple sine tones, so you get the clean result for free.
 
 :::note
 For the huge library of ready-made FM sounds, Aconite can load classic Yamaha DX7
