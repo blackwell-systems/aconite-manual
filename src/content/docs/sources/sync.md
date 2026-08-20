@@ -29,14 +29,19 @@ reset fires less often, so the snap is rounded off — the same idea, softened.
 
 ## Finding the controls: the SYNC tab
 
-The sync controls live on the **SYNC** tab of the source-shaping deck, alongside
-**Shaper** and **Resonator** (the deck reads **Shaper | Resonator | SYNC**). Click
-**SYNC** and you get:
+All sync controls live on the **SYNC** tab of the source-shaping deck — the deck
+reads **Shaper | Resonator | SYNC**. Click **SYNC** and you get:
 
 - A live **sync-waveform view** driven by the real oscillator — turn a control and
   the trace re-draws so you can *see* the sync edge move.
 - The **Routing** selector, and the **Ratio**, **Amount** and **Reset φ** knobs,
   and the **Hard / Soft** toggle.
+
+The SYNC tab is the only place to set the sync routing; there is no duplicate
+control in the oscillator strip. The panel reads your oscillator selections and
+greys out routings that would not produce sync — so if Osc 1 is set to FM (which
+cannot sync), the panel shows a note rather than leaving an option that silently
+does nothing. Hover any of the four main controls for a description of what it does.
 
 When you load a preset that uses sync, the deck opens the SYNC tab for you
 automatically, so you land on the controls the patch is actually using.
@@ -58,6 +63,12 @@ To make the sweep, detune Osc 1 (the slave) away from the master with its
 **Coarse** and **Detune**, while the master holds the played pitch. Set it sharp
 and every note gets the same synced bite; sweep it with an envelope or LFO for the
 classic "rising sync scream."
+
+The **Osc 1 Coarse** modulation destination covers a full **three octaves** of
+range at maximum depth, so a single envelope route can drive the whole sweep in one
+shot — no need to combine Coarse and Detune destinations. The factory preset
+**Prophet Sync Lead** uses exactly this: an Env 3 → Osc 1 Coarse route attacks
+from a bright, biting sync timbre and sweeps the full range as the envelope falls.
 
 ## Sync Ratio: sync from one oscillator, no second one spent
 

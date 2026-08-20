@@ -107,7 +107,17 @@ filter to pull up just the sounds you starred.
 Aconite ships with a curated factory bank spanning a wide range of sounds and
 playing styles. The bank covers categories including Bass, Lead, Pad, Pluck, FX,
 Keys, Brass, Chiptune, and Percussion, including some less common voice types
-built on physical modelling (Handpan, Steel Drum, and modal drums).
+built on physical modelling (Handpan, Steel Drum, and modal drums), and hard-sync
+leads designed around the Chance modulation and the oscillator sync system.
+
+Two factory presets showcase oscillator sync at its most expressive: **Prophet Sync
+Lead (Mono)** and **Prophet Sync Lead (Poly)**. Both use two sawtooth oscillators
+with a 2→1 sync routing, and an envelope route from Env 3 to the slave oscillator's
+Coarse tune — sweeping it a full three octaves so the sync timbre screams and snarls
+as the note attacks. The Mono version locks to a single note for cutting lead work;
+the Poly version opens the same patch to full polyphony for chords. These are good
+patches to open up and study if you want to understand how the sync system and the
+modulation matrix work together.
 
 Each factory preset is a full-state capture authored by ear in the plugin, so
 what you load is exactly what the preset's author heard. Factory presets carry

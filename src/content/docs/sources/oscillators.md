@@ -387,9 +387,10 @@ are [mod-matrix](/modulation/matrix/) destinations.
 The **Kick** is the third of the struck family, a flexible bass-drum voice that
 sweeps continuously between a TR-808 character and a TR-909 character. One note-on
 is one kick, and like the String and Modal it plays through the voice's filter, amp,
-and effects. There is no 808/909 switch; the seven controls cover the whole range:
+and effects. There is no 808/909 switch; the six panel controls cover the whole range
+(use the standard **Octave / Coarse / Detune** knobs for overall pitch — the Kick
+tunes to the played note like any oscillator):
 
-- **Tune**: the fundamental pitch, the played note offset up or down an octave.
 - **Punch**: the depth of the pitch snap. Near the bottom it is the 808's subtle tick
   (around +1 octave); near the top it is a deep 909-style sweep (around +3 octaves).
 - **Snap**: how fast that pitch snap falls, from an instant 808 snap (around 6 ms) to a
@@ -403,10 +404,11 @@ and effects. There is no 808/909 switch; the seven controls cover the whole rang
 - **Drive**: a soft-clip on the whole body, from a clean sub at zero to 909-style
   grit and harmonics as you push it.
 
-All seven controls are [mod-matrix](/modulation/matrix/) destinations. Two factory presets
-anchor the range: **808 Bass** (a sustained, tuned 808 sub-bass with a long decay, mono
-glide, and Drive saturation) and **909 Kick** (a punchy house/techno kick with deep Punch,
-fast Snap, a short decay, a sharp click, and grit).
+All six controls are [mod-matrix](/modulation/matrix/) destinations (plus a "Kick Tune"
+matrix destination that lets you automate a fine pitch offset even without a panel knob).
+Two factory presets anchor the range: **808 Bass** (a sustained, tuned 808 sub-bass with
+a long decay, mono glide, and Drive saturation) and **909 Kick** (a punchy house/techno
+kick with deep Punch, fast Snap, a short decay, a sharp click, and grit).
 
 ## Lo-fi / vintage-digital character
 

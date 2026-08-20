@@ -65,6 +65,12 @@ The source menu lists over forty options, organized by type:
 - **Seq Step**, **Seq Vel**, **Seq Gate**: the Seq engine's own rhythm as a modulation
   source; route Seq Gate to filter cutoff to pluck the filter on every step
 - **Curve 1–4**: four drawable, pattern-synced automation lanes
+- **Random**: a fresh bipolar value latched once per note-on, per voice — the classic
+  per-note random spread. Route it to pan, detune, or any destination to give each
+  note of a phrase a slightly different character without recording automation. It is a
+  per-note *sample-and-hold*: the value is set at note-on and stays constant for the
+  whole note. Each voice in a chord draws its own independent value, so chords spread
+  naturally. For a continuously changing random signal, use **Noise** (audio-rate) instead.
 
 :::note
 For automation bound directly to one destination (no matrix row to fill in), draw it
@@ -130,8 +136,30 @@ before it lands:
 | **Rectify** | Folds the negative half of a bipolar source up into positive territory, doubling the effective rate of a sine or triangle LFO. |
 | **Quantize** | Steps the source into discrete levels, turning a smooth LFO into a stepped sequence in real time. |
 | **Lag** | Applies a 40 ms slew to the source, rounding off sharp jumps and making fast sources feel more gradual. |
+| **Chance 75% / 50% / 33% / 25%** | A per-note probabilistic gate (see below). |
 
 Transforms are available on every slot, for both voice and bus routes.
+
+### Chance: probabilistic modulation
+
+The **Chance** transforms make a modulation route fire only *some* of the time, decided at
+each note-on and held for the life of that note. Pick a percentage — 75%, 50%, 33%, or 25% —
+and that route either passes its full modulation for that note, or contributes nothing, with
+roughly that probability.
+
+The decision is made fresh on every note-on, per voice, and independently per chord note. A
+rendered bounce gives the same result every time (the random draw is seeded, not truly random
+at playback), so what you heard on the last pass is what you get when you bounce.
+
+**Probabilistic layering** is the headline use. Set an oscillator's mixer fader all the way
+down, then add a route:
+
+> `Velocity → Chance 33% → Osc 2 Level`
+
+Now osc 2 sounds on about one in three notes while osc 1 plays every note. The result is a
+texture that shifts and surprises without ever repeating exactly — an effect that would take
+significant sequencer programming to approximate any other way. The same technique works for
+filter sweeps, reverb mix, pitch spread, or anything else you can modulate.
 
 ## Setting depth
 
