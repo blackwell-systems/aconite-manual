@@ -77,7 +77,11 @@ The source menu lists over forty options, organized by type:
   it is a note-gate that **respects the value you dialed** — on a fire the destination plays at your set
   level, on a miss it drops to silent (it does *not* jump to full scale). Chord notes decide
   independently; bounces are reproducible. Pick **Chance** as the Source, choose a destination, set Depth.
-  See [Probabilistic layering](#probabilistic-layering) below for the headline use.
+  See [Probabilistic layering](#probabilistic-layering) below for the headline use. When a Chance route
+  fires, the destination's knob or fader briefly brightens toward the generative accent colour so you can
+  *see* the gate land (a gear-menu **Chance pulse** toggle turns this on or off). Chance is one of a family
+  of probability features: see also the [per-source odds](/sources/mixer/#per-source-chance-the-odds-chip)
+  on the mixer and the [Probability Filter](/performance/probability-filter/).
 
 :::note
 For automation bound directly to one destination (no matrix row to fill in), draw it
@@ -94,12 +98,15 @@ in order:
 
 - **Pitch**: the played pitch, fanned to all oscillators at once.
 - **Oscillator**: per-oscillator coarse tune, fine detune, level, pulse width, and FM
-  depth, plus **WT Warp** (the Wavetable oscillator's warp amount, for evolving wavetable
+  depth, plus **Osc 1/2/3 Chance** (each oscillator's per-note firing odds, the mixer's
+  [odds chip](/sources/mixer/#per-source-chance-the-odds-chip) as a destination) and
+  **WT Warp** (the Wavetable oscillator's warp amount, for evolving wavetable
   motion), with **Lo-fi** (Bits, Crush, Alias) and **Additive** (the partial-group levels
   plus additive drive and drift, and **Add Tilt** for a spectral-brightness sweep, **Add
   Noise** for the residual air, and **Add Stretch** for the harmonic-to-inharmonic bell
   morph) as their own submenus.
-- **Sub / Noise**: the sub-oscillator and noise-source controls.
+- **Sub / Noise**: the sub-oscillator and noise-source controls, including **Sub Chance**
+  and **Noise Chance** (their per-note firing odds).
 - **Filter**: split into **Filter 1**, **Filter 2**, and **Common**, covering cutoff,
   resonance, drive, and mode morph for each filter.
 - **Shaper**: the waveshaper's drive, mix, bias, and trim.

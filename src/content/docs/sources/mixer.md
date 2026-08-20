@@ -30,6 +30,34 @@ Because the sources are independent faders (not a crossfade), any combination ca
 be active at once. You can run all three oscillators at full level, or bring in
 just a whisper of noise, or silence Osc 2 entirely while Osc 1 and 3 play.
 
+## Per-source Chance (the odds chip)
+
+Each of the five sources carries a small **odds chip** showing a percentage: the
+**chance that source sounds on a given note**. At **100%** (the default) the source
+plays every note, so a normal patch is unchanged. Lower it and that source starts to
+drop out at random from note to note: set Osc 3 to 60% and it speaks on roughly six
+notes in ten while the others play through.
+
+Each source rolls its own independent dice, so the sources come and go in ever-shifting
+combinations rather than in lockstep. It is the fastest way to make a static stack of
+oscillators feel alive and generative: dial back the odds on a layer or two and hold a
+pattern, and the timbre keeps rearranging itself without ever repeating exactly.
+
+The odds are also [modulation matrix](/modulation/matrix/) destinations, one per source:
+**Osc 1 Chance, Osc 2 Chance, Osc 3 Chance, Sub Chance,** and **Noise Chance**. Sweep a
+source's odds with an LFO or envelope to fade a layer from "always there" to "rare
+sparkle" hands-free.
+
+This is the same [Chance](/modulation/matrix/#sources) gate the modulation matrix
+offers, brought right onto each fader so the odds ride the control they govern. See
+[the probability features](/performance/probability-filter/) for how per-source Chance,
+the matrix Chance source, and the Probability Filter fit together as one family.
+
+When a source's Chance fires on a note you can watch it happen: its lane briefly
+brightens toward the generative accent colour, and the [on-screen
+keyboard](/interface/keyboard/) shows the oscillators that fired as coloured bands on
+the playing key. A source left at 100% shows a plain highlight with no band.
+
 ## The RESO return channel
 
 Set apart on the right of the mixer, past a thin divider and drawn in its own colour,

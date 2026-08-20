@@ -21,6 +21,16 @@ together and the pattern thins along two axes at once.
 The probability filter starts **off and at zero depth**, so an existing patch
 sounds exactly as before. It does nothing until you turn it up.
 
+:::note
+**Part of the probability family.** The probability filter is one of several ways Aconite makes notes probabilistic. The
+[**Chance** modulation source](/modulation/matrix/#sources) gates any destination (a
+level, a filter sweep, an FX send) by a per-note coin flip; the mixer's
+[**per-source odds**](/sources/mixer/#per-source-chance-the-odds-chip) set how often each
+oscillator, the sub, and noise sound; and the [step sequencer's](/performance/step-sequencer/)
+per-step probability gates notes in time. They all share the same "roll the dice each note"
+character and stack freely.
+:::
+
 ## What the curve does
 
 You choose one of four filter shapes, and the curve's **height at each key** is
