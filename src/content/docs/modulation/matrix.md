@@ -164,6 +164,25 @@ the probabilistic layer sits at the balance you set rather than jumping to full 
 technique works for filter sweeps, reverb mix, pitch spread, or anything else you can modulate. Depth is
 purely the fire probability.
 
+**Stack Chance for richer textures.** Each Chance route rolls its **own** die, so routes are
+independent of one another:
+
+- **Different destinations flip independent coins.** Put `Chance → Osc 2 Level` at 50% and
+  `Chance → Osc 3 Level` at 50% and every combination happens — both layers, either one alone,
+  or neither. You are not locking one layer inside the other; each oscillator decides for itself
+  each note.
+- **The same destination multiplies.** Two Chance routes aimed at the *same* destination fire it
+  only when **both** coins land, so the odds are the product: two routes at 50% each fire the
+  destination about 25% of the time. Use this to build very sparse events out of ordinary-looking
+  percentages.
+
+:::note
+Chance is the matrix's **catch-all** for firing odds: reach for it when the thing you want to make
+probabilistic has no odds control of its own — filter cutoff, an FX send, pitch. Where a control
+*does* own its odds (a step's Chance lane, a chord's odds, a note's play chance), set the probability
+right there instead. The rule of thumb: **the odds ride the control of the thing they govern.**
+:::
+
 ## Setting depth
 
 The **Depth** slider is bipolar: drag right for a positive push, drag left for a negative
