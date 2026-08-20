@@ -71,6 +71,13 @@ The source menu lists over forty options, organized by type:
   per-note *sample-and-hold*: the value is set at note-on and stays constant for the
   whole note. Each voice in a chord draws its own independent value, so chords spread
   naturally. For a continuously changing random signal, use **Noise** (audio-rate) instead.
+- **Chance**: a per-note probabilistic gate. It has **no dedicated parameter and no knob of its own.**
+  The row's own **Depth knob is the fire probability**: set Depth to 30% and the note passes on
+  approximately 30% of note-ons (0% = never, 100% = always). On a **level or other param** destination
+  it is a note-gate that **respects the value you dialed** — on a fire the destination plays at your set
+  level, on a miss it drops to silent (it does *not* jump to full scale). Chord notes decide
+  independently; bounces are reproducible. Pick **Chance** as the Source, choose a destination, set Depth.
+  See [Probabilistic layering](#probabilistic-layering) below for the headline use.
 
 :::note
 For automation bound directly to one destination (no matrix row to fill in), draw it
@@ -136,37 +143,35 @@ before it lands:
 | **Rectify** | Folds the negative half of a bipolar source up into positive territory, doubling the effective rate of a sine or triangle LFO. |
 | **Quantize** | Steps the source into discrete levels, turning a smooth LFO into a stepped sequence in real time. |
 | **Lag** | Applies a 40 ms slew to the source, rounding off sharp jumps and making fast sources feel more gradual. |
-| **Chance 75% / 50% / 33% / 25%** | A per-note probabilistic gate (see below). |
 
-Transforms are available on every slot, for both voice and bus routes.
+Transforms are available on every slot, for both voice and bus routes. The complete via list is:
+`-- / Invert / Rectify / Quantize / Lag`.
 
-### Chance: probabilistic modulation
+### Probabilistic layering
 
-The **Chance** transforms make a modulation route fire only *some* of the time, decided at
-each note-on and held for the life of that note. Pick a percentage — 75%, 50%, 33%, or 25% —
-and that route either passes its full modulation for that note, or contributes nothing, with
-roughly that probability.
+For probabilistic routing, use **Chance** as the *source* (not a via transform) — see the **Chance**
+entry in the [Sources](#sources) list above.
 
-The decision is made fresh on every note-on, per voice, and independently per chord note. A
-rendered bounce gives the same result every time (the random draw is seeded, not truly random
-at playback), so what you heard on the last pass is what you get when you bounce.
+**Probabilistic layering** is the headline use. Leave an oscillator's mixer fader **at the level you
+want it to play at**, then add a route:
 
-**Probabilistic layering** is the headline use. Set an oscillator's mixer fader all the way
-down, then add a route:
+> `Chance → Osc 2 Level`
 
-> `Velocity → Chance 33% → Osc 2 Level`
-
-Now osc 2 sounds on about one in three notes while osc 1 plays every note. The result is a
-texture that shifts and surprises without ever repeating exactly — an effect that would take
-significant sequencer programming to approximate any other way. The same technique works for
-filter sweeps, reverb mix, pitch spread, or anything else you can modulate.
+Set **Depth to 30%**. Now osc 2 speaks at that level on about 30% of notes and is silent on the rest,
+while osc 1 plays every note. The result is a texture that shifts and surprises without ever repeating
+exactly — an effect that would take significant sequencer programming to approximate any other way, and
+the probabilistic layer sits at the balance you set rather than jumping to full volume. The same
+technique works for filter sweeps, reverb mix, pitch spread, or anything else you can modulate. Depth is
+purely the fire probability.
 
 ## Setting depth
 
 The **Depth** slider is bipolar: drag right for a positive push, drag left for a negative
 one. At zero, the route is present but contributes nothing (useful for temporarily muting
 a connection without deleting it). A negative depth inverts the modulation direction: a
-rising envelope lowers the destination, for instance.
+rising envelope lowers the destination, for instance. (The **Chance** source is the one
+exception: its Depth is a probability, so zero means *never fires* — the gated destination
+stays silent rather than passing unchanged.)
 
 For signal-rate destinations like cutoff and pitch, depth is calibrated in musically useful
 units (five octaves of cutoff sweep, two octaves of pitch range). For other destinations
