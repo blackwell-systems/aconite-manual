@@ -30,6 +30,24 @@ Because the sources are independent faders (not a crossfade), any combination ca
 be active at once. You can run all three oscillators at full level, or bring in
 just a whisper of noise, or silence Osc 2 entirely while Osc 1 and 3 play.
 
+## Normalize levels (right-click)
+
+**Right-click the mixer background** (the empty space around the faders, not a fader
+itself) for **Normalize levels**. It brings your mix up to full headroom without
+changing the balance: it scales every un-muted source by the same factor so the
+loudest one reaches the top of its fader, and the rest keep their exact proportions.
+Dial in a blend you like at low levels, then normalize it in one click to make it as
+loud as it can be.
+
+Muted sources and sources sitting at zero are left where they are — only the audible
+ones are scaled — and it does nothing if the loudest source is already at full or the
+whole mix is effectively silent.
+
+:::note
+Right-clicking a *fader* opens its **Modulate / MIDI-learn** menu instead. Normalize
+lives on the background so it does not compete with the per-fader menu.
+:::
+
 ## Per-source Chance (the odds chip)
 
 Each of the five sources carries a small **odds chip** showing a percentage: the

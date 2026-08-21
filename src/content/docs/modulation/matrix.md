@@ -154,6 +154,30 @@ before it lands:
 Transforms are available on every slot, for both voice and bus routes. The complete via list is:
 `-- / Invert / Rectify / Quantize / Lag`.
 
+### Conditional Chance (fire one route off another)
+
+On a row whose **Source** is **Chance**, the Via column changes: instead of the transforms above it offers
+**Own die**, **If Prev**, and **If ¬Prev**. This lets one Chance route depend on another's outcome for the
+same note.
+
+- **Own die** (the default) — the normal independent coin. The route decides on its own, unaffected by any
+  other.
+- **If Prev** — fires *only* on notes where **Prev** also fired.
+- **If ¬Prev** — fires *only* on notes where **Prev** missed.
+
+**"Prev" is the nearest Chance route above this one in the matrix.** Conditional routes chain by position:
+put the trigger higher in the list and the follower lower, and the follower reads the trigger's this-note
+result. The follower still rolls its own Depth on top, so a follower at 100% Depth mirrors the trigger
+exactly, while at 50% it joins about half of the trigger's hits.
+
+When a row is conditional, the matrix draws a short **tie** in the slot margin linking it to its trigger, so
+you can see the dependency at a glance. If there is no Chance route above it to depend on, the tie shows as a
+**red dashed** stub — the condition has nothing to hang off, so it never fires.
+
+Use it to make two probabilistic layers move *together* or in *opposition*: set `Chance → Osc 2 Level` as the
+trigger, then a second route such as `Chance → Reverb Send` to **If Prev** so the reverb only blooms on the
+notes where osc 2 also spoke — or **If ¬Prev** so it fills in the gaps instead.
+
 ### Probabilistic layering
 
 For probabilistic routing, use **Chance** as the *source* (not a via transform) — see the **Chance**
