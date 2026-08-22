@@ -31,6 +31,23 @@ Five modes decide how Aconite walks the notes you hold:
 **Octaves** (1 to 4) extends the pattern upward by whole octaves, so a two-note hold at Octaves 3
 becomes a six-step pattern that spans three registers.
 
+## Shaping the Random draw: DISTRIBUTION
+
+In **Random** mode a small **DISTRIBUTION** cluster appears on the arp row (it stays hidden in the
+other modes, since it only shapes the random draw). Instead of a flat coin-flip, these three controls
+bend *which* held note the arp reaches for:
+
+- **Mutate** sets how much the random sequence repeats itself. Fully left, the arp **locks** onto a
+  repeating loop of picks (a random riff that keeps coming back); fully right, it draws fresh every
+  step; in between, it slowly mutates a phrase you can still recognise. This turns "random" from
+  never-repeating noise into a musical, evolving pattern.
+- **Spread** narrows or widens the draw. Low Spread pulls the picks toward the centre of your held
+  range; high Spread lets it reach the full span.
+- **Bias** leans the draw low or high, so the arp favours the bottom or the top of your held notes.
+
+At their defaults these do nothing (a plain, even shuffle), so a Random patch you already have is
+unchanged until you reach for them.
+
 ## Rate and gate
 
 **Rate** runs in two modes:

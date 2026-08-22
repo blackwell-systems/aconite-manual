@@ -44,6 +44,17 @@ probability stage. See [Arpeggiator](/performance/arpeggiator/),
 | Strum Time | Spreads a chord's notes across the step in time (0 is simultaneous): a fraction of the step when Synced, an absolute time when Free. | ms or step fraction |
 | Strum Direction | Order the strummed chord fans out in. | Up / Down / Up-Down / As Played / Random |
 
+## Random distribution
+
+Shown only in **Random** mode (the DISTRIBUTION cluster on the arp row); shapes *which* held note the
+random draw reaches for. All three default to a plain even shuffle (a no-op).
+
+| Control | What it does | Range / values |
+|---------|--------------|----------------|
+| Mutate | How much the random sequence repeats: locked into a repeating loop (a random riff that recurs) through to a fresh draw every step. | 0 to 100 % (default fresh) |
+| Spread | Draw width: low pulls picks toward the centre of the held range, high uses the full span. | 0 to 100 % (default full) |
+| Bias | Leans the draw toward the low or high end of the held notes. | low ↔ high (default centre) |
+
 ## Euclidean fill
 
 | Control | What it does | Range / values |

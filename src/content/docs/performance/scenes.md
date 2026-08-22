@@ -18,6 +18,9 @@ rack**, and — if you choose — its own **sequence**) running inside the same 
 Each scene is a completely independent instrument. It carries its own:
 
 - Oscillator, filter, and envelope settings.
+- **Its own source mix** — the mixer faders, mutes, per-source trigger odds, and Mix Drive, so Scene B
+  can balance its oscillators, sub, and noise completely differently from Scene A. (The sympathetic
+  **Return** lane stays shared, since it rides the combined master bus.)
 - Voicing controls: play mode, polyphony cap, note priority, glide.
 - Unison stacking and detune.
 - Analog character settings: Voice Detune, Drift, Variance, and Transient.
@@ -95,8 +98,9 @@ layer, or keep both centred and let the oscillator and unison settings do the sp
 
 The **Edit: Scene A / B** selector in the header brings that scene's controls into focus for editing;
 the panels update to show that scene's patch. This now re-points **everything** that is per-scene — the
-oscillator / filter / envelope / modulation panels, **the effects rack**, and (with **Per-Scene**) **the
-Keys / piano-roll sequencer** — so switching to Scene B lets you edit its FX and its sequence in place.
+oscillator / filter / envelope / modulation panels, **the mixer**, **the effects rack**, and (with
+**Per-Scene**) **the Keys / piano-roll sequencer** — so switching to Scene B lets you edit its source
+mix, its FX, and its sequence in place.
 The other scene keeps playing as you edit.
 
 Under **Shared** the sequencer stays on the one shared pattern even while you edit Scene B's sound; only

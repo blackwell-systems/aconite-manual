@@ -30,6 +30,13 @@ Because the sources are independent faders (not a crossfade), any combination ca
 be active at once. You can run all three oscillators at full level, or bring in
 just a whisper of noise, or silence Osc 2 entirely while Osc 1 and 3 play.
 
+:::note
+The mixer is **per-scene**. The faders, mutes, per-source odds, and Mix Drive all follow the
+**Edit: Scene A / B** selector, so each [scene](/performance/scenes/) can hold a completely different
+source balance. The **RESO** return channel (below) is the one exception: it is shared, since it rides
+the combined master bus.
+:::
+
 ## Normalize levels (right-click)
 
 **Right-click the mixer background** (the empty space around the faders, not a fader
