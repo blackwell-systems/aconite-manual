@@ -71,16 +71,16 @@ The source menu lists over forty options, organized by type:
   per-note *sample-and-hold*: the value is set at note-on and stays constant for the
   whole note. Each voice in a chord draws its own independent value, so chords spread
   naturally. For a continuously changing random signal, use **Noise** (audio-rate) instead.
-- **Chance**: a per-note probabilistic gate. It has **no dedicated parameter and no knob of its own.**
+- **Probability** (formerly "Chance"): a per-note probabilistic gate. It has **no dedicated parameter and no knob of its own.**
   The row's own **Depth knob is the fire probability**: set Depth to 30% and the note passes on
   approximately 30% of note-ons (0% = never, 100% = always). On a **level or other param** destination
   it is a note-gate that **respects the value you dialed** — on a fire the destination plays at your set
   level, on a miss it drops to silent (it does *not* jump to full scale). Chord notes decide
-  independently; bounces are reproducible. Pick **Chance** as the Source, choose a destination, set Depth.
-  See [Probabilistic layering](#probabilistic-layering) below for the headline use. When a Chance route
+  independently; bounces are reproducible. Pick **Probability** as the Source, choose a destination, set Depth.
+  See [Probabilistic layering](#probabilistic-layering) below for the headline use. When a Probability route
   fires, the destination's knob or fader briefly brightens toward the generative accent colour so you can
-  *see* the gate land (a gear-menu **Chance pulse** toggle turns this on or off). Chance is one of a family
-  of probability features: see also the [per-source odds](/sources/mixer/#per-source-chance-the-odds-chip)
+  *see* the gate land (a gear-menu **Chance pulse** toggle turns this on or off). Probability is one of a family
+  of probability features: see also the [per-source odds](/sources/mixer/#per-source-probability-the-odds-chip)
   on the mixer and the [Probability Filter](/performance/probability-filter/).
 
 :::note
@@ -98,15 +98,15 @@ in order:
 
 - **Pitch**: the played pitch, fanned to all oscillators at once.
 - **Oscillator**: per-oscillator coarse tune, fine detune, level, pulse width, and FM
-  depth, plus **Osc 1/2/3 Chance** (each oscillator's per-note firing odds, the mixer's
-  [odds chip](/sources/mixer/#per-source-chance-the-odds-chip) as a destination) and
+  depth, plus **Osc 1/2/3 Probability** (each oscillator's per-note firing odds, the mixer's
+  [odds chip](/sources/mixer/#per-source-probability-the-odds-chip) as a destination) and
   **WT Warp** (the Wavetable oscillator's warp amount, for evolving wavetable
   motion), with **Lo-fi** (Bits, Crush, Alias) and **Additive** (the partial-group levels
   plus additive drive and drift, and **Add Tilt** for a spectral-brightness sweep, **Add
   Noise** for the residual air, and **Add Stretch** for the harmonic-to-inharmonic bell
   morph) as their own submenus.
-- **Sub / Noise**: the sub-oscillator and noise-source controls, including **Sub Chance**
-  and **Noise Chance** (their per-note firing odds).
+- **Sub / Noise**: the sub-oscillator and noise-source controls, including **Sub Probability**
+  and **Noise Probability** (their per-note firing odds).
 - **Filter**: split into **Filter 1**, **Filter 2**, and **Common**, covering cutoff,
   resonance, drive, and mode morph for each filter.
 - **Shaper**: the waveshaper's drive, mix, bias, and trim.
@@ -126,6 +126,12 @@ in order:
 - **Macros**: the four macro knobs, so one modulator can drive a macro that in turn fans
   out to everything routed to it.
 - **Output**: the post-VCA amplitude, for tremolo or gating effects.
+
+- **Probability**: every per-note firing-odds destination gathered into one group — **Osc 1/2/3
+  Probability**, **Sub Probability**, and **Noise Probability** (the mixer odds chips), the bus **Stab
+  Probability**, and the [Seq Probability](/performance/step-sequencer/) master gate. They are also
+  reachable from their home groups above (Oscillator, Sub / Noise), but the unified **Probability** group
+  puts the whole family in one place.
 
 Below those come the **FX** destinations and the **bus** subsystems (reverb, chorus,
 delay, phaser, EQ, and master). These are bus-level only: choose one and the row's Scope
@@ -154,10 +160,10 @@ before it lands:
 Transforms are available on every slot, for both voice and bus routes. The complete via list is:
 `-- / Invert / Rectify / Quantize / Lag`.
 
-### Conditional Chance (fire one route off another)
+### Conditional Probability (fire one route off another)
 
-On a row whose **Source** is **Chance**, the Via column changes: instead of the transforms above it offers
-**Own die**, **If Prev**, and **If ¬Prev**. This lets one Chance route depend on another's outcome for the
+On a row whose **Source** is **Probability**, the Via column changes: instead of the transforms above it offers
+**Own die**, **If Prev**, and **If ¬Prev**. This lets one Probability route depend on another's outcome for the
 same note.
 
 - **Own die** (the default) — the normal independent coin. The route decides on its own, unaffected by any
@@ -165,28 +171,28 @@ same note.
 - **If Prev** — fires *only* on notes where **Prev** also fired.
 - **If ¬Prev** — fires *only* on notes where **Prev** missed.
 
-**"Prev" is the nearest Chance route above this one in the matrix.** Conditional routes chain by position:
+**"Prev" is the nearest Probability route above this one in the matrix.** Conditional routes chain by position:
 put the trigger higher in the list and the follower lower, and the follower reads the trigger's this-note
 result. The follower still rolls its own Depth on top, so a follower at 100% Depth mirrors the trigger
 exactly, while at 50% it joins about half of the trigger's hits.
 
 When a row is conditional, the matrix draws a short **tie** in the slot margin linking it to its trigger, so
-you can see the dependency at a glance. If there is no Chance route above it to depend on, the tie shows as a
+you can see the dependency at a glance. If there is no Probability route above it to depend on, the tie shows as a
 **red dashed** stub — the condition has nothing to hang off, so it never fires.
 
-Use it to make two probabilistic layers move *together* or in *opposition*: set `Chance → Osc 2 Level` as the
-trigger, then a second route such as `Chance → Reverb Send` to **If Prev** so the reverb only blooms on the
+Use it to make two probabilistic layers move *together* or in *opposition*: set `Probability → Osc 2 Level` as the
+trigger, then a second route such as `Probability → Reverb Send` to **If Prev** so the reverb only blooms on the
 notes where osc 2 also spoke — or **If ¬Prev** so it fills in the gaps instead.
 
 ### Probabilistic layering
 
-For probabilistic routing, use **Chance** as the *source* (not a via transform) — see the **Chance**
+For probabilistic routing, use **Probability** as the *source* (not a via transform) — see the **Probability**
 entry in the [Sources](#sources) list above.
 
 **Probabilistic layering** is the headline use. Leave an oscillator's mixer fader **at the level you
 want it to play at**, then add a route:
 
-> `Chance → Osc 2 Level`
+> `Probability → Osc 2 Level`
 
 Set **Depth to 30%**. Now osc 2 speaks at that level on about 30% of notes and is silent on the rest,
 while osc 1 plays every note. The result is a texture that shifts and surprises without ever repeating
@@ -195,20 +201,20 @@ the probabilistic layer sits at the balance you set rather than jumping to full 
 technique works for filter sweeps, reverb mix, pitch spread, or anything else you can modulate. Depth is
 purely the fire probability.
 
-**Stack Chance for richer textures.** Each Chance route rolls its **own** die, so routes are
+**Stack Probability for richer textures.** Each Probability route rolls its **own** die, so routes are
 independent of one another:
 
-- **Different destinations flip independent coins.** Put `Chance → Osc 2 Level` at 50% and
-  `Chance → Osc 3 Level` at 50% and every combination happens — both layers, either one alone,
+- **Different destinations flip independent coins.** Put `Probability → Osc 2 Level` at 50% and
+  `Probability → Osc 3 Level` at 50% and every combination happens — both layers, either one alone,
   or neither. You are not locking one layer inside the other; each oscillator decides for itself
   each note.
-- **The same destination multiplies.** Two Chance routes aimed at the *same* destination fire it
+- **The same destination multiplies.** Two Probability routes aimed at the *same* destination fire it
   only when **both** coins land, so the odds are the product: two routes at 50% each fire the
   destination about 25% of the time. Use this to build very sparse events out of ordinary-looking
   percentages.
 
 :::note
-Chance is the matrix's **catch-all** for firing odds: reach for it when the thing you want to make
+Probability is the matrix's **catch-all** for firing odds: reach for it when the thing you want to make
 probabilistic has no odds control of its own — filter cutoff, an FX send, pitch. Where a control
 *does* own its odds (a step's Chance lane, a chord's odds, a note's play chance), set the probability
 right there instead. The rule of thumb: **the odds ride the control of the thing they govern.**
@@ -219,7 +225,7 @@ right there instead. The rule of thumb: **the odds ride the control of the thing
 The **Depth** slider is bipolar: drag right for a positive push, drag left for a negative
 one. At zero, the route is present but contributes nothing (useful for temporarily muting
 a connection without deleting it). A negative depth inverts the modulation direction: a
-rising envelope lowers the destination, for instance. (The **Chance** source is the one
+rising envelope lowers the destination, for instance. (The **Probability** source is the one
 exception: its Depth is a probability, so zero means *never fires* — the gated destination
 stays silent rather than passing unchanged.)
 

@@ -45,7 +45,7 @@ so you can see, at a glance, which notes it is favouring.
 
 ## Which oscillators fired: the spectral bands
 
-When [per-source Chance](/sources/mixer/#per-source-chance-the-odds-chip) is in play, a
+When [per-source Probability](/sources/mixer/#per-source-probability-the-odds-chip) is in play, a
 sounding key does more than light up: it shows **coloured bands for the oscillators that
 actually fired on that note**, using each source's mixer colour. Because every source
 rolls its own odds per note, the bands change from key to key, so you can see the
@@ -53,6 +53,6 @@ generative mix rearranging itself in real time. An oscillator left at 100% (alwa
 shows as a plain highlight with no band.
 
 This is one part of Aconite's probability feedback. Any knob or fader targeted by a
-[Chance](/modulation/matrix/#sources) route also pulses toward the generative accent
+[Probability](/modulation/matrix/#sources) route also pulses toward the generative accent
 colour the moment its gate fires, so you can watch probability land wherever you routed
 it. A gear-menu toggle, **Chance pulse**, turns that brightening on or off.

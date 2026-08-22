@@ -118,6 +118,10 @@ export default defineConfig({
           ],
         },
         {
+          label: 'AI & automation',
+          items: [{ label: 'AI over MCP', link: '/ai/mcp/' }],
+        },
+        {
           label: 'Tutorials',
           items: [{ label: 'Learn by doing', link: '/tutorials/' }],
         },

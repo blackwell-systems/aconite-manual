@@ -48,7 +48,7 @@ Right-clicking a *fader* opens its **Modulate / MIDI-learn** menu instead. Norma
 lives on the background so it does not compete with the per-fader menu.
 :::
 
-## Per-source Chance (the odds chip)
+## Per-source Probability (the odds chip)
 
 Each of the five sources carries a small **odds chip** showing a percentage: the
 **chance that source sounds on a given note**. At **100%** (the default) the source
@@ -62,16 +62,16 @@ oscillators feel alive and generative: dial back the odds on a layer or two and 
 pattern, and the timbre keeps rearranging itself without ever repeating exactly.
 
 The odds are also [modulation matrix](/modulation/matrix/) destinations, one per source:
-**Osc 1 Chance, Osc 2 Chance, Osc 3 Chance, Sub Chance,** and **Noise Chance**. Sweep a
+**Osc 1 Probability, Osc 2 Probability, Osc 3 Probability, Sub Probability,** and **Noise Probability**. Sweep a
 source's odds with an LFO or envelope to fade a layer from "always there" to "rare
 sparkle" hands-free.
 
-This is the same [Chance](/modulation/matrix/#sources) gate the modulation matrix
+This is the same [Probability](/modulation/matrix/#sources) gate the modulation matrix
 offers, brought right onto each fader so the odds ride the control they govern. See
-[the probability features](/performance/probability-filter/) for how per-source Chance,
-the matrix Chance source, and the Probability Filter fit together as one family.
+[the probability features](/performance/probability-filter/) for how per-source Probability,
+the matrix Probability source, and the Probability Filter fit together as one family.
 
-When a source's Chance fires on a note you can watch it happen: its lane briefly
+When a source's Probability fires on a note you can watch it happen: its lane briefly
 brightens toward the generative accent colour, and the [on-screen
 keyboard](/interface/keyboard/) shows the oscillators that fired as coloured bands on
 the playing key. A source left at 100% shows a plain highlight with no band.
