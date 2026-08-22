@@ -167,29 +167,43 @@ before it lands:
 Transforms are available on every slot, for both voice and bus routes. The complete via list is:
 `-- / Invert / Rectify / Quantize / Lag`.
 
-### Conditional Probability (fire one route off another)
+### Conditions (make a Probability route depend on context)
 
-On a row whose **Source** is **Probability**, the Via column changes: instead of the transforms above it offers
-**Own die**, **If Prev**, and **If ¬Prev**. This lets one Probability route depend on another's outcome for the
-same note.
+On a row whose **Source** is **Probability**, the Via column becomes a **Cond** menu: instead of the transforms
+above it offers a **condition** that decides *whether the route is even allowed to fire this note*, on top of its
+own Depth. The menu groups six conditions into two families — **Relate** (the route reacts to another route) and
+**History** (the route reacts to its own recent past):
 
-- **Own die** (the default) — the normal independent coin. The route decides on its own, unaffected by any
-  other.
-- **If Prev** — fires *only* on notes where **Prev** also fired.
-- **If ¬Prev** — fires *only* on notes where **Prev** missed.
+- **Own die** (the default) — no condition. The route is the normal independent coin, unaffected by anything else.
+- **Relate ▸**
+  - **If Prev** — fire *only* on notes where the route above it (its **trigger**) also fired.
+  - **If ¬Prev** — fire *only* on notes where that trigger *missed*.
+- **History ▸**
+  - **Not-twice** — never fire on two notes in a row. After a note where it fires, it sits out the next note,
+    then it is free again. Good for keeping an accent from clumping.
+  - **Max per bar** — fire at most **N** times per bar, then stay quiet until the next bar. A small number
+    box appears next to the menu to set **N** (1–8). Good for a rare sparkle that shows up a set number of times
+    each bar instead of purely at random.
+  - **Follows** — a *momentum* condition: after a note where it fires, the next note becomes **more** likely to
+    fire (or less, if you flip the bias); after a miss, the reverse. A **bias** slider appears next to the menu,
+    from strongly clustering (fires come in runs) through neutral to strongly alternating (fires avoid repeating).
+    This turns a flat coin into music that develops phrases instead of scattering.
 
-**"Prev" is the nearest Probability route above this one in the matrix.** Conditional routes chain by position:
-put the trigger higher in the list and the follower lower, and the follower reads the trigger's this-note
-result. The follower still rolls its own Depth on top, so a follower at 100% Depth mirrors the trigger
-exactly, while at 50% it joins about half of the trigger's hits.
+For the two **Relate** conditions, **"Prev" is the nearest Probability route above this one in the matrix.**
+Conditional routes chain by position: put the trigger higher in the list and the follower lower, and the
+follower reads the trigger's this-note result. The follower still rolls its own Depth on top, so a follower at
+100% Depth mirrors the trigger exactly, while at 50% it joins about half of the trigger's hits. When a Relate row
+is set, the matrix draws a short **tie** in the slot margin linking it to its trigger, so you can see the
+dependency at a glance. If there is no Probability route above it to depend on, the tie shows as a **red dashed**
+stub — the condition has nothing to hang off, so it never fires.
 
-When a row is conditional, the matrix draws a short **tie** in the slot margin linking it to its trigger, so
-you can see the dependency at a glance. If there is no Probability route above it to depend on, the tie shows as a
-**red dashed** stub — the condition has nothing to hang off, so it never fires.
+Use **Relate** to make two probabilistic layers move *together* or in *opposition*: set `Probability → Osc 2 Level`
+as the trigger, then a second route such as `Probability → Reverb Send` to **If Prev** so the reverb only blooms on
+the notes where osc 2 also spoke — or **If ¬Prev** so it fills in the gaps instead. Use **History** to shape a
+single route over time: **Not-twice** to space an accent out, **Max per bar** to ration a rare event, **Follows**
+to let a part gather into runs and rests instead of scattering evenly.
 
-Use it to make two probabilistic layers move *together* or in *opposition*: set `Probability → Osc 2 Level` as the
-trigger, then a second route such as `Probability → Reverb Send` to **If Prev** so the reverb only blooms on the
-notes where osc 2 also spoke — or **If ¬Prev** so it fills in the gaps instead.
+Conditions are saved with the patch. A patch made before conditions existed keeps whatever condition it had.
 
 ### Probabilistic layering
 
