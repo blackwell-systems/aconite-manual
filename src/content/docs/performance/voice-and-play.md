@@ -145,7 +145,7 @@ Two pan controls are available:
 
 - **Voice Pan:** places the overall voice output in the stereo field. Because this follows the
   modulation matrix Pan destination, an LFO or other source can auto-pan on top of the static setting.
-- **Scene Pan:** places a whole scene in the field when Layer or Split mode is active.
+- **Scene Pan:** places a whole scene in the field when both scenes are live under Layer or Split routing.
 
 ## Sequencer: Shared / Per-Scene
 

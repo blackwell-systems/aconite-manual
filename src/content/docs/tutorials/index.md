@@ -379,7 +379,7 @@ A few directions to explore next:
   [LFOs](/modulation/lfos/) chapter covers the full editor.
 - **Build a beat.** Use the Kick oscillator type on one instance and the Modal model on
   another to synthesize a kick and a percussion hit, then layer them in the Mixer.
-- **Explore scenes.** Switch to Layer mode (Voice / Play → Scene Mode → Layer), edit
-  scene B to a completely different patch (a pad under a lead, for instance), and play
-  both at once. See [Voice & play](/performance/voice-and-play/) for
-  the scene system.
+- **Explore scenes.** Light the **B** pill in the header **A | B** pair so both scenes are
+  live, set **Routing** (Voice / Play) to **Layer**, edit scene B to a completely different
+  patch (a pad under a lead, for instance), and play both at once. Or turn **A** off to play
+  scene B by itself. See [Voice & play](/performance/voice-and-play/) for the scene system.

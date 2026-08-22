@@ -43,10 +43,11 @@ drives both; set **SEQ: Per-Scene** to give Scene B its own.
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|
-| Scene Mode | How the two scenes combine: Single uses only A; Layer stacks A and B; Split routes them across a keyboard split; Channel routes them by MIDI channel. | Single / Layer / Split / Channel |
-| Split Point | The keyboard note where Split mode divides scenes A (below) and B (at and above). | MIDI note |
-| Channel Split | In Channel mode, MIDI channels up to this number play scene A; higher channels play scene B. | 1 to 16 |
+| Scene A / Scene B (activation) | The two lit pills in the header. Each turns its scene on or off independently; at least one always stays live. Any of A alone, B alone, or both. | On / Off each |
+| Routing | When both scenes are live, how they share the keyboard: Layer stacks A and B on every note; Split routes them across a keyboard split; Channel routes them by MIDI channel. Dimmed unless both scenes are live. | Layer / Split / Channel |
+| Split Point | The keyboard note where Split routing divides scenes A (below) and B (at and above). | MIDI note |
+| Channel Split | In Channel routing, MIDI channels up to this number play scene A; higher channels play scene B. | 1 to 16 |
 | Scene B Coarse | Pitch offset of scene B in semitones, for stacking B a fixed interval from A. | semitones |
 | Scene B Level | Output level of scene B relative to A, for balancing a layer or split. | dB |
-| Scene Pan | Per-scene stereo placement (Layer and Split only). | L to R, centre |
+| Scene Pan | Per-scene stereo placement (when both scenes are live, under Layer or Split routing). | L to R, centre |
 | SEQ: Shared / Per-Scene | Whether one sequencer/arp/chord/probability engine drives both scenes (Shared, default) or Scene B runs its own (Per-Scene). | Shared / Per-Scene |

@@ -1,17 +1,20 @@
 ---
 title: Scenes
-description: "The A/B scene layer: Single, Layer, Split, and Channel modes, per-scene sound, effects, and sequencer, and how to build two fully independent scenes."
+description: "Scenes A and B: two independent voices you activate and combine freely, per-scene sound, effects, and sequencer, and how to build two fully independent scenes."
 ---
 
-A **scene** is a whole second instrument, so two completely different patches can play together.
-**Scene Mode** decides how they combine: **Single, Layer, Split** (keyboard
-divided), or **Channel** (each scene on its own MIDI channel, making Aconite
-multitimbral). Each scene carries its own complete voicing, character, **effects, and sequencer**
-settings, so the two can behave — and sound — entirely differently.
+Aconite gives you **two scenes, A and B** — think of them as **two independent voices you activate
+and combine freely**. Each scene is a whole second instrument, so two completely different patches can
+play together. Play **A alone**, **B alone**, or **both at once**; when both are live, a **Routing**
+choice decides how they share the keyboard — **Layer** (stacked on every note), **Split** (the keyboard
+divided), or **Channel** (each scene on its own MIDI channel, making Aconite multitimbral). Each scene
+carries its own complete voicing, character, **effects, and sequencer** settings, so the two can behave —
+and sound — entirely differently.
 
-Think of it this way: every preset you load lives in Scene A. Turn scenes on and Scene B is a
+Think of it this way: every preset you load lives in Scene A. Activate Scene B and it becomes a
 complete second instrument (its own oscillators, its own filters, its own envelopes, its own **FX
-rack**, and — if you choose — its own **sequence**) running inside the same plugin window.
+rack**, and — if you choose — its own **sequence**) running inside the same plugin window. You can play
+it alongside A, or on its own.
 
 ## What a scene captures
 
@@ -50,14 +53,26 @@ notes, chord lane, and probability curve, edited independently of Scene A. A sma
 header tells you what you are editing — **Shared** (one sequence for both) or **Scene B** (Scene B's own
 sequence) — so it is never ambiguous.
 
-## Scene modes
+## Activating scenes: the A | B pair
 
-**Scene Mode** sets how the two scenes combine:
+Two lit pills — **A** and **B** — sit in the header, next to the **Edit: Scene A / B** box. A lit pill
+means that scene is **live**. Click a pill to turn its scene on or off:
 
-### Single
+- **A only** (the default) — Aconite behaves as a single-patch instrument exactly as it always has.
+  Scene B is ready but silent.
+- **B only** — Scene B plays on its own, with the whole keyboard to itself and no split. Great for
+  auditioning Scene B's patch, or for flipping between two full patches live by toggling the pair.
+- **Both live** — A and B play together; the **Routing** choice (below) decides how they share the
+  keyboard.
 
-Only Scene A sounds. This is the default; Aconite behaves as a single-patch instrument exactly as
-it always has. Scene B is ready but silent.
+At least one scene always stays live, so you can never mute the patch by accident. When you turn one
+scene solo, the **Edit: Scene A / B** box follows to that scene, so the panels you are editing are the
+panels you are hearing.
+
+## Routing: how two live scenes share the keyboard
+
+When **both** scenes are live, the **Routing** selector — in the **Voice** panel — sets how they combine.
+(With only one scene live, Routing is dimmed, since there is nothing to share.)
 
 ### Layer
 
@@ -90,8 +105,8 @@ channels, or for combining Aconite with a step sequencer lane per scene.
 
 ## Scene Pan
 
-In Layer and Split modes, each scene has a **Scene Pan** control that places that scene's output in
-the stereo field independently of the other. Pan Scene A left and Scene B right for a split-stereo
+When both scenes are live (Layer or Split routing), each scene has a **Scene Pan** control that places
+that scene's output in the stereo field independently of the other. Pan Scene A left and Scene B right for a split-stereo
 layer, or keep both centred and let the oscillator and unison settings do the spreading.
 
 ## Switching between scenes
@@ -112,7 +127,8 @@ which you are editing).
 To build two fully independent instruments in one patch — different sound, different effects, different
 sequence:
 
-1. Set **Scene Mode** to **Layer** (both stack on every note) or **Split** (a two-zone keyboard).
+1. Light the **B** pill in the header **A | B** pair so both scenes are live, then set **Routing** (in
+   the Voice panel) to **Layer** (both stack on every note) or **Split** (a two-zone keyboard).
 2. Click **Edit: Scene B** in the header and dial a different patch — its own oscillators, filter, and
    envelopes.
 3. With Scene B still selected, open the **Effects** rack and give Scene B its own effects (say, Scene A
@@ -125,7 +141,7 @@ sequence:
 
 :::tip
 Scenes are the fastest way to build a rich live rig. Load a filter-heavy pad into Scene A, a
-percussive pluck into Scene B, set Split mode, and you have an expressive two-hand keyboard
-instrument in seconds: no routing, no parallel tracks. Save the preset and the whole setup comes
+percussive pluck into Scene B, light both pills and set **Split** routing, and you have an expressive
+two-hand keyboard instrument in seconds: no parallel tracks. Save the preset and the whole setup comes
 back exactly as you left it.
 :::
