@@ -43,6 +43,34 @@ that are absent fall back to their defaults. Old preset files and saved sessions
 load without complaint; you will never get an error because a patch predates a new
 feature.
 
+## Keeping your sequence across presets
+
+By default, loading a preset loads **everything** it captured, including its
+sequence and generative layer. Sometimes you want the opposite: you have built a
+groove you love — an arp pattern, a step sequence, a chord lane, a probability
+setup, some curve lanes — and you want to **audition different sounds over it**
+without each new preset wiping the part out.
+
+Open the [Options gear](/interface/header/#options-gear-menu) and you will find a
+toggle, **Presets replace the sequence**:
+
+- **On** (the default): loading a preset replaces your current sequence with the
+  preset's own. This is the normal behaviour, and how presets have always worked.
+- **Off**: loading a preset **keeps your current sequence** and generative layer
+  in place, and loads only the sound. The arp, step sequencer, chord lane,
+  probability routes, and curve lanes you built stay exactly as they are while the
+  patch underneath them changes.
+
+Turn it off, get a phrase going, then step through the preset list: every sound you
+land on plays your groove, so you can hear how each one sits in the part you are
+writing. Turn it back on when you want presets to load whole again.
+
+:::note
+This is a session preference for how presets **load**; it does not change what a
+preset **saves**. Every preset still captures its own full sequence, so the part
+is always there when you want it.
+:::
+
 ## The preset browser
 
 Click the **preset name** in the [header](/interface/header/) and the browser

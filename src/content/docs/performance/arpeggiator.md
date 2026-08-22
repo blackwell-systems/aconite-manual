@@ -48,6 +48,12 @@ bend *which* held note the arp reaches for:
 At their defaults these do nothing (a plain, even shuffle), so a Random patch you already have is
 unchanged until you reach for them.
 
+**Modulate the draw.** Mutate, Spread, and Bias are also [modulation
+destinations](/modulation/matrix/#destinations) (under the **Arp** group), so an LFO or envelope
+can move them while the arp runs. Drift **Bias** with a slow LFO to let the note-cluster centre
+wander up and down the held range, breathe **Spread** to open and close the draw over a phrase, or
+ease **Mutate** to loosen a locked riff into fresh territory over time, all hands-free.
+
 ## Rate and gate
 
 **Rate** runs in two modes:

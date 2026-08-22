@@ -30,7 +30,7 @@ reset fires less often, so the snap is rounded off — the same idea, softened.
 ## Finding the controls: the SYNC tab
 
 All sync controls live on the **SYNC** tab of the source-shaping deck — the deck
-reads **Shaper | Resonator | SYNC**. Click **SYNC** and you get:
+reads **Waveshaper | Resonator | SYNC**. Click **SYNC** and you get:
 
 - A live **sync-waveform view** driven by the real oscillator — turn a control and
   the trace re-draws so you can *see* the sync edge move.

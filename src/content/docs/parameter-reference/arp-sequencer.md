@@ -47,7 +47,9 @@ probability stage. See [Arpeggiator](/performance/arpeggiator/),
 ## Random distribution
 
 Shown only in **Random** mode (the DISTRIBUTION cluster on the arp row); shapes *which* held note the
-random draw reaches for. All three default to a plain even shuffle (a no-op).
+random draw reaches for. All three default to a plain even shuffle (a no-op). All three are also
+[modulation destinations](/modulation/matrix/#destinations) (the **Arp** group), so an LFO or
+envelope can sweep them while the arp runs.
 
 | Control | What it does | Range / values |
 |---------|--------------|----------------|

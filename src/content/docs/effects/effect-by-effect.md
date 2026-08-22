@@ -372,24 +372,24 @@ curve, from gentle saturation to hard clipping, wavefolding, and a fully hand-dr
 shape.
 
 **Placement around the filter.** A **Place** selector sets where in the signal path
-the shaper sits:
+the waveshaper sits:
 
-- **Pre-filter**: the shaper distorts the raw oscillator mix before the filter
+- **Pre-filter**: the waveshaper distorts the raw oscillator mix before the filter
   carves it. Sweeping the filter then sweeps which generated harmonics survive: a
   bright, aggressive "distort then EQ" placement.
 - **Post-filter**: after the filter (the default). The filter shapes the waveform
-  first, including its resonant peak, then the shaper distorts the result. This makes
+  first, including its resonant peak, then the waveshaper distorts the result. This makes
   resonance sing and self-compress, and tames near-self-oscillation, the classic
   "synth scream" placement.
 - **Mid-filter**: between the two filters in Serial routing. The first filter
-  pre-shapes, the shaper distorts, the second filter post-carves. In routings without
+  pre-shapes, the waveshaper distorts, the second filter post-carves. In routings without
   a clean between-filter slot it falls back to Post-filter.
 
 **Curves.** A **Curve** selector chooses the transfer shape:
 
 | Curve | Character |
 |-------|-----------|
-| **None** | Pure passthrough; the shaper is inert and all controls step aside. |
+| **None** | Pure passthrough; the waveshaper is inert and all controls step aside. |
 | **Soft** | Gentle rational soft-clip: subtle warmth and thickening. |
 | **Tanh** | Smooth symmetric saturation: classic overdrive that rounds the peaks. |
 | **Hard Clip** | Brick-wall clip: aggressive, buzzy, rich in odd harmonics. |
@@ -403,7 +403,7 @@ Peaks stay level-matched as you push harder, so switching curve or raising drive
 does not jump the loudness.
 
 **Trim** is a pre-curve input trim: it sets how hot the signal arrives at the
-shape before Drive takes over. Because Trim sits ahead of the curve and Drive
+curve before Drive takes over. Because Trim sits ahead of the curve and Drive
 controls how deep into it you push, you can stage a clean input level for the
 curve independently of how much harmonic character Drive adds, useful when the
 incoming oscillator level varies between patches or scenes.
@@ -416,7 +416,7 @@ never builds up, even at high drive levels.
 **Key controls:** Curve, Place (Pre-filter / Post-filter / Mid-filter), Drive, Mix,
 Trim, Bias (Asym curve only).
 
-**The Draw curve.** Selecting **Draw** turns the shaper's display into an interactive
+**The Draw curve.** Selecting **Draw** turns the waveshaper's display into an interactive
 transfer-curve editor. A live waveform preview shows how the curve transforms the
 signal in real time, and a dot rides the curve to show the input-to-output mapping
 as audio passes through. You build the curve with breakpoints: add them by clicking,
@@ -446,7 +446,7 @@ chain without the two stages interfering with each other.
 
 ![The Sympathetic Resonator](../../../assets/screenshots/panel-resonator.png)
 
-The waveshaper's panel is a two-page deck: a **Shaper | Resonator** tab strip at
+The waveshaper's panel is a two-page deck: a **Waveshaper | Resonator** tab strip at
 the top swaps its control surface between the drawable waveshaper (above) and the
 **Sympathetic Resonator**. Both stages keep running; the tab only changes which one
 you are looking at. The Resonator is a bank of undamped tuned strings that ring in

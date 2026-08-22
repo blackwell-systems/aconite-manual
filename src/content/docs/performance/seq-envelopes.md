@@ -19,7 +19,7 @@ choose the target here and the curve you draw drives it directly.
 
 1. **Pick a destination.** The **Device → Control** picker is built from the real
    modulation destination table, grouped exactly as the Master Matrix groups its
-   destinations: Pitch, Oscillator, Sub-Noise, Filter, Shaper, Amp Env, Filter Env,
+   destinations: Pitch, Oscillator, Sub-Noise, Filter, Waveshaper, Amp Env, Filter Env,
    Rates, String, Modal, Kick, Additive, Lofi, Macros, Voice, Output. A leading dot
    marks the controls that already carry an envelope. Coverage is the full
    destination table: control-rate parameters (cutoff, resonance, drive, envelope

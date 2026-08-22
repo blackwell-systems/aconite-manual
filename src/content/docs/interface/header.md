@@ -79,9 +79,12 @@ not release, or a reverb that is out of control: PANIC clears it all in one pres
 ## Options (gear menu)
 
 The **gear icon** opens the Options overlay, which holds settings that are not
-part of a patch: window resizing, voice allocation preferences, and the optional
+part of a patch: window resizing, voice allocation preferences, the optional
 **Auto HQ on bounce** toggle that switches to maximum Quality automatically when
-your host renders to disk, even if your live Quality is set low.
+your host renders to disk (even if your live Quality is set low), and the
+**Presets replace the sequence** toggle that decides whether loading a preset also
+loads its sequence or keeps the one you built (see
+[Presets & A/B](/master/presets/#keeping-your-sequence-across-presets)).
 
 ## Quality
 

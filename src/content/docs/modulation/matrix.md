@@ -93,8 +93,10 @@ transport.
 ## Destinations
 
 Destinations span the full signal path. The destination menu is grouped, with cascading
-submenus so you drill down to what you want instead of scrolling a flat list. The groups,
-in order:
+submenus so you drill down to what you want instead of scrolling a flat list. At the end of
+the menu is **Off**: pick it to park a row with no destination, so the route stays set up
+(its source, Via, and depth are all remembered) but drives nothing until you point it at a
+target again. The groups, in order:
 
 - **Pitch**: the played pitch, fanned to all oscillators at once.
 - **Oscillator**: per-oscillator coarse tune, fine detune, level, pulse width, and FM
@@ -109,10 +111,15 @@ in order:
   and **Noise Probability** (their per-note firing odds).
 - **Filter**: split into **Filter 1**, **Filter 2**, and **Common**, covering cutoff,
   resonance, drive, and mode morph for each filter.
-- **Shaper**: the waveshaper's drive, mix, bias, and trim.
+- **Waveshaper**: the waveshaper's drive, mix, bias, and trim.
 - **Amp / Filter Envelope**: attack, decay, sustain, and release for the amp and filter
   envelopes, plus how much each filter envelope pushes the cutoff.
 - **Rates**: all six LFO rates, plus the step sequencer and Performer rates.
+- **Arp**: the Random arp's distribution controls — **Mutate**, **Spread**, and **Bias**
+  (see [Shaping the Random draw](/performance/arpeggiator/#shaping-the-random-draw-distribution)).
+  Because these are destinations, a slow LFO or envelope can sweep the random draw while it
+  runs: drift the note-cluster centre with **Bias**, breathe the draw width with **Spread**, or
+  ease a locked riff toward fresh draws with **Mutate**, all hands-free.
 - **Acoustic**: the modeled concert grand's four character controls, **Bright**, **Decay**,
   **Inharm**, and **Morph**. Because the grand is resynthesised at note-on, Bright, Decay,
   and Inharm re-voice each *new* note (route velocity to Bright for the realistic harder-is-
@@ -238,7 +245,9 @@ the range is the full usable extent of the parameter.
 From the **right-click menu**: open the menu on the modulated knob, find the route under the
 source name, and click the remove button.
 
-From the **grid**: set the Source to Off (blank) or set Depth to zero.
+From the **grid**: set the Source to Off (blank), set the Destination to **Off**, or set
+Depth to zero. Setting the Destination to Off is the tidy way to silence a route while
+keeping its source, Via, and depth intact for later.
 
 ## Macros
 
